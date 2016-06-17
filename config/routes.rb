@@ -54,4 +54,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  get 'cn_mainframe', :to => 'mainframe#cn_index', :format => false
+  get 'cn_join_us', :to => 'mainframe#cn_join_us', :format => false
+  get 'cn_news', :to => 'mainframe#cn_news', :format => false
+  get 'cn_plans', :to => 'mainframe#cn_plans', :format => false
+  get 'cn_products', :to => 'mainframe#cn_products', :format => false
+  get 'cn_service', :to => 'mainframe#cn_service', :format => false
+  get 'cn_about_us', :to => 'mainframe#cn_about_us', :format => false
+  get '/', :to => 'mainframe#cn_index', :format => false
 end
