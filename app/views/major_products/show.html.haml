@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Categoryid:
+  = @major_product.categoryId
+%p
+  %b Categoryname:
+  = @major_product.categoryName
+%p
+  %b Categoryimg:
+  = @major_product.categoryImg
+%p
+  %b Categorydescription:
+  = @major_product.categoryDescription
+
+= link_to 'Edit', edit_major_product_path(@major_product)
+\|
+= link_to 'Back', major_products_path

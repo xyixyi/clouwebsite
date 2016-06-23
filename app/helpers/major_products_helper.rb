@@ -1,0 +1,2 @@
+module MajorProductsHelper
+end
