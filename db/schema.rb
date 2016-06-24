@@ -21,15 +21,6 @@ ActiveRecord::Schema.define(version: 20160624063215) do
     t.datetime "updated_at",          null: false
   end
 
-  create_table "major_products", force: :cascade do |t|
-    t.integer  "categoryId"
-    t.string   "categoryName"
-    t.string   "categoryImg"
-    t.string   "categoryDescription"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "productName"
     t.string   "synopsis"
