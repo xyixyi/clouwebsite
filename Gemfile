@@ -5,8 +5,6 @@ ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
-# gem 'codeclimate-test-reporter', require: nil
-
 gem 'devise'
 
 gem 'rails_admin'
@@ -61,7 +59,7 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
-  gem 'rspec-rails', '2.14'
+  gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # basic imperative step defs
