@@ -11,8 +11,13 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
+<!--Create the login button to allow user to sign in -->
+<% if current_user %> 
+  <%= link_to "log out", destroy_user_session_path, method: :delete %>
+<% else %> 
+  <%= link_to "login", new_user_session_path %>
+<%end%>
 
-Just To Try
 <%= yield %>
 
 </body>
