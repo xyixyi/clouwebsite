@@ -1,0 +1,25 @@
+%h1 Listing types
+
+%table
+  %thead
+    %tr
+      %th Typeid
+      %th Typename
+      %th Typedescription
+      %th
+      %th
+      %th
+
+  %tbody
+    - @types.each do |type|
+      %tr
+        %td= type.typeId
+        %td= type.typeName
+        %td= type.typeDescription
+        %td= link_to 'Show', type
+        %td= link_to 'Edit', edit_type_path(type)
+        %td= link_to 'Destroy', type, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Type', new_type_path
