@@ -1,14 +1,14 @@
-= form_for @major_product do |f|
-  - if @major_product.errors.any?
+= form_for @category do |f|
+  - if @category.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@major_product.errors.count, "error")} prohibited this major_product from being saved:"
+      %h2= "#{pluralize(@category.errors.count, "error")} prohibited this category from being saved:"
       %ul
-        - @major_product.errors.full_messages.each do |msg|
+        - @category.errors.full_messages.each do |msg|
           %li= msg
 
   .field
-    = f.label :categoryId
-    = f.number_field :categoryId
+    = f.label :id
+    = f.number_field :id
   .field
     = f.label :categoryName
     = f.text_field :categoryName

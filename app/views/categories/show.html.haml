@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Id:
+  = @category.id
+%p
+  %b Categoryname:
+  = @category.categoryName
+%p
+  %b Categoryimg:
+  = @category.categoryImg
+%p
+  %b Categorydescription:
+  = @category.categoryDescription
+
+= link_to 'Edit', edit_category_path(@category)
+\|
+= link_to 'Back', categories_path

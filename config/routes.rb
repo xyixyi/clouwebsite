@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :types
+  resources :categories
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :major_products
   devise_for :users
   root "mainframe#cn_index"
   # The priority is based upon order of creation: first created -> highest priority.
