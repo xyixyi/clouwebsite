@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>Clouwebsite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+  
+  <!--Navbar CSS File-->
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+
 </head>
 <body>
 <!--This is for devise gem-->
@@ -12,11 +14,50 @@
 <p class="alert"><%= alert %></p>
 
 <!--Create the login button to allow user to sign in -->
-<% if current_user %> 
-  <%= link_to "log out", destroy_user_session_path, method: :delete %>
-<% else %> 
-  <%= link_to "login", new_user_session_path %>
-<%end%>
+
+<div class="top">
+  <% if current_user %> 
+    <%= link_to "登出", destroy_user_session_path, method: :delete %>
+  <% else %> 
+    <p class="welcomewords">
+    欢迎来到深圳市科陆电子科技有限公司，请
+  </p>
+    <%= link_to "登录", new_user_session_path, class: "login" %>
+    <p class="welcomewords">或</p>
+  <%end%>
+</div>
+<hr>
+
+<nav id="navbar" class="navbar">
+  <div class = "logo">
+        <a href="/">
+            <img border="0" alt="logo" src="/img/homepage/logo.png" class="logoImg" width="192" height="28">
+            <!--<div id="theImage" class="theImage"></div>-->
+        </a>
+  </div>
+  <span class="links">
+    <a id="home" href="/">首页</a>
+    <a id="products" href="/cn_products">产品</a>
+    <a id="plans" href="/cn_plans">方案</a>
+    <a id="service" href="/cn_service">技术支持</a>
+    <a id="aboutus" href="/cn_about_us">关于科陆</a>
+
+    <div class="search_field">
+      <input id="search" name="search" type="search"/>
+      <!--<img border="0" alt="searchImg" src="/img/homepage/search.png" class="searchImg" width="15" height="15">-->
+      <div class="searchImg">
+        
+      </div>
+    </div>
+    
+
+  </span>
+      
+</nav>
+
+
+
+
 
 <%= yield %>
 

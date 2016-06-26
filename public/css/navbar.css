@@ -1,0 +1,104 @@
+/*Yiran Rao 
+  CSS file for application navbar*/
+body {
+    background-color: #f2f2f2;
+    font-family: "MicrosoftYaHei Regular";
+    color: black;
+}
+
+.top {
+    position: absolute;
+    top: 0px;
+    width: 1680px;
+    background-color: white;
+    height: 30px;
+}
+
+nav .links a {
+    padding: 15px 16px;
+}
+
+nav {
+    position: absolute;
+    height: 90px;
+    top: 31px;
+    width: 1680px;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #58585B;
+    display:inline-block;
+}
+
+hr {
+    position: absolute;
+    top: 31px;
+    border: 1px solid #ececec;
+    width: 1680px;
+    color: #ececec;
+}
+
+.logo {
+    position: relative;
+    top: 31px;
+    height: 28px;
+    width: 192px;
+    left: 265px;
+}
+
+.links {
+    font-size: 14px;
+    color: #58585B;
+    position: relative;
+    left: 690px;
+    display:inline-block;
+    top: -7px;
+}
+
+.search_field{
+    width: 210px;
+    position: relative;
+    left: 35px;
+    height: 30px;
+    background-color: white;
+    display: inline-block;
+    margin:auto 0 auto auto;
+    text-align:left;
+    vertical-align: baseline;
+
+}
+
+#search {
+    position: relative;
+    left: 0px;
+    height: 30px;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    width: 170px;
+    vertical-align: baseline;
+}
+
+.search_field::after {
+    content: url("../img/homepage/search.png");
+    background-color: #c4261d;
+    height: 30px;
+    color: red;
+    width: 36px;
+    /*position: relative;*/
+    /*left: 0px;*/
+    /*vertical-align: baseline;*/
+}
+
+.welcomewords {
+    font-size: 11px;
+    display: inline-block;
+}
+
+.login {
+    font-size: 11px;
+    color: #c4261d;
+}
