@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20160628081014) do
     t.integer  "type_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.string   "image"
   end
 
   add_index "products", ["type_id"], name: "index_products_on_type_id"
