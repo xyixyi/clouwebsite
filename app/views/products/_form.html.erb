@@ -20,16 +20,12 @@
 
 <div class="well">
   <%= form_for @product, html: { multipart: true } do |f| %>
-    <%= f.label :productName %>
-    <%= f.text_field :productName %>
-    <%= f.label :synopsis %>
-    <%= f.text_field :synopsis %>
-    <%= f.label :detail %>
-    <%= f.text_field :detail %>
-    <%= f.label :attachedFiles %>
-    <%= f.text_field :attachedFiles %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
     <%= f.label :image %>
     <%= f.file_field :image %>
-    <%= f.submit "Save", class: "btn btn-primary" %>
+    <%= f.submit "保存", class: "btn btn-primary" %>
   <% end %>
 </div>

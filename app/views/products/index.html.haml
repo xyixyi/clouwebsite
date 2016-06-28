@@ -13,11 +13,12 @@
 %table
   %thead
     %tr
-      %th Productid
-      %th Productname
+      %th Name
+      %th Img
       %th Synopsis
       %th Detail
-      %th Attached files
+      %th Attachedfiles
+      %th Type
       %th
       %th
       %th
@@ -25,11 +26,12 @@
   %tbody
     - @products.each do |product|
       %tr
-        // %td= product.productId
-        %td= product.productName
+        %td= product.name
+        %td= product.image
         %td= product.synopsis
         %td= product.detail
         %td= product.attachedFiles
+        %td= product.type
         %td= link_to '详情', product
         %td= link_to '编辑', edit_product_path(product)
         %td= link_to '删除', product, :method => :delete, :data => { :confirm => '确定删除此产品?' }

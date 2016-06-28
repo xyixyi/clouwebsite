@@ -1,14 +1,14 @@
 %p#notice= notice
 
 %p
-  %b Typeid:
-  = @type.typeId
+  %b Name:
+  = @type.name
 %p
-  %b Typename:
-  = @type.typeName
+  %b Description:
+  = @type.description
 %p
-  %b Typedescription:
-  = @type.typeDescription
+  %b Category:
+  = @type.category
 
 = link_to 'Edit', edit_type_path(@type)
 \|

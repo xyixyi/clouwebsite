@@ -3,9 +3,9 @@
 %table
   %thead
     %tr
-      %th Typeid
-      %th Typename
-      %th Typedescription
+      %th Name
+      %th Description
+      %th Category
       %th
       %th
       %th
@@ -13,9 +13,9 @@
   %tbody
     - @types.each do |type|
       %tr
-        %td= type.typeId
-        %td= type.typeName
-        %td= type.typeDescription
+        %td= type.name
+        %td= type.description
+        %td= type.category
         %td= link_to 'Show', type
         %td= link_to 'Edit', edit_type_path(type)
         %td= link_to 'Destroy', type, :method => :delete, :data => { :confirm => 'Are you sure?' }
