@@ -1,0 +1,39 @@
+#bannerBtn { 
+    color:rgb(255, 255, 255);
+    font-size:19px;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:40px;
+    padding-right:40px;
+    border-width:0px;
+    border-color:
+    rgb(197, 229, 145);
+    border-style:solid;
+    border-radius:56px;
+    background-color:rgb(196, 38, 29);
+    letter-spacing: 2px;
+    position: relative;
+    top: 56%;
+    
+}
+
+#bannerBtn:hover{  
+    letter-spacing: 2px;
+    color:#ffffff;
+    background-color:#ae221a;
+    border-color:#ae221a;
+}
+
+.banner {
+    position: absolute;
+    top: 121px;
+    background-image: url("../img/homepage/banner_03.jpg") !important;
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}

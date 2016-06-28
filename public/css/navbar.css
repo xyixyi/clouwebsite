@@ -9,7 +9,8 @@ body {
 .top {
     position: absolute;
     top: 0px;
-    width: 1680px;
+    /*width: 1680px;*/
+    width: 100%;
     background-color: white;
     height: 30px;
 }
@@ -27,7 +28,8 @@ nav {
     position: absolute !important;
     height: 90px;
     top: 31px;
-    width: 1680px;
+    /*width: 1680px;*/
+    width: 100%;
     background-color: white;
 }
 
@@ -41,7 +43,8 @@ hr {
     position: absolute;
     top: 31px;
     border: 1px solid #ececec;
-    width: 1680px;
+    /*width: 1680px;*/
+    width: 100%;
     color: #ececec;
 }
 
@@ -49,8 +52,9 @@ hr {
     position: relative;
     top: 31px;
     height: 28px;
-    width: 192px;
-    left: 265px;
+    width: 11.4%;
+    /*left: 265px;*/
+    left: 15.8%;
 }
 
 .links {
@@ -63,7 +67,8 @@ hr {
 }
 
 .search_field{
-    width: 210px;
+    /*width: 210px;*/
+    width: 12.5%;
     position: relative;
     left: 35px;
     height: 30px;
@@ -83,7 +88,8 @@ hr {
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
-    width: 170px;
+    /*width: 170px;*/
+    width: 10.11%;
     vertical-align: baseline;
 }
 
@@ -100,29 +106,20 @@ hr {
     height: 30px;
 }
 
-.search_field::after {
-    content: url("../img/homepage/R_03.png");
-    background-color: #c4261d;
-    height: 30px;
-    color: red;
-    width: 36px;
-    border-radius: 3px;
-    /*position: relative;*/
-    /*left: 0px;*/
-    /*vertical-align: baseline;*/
-}
 
 .welcomewords {
     font-size: 11px;
     position: relative;
-    left: 265px;
+    /*left: 265px;*/
+    left: 15.8%;
     display: inline-block;
     top: 5.5px;
 }
 
 .login, .sign_out {
     position: relative;
-    left: 265px;
+    /*left: 265px;*/
+    left: 15.8%;
     font-size: 11px;
     color: #c4261d;
     top:5.5px;
@@ -133,6 +130,7 @@ hr {
     position: relative;
     display: inline-block;
     font-size: 11px;
-    right: 265px;
+    /*right: 265px;*/
+    right: 15.8%;
     top: 9px;
 }
