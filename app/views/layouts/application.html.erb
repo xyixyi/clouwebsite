@@ -8,6 +8,7 @@
   
   <!--Navbar CSS File-->
   <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+
 </head>
 <body>
 <!--This is for devise gem-->
@@ -15,18 +16,19 @@
 <p class="alert"><%= alert %></p>
 
 <!--Create the login button to allow user to sign in -->
+
 <div class="top">
   <% if current_user %> 
   <!--not tested Yiran -->
-    <%= link_to "登出", destroy_user_session_path, method: :delete, class: "sign_out" %>
+    <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
   <% else %> 
     <p class="welcomewords">
     欢迎来到深圳市科陆电子科技有限公司，请
   </p>
     <%= link_to "登录", new_user_session_path, class: "login" %>
     <p class="welcomewords">或</p>
-    <%= link_to "注册", new_user_registration_path, class: "login"%>
-  
+    <%= link_to "注册", new_user_registration_path, class: "login" %>
+  <%end%>
   <%= link_to "| EN", "/", class: "language_link" %>
   <a href="/" class="language_link" style="color: #c4261d;">CN&nbsp;</a>
 </div>
@@ -58,6 +60,8 @@
   </span>
       
 </nav>
+
+
 
 
 
