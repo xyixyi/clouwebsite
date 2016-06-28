@@ -13,7 +13,7 @@
  
 <p>
   <strong>产品:</strong>
-  <%= @product.productName %>
+  <%= @product.name %>
 </p>
  
 <p>
@@ -23,7 +23,7 @@
  
 <p>
   <strong>图片:</strong>
-  <%= image_tag @product.image.url %>
+  <%= image_tag @product.img %>
 </p>
  
 <%= link_to '编辑', edit_product_path(@product) %> |
