@@ -11,18 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624063215) do
+ActiveRecord::Schema.define(version: 20160628093818) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "categoryName"
-    t.string   "categoryImg"
-    t.string   "categoryDescription"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
-  create_table "major_products", force: :cascade do |t|
-    t.integer  "categoryId"
     t.string   "categoryName"
     t.string   "categoryImg"
     t.string   "categoryDescription"
@@ -37,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160624063215) do
     t.string   "attachedFiles"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "image"
   end
 
   create_table "types", force: :cascade do |t|

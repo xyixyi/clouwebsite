@@ -1,0 +1,43 @@
+<!--Title of Home page-->
+
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<br />
+<%= link_to "别点这个没用只是怕被挡住了", new_product_path, class: "btn btn-primary" %>
+<br />
+<br />
+<%= link_to "别点这个没用只是怕被挡住了", new_product_path, class: "btn btn-primary" %>
+<br />
+<br />
+<%= link_to "别点这个没用只是怕被挡住了", new_product_path, class: "btn btn-primary" %>
+<br />
+
+<br />
+<%= link_to "上传图片", new_product_path, class: "btn btn-primary" %>
+<br />
+
+
+<br />
+<table class="table">
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>下载链接</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.productName %></td>
+        <td><%= link_to "下载图片", product.image_url %></td>
+        <td><%= button_to "删除",  product, method: :delete, class: "btn btn-danger", confirm: "确定删除 #{product.productName}?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

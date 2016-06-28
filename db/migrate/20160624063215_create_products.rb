@@ -5,6 +5,9 @@ class CreateProducts < ActiveRecord::Migration
       t.string :synopsis
       t.string :detail
       t.string :attachedFiles
+      # added by xy
+      t.string :image
+      t.string :productId
 
       t.timestamps null: false
     end

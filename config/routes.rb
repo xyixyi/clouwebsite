@@ -69,4 +69,8 @@ Rails.application.routes.draw do
   get 'cn_about_us', :to => 'mainframe#cn_about_us', :format => false
   get 'cn_supplier', :to => 'mainframe#cn_supplier', :format => false
   get '/', :to => 'mainframe#cn_index', :format => false
+  
+  
+  # below code for testing uploading function
+  get 'example', :to => 'products#example_upload', :format => false
 end
