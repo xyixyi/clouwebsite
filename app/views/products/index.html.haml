@@ -3,11 +3,12 @@
 %table
   %thead
     %tr
-      %th Productid
-      %th Productname
+      %th Name
+      %th Img
       %th Synopsis
       %th Detail
       %th Attachedfiles
+      %th Type
       %th
       %th
       %th
@@ -15,11 +16,12 @@
   %tbody
     - @products.each do |product|
       %tr
-        %td= product.productId
-        %td= product.productName
+        %td= product.name
+        %td= product.img
         %td= product.synopsis
         %td= product.detail
         %td= product.attachedFiles
+        %td= product.type
         %td= link_to 'Show', product
         %td= link_to 'Edit', edit_product_path(product)
         %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -6,7 +6,21 @@ RailsAdmin.config do |config|
   config.authorize_with do
     redirect_to main_app.root_path unless current_user.admin == true
   end
+  
+  # config.model 'Category' do
+  #   configure :type, :belongs_to_association
+  #     list do
+  #       field :typeName do
+  #           label "Type Name"
+  #       end
+  #       field :typeDescription do
+  #           label "Type Description"
+  #       end
+  #     end
+  #   end
+
   end
+  
   
   ## == Devise ==
   # config.authenticate_with do
