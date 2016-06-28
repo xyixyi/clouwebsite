@@ -117,6 +117,7 @@ hr {
     position: relative;
     left: 265px;
     display: inline-block;
+    top: 5.5px;
 }
 
 .login, .sign_out {
