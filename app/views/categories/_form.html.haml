@@ -7,16 +7,13 @@
           %li= msg
 
   .field
-    = f.label :id
-    = f.number_field :id
+    = f.label :name
+    = f.text_field :name
   .field
-    = f.label :categoryName
-    = f.text_field :categoryName
+    = f.label :img
+    = f.text_field :img
   .field
-    = f.label :categoryImg
-    = f.text_field :categoryImg
-  .field
-    = f.label :categoryDescription
-    = f.text_field :categoryDescription
+    = f.label :description
+    = f.text_field :description
   .actions
     = f.submit 'Save'

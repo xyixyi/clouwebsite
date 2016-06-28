@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :products
   resources :types
   resources :categories
+  resources :products
   devise_for :users
   root "mainframe#cn_index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -57,8 +58,7 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     #   end
   
   get 'cn_mainframe', :to => 'mainframe#cn_index', :format => false
   get 'cn_join_us', :to => 'mainframe#cn_join_us', :format => false
@@ -69,4 +69,8 @@ Rails.application.routes.draw do
   get 'cn_about_us', :to => 'mainframe#cn_about_us', :format => false
   get 'cn_supplier', :to => 'mainframe#cn_supplier', :format => false
   get '/', :to => 'mainframe#cn_index', :format => false
+  
+  
+  # below code for testing uploading function
+  get 'example', :to => 'products#example_upload', :format => false
 end

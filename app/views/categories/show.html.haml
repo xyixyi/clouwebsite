@@ -1,17 +1,14 @@
 %p#notice= notice
 
 %p
-  %b Id:
-  = @category.id
+  %b Name:
+  = @category.name
 %p
-  %b Categoryname:
-  = @category.categoryName
+  %b Img:
+  = @category.img
 %p
-  %b Categoryimg:
-  = @category.categoryImg
-%p
-  %b Categorydescription:
-  = @category.categoryDescription
+  %b Description:
+  = @category.description
 
 = link_to 'Edit', edit_category_path(@category)
 \|

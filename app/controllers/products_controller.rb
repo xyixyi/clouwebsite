@@ -60,15 +60,20 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def example_upload
+    @products = Product.all
+  end
 
-  private
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
     end
-
+    
+private
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:productId, :productName, :synopsis, :detail, :attachedFiles)
+      params.require(:product).permit(:name, :image, :synopsis, :detail, :attachedFiles, :type_id)
     end
 end

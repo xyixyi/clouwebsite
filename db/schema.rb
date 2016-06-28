@@ -11,40 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624063215) do
+ActiveRecord::Schema.define(version: 20160628081014) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "categoryName"
-    t.string   "categoryImg"
-    t.string   "categoryDescription"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
-  create_table "major_products", force: :cascade do |t|
-    t.integer  "categoryId"
-    t.string   "categoryName"
-    t.string   "categoryImg"
-    t.string   "categoryDescription"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "name"
+    t.string   "img"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "productName"
+    t.string   "name"
+    t.string   "img"
     t.string   "synopsis"
     t.string   "detail"
     t.string   "attachedFiles"
+    t.integer  "type_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "image"
   end
 
+  add_index "products", ["type_id"], name: "index_products_on_type_id"
+
   create_table "types", force: :cascade do |t|
-    t.string   "typeName"
-    t.string   "typeDescription"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.string   "description"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "types", ["category_id"], name: "index_types_on_category_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

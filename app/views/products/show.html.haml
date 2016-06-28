@@ -1,11 +1,11 @@
 %p#notice= notice
 
 %p
-  %b Productid:
-  = @product.productId
+  %b Name:
+  = @product.name
 %p
-  %b Productname:
-  = @product.productName
+  %b Img:
+  = @product.img
 %p
   %b Synopsis:
   = @product.synopsis
@@ -15,6 +15,9 @@
 %p
   %b Attachedfiles:
   = @product.attachedFiles
+%p
+  %b Type:
+  = @product.type
 
 = link_to 'Edit', edit_product_path(@product)
 \|

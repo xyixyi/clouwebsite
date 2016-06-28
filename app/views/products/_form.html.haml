@@ -1,25 +1,19 @@
-= form_for @product do |f|
-  - if @product.errors.any?
+= form_for @category do |f|
+  - if @category.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      %h2= "#{pluralize(@category.errors.count, "error")} prohibited this category from being saved:"
       %ul
-        - @product.errors.full_messages.each do |msg|
+        - @category.errors.full_messages.each do |msg|
           %li= msg
 
   .field
-    = f.label :productId
-    = f.number_field :productId
+    = f.label :name
+    = f.text_field :name
   .field
-    = f.label :productName
-    = f.text_field :productName
+    = f.label :img
+    = f.text_field :img
   .field
-    = f.label :synopsis
-    = f.text_field :synopsis
-  .field
-    = f.label :detail
-    = f.text_field :detail
-  .field
-    = f.label :attachedFiles
-    = f.text_field :attachedFiles
+    = f.label :description
+    = f.text_field :description
   .actions
     = f.submit 'Save'
