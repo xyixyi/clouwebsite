@@ -18,8 +18,13 @@ nav .links a {
     padding: 15px 16px;
 }
 
+a:hover {
+    text-decoration: none !important;
+    color: #c4261d;
+}
+
 nav {
-    position: absolute;
+    position: absolute !important;
     height: 90px;
     top: 31px;
     width: 1680px;
@@ -82,12 +87,26 @@ hr {
     vertical-align: baseline;
 }
 
+.language_slash {
+    display: inline-block;
+    position: relative;
+    float: right;
+    font-size: 10px;
+}
+
+.search_btn {
+    background-image: url("../img/homepage/R_03.png") !important;
+    width: 36px;
+    height: 30px;
+}
+
 .search_field::after {
-    content: url("../img/homepage/search.png");
+    content: url("../img/homepage/R_03.png");
     background-color: #c4261d;
     height: 30px;
     color: red;
     width: 36px;
+    border-radius: 3px;
     /*position: relative;*/
     /*left: 0px;*/
     /*vertical-align: baseline;*/
@@ -95,10 +114,24 @@ hr {
 
 .welcomewords {
     font-size: 11px;
+    position: relative;
+    left: 265px;
     display: inline-block;
 }
 
-.login {
+.login, .sign_out {
+    position: relative;
+    left: 265px;
     font-size: 11px;
     color: #c4261d;
+    top:5.5px;
+}
+
+.language_link {
+    float: right;
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    right: 265px;
+    top: 9px;
 }

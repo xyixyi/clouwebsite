@@ -3,6 +3,8 @@
 <head>
   <title>Clouwebsite</title>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   
   <!--Navbar CSS File-->
   <link rel="stylesheet" type="text/css" href="/css/navbar.css">
@@ -17,14 +19,18 @@
 
 <div class="top">
   <% if current_user %> 
-    <%= link_to "登出", destroy_user_session_path, method: :delete %>
+  <!--not tested Yiran -->
+    <%= link_to "登出", destroy_user_session_path, method: :delete, class: "sign_out" %>
   <% else %> 
     <p class="welcomewords">
     欢迎来到深圳市科陆电子科技有限公司，请
   </p>
     <%= link_to "登录", new_user_session_path, class: "login" %>
     <p class="welcomewords">或</p>
+    <%= link_to "注册", new_user_registration_path, class: "login" %>
   <%end%>
+  <%= link_to "| EN", "/", class: "language_link" %>
+  <a href="/" class="language_link" style="color: #c4261d;">CN&nbsp;</a>
 </div>
 <hr>
 
@@ -40,15 +46,15 @@
     <a id="products" href="/cn_products">产品</a>
     <a id="plans" href="/cn_plans">方案</a>
     <a id="service" href="/cn_service">技术支持</a>
-    <a id="aboutus" href="/cn_about_us">关于科陆</a>
+    <a id="aboutus" href="/cn_about_us">关于我们</a>
+    <a id="supplier" href="/cn_supplier">合作伙伴</a>
 
-    <div class="search_field">
-      <input id="search" name="search" type="search"/>
-      <!--<img border="0" alt="searchImg" src="/img/homepage/search.png" class="searchImg" width="15" height="15">-->
-      <div class="searchImg">
-        
-      </div>
+<form class="navbar-form navbar-right" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" style="width:170px;height:30px;margin-left:20px;">
     </div>
+    <button type="submit" class="btn btn-default search_btn" style="border-radius:3px; margin-left: -5px;"></button>
+</form>
     
 
   </span>

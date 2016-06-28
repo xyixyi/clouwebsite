@@ -67,5 +67,6 @@ Rails.application.routes.draw do
   get 'cn_products', :to => 'mainframe#cn_products', :format => false
   get 'cn_service', :to => 'mainframe#cn_service', :format => false
   get 'cn_about_us', :to => 'mainframe#cn_about_us', :format => false
+  get 'cn_supplier', :to => 'mainframe#cn_supplier', :format => false
   get '/', :to => 'mainframe#cn_index', :format => false
 end
