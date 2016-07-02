@@ -3,13 +3,14 @@
 body {
     background-color: #f2f2f2;
     font-family: "MicrosoftYaHei Regular";
-    color: black;
+    color: #808080;
+    
 }
 
 .top {
-    position: absolute;
-    top: 0px;
-    /*width: 1680px;*/
+    position: relative;
+    margin-top: -65px;
+    padding: 0px;
     width: 100%;
     background-color: white;
     height: 30px;
@@ -40,10 +41,12 @@ a {
 }
 
 hr {
-    position: absolute;
-    top: 31px;
+    position: relative;
+    /* padding: 0px; */
+    margin: auto;
+    /* margin-top: -65px; */
     border: 1px solid #ececec;
-    /*width: 1680px;*/
+    /* width: 1680px; */
     width: 100%;
     color: #ececec;
 }
