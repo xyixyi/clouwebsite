@@ -37,3 +37,80 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.quick_access {
+    width: 100%;
+    Height: 230px;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 620px;
+    display: inline-block;
+}
+
+.quick_access * {
+     box-sizing: border-box;
+}
+
+h1 {
+    color: #565A56;
+    font-family: CiscoSans,"HelveticaNeue-Light","Helvetica Neue Light",HelveticaNeueLight,HelveticaNeue,Helvetica,Arial,"Nimbus Sans L",sans-serif;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    font-weight: 200;
+}
+
+.quick_access li {
+    display: inline-block;
+    margin: 0 51px;
+    margin-top: 10px;
+    color: #7B8B80;
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+    margin-bottom: 0;
+}
+
+.quick_access ul {
+    display: inline;
+    float: left;
+    text-align: center;
+    padding: 0px;
+    width: 52%;
+    position: absolute;
+    margin-bottom: 0;
+    transform: translate(50%, 50%);
+    margin: 0px;
+}
+
+
+.one {
+    background-image: url("../img/homepage/fast_one.png");
+}
+
+.two {
+    background-image: url("../img/homepage/fast_two.png");
+}
+
+.three {
+    background-image: url("../img/homepage/fast_three.png");
+}
+
+.four {
+    background-image: url("../img/homepage/fast_four.png");
+}
+
+.quickicon {
+    height: 54px;
+    width: 54px;
+}
+
+.news {
+    position: absolute;
+    width: 100%;
+    top: 851px;
+    height: 440px;
+    background-color: white;
+    display: inline-block;
+}

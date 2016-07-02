@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160628081014) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.string   "img"
+    t.string   "image"
     t.string   "synopsis"
     t.string   "detail"
     t.string   "attachedFiles"
