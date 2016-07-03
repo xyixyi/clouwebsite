@@ -211,11 +211,13 @@ h1 {
 .carousel-indicators li {
     border: 1px solid gray;
     background-color: gray;
+    margin-left: 10px;
 }
 
 .carousel-indicators .active {
     background-color: transparent;
     width: 10px;
+    margin: 0px;
     height: 10px;
 }
 
@@ -227,4 +229,53 @@ h1 {
     background: transparent;
 }
 
+.carousel-inner {
+    height: 270px;
+    top: 140px;
+    padding: 0 50px;
+}
 
+.glyphicon-menu-right {
+    float: right;
+    right: 20px;
+}
+
+.glyphicon-menu-left {
+    float: left;
+    left: 20px;
+}
+
+.carousel-control.left {
+    height: 100px;
+    margin: auto;
+}
+
+.carousel-control.right {
+    height: 100px;
+    margin: auto;
+}
+.glyphicon {
+    top: 40px;
+}
+
+.carousel-control {
+    width: 50px;
+}
+
+h4 {
+    font-size: 30px;
+    color: #565A56;
+    text-align: center;
+}
+
+.carousel-outer {
+    position: relative;
+    top: 60px;
+    text-align: center;
+}
+
+.allproduct {
+    text-align: center;
+    font-size: 13px;
+    color: #C4261D;
+}
