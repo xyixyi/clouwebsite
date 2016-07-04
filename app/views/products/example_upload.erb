@@ -35,7 +35,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= link_to "下载图片", product.img %></td>
+        <td><%= link_to "下载图片", product.image_url %></td>
         <td><%= button_to "删除",  product, method: :delete, class: "btn btn-danger", confirm: "确定删除 #{product.name}?" %></td>
       </tr>
     <% end %>
