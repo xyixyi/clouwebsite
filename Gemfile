@@ -10,6 +10,9 @@ gem 'rails', '4.2.5'
 
 gem 'devise'
 
+#for devise translation
+gem 'devise-i18n'
+
 # admin 
 gem 'rails_admin'
 

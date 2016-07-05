@@ -127,6 +127,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.1.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.20160615)
@@ -435,6 +436,7 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   devise
+  devise-i18n
   elasticsearch-model
   elasticsearch-rails
   factory_girl_rails
