@@ -6,7 +6,7 @@ Rails.application.routes.draw do
      end
   end
   devise_for :users
-  root "mainframe#cn_index"
+  root "mainframe#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -61,15 +61,15 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     #   end
   
-  get 'cn_mainframe', :to => 'mainframe#cn_index', :format => false
-  get 'cn_join_us', :to => 'mainframe#cn_join_us', :format => false
-  get 'cn_news', :to => 'mainframe#cn_news', :format => false
-  get 'cn_plans', :to => 'mainframe#cn_plans', :format => false
-  get 'cn_products', :to => 'mainframe#cn_products', :format => false
-  get 'cn_service', :to => 'mainframe#cn_service', :format => false
-  get 'cn_about_us', :to => 'mainframe#cn_about_us', :format => false
-  get 'cn_supplier', :to => 'mainframe#cn_supplier', :format => false
-  get '/', :to => 'mainframe#cn_index', :format => false
+  get 'mainframe', :to => 'mainframe#index', :format => false
+  get 'join_us', :to => 'mainframe#join_us', :format => false
+  get 'news', :to => 'mainframe#news', :format => false
+  get 'plans', :to => 'mainframe#plans', :format => false
+  get 'products', :to => 'mainframe#products', :format => false
+  get 'service', :to => 'mainframe#service', :format => false
+  get 'about_us', :to => 'mainframe#about_us', :format => false
+  get 'supplier', :to => 'mainframe#supplier', :format => false
+  get '/', :to => 'mainframe#index', :format => false
   
   
   # below code for testing uploading function
