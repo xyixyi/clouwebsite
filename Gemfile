@@ -10,7 +10,11 @@ gem 'rails', '4.2.5'
 
 gem 'devise'
 
+# admin 
 gem 'rails_admin'
+
+# admin authentication
+gem 'cancancan', '~> 1.10'
 
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets

@@ -3,9 +3,13 @@ RailsAdmin.config do |config|
   ### Popular gems integration
   
   RailsAdmin.config do |config|
-  config.authorize_with do
-    redirect_to main_app.root_path unless current_user.admin == true
-  end
+  # config.authorize_with do
+  #   # redirect_to main_app.root_path unless current_user.admin == true
+  # end
+  
+    config.authorize_with :cancan # add cancancan to rails_admin config
+    config.current_user_method { current_user } # set up the initializer to current user
+  # config.current_user_method = :current_user
   
   # config.model 'Category' do
   #   configure :type, :belongs_to_association
