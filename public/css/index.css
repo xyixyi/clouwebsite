@@ -347,7 +347,7 @@ h4 {
 .news-container li {
     margin: 25px;
     display: inline-block;
-    width: 330px;
+    width: 20%;
     position: relative;
 }
 
@@ -386,5 +386,31 @@ h4 {
 .logo-field {
     text-align: center;
     background-color: transparent;
+    position: relative;
+    width: 1300px;
+    height: 70px;
+    margin: auto;
+    top: 100px;
+}
+
+.child {
+    width: 246px;
+    height: 70px;
+    margin: 0 31px;
+}
+
+.nextlogo {
+    background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
+    float: right;
+    top: 120px;
+    right: 10%;
+    position: relative;
+}
+
+.prevlogo {
+    background: url(../img/homepage/newsarrowleft.png) no-repeat 6px center;
+    float: left;
+    top: 120px;
+    left: 10%;
     position: relative;
 }
