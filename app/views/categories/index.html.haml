@@ -4,7 +4,6 @@
   %thead
     %tr
       %th Name
-      %th Img
       %th Description
       %th
       %th
@@ -14,7 +13,6 @@
     - @categories.each do |category|
       %tr
         %td= category.name
-        %td= category.img
         %td= category.description
         %td= link_to 'Show', category
         %td= link_to 'Edit', edit_category_path(category)

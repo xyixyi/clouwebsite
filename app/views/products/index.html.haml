@@ -1,16 +1,12 @@
 %h1 Listing products
-header
-header
-header
+
 %table
   %thead
     %tr
       %th Name
-      %th Img
       %th Synopsis
       %th Detail
-      %th Attachedfiles
-      %th TypeId
+      %th Type
       %th
       %th
       %th
@@ -19,15 +15,13 @@ header
     - @products.each do |product|
       %tr
         %td= product.name
-        %td= product.image
         %td= product.synopsis
         %td= product.detail
-        %td= product.attachedFiles
-        %td= product.type_id
-        %td= link_to '详情', product
-        %td= link_to '编辑', edit_product_path(product)
-        %td= link_to '删除', product, :method => :delete, :data => { :confirm => '确定删除此产品?' }
+        %td= product.Type
+        %td= link_to 'Show', product
+        %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to '添加产品', new_product_path
+= link_to 'New Product', new_product_path
