@@ -1,6 +1,97 @@
 RailsAdmin.config do |config|
+  # config.authorize_with do
+  #   # redirect_to main_app.root_path unless current_user.admin == true
+  # end
+  config.model Category do
+    list do
+      field :name do
+        label "名称"
+      end
+      field :description do
+        label "简介"
+      end
+    end
+    edit do 
+      field :name do
+        label "名称"
+      end
+      field :description do
+        label "简介"
+      end
+    end
+  end
+  
+  config.model Type do
+    parent Category 
+    list do 
+      field :name do
+        label "名称"
+      end
+      field :description do
+        label "简介"
+      end
+      field :Category_id, :enum do
+        label "产品大类"
+        enum do
+          Category.all.collect {|p| [p.name, p.id]}
+        end
+      end
+    end
+    edit do
+      field :name do
+        label "名称"
+      end
+      field :description do
+        label "简介"
+      end
+      field :Category_id, :enum do
+        label "产品大类"
+        enum do
+          Category.all.collect {|p| [p.name, p.id]}
+        end
+      end
+    end
+  end
+  
+  config.model Product do
+    parent Type
+    list do 
+      field :name do
+        label "名称"
+      end
+      field :synopsis do
+        label "梗概"
+      end
+      field :detail do
+        label "细节"
+      end
+      field :Type_id, :enum do
+        label "产品小类"
+        enum do
+          Type.all.collect {|p| [p.name, p.id]}
+        end
+      end
+    end
+    
+    edit do 
+      field :name do
+        label "名称"
+      end
+      field :synopsis do
+        label "梗概"
+      end
+      field :detail do
+        label "细节"
+      end
+      field :Type_id, :enum do
+        label "产品小类"
+        enum do
+          Type.all.collect {|p| [p.name, p.id]}
+        end
+      end
+    end
+  end
 
-  ### Popular gems integration
 
   ## == Devise ==
   # config.authenticate_with do
@@ -9,8 +100,9 @@ RailsAdmin.config do |config|
   # config.current_user_method(&:current_user)
 
   ## == Cancan ==
-  # config.authorize_with :cancan
-
+  config.authorize_with :cancan # add cancancan to rails_admin config
+  config.current_user_method { current_user } # set up the initializer to current 
+  
   ## == Pundit ==
   # config.authorize_with :pundit
 
