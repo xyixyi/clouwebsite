@@ -1,0 +1,39 @@
+h4 {
+    float: left;
+}
+
+body {
+    background-color: white;
+}
+
+.carousel-outer
+{
+    top: 40px;
+}
+
+.allcategory {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 115px;
+}
+
+.hotline {
+    float: right;
+    margin-top: 20px;
+    color: #c4261d;
+}
+
+.cell {
+    width: 40%;
+    margin: 0 4%;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.allproduct {
+    width: 100%;
+    line-height: 50px;
+}
