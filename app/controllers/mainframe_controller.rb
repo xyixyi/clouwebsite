@@ -8,7 +8,7 @@ class MainframeController < ApplicationController
   end
 
   def index
-
+    @products = Product.all
   end
 
   def new

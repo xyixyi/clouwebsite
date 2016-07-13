@@ -105,46 +105,40 @@
     
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
+          <% i = 1 %>
+          <% @products.each do |product| %>
+            <% if i == 1%>
     
-          <div class="item active">
-            <img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">
-            <div class="carousel-caption">
-              <a href="/" class="h3">Product</a>
-              <p>你的意思是图片能百分百显示在容器里，这个容器可以是table的td,也可以是DIV。以下用div做容器来说明。
-                图片随页面的变化而变化，那么最好把div的宽度设置成百分比，而不是像素，这样div就不会被固定大小，从而能自适应页面的大小。
-            </p>
-            </div>
-          </div>
-    
-          <div class="item">
-            <img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">
-            <div class="carousel-caption">
-              <a href="/" class="h3">Product</a>
-              <p>你的意思是图片能百分百显示在容器里，这个容器可以是table的td,也可以是DIV。以下用div做容器来说明。
-                图片随页面的变化而变化，那么最好把div的宽度设置成百分比，而不是像素，这样div就不会被固定大小，从而能自适应页面的大小。
-            </p>
-            </div>
-          </div>
-        
-          <div class="item">
-            <img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">
-            <div class="carousel-caption">
-              <a href="/" class="h3">Product</a>
-              <p>你的意思是图片能百分百显示在容器里，这个容器可以是table的td,也可以是DIV。以下用div做容器来说明。
-                图片随页面的变化而变化，那么最好把div的宽度设置成百分比，而不是像素，这样div就不会被固定大小，从而能自适应页面的大小。
-            </p>
-            </div>
-          </div>
-    
-          <div class="item">
-            <img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">
-            <div class="carousel-caption">
-              <a href="/" class="h3">Product</a>
-              <p>你的意思是图片能百分百显示在容器里，这个容器可以是table的td,也可以是DIV。以下用div做容器来说明。
-                图片随页面的变化而变化，那么最好把div的宽度设置成百分比，而不是像素，这样div就不会被固定大小，从而能自适应页面的大小。
-            </p>
-            </div>
-          </div>
+              <div class="item active">
+                <!--<img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">-->
+                <% if product.image.nil? %>
+                  <img class="productimg" src="img/homepage/testproduct.png" alt="product">
+                <%else%>
+                  <%= image_tag product.image, class:"productimg"%>
+                <%end%>
+                <div class="carousel-caption">
+                  <!--这里要能点进去-->
+                  <a href="/" class="h3">Product</a>
+                  <p><%= product.synopsis %></p>
+                </div>
+              </div>
+            <%else%>
+      
+              <div class="item">
+                <% if product.image.nil? %>
+                  <img class="productimg" src="img/homepage/testproduct.png" alt="product">
+                <%else%>
+                  <%= image_tag product.image, class:"productimg"%>
+                <%end%>
+                <div class="carousel-caption">
+                  <!--这里要能点进去-->
+                  <a href="/" class="h3">Product</a>
+                <p><%= product.synopsis %></p>
+                </div>
+              </div>
+            <%end%>
+            <%i+=1%>
+          <%end%>
       
         </div>
     

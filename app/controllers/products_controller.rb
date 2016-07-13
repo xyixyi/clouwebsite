@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @categories = Category.all
   end
 
   # GET /products/1
@@ -60,6 +61,13 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # show image
+  def show_image
+    @category_for_img = Category.find(params[:id])
+    send_data @category_for_img.image, :type => 'image/png',:disposition => 'inline'
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
