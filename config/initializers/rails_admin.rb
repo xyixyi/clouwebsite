@@ -18,6 +18,9 @@ RailsAdmin.config do |config|
       field :description do
         label "简介"
       end
+      field :image, :carrierwave do
+        label "图片"
+      end
     end
   end
   
@@ -49,6 +52,9 @@ RailsAdmin.config do |config|
         enum do
           Category.all.collect {|p| [p.name, p.id]}
         end
+      end
+      field :image, :carrierwave do
+        label "图片"
       end
     end
   end
