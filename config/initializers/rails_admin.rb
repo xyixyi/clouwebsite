@@ -65,6 +65,14 @@ RailsAdmin.config do |config|
       field :detail do
         label "细节"
       end
+      
+      field :category_id, :enum do
+        label "产品大类"
+        enum do 
+          Category.all.collect {|p| [p.name, p.id]}
+        end
+      end
+      
       field :Type_id, :enum do
         label "产品小类"
         enum do
@@ -83,6 +91,14 @@ RailsAdmin.config do |config|
       field :detail do
         label "细节"
       end
+      
+      field :category_id, :enum do
+        label "产品大类"
+        enum do 
+          Category.all.collect {|p| [p.name, p.id]}
+        end
+      end
+      
       field :Type_id, :enum do
         label "产品小类"
         enum do
