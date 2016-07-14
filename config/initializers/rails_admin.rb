@@ -15,8 +15,11 @@ RailsAdmin.config do |config|
       field :name do
         label "名称"
       end
-      field :description do
+      field :description, :text do
         label "简介"
+        html_attributes do
+          {:maxlength => 600}
+        end
       end
       field :image, :carrierwave do
         label "图片"
@@ -44,8 +47,11 @@ RailsAdmin.config do |config|
       field :name do
         label "名称"
       end
-      field :description do
+      field :description, :text do
         label "简介"
+        html_attributes do
+          {:maxlength => 600}
+        end
       end
       field :Category_id, :enum do
         label "产品大类"
@@ -94,8 +100,11 @@ RailsAdmin.config do |config|
       field :synopsis do
         label "梗概"
       end
-      field :detail do
+      field :detail, :text do
         label "细节"
+        html_attributes do
+          {:maxlength => 600}
+        end
       end
       
       field :category_id, :enum do
