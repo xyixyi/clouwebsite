@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   get 'join_us', :to => 'mainframe#join_us', :format => false
   get 'news', :to => 'mainframe#news', :format => false
   get 'plans', :to => 'mainframe#plans', :format => false
-  get 'products', :to => 'products#index', :format => false
+  get 'products', :to => 'mainframe#alltypes', :format => false
   get 'service', :to => 'mainframe#service', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false
   get 'supplier', :to => 'mainframe#supplier', :format => false
