@@ -10,6 +10,11 @@ class MainframeController < ApplicationController
   def index
     @products = Product.all
   end
+  
+  def products
+    @products = Product.all
+    @categories = Category.all
+  end
 
   def new
   end

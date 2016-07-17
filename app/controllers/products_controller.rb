@@ -1,11 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :js
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-    @categories = Category.all
+    find_products
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /products/1
@@ -71,6 +74,19 @@ class ProductsController < ApplicationController
   def show_image
     @category_for_img = Category.find(params[:id])
     send_data @category_for_img.image, :type => 'image/png',:disposition => 'inline'
+  end
+  
+  #dynamic load product belone to type
+  def find_products
+    if params[:type_id]
+      @products = Type.find(params[:type_id]).products
+      @products.each do |product|
+        print product.name
+      end
+    else
+      # Error or @lessons = Lesson.all
+      @products = nil
+    end
   end
 
 

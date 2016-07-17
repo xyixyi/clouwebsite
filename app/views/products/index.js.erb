@@ -1,0 +1,22 @@
+$(function () {
+  var where = $(".right")
+  where.empty() 
+  where.append('d');
+  <% @products.each do  |product| %>
+    
+    $('.products_list').append('
+    <li>
+      <%= product.name%>
+      
+    </li>');
+    
+  <% end %>
+})
+
+    
+    
+        <!--      <div class="text-field">-->
+        <!--    <a class="producttitle" href="/">智能用电系统</a>-->
+
+        <!--  </div>-->
+        <!--</div>-->

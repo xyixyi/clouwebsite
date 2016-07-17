@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :categories do 
-     resources :types do 
-       resources :products
-     end
+
+  resources :types do
+    resources :products
   end
+  resources :categories
+  # resources :categories do 
+  #   resources :types do 
+  #     resources :products
+  #   end
+  # end
   devise_for :users
   root "mainframe#index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -64,7 +69,7 @@ Rails.application.routes.draw do
   get 'join_us', :to => 'mainframe#join_us', :format => false
   get 'news', :to => 'mainframe#news', :format => false
   get 'plans', :to => 'mainframe#plans', :format => false
-  get 'products', :to => 'mainframe#alltypes', :format => false
+  get 'products_main', :to => 'mainframe#products', :format => false
   get 'service', :to => 'mainframe#service', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false
   get 'supplier', :to => 'mainframe#supplier', :format => false

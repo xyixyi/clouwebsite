@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @category = Category.find(params[:id])
   end
 
   # GET /categories/new
@@ -50,6 +51,8 @@ class CategoriesController < ApplicationController
       end
     end
   end
+  
+
 
   # DELETE /categories/1
   # DELETE /categories/1.json
