@@ -62,7 +62,6 @@ h5 {
     position: relative;
     color: #211c19;
     font-size: 24px;
-    
 }
 
 .hr {
@@ -112,7 +111,7 @@ h6 {
 .product {
     width: 100%;
     position: relative;
-    height: 10%;
+    height: 150px;
     margin-top: 2%;
 }
 
@@ -136,7 +135,7 @@ h6 {
 .producttitle {
     color: #211c19;
     font-size: 14px;
-    
+    margin-bottom: 20px;
 }
 
 .productdiscription {
@@ -145,4 +144,19 @@ h6 {
 
 .right li {
     list-style-type: none;
+}
+
+.products_list {
+    padding: 0;
+}
+
+p.producttext {
+    height: 90px;
+    line-height: 22px;
+    overflow: hidden;   
+}
+
+a.visited{
+    color:#c4261d;
+    text-decoration: none;
 }

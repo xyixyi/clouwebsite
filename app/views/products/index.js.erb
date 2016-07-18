@@ -1,22 +1,15 @@
 $(function () {
-  var where = $(".right")
-  where.empty() 
-  where.append('d');
-  <% @products.each do  |product| %>
-    
-    $('.products_list').append('
-    <li>
-      <%= product.name%>
-      
-    </li>');
-    
+  var where = $(".products_list");
+  where.empty();
+  $(".title").empty();
+  $(".title").append("<h6><%= @current_type.name%></h6><hr class='righthr'>");
+  
+  <% if @products != nil%>
+    <% @products.each do |product| %>
+      <!--ajax-->
+      <% print product.name+"123"%>
+      where.append('<li><div class="product"><%= image_tag product.image, class:"productimage"%><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id, class: "producttitle"))%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
+    <%end%>
   <% end %>
 })
 
-    
-    
-        <!--      <div class="text-field">-->
-        <!--    <a class="producttitle" href="/">智能用电系统</a>-->
-
-        <!--  </div>-->
-        <!--</div>-->

@@ -3,30 +3,41 @@
     <h5><%= @category.name%></h5>
     <hr class="hr">
     <ul>
+        <% counter = 1%>
         <% @category.types.each do |type| %>
         <li>
-
-            <%= link_to(type.name, type_products_path(type), remote: :true, class: "typeslink") %>
+            <% if counter == 1%>
+                <%= link_to(type.name, type_products_path(type), remote: :true, id: "first_field", class: "typeslink") %>
+            <% else %>
+                <%= link_to(type.name, type_products_path(type), remote: :true, class: "typeslink") %>
+            <% end %>
+            
         </li>
+        <% counter += 1%>
         <% end %>
         
-        <!--<li>-->
-        <!--    <a href="/" class="typeslink">产品类二</a>-->
-        <!--</li>-->
+
     </ul>
 </div>
 <div class="right">
     <div class="title">
-        <h6>智能配电</h6>
+        
         <hr class="righthr">
     </div>
     <ul class="products_list">
-
     </ul>
 
     
 </div>
 
 <script>
+    $('.typeslink').click(function(){
+        $('.typeslink').removeClass('visited');
+        $(this).addClass("visited");
+    });
     
+    $(window).bind("load", function() {
+   // code goes here
+       document.getElementById('first_field').click();
+});
 </script>

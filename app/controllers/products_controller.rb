@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
   end
 
   # GET /products/new
@@ -79,10 +80,8 @@ class ProductsController < ApplicationController
   #dynamic load product belone to type
   def find_products
     if params[:type_id]
+      @current_type = Type.find(params[:type_id])
       @products = Type.find(params[:type_id]).products
-      @products.each do |product|
-        print product.name
-      end
     else
       # Error or @lessons = Lesson.all
       @products = nil

@@ -82,5 +82,5 @@ Rails.application.routes.draw do
   
   
   # below code for testing uploading function
-  get 'example', :to => 'products#example_upload', :format => false
+  get 'general', :to => 'mainframe#general_text', :format => false
 end

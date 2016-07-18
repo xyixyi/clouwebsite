@@ -1,52 +1,13 @@
-<link rel="stylesheet" type="text/css" href="/css/products.css">
-<div class="left">
-    <h5>智能电网</h5>
-    <hr class="hr">
-    <ul>
-        <li>
-            <a href="/" class="typeslink">产品类一</a>
-        </li>
-        <li>
-            <a href="/" class="typeslink">产品类二</a>
-        </li>
-    </ul>
-</div>
-<div class="right">
-    <div class="title">
-        <h6>智能配电</h6>
-        <hr class="righthr">
+<link rel="stylesheet" type="text/css" href="/css/general.css">
+<div class="mainfield">
+    <div class="text-field">
+        <h5><%= @product.name%></h5>
+        <hr class="hr">
+        <%= image_tag @product.image, class:"productimage"%>
+        <p class="body"><%= @product.detail%></p>
     </div>
+</div>
+<div class="downloadfield">
+    <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
+</div>
 
-    <div class="product">
-        <img src="img/product/product.jpg" class="productimage">
-        <div class="text-field">
-            <a class="producttitle" href="/">智能用电系统</a>
-            <p class="productdiscription"> 深圳市科陆电子科技股份有限公司（股票代码：002121）是国家级高新技术企业，致力于为智能电网和新能源应用、节能减排提供整体技术与产品解决方案
-            。企业成立于1996年，于2007年3月在深圳证交所挂牌上市。现注册资本47609.3万元，员工3000余人，拥有超过700人的技术研发团队，在深圳建有近3.6万平方米的研发基地和近
-            </p>
-        </div>
-        
-    </div>
-    
-    <div class="product">
-        <img src="img/product/product.jpg" class="productimage">
-        <div class="text-field">
-            <a class="producttitle" href="/">智能用电系统</a>
-            <p class="productdiscription"> 深圳市科陆电子科技股份有限公司（股票代码：002121）是国家级高新技术企业，致力于为智能电网和新能源应用、节能减排提供整体技术与产品解决方案
-            。企业成立于1996年，于2007年3月在深圳证交所挂牌上市。现注册资本47609.3万元，员工3000余人，拥有超过700人的技术研发团队，在深圳建有近3.6万平方米的研发基地和近
-            </p>
-        </div>
-        
-    </div>
-    
-    <div class="product">
-        <img src="img/product/product.jpg" class="productimage">
-        <div class="text-field">
-            <a class="producttitle" href="/">智能用电系统</a>
-            <p class="productdiscription"> 深圳市科陆电子科技股份有限公司（股票代码：002121）是国家级高新技术企业，致力于为智能电网和新能源应用、节能减排提供整体技术与产品解决方案
-            。企业成立于1996年，于2007年3月在深圳证交所挂牌上市。现注册资本47609.3万元，员工3000余人，拥有超过700人的技术研发团队，在深圳建有近3.6万平方米的研发基地和近
-            </p>
-        </div>
-        
-    </div>
-</div>

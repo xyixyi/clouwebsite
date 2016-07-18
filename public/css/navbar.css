@@ -17,7 +17,7 @@ body {
 }
 
 nav .links a {
-    padding: 15px 16px;
+    padding: 40px 16px;
 }
 
 a:hover {
@@ -52,7 +52,7 @@ hr {
 }
 
 .logo {
-    position: relative;
+    position: absolute;
     top: 31px;
     height: 28px;
     width: 11.4%;
@@ -63,8 +63,8 @@ hr {
 .links {
     font-size: 14px;
     color: #58585B;
-    position: relative;
-    left: 690px;
+    position: absolute;
+    right: 10%;
     display:inline-block;
     top: -7px;
 }
@@ -197,4 +197,14 @@ hr {
 .useless-container {
     position: relative;
     margin: 30px 20%;
+}
+
+p{
+    text-overflow : '.';
+    
+}
+
+a.visited{
+    color:#c4261d;
+    text-decoration: none;
 }
