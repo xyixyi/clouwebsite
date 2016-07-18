@@ -16,6 +16,9 @@ gem 'devise-i18n'
 # admin 
 gem 'rails_admin'
 
+# text editor
+gem 'ckeditor', github: 'galetahub/ckeditor'
+
 # admin authentication
 gem 'cancancan', '~> 1.10'
 

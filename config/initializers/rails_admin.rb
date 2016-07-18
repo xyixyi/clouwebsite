@@ -2,6 +2,8 @@ RailsAdmin.config do |config|
   # config.authorize_with do
   #   # redirect_to main_app.root_path unless current_user.admin == true
   # end
+  
+  config.included_models = ["Category", "Type", "Product"]
   config.model Category do
     list do
       field :name do
@@ -15,11 +17,8 @@ RailsAdmin.config do |config|
       field :name do
         label "名称"
       end
-      field :description, :text do
+      field :description, :ck_editor do
         label "简介"
-        html_attributes do
-          {:maxlength => 600}
-        end
       end
       field :image, :carrierwave do
         label "图片"
@@ -47,11 +46,8 @@ RailsAdmin.config do |config|
       field :name do
         label "名称"
       end
-      field :description, :text do
+      field :description, :ck_editor do
         label "简介"
-        html_attributes do
-          {:maxlength => 600}
-        end
       end
       field :Category_id, :enum do
         label "产品大类"
@@ -100,11 +96,8 @@ RailsAdmin.config do |config|
       field :synopsis do
         label "梗概"
       end
-      field :detail, :text do
+      field :detail, :ck_editor do
         label "细节"
-        html_attributes do
-          {:maxlength => 600}
-        end
       end
       
       field :category_id, :enum do
