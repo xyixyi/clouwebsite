@@ -53,8 +53,6 @@ ActiveRecord::Schema.define(version: 20160719002909) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
-    t.string   "image"
-    t.string   "attachement"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "attachment"
