@@ -4,10 +4,9 @@
         <h5><%= @product.name%></h5>
         <hr class="hr">
         <%= image_tag @product.image, class:"productimage"%>
-        <p class="body"><%= @product.detail%></p>
+        <div class="body" id="productbody"><%= @product.detail.html_safe %></div>
     </div>
 </div>
 <div class="downloadfield">
     <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
 </div>
-

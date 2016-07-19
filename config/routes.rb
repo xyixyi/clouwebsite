@@ -79,7 +79,7 @@ Rails.application.routes.draw do
   
   
   #only for test
-  get 'productformat', :to => 'mainframe#productformat', :format => false
+  get 'test', :to => 'mainframe#test', :format => false
   
   
   # below code for testing uploading function

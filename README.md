@@ -12,3 +12,6 @@ run:
 sudo apt-get update
 
 sudo apt-get install imagemagick --fix-missing
+
+在后台load html (product.detail):
+<div class="body" id="productbody"><%= @product.detail.html_safe %></div>

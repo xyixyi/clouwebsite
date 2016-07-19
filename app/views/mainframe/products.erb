@@ -83,14 +83,8 @@
     <% @categories.each do |category| %>
       
       <div class="cell">
-        <!--图片要loadfrom db-->
-        <!--<img src="img/product/product.jpg" width="100%" height="270">-->
         <%= image_tag category.image, class:"categoryimg"%>
-        
-        <!--<a href="/products#show"><%= category.name%></a>-->
         <%= link_to category.name, category_path(category.id) %>
-        <!--link要loadfrom db-->
-        <!--<a href="/" class="allproduct" style="width:100%; top:10px;">智能电网</a>-->
       </div>
     <%end%>
 </div>
