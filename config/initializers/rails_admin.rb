@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
   #   # redirect_to main_app.root_path unless current_user.admin == true
   # end
   
-  config.included_models = ["Category", "Type", "Product", "PopProduct"]
+  config.included_models = ["Category", "Type", "Product", "PopProduct", "News"]
   config.model Category do
     list do
       field :name do
@@ -188,7 +188,49 @@ RailsAdmin.config do |config|
       
     end
   end
+  
+  config.model News do
+    list do
+      field :title do
+        label "名称"
+      end
+      field :shortDescription do
+        label "短简介"
+      end
+      field :description do
+        label "短简介"
+      end
+      field :content do
+        label "内容"
+      end
+      field :video_url do
+        label "视频链接"
+      end
+    end
+    edit do 
+      field :title do
+        label "名称"
+      end
+      field :shortDescription do
+        label "短简介"
+      end
+      field :description, :ck_editor do
+        label "短简介"
+      end
+      field :content, :ck_editor do
+        label "内容"
+      end
+      field :image, :carrierwave do
+        label "图片"
+      end
+      field :video_url do
+        label "视频链接"
+      end
+    end
+  end
+  
 
+  
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
