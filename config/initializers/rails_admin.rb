@@ -238,7 +238,7 @@ RailsAdmin.config do |config|
         label "名称"
       end
 
-      field :description, :ck_editor do
+      field :description do
         label "梗概"
       end
       field :content, :ck_editor do
@@ -278,7 +278,7 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :description, :ck_editor do
+      field :description do
         label "梗概"
       end
       field :content, :ck_editor do
