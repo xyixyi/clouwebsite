@@ -214,6 +214,9 @@ RailsAdmin.config do |config|
       field :video_url do
         label "视频链接"
       end
+      field :image, :carrierwave do
+        label "封面"
+      end
     end
     edit do 
       field :title do
@@ -230,6 +233,9 @@ RailsAdmin.config do |config|
       end
       field :video_url do
         label "视频链接"
+      end
+      field :image, :carrierwave do
+        label "封面"
       end
     end
   end
