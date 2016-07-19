@@ -15,6 +15,11 @@ class MainframeController < ApplicationController
     @products = Product.all
     @categories = Category.all
   end
+  
+  def news
+    @industry_news = IndustryNews.all
+    @company_news = CompanyNews.all
+  end
 
   def new
   end

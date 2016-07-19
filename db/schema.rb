@@ -39,26 +39,30 @@ ActiveRecord::Schema.define(version: 20160719075716) do
 
   create_table "company_news", force: :cascade do |t|
     t.string   "title"
-    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.datetime "time"
     t.string   "editor"
   end
 
   create_table "industry_news", force: :cascade do |t|
     t.string   "title"
-    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
+<<<<<<< HEAD
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+=======
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+>>>>>>> 7802966e69dc06336909e2a4fd24d7f54bd67ff1
     t.string   "image"
   end
 
@@ -69,10 +73,9 @@ ActiveRecord::Schema.define(version: 20160719075716) do
     t.integer  "type_id"
     t.integer  "category_id"
     t.string   "image"
-    t.string   "attachement"
+    t.string   "attachment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "attachment"
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"

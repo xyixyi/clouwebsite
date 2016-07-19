@@ -43,7 +43,7 @@ body {
     margin-right: 10%;
     background-color: white;
     top: 188px;
-    position: fixed;
+    position: absolute;
     width: 200px;
     display: inline-block;
     height: 200px;

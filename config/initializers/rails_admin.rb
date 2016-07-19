@@ -238,7 +238,7 @@ RailsAdmin.config do |config|
         label "名称"
       end
 
-      field :description, :ck_editor do
+      field :description do
         label "梗概"
       end
       field :content, :ck_editor do
@@ -270,12 +270,15 @@ RailsAdmin.config do |config|
       field :video_url do
         label "视频链接"
       end
+      field :image, :carrierwave do
+        label "封面"
+      end
     end
     edit do 
       field :title do
         label "名称"
       end
-      field :description, :ck_editor do
+      field :description do
         label "梗概"
       end
       field :content, :ck_editor do
@@ -283,6 +286,9 @@ RailsAdmin.config do |config|
       end
       field :video_url do
         label "视频链接"
+      end
+      field :image, :carrierwave do
+        label "封面"
       end
     end
   end

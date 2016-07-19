@@ -1,0 +1,27 @@
+<%= form_for @product, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :synopsis %><br />
+    <%= f.text_field :synopsis %>
+  </p>
+  <p>
+    <%= f.label :detail %><br />
+    <%= f.text_field :detail %>
+  </p>
+  <p>
+    <%= f.label :Type %><br />
+    <%= f.text_field :Type %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.file_field :attachment %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+

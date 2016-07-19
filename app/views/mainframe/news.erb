@@ -1,0 +1,127 @@
+<link rel="stylesheet" type="text/css" href="/css/news.css">
+<div class="left">
+    <h5>新闻</h5>
+    <hr class="hr">
+    <ul>
+        <li>
+            <a class="typeslink" id="company_news" href="#">公司新闻</a>
+        </li>
+        <li>
+            <a class="typeslink" id="industry_news" href="#">行业新闻</a>
+        </li>
+    </ul>
+</div>
+<div class="right">
+    <div class="title">
+        <h6></h6>
+        <hr class="righthr">
+    </div>
+    
+    <% page_counter = 1 %>
+    <% news_counter = 0 %>
+    <ul class="news_list current" id ="1">
+        
+        
+        
+        <li>
+            <div class="product">
+                <img src="img/product/product.jpg" class="productimage">
+                <div class="text-field">
+                <a class="newstitle" href="/">智能用电系统</a>
+            </div>
+            
+        </div>
+        </li>
+
+    
+    </ul>
+    
+
+    <div class="page-nav">
+        <a class="btn navbtn bright" id="next">下一页</a>
+        <a class="btn navbtn bleft" id="prev">上一页</a>
+    </div>
+    
+</div>
+
+<script>
+    $(function () {
+        
+        
+    var stepNumber = 0,
+    sumProgPortion = 0,
+    appStepsTotal = $('.news_list').length,
+    progPortion = 100 / appStepsTotal;
+        
+    if (appStepsTotal === 1) {
+        $('#next').hide();
+    }
+  // APPLICATION FORM
+  $('#next').on('click', function (e) {
+    e.preventDefault();
+
+    var $inView = $('.current');
+
+
+    $('.current').next().removeClass('next').addClass('current');
+    $inView.removeClass('current').addClass('prev');
+
+    stepNumber++;
+
+    sumProgPortion = sumProgPortion + progPortion;
+
+    if (stepNumber > 0) {
+      $('#prev').show();
+    }
+    
+    if (appStepsTotal === 1) {
+        $('#next').hide();
+    }
+            
+
+    if (stepNumber === appStepsTotal - 1) {
+      $('#next').hide();
+      e.stopPropagation();
+    }
+
+  });
+  
+    $('#prev').on('click', function (e) {
+    e.preventDefault();
+
+    var $inView = $('.current');
+
+    $('.current').prev().removeClass('prev').addClass('current');
+    $inView.removeClass('current').addClass('next');
+
+    stepNumber--;
+
+
+
+    if (stepNumber < 1) {
+      $(this).hide();
+    }
+    
+
+    if (stepNumber < appStepsTotal - 1) {
+      $('#next').show();
+      $('.submit-btn').hide();
+    }
+  
+  });
+  
+    $('.typeslink').click(function(e){
+        e.preventDefault();
+        $('.typeslink').removeClass('visited');
+        $(this).addClass("visited");
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+})
+</script>

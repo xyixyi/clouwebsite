@@ -17,7 +17,14 @@ body {
 }
 
 nav .links a {
-    padding: 40px 16px;
+    padding-top: 40px;
+    margin-left: 38px;
+    
+    padding-bottom: 32px !important;
+}
+
+nav .links a:hover {
+    border-bottom: solid 1px #c4261d;
 }
 
 a:hover {

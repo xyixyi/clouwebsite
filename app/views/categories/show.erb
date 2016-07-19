@@ -24,21 +24,96 @@
         
         <hr class="righthr">
     </div>
-    <ul class="products_list">
+    <ul class="products_list current" id="1">
     </ul>
 
     
 </div>
 
 <script>
+
+    $(function () {
+    // page switch after ajax
+        $('body').on('click', '#next', function(e){
+        //do stuff
+            var stepNumber = 0,
+            sumProgPortion = 0,
+            appStepsTotal = $('.products_list').length,
+            progPortion = 100 / appStepsTotal;
+            e.preventDefault();
+
+            var $inView = $('.current');
+
+
+            $('.current').next().removeClass('next').addClass('current');
+            $inView.removeClass('current').addClass('prev');
+        
+            stepNumber++;
+        
+            sumProgPortion = sumProgPortion + progPortion;
+        
+            if (stepNumber > 0) {
+              $('#prev').show();
+            }
+            
+            if (appStepsTotal === 1) {
+                $('#next').hide();
+            }
+            
+        
+            if (stepNumber === appStepsTotal - 1) {
+              $('#next').hide();
+              e.stopPropagation();
+            }
+            window.scrollTo(0, 0);
+        });
+        
+        
+        $('body').on('click', '#prev', function(e){
+            var stepNumber = 0,
+            sumProgPortion = 0,
+            appStepsTotal = $('.products_list').length,
+            progPortion = 100 / appStepsTotal;
+            
+            e.preventDefault();
+        
+            var $inView = $('.current');
+        
+            $('.current').prev().removeClass('prev').addClass('current');
+            $inView.removeClass('current').addClass('next');
+        
+            stepNumber--;
+
+            if (stepNumber < 1) {
+              $(this).hide();
+            }
+
+            if (stepNumber < appStepsTotal - 1) {
+              $('#next').show();
+              $('.submit-btn').hide();
+            }
+            window.scrollTo(0, 0);
+        });
+
+        
+        
+    $(document).ready(function() {
+    // jQuery code goes here
+    document.getElementById('first_field').click();
+    // var currentpage_id = $(".current").attr("id");
+    // var total_page = $('.products_list').length;
+    // var totoal_products = $('li.product').length;
+    // var input = "第 "+ currentpage_id  + " 共 " +total_page+ " 页 "+totoal_products + "条记录";
+    //  window.alert(input);
+    // $(".pageinfo").html(input);
+
     $('.typeslink').click(function(){
         $('.typeslink').removeClass('visited');
         $(this).addClass("visited");
     });
-    
-    $(document).ready(function() {
-    // jQuery code goes here
-    document.getElementById('first_field').click();
-});
+    });
+ 
+})
 
 </script>
+
