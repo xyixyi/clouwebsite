@@ -63,5 +63,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def extension_white_list
     %w(jpg jpeg gif png)
   end
+  
+  def sanitize_regexp
+    /[^[:word:]\.\-\+]/
+  end
 
 end

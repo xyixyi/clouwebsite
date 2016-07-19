@@ -1,4 +1,4 @@
-# encoding: utf-8
+#Encoding: utf-8
 
 class AttachmentUploader < CarrierWave::Uploader::Base
 
@@ -47,5 +47,9 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  
+  def sanitize_regexp
+    /[^[:word:]\.\-\+]/
+  end
 
 end
