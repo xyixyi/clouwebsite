@@ -2,7 +2,6 @@ class CreateIndustryNews < ActiveRecord::Migration
   def change
     create_table :industry_news do |t|
       t.string :title
-      t.string :shortDescription
       t.string :description
       t.string :content
       t.string :video_url

@@ -217,11 +217,8 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
       field :description do
-        label "简介"
+        label "梗概"
         pretty_value do
           value.html_safe
         end
@@ -232,25 +229,26 @@ RailsAdmin.config do |config|
       field :video_url do
         label "视频链接"
       end
+      field :image, :carrierwave do
+        label "封面"
+      end
     end
     edit do 
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-        html_attributes do
-          {:maxlength => 600}
-        end
-      end
+
       field :description, :ck_editor do
-        label "简介"
+        label "梗概"
       end
       field :content, :ck_editor do
         label "内容"
       end
       field :video_url do
         label "视频链接"
+      end
+      field :image, :carrierwave do
+        label "封面"
       end
     end
   end
@@ -260,11 +258,8 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
       field :description do
-        label "简介"
+        label "梗概"
         pretty_value do
           value.html_safe
         end
@@ -280,14 +275,8 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-        html_attributes do
-          {:maxlength => 600}
-        end
-      end
       field :description, :ck_editor do
-        label "简介"
+        label "梗概"
       end
       field :content, :ck_editor do
         label "内容"
