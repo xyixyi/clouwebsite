@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719031002) do
+ActiveRecord::Schema.define(version: 20160719073922) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160719031002) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
-  create_table "news", force: :cascade do |t|
+  create_table "company_news", force: :cascade do |t|
     t.string   "title"
     t.string   "shortDescription"
     t.string   "description"
@@ -45,7 +45,20 @@ ActiveRecord::Schema.define(version: 20160719031002) do
     t.string   "video_url"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "image"
+    t.datetime "time"
+    t.string   "editor"
+  end
+
+  create_table "industry_news", force: :cascade do |t|
+    t.string   "title"
+    t.string   "shortDescription"
+    t.string   "description"
+    t.string   "content"
+    t.string   "video_url"
+    t.datetime "time"
+    t.string   "editor"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "pop_products", force: :cascade do |t|
@@ -54,9 +67,10 @@ ActiveRecord::Schema.define(version: 20160719031002) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
+    t.string   "image"
+    t.string   "attachement"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "image"
     t.string   "attachment"
   end
 

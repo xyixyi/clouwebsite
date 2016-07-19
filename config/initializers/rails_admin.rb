@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
   #   # redirect_to main_app.root_path unless current_user.admin == true
   # end
   
-  config.included_models = ["Category", "Type", "Product", "PopProduct", "News"]
+  config.included_models = ["Category", "Type", "Product", "PopProduct", "CompanyNews", "IndustryNews"]
   config.model Category do
     list do
       field :name do
@@ -19,6 +19,9 @@ RailsAdmin.config do |config|
       end
       field :description, :ck_editor do
         label "简介"
+        pretty_value do
+          value.html_safe
+        end
       end
       field :image, :carrierwave do
         label "图片"
@@ -32,7 +35,7 @@ RailsAdmin.config do |config|
       field :name do
         label "名称"
       end
-      field :description do
+      field :description, :ck_editor do
         label "简介"
       end
       field :Category_id, :enum do
@@ -72,6 +75,9 @@ RailsAdmin.config do |config|
       end
       field :detail do
         label "细节"
+        pretty_value do
+          value.html_safe
+        end
       end
       
       field :category_id, :enum do
@@ -95,6 +101,9 @@ RailsAdmin.config do |config|
       end
       field :synopsis do
         label "梗概"
+        html_attributes do
+          {:maxlength => 600}
+        end
       end
       field :detail, :ck_editor do
         label "细节"
@@ -133,6 +142,9 @@ RailsAdmin.config do |config|
       end
       field :synopsis do
         label "梗概"
+        pretty_value do
+          value.html_safe
+        end
       end
       field :detail do
         label "细节"
@@ -167,6 +179,9 @@ RailsAdmin.config do |config|
       end
       field :synopsis do
         label "梗概"
+        html_attributes do
+          {:maxlength => 600}
+        end
       end
       field :detail, :ck_editor do
         label "细节"
@@ -197,16 +212,16 @@ RailsAdmin.config do |config|
     end
   end
   
-  config.model News do
+  config.model CompanyNews do
     list do
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
       field :description do
-        label "短简介"
+        label "梗概"
+        pretty_value do
+          value.html_safe
+        end
       end
       field :content do
         label "内容"
@@ -222,11 +237,9 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
+
       field :description, :ck_editor do
-        label "短简介"
+        label "梗概"
       end
       field :content, :ck_editor do
         label "内容"
@@ -240,6 +253,39 @@ RailsAdmin.config do |config|
     end
   end
   
+  config.model IndustryNews do
+    list do
+      field :title do
+        label "名称"
+      end
+      field :description do
+        label "梗概"
+        pretty_value do
+          value.html_safe
+        end
+      end
+      field :content do
+        label "内容"
+      end
+      field :video_url do
+        label "视频链接"
+      end
+    end
+    edit do 
+      field :title do
+        label "名称"
+      end
+      field :description, :ck_editor do
+        label "梗概"
+      end
+      field :content, :ck_editor do
+        label "内容"
+      end
+      field :video_url do
+        label "视频链接"
+      end
+    end
+  end
 
   
   ## == Devise ==
