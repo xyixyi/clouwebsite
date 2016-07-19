@@ -228,9 +228,6 @@ RailsAdmin.config do |config|
       field :content, :ck_editor do
         label "内容"
       end
-      field :image, :carrierwave do
-        label "图片"
-      end
       field :video_url do
         label "视频链接"
       end
