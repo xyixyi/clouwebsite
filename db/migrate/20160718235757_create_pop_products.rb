@@ -6,8 +6,6 @@ class CreatePopProducts < ActiveRecord::Migration
       t.string :detail
       t.references :type, index: true, foreign_key: true
       t.references :category, index: true, foreign_key: true
-      t.string :image
-      t.string :attachement
 
       t.timestamps null: false
     end

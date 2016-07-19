@@ -151,6 +151,14 @@ RailsAdmin.config do |config|
           Type.all.collect {|p| [p.name, p.id]}
         end
       end
+      
+      field :image, :carrierwave do
+        label "图片"
+      end
+      
+      field :attachment, :carrierwave do
+        label "附件"
+      end     
     end
     
     edit do 
@@ -178,13 +186,13 @@ RailsAdmin.config do |config|
         end
       end
       
-      # field :image, :carrierwave do
-      #   label "图片"
-      # end
+      field :image, :carrierwave do
+        label "图片"
+      end
       
-      # field :attachment, :carrierwave do
-      #   label "附件"
-      # end
+      field :attachment, :carrierwave do
+        label "附件"
+      end
       
     end
   end
