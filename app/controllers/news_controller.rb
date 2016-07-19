@@ -1,4 +1,4 @@
-class MainframeController < ApplicationController
+class NewsController < ApplicationController
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   
@@ -8,17 +8,10 @@ class MainframeController < ApplicationController
   end
 
   def index
-    @products = Product.all
   end
   
   def products
-    @products = Product.all
-    @categories = Category.all
-  end
-  
-  def news
-    @industry_news = IndustryNews.all
-    @company_news = CompanyNews.all
+
   end
 
   def new

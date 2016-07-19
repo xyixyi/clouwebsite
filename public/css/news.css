@@ -1,0 +1,255 @@
+h4 {
+    float: left;
+}
+
+body {
+    background-color: white;
+}
+
+.carousel-outer
+{
+    top: 40px;
+}
+
+.allcategory {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 115px;
+}
+
+.hotline {
+    float: right;
+    margin-top: 20px;
+    color: #c4261d;
+}
+
+.cell {
+    width: 40%;
+    margin: 0 4%;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.allproduct {
+    width: 100%;
+    line-height: 50px;
+}
+
+.categoryimg {
+    width:100%;
+    height: 270;
+}
+
+.productimg {
+    width: 40%;
+}
+
+.left {
+    position: relative;
+    height: 1500px;
+    top: 90px;
+    width: 11.4%;
+    left: 15.8%;
+    text-align: left;
+    display: inline-block;
+}
+
+h5 {
+    top: 36px;
+    position: relative;
+    color: #211c19;
+    font-size: 24px;
+}
+
+.hr {
+    position: relative;
+    top: 50px;
+    border: 2px solid #c4261d;
+    width: 40px;
+    margin-left: 2px;
+}
+
+.left ul{
+    position: relative;
+    padding: 0;
+    top: 75px;
+    margin-left: 2px;
+    list-style-type: none;
+}
+
+.typeslink {
+    font-size: 16px;
+    margin-bottom: 23px;
+}
+
+.right {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    top: 90px;
+    height: 1500px;
+    left: 0;
+    float: right;
+    margin-right: 13%;
+}
+
+h6 {
+    color: #c4261d;
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.righthr {
+     top: 102px;
+
+}
+
+.product {
+    width: 100%;
+    position: relative;
+    height: 150px;
+    margin-top: 4%;
+}
+
+
+
+.title {
+    position: relative;
+    height: 135px;
+}
+
+.productimage {
+    width: 20%;
+}
+
+.text-field {
+    width: 77%;
+    float: right;
+    position: relative;
+}
+
+.newstitle {
+    color: #211c19;
+    font-size: 25px;
+}
+
+.productdiscription {
+    margin-top: 20px;
+}
+
+.right li {
+    list-style-type: none;
+}
+
+.products_list {
+    padding: 0;
+}
+
+p.producttext {
+    height: 90px;
+    line-height: 22px;
+    overflow: hidden;   
+}
+
+a.visited{
+    color:#c4261d;
+    text-decoration: none;
+}
+
+.navbtn { 
+    float: right !important;
+    color:#c4261d;
+    font-size:14px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+    border-width:1px;
+    border-color:rgb(196, 38, 29);
+    border-style:solid;
+    border-radius:0px;
+    background-color:#ffffff;
+    
+}
+
+.navbtn:hover{
+    color:#ffffff;
+    background-color:#c4261d;
+    border-color:#c4261d;
+}
+
+.bright {
+    margin-left: 20px;
+}
+
+.bleft {
+    display: none;
+    margin-right: 20px;
+}
+
+.page-nav {
+    margin-top: 55px;
+}
+
+.pageinfo {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+.products_list.next {
+    display: none;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+}
+
+.products_list.prev {
+    display: none;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transform: translateX(-220%);
+    -ms-transform: translateX(-220%);
+    -webkit-transform: translateX(-220%);
+    transform: translateX(-220%);
+}
+
+.products_list.current {
+    moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    /*-moz-transform: translateX(0);*/
+    /*-ms-transform: translateX(0);*/
+    /*-webkit-transform: translateX(0);*/
+    transform: translateX(0);
+    opacity: 1;
+}
+

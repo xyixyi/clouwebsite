@@ -33,7 +33,7 @@
 <script>
 
     $(function () {
-
+    // page switch after ajax
         $('body').on('click', '#next', function(e){
         //do stuff
             var stepNumber = 0,
@@ -56,11 +56,16 @@
               $('#prev').show();
             }
             
+            if (appStepsTotal === 1) {
+                $('#next').hide();
+            }
+            
         
             if (stepNumber === appStepsTotal - 1) {
               $('#next').hide();
               e.stopPropagation();
             }
+            window.scrollTo(0, 0);
         });
         
         
@@ -87,7 +92,7 @@
               $('#next').show();
               $('.submit-btn').hide();
             }
-
+            window.scrollTo(0, 0);
         });
 
         

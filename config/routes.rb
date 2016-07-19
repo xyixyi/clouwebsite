@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :types do
     resources :products
   end
+  resources :news
   resources :categories
   # resources :categories do 
   #   resources :types do 
@@ -80,7 +81,7 @@ Rails.application.routes.draw do
   
   #only for test
   get 'test', :to => 'mainframe#test', :format => false
-  
+  get 'news_page', :to => 'mainframe#news', :format => false
   
   # below code for testing uploading function
   get 'general', :to => 'mainframe#general_text', :format => false
