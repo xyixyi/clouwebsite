@@ -202,11 +202,8 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
       field :description do
-        label "短简介"
+        label "梗概"
       end
       field :content do
         label "内容"
@@ -222,11 +219,8 @@ RailsAdmin.config do |config|
       field :title do
         label "名称"
       end
-      field :shortDescription do
-        label "短简介"
-      end
-      field :description, :ck_editor do
-        label "短简介"
+      field :description do
+        label "梗概"
       end
       field :content, :ck_editor do
         label "内容"
