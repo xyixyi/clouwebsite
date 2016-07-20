@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="/css/newsspec.css">
+<div class="mainfield">
+    <div class="text-field">
+        <h5><%= @news.title %></h5>
+        <p>编辑：<%= @news.editAuthor%></p>
+        <p><%= @news.created_at.to_date%></p>
+        <hr class="hr">
+        <%= image_tag @news.image, class:"productimg"%>
+        <div class="body" id="productbody"><%= @news.description.html_safe%></div>
+    </div>
+</div>

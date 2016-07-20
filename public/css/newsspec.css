@@ -22,6 +22,7 @@ body {
 
 .text-field {
     height: auto;
+    text-align: center;
 }
 
 .hr {
@@ -32,11 +33,9 @@ body {
     margin: auto !important;
 }
 
-.productimage {
+.productimg {
     padding-top: 37px;
     width: 40%;
-    width: 100%;
-
     text-align: center;
 }
 
@@ -44,6 +43,7 @@ body {
     padding-top: 30px;
     line-height: 22px;
     width: 950px;
+    text-align: left;
 }
 
 .downloadfield {
