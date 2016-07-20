@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719075716) do
+ActiveRecord::Schema.define(version: 20160719235340) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        null: false
@@ -39,31 +39,31 @@ ActiveRecord::Schema.define(version: 20160719075716) do
 
   create_table "company_news", force: :cascade do |t|
     t.string   "title"
+    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
-    t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.datetime "time"
     t.string   "editor"
+    t.datetime "editTime"
+    t.string   "editAuthor"
   end
 
   create_table "industry_news", force: :cascade do |t|
     t.string   "title"
+    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-<<<<<<< HEAD
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-=======
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
->>>>>>> 7802966e69dc06336909e2a4fd24d7f54bd67ff1
     t.string   "image"
+    t.datetime "editTime"
+    t.string   "editAuthor"
   end
 
   create_table "pop_products", force: :cascade do |t|
@@ -73,9 +73,10 @@ ActiveRecord::Schema.define(version: 20160719075716) do
     t.integer  "type_id"
     t.integer  "category_id"
     t.string   "image"
-    t.string   "attachment"
+    t.string   "attachement"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "attachment"
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
