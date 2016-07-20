@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     resources :products
   end
   resources :news do 
-  get "showindustrynews", :on => :collection
-  get "showcompanynews", :on => :collection
+    get "showindustrynews", :on => :collection
+    get "showcompanynews", :on => :collection
 end
   resources :categories
   # resources :categories do 
