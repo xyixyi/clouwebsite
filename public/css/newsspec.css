@@ -3,6 +3,8 @@ h5 {
     color: #211c19;
     font-size: 24px;
     padding: 35px 0;
+    margin: auto;
+    text-align: center;
 }
 
 body {
@@ -27,11 +29,15 @@ body {
     border: 2px solid #c4261d;
     width: 40px;
     margin-left: 2px;
+    margin: auto !important;
 }
 
 .productimage {
     padding-top: 37px;
     width: 40%;
+    width: 100%;
+
+    text-align: center;
 }
 
 .body {

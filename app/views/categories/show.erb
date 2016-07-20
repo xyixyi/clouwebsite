@@ -27,13 +27,25 @@
     <ul class="products_list current" id="1">
     </ul>
 
-    
+    <input class="target" type="text" value="Field 1" style="display:none;">
 </div>
+<input class="target" type="text" value="Field 1" style="display:none;">
 
 <script>
 
     $(function () {
     // page switch after ajax
+            $('body').on("change", ".target", function(e) {
+                e.preventDefault();
+            var appStepsTotal = $('.products_list').length;
+            if (appStepsTotal == 1) {
+                $('#next').hide();
+            }
+                
+                 $("#next").hide();
+            });
+    
+    
         $('body').on('click', '#next', function(e){
         //do stuff
             var stepNumber = 0,
@@ -56,8 +68,10 @@
               $('#prev').show();
             }
             
+             window.alert(appStepsTotal);
             if (appStepsTotal === 1) {
                 $('#next').hide();
+                
             }
             
         
@@ -100,12 +114,7 @@
     $(document).ready(function() {
     // jQuery code goes here
     document.getElementById('first_field').click();
-    // var currentpage_id = $(".current").attr("id");
-    // var total_page = $('.products_list').length;
-    // var totoal_products = $('li.product').length;
-    // var input = "第 "+ currentpage_id  + " 共 " +total_page+ " 页 "+totoal_products + "条记录";
-    //  window.alert(input);
-    // $(".pageinfo").html(input);
+    $('#first_field').addClass("visited");
 
     $('.typeslink').click(function(){
         $('.typeslink').removeClass('visited');

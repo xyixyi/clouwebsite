@@ -31,4 +31,11 @@ class NewsController < ApplicationController
   def destroy
   end
 
+  def showindustrynews
+    @news = IndustryNews.find(params[:id])
+  end
+  
+  def showcompanynews
+    @news = CompanyNews.find(params[:id])
+  end
 end

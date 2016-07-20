@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :types do
     resources :products
   end
-  resources :news
+  resources :news do 
+  get "showindustrynews", :on => :collection
+  get "showcompanynews", :on => :collection
+end
   resources :categories
   # resources :categories do 
   #   resources :types do 
@@ -69,20 +72,22 @@ Rails.application.routes.draw do
   
   get 'mainframe', :to => 'mainframe#index', :format => false
   get 'join_us', :to => 'mainframe#join_us', :format => false
-  get 'news', :to => 'mainframe#news', :format => false
   get 'plans', :to => 'mainframe#plans', :format => false
   get 'products_main', :to => 'mainframe#products', :format => false
   get 'service', :to => 'mainframe#service', :format => false
   get 'about_us', :to => 'mainframe#about_us', :format => false
   get 'supplier', :to => 'mainframe#supplier', :format => false
   get '/', :to => 'mainframe#index', :format => false
-  
+  get 'news_page', :to => 'mainframe#news', :format => false
   
   
   #only for test
   get 'test', :to => 'mainframe#test', :format => false
-  get 'news_page', :to => 'mainframe#news', :format => false
+  get 'testtwo', :to => 'mainframe#test2', :format => false
+
+
   
   # below code for testing uploading function
   get 'general', :to => 'mainframe#general_text', :format => false
+  
 end
