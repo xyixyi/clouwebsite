@@ -47,7 +47,7 @@
                 var right = $(".right");
                 $(".title").empty();
                 $(".page-nav").empty();
-                $(".title").append("<h6>公司新闻</h6><hr class='righthr'>");
+                $(".title").append("<h6>行业新闻</h6><hr class='righthr'>");
                 <% if @industry_news != nil%>
                     <% news_num = @industry_news.size %>
                     var page_counter = 1;
@@ -55,7 +55,7 @@
                     
                     <% @industry_news.each do |news| %>
                         if (single_page_counter < 6 && page_counter == 1) {
-                            current.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, "/", class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
+                            current.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, showindustrynews_news_index_path(:id => news.id), class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
                         single_page_counter+=1;
                         }
                         else if (single_page_counter == 6 && page_counter >= 1) {
@@ -64,12 +64,12 @@
                               'class': 'news_list next', 
                               'id': page_counter }
                               ).appendTo(right);
-                            ul.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, "/", class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
+                            ul.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, showindustrynews_news_index_path(:id => news.id), class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
                             single_page_counter = 1;
                             }
                         else {
                             var next = $('#'+page_counter.toString());
-                            next.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, "/", class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
+                            next.append('<li><div class="newscell"><div class="newsimg" style="background: url(<%= news.image%>);"></div><div class="text-field"><%= link_to(news.title, showindustrynews_news_index_path(:id => news.id), class: "newstitle")%><p class="newstext"><%= news.created_at.to_date %></p></div></div></li>');
                             single_page_counter += 1;
                         }
                     <%end%>
