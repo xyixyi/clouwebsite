@@ -1,4 +1,16 @@
 en:
+  activerecord:
+    models:
+      user: "用户"
+      category: "产品大类"
+      type: "产品小类"
+      product: "产品"
+      pop_product: "明星产品"
+      campus_recuritment: "校园招聘"
+      society_recuritment: "社会招聘"
+      industry_news: "行业新闻"
+      company_news: "公司新闻"
+      
   admin:
     js:
       true: True
