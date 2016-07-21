@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719235340) do
+ActiveRecord::Schema.define(version: 20160721055711) do
+
+  create_table "bids", force: :cascade do |t|
+    t.string   "position"
+    t.string   "department"
+    t.datetime "deadline"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "campus_recuritments", force: :cascade do |t|
+    t.string   "title"
+    t.string   "position"
+    t.string   "department"
+    t.datetime "deadline"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        null: false
@@ -39,29 +58,28 @@ ActiveRecord::Schema.define(version: 20160719235340) do
 
   create_table "company_news", force: :cascade do |t|
     t.string   "title"
+    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "image"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.datetime "time"
     t.string   "editor"
-    t.datetime "editTime"
     t.string   "editAuthor"
   end
 
   create_table "industry_news", force: :cascade do |t|
     t.string   "title"
+    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "image"
-    t.datetime "editTime"
     t.string   "editAuthor"
   end
 
@@ -71,9 +89,10 @@ ActiveRecord::Schema.define(version: 20160719235340) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
+    t.string   "image"
+    t.string   "attachement"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "image"
     t.string   "attachment"
   end
 
@@ -90,6 +109,16 @@ ActiveRecord::Schema.define(version: 20160719235340) do
     t.string   "image"
     t.integer  "category_id"
     t.string   "attachment"
+  end
+
+  create_table "society_recuritments", force: :cascade do |t|
+    t.string   "title"
+    t.string   "position"
+    t.string   "department"
+    t.datetime "deadline"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "types", force: :cascade do |t|

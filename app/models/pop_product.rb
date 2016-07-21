@@ -6,7 +6,8 @@ class PopProduct < ActiveRecord::Base
   
   #set up rails admin
   rails_admin do
-    # parent Type
+    navigation_label '产品类别'
+    parent Type
     list do 
       field :name do
         label "名称"

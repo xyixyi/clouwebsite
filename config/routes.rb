@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :bids
+  resources :campus_recuritments
+  resources :society_recuritments
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 

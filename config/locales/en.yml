@@ -16,7 +16,7 @@ en:
       is_exactly: Is exactly
       starts_with: Starts with
       ends_with: Ends with
-    loading: "Loading..."
+    loading: "等待中..."
     home:
       name: "首页"
     pagination:
@@ -49,7 +49,7 @@ en:
       model_not_found: "找不到'%{model}' Model"
       object_not_found: "找不到id为'%{id}'的'%{model}'"
     table_headers:
-      model_name: "Model 名"
+      model_name: "数据库名"
       last_used: "上次使用"
       records: "记录"
       username: "用户"

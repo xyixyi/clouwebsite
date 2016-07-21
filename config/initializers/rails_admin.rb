@@ -3,7 +3,8 @@ RailsAdmin.config do |config|
   #   # redirect_to main_app.root_path unless current_user.admin == true
   # end
   
-  config.included_models = ["Category", "Type", "Product", "PopProduct", "CompanyNews", "IndustryNews"]
+  config.included_models = ["Category", "Type", "Product", "PopProduct", "CompanyNews", 
+                                                "IndustryNews", "Bid", "CampusRecuritment", "SocietyRecuritment", "User"]
   
   config.model Type do
     parent Category

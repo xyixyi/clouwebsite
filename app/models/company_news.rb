@@ -3,6 +3,7 @@ class CompanyNews < ActiveRecord::Base
     
     #rails admin set up
     rails_admin do
+        navigation_label '新闻'
         list do
           field :title do
             label "名称"
@@ -15,6 +16,9 @@ class CompanyNews < ActiveRecord::Base
           end
           field :content do
             label "内容"
+            pretty_value do
+              value.html_safe
+            end
           end
           field :video_url do
             label "视频链接"

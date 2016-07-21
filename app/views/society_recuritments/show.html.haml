@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @society_recuritment.title
+%p
+  %b Position:
+  = @society_recuritment.position
+%p
+  %b Department:
+  = @society_recuritment.department
+%p
+  %b Deadline:
+  = @society_recuritment.deadline
+%p
+  %b Description:
+  = @society_recuritment.description
+
+= link_to 'Edit', edit_society_recuritment_path(@society_recuritment)
+\|
+= link_to 'Back', society_recuritments_path
