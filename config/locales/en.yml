@@ -10,7 +10,7 @@ en:
       society_recuritment: "社会招聘"
       industry_news: "行业新闻"
       company_news: "公司新闻"
-      
+      bid: "投标"
   admin:
     js:
       true: True
