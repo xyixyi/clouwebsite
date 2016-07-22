@@ -34,14 +34,14 @@ h1 {
 .head_left, .branch_left {
     position: relative;
     display: inline-block;
-    width: 49%;
+    width: 59%;
 }
 
 .branch_right {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 40%;
 }
 
 h2 {
@@ -88,5 +88,5 @@ h2, h3 {
     position: absolute;
     top: 250px;
     float: right;
-    right: 22%;
+    right: 9.5%;
 }
