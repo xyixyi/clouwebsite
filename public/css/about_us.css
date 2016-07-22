@@ -1,0 +1,82 @@
+body {
+    background-color: white;
+    font-family: "MicrosoftYaHei Regular";
+}
+
+.page_name {
+    width: 68%;
+    height: auto;
+    
+    position: relative;
+    top: 115px;
+    margin:auto;
+    margin-bottom: 30px;
+    
+    color: #211c19;
+    font-size: 24px;
+}
+
+.redline {
+    position: relative;
+    top: 115px;
+    border: 2px solid #c4261d;
+    width: 40px;
+    margin-left: 16%;
+}
+
+.head_name {
+    width: 68%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    margin-top: 237px;
+    
+    color: #000000;
+    font-size: 20px;
+}
+.head_address {
+    width: 68%;
+    height: auto;
+    position: relative;
+    color: #7C7C7C;
+    font-size: 16px;
+    line-height: 90%;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 108px;
+}
+
+.map{
+    width: 580px;
+    height: 220px;
+    right: 430px;
+    top:250px;
+    position: absolute;
+}
+
+/*分公司名字*/
+.branch_name {
+    width: 68%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    
+    color: #000000;
+    font-size: 20px;
+}
+
+.branch_address {
+    width: 68%;
+    height: auto;
+    position: relative;
+    top:20px;
+    color: #7C7C7C;
+    font-size: 16px;
+    line-height: 90%;
+    margin:auto;
+     margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160721055711) do
+ActiveRecord::Schema.define(version: 20160722081916) do
+
+  create_table "announcements", force: :cascade do |t|
+    t.datetime "date"
+    t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bids", force: :cascade do |t|
     t.string   "position"
@@ -28,8 +35,12 @@ ActiveRecord::Schema.define(version: 20160721055711) do
     t.string   "department"
     t.datetime "deadline"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "number"
+    t.string   "workPosition"
+    t.string   "dipolma"
+    t.string   "attachment"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -61,12 +72,21 @@ ActiveRecord::Schema.define(version: 20160721055711) do
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
-    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
     t.datetime "time"
     t.string   "editor"
     t.string   "editAuthor"
+  end
+
+  create_table "employee_stories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "image"
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "industry_news", force: :cascade do |t|
@@ -88,10 +108,17 @@ ActiveRecord::Schema.define(version: 20160721055711) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
+<<<<<<< HEAD
     t.string   "image"
     t.string   "attachment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+=======
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image"
+    t.string   "attachment"
+>>>>>>> 5dc6cd977336190a904240ec57bb4c3f88596c0d
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
@@ -115,8 +142,12 @@ ActiveRecord::Schema.define(version: 20160721055711) do
     t.string   "department"
     t.datetime "deadline"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "number"
+    t.string   "workPosition"
+    t.string   "dipolma"
+    t.string   "attachment"
   end
 
   create_table "types", force: :cascade do |t|
@@ -147,5 +178,12 @@ ActiveRecord::Schema.define(version: 20160721055711) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "year_reports", force: :cascade do |t|
+    t.datetime "date"
+    t.string   "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

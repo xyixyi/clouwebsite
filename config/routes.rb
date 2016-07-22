@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :employee_stories
+  resources :announcements
+  resources :year_reports
   resources :bids
   resources :campus_recuritments
   resources :society_recuritments
@@ -92,6 +95,9 @@ Rails.application.routes.draw do
   #only for test
   get 'test', :to => 'mainframe#test', :format => false
   get 'testtwo', :to => 'mainframe#test2', :format => false
+  
+  
+  get 'contact_us', :to => 'about_us#contact_us', :format => false
 
 
   
