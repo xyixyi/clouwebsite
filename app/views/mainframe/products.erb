@@ -93,41 +93,41 @@
 </div>
 
 <script>
-  $(function() {
-    var lastScroll = 0;
-    $(window).bind('mousewheel DOMMouseScroll', function(event){
-      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-          // scroll up
-      }
-      else {
-          // scroll down
-          var st = $(this).scrollTop();
-          // window.alert(st);
-          //Determines up-or-down scrolling
-          // window.alert("last : "+lastScroll+" st: "+st);
-          if (st > lastScroll){
-             //Replace this with your function call for downward-scrolling
-            // window.alert("hello");
-            var scrollt = $('#myCarousel').offset().top;
+  // $(function() {
+  //   var lastScroll = 0;
+  //   $(window).bind('mousewheel DOMMouseScroll', function(event){
+  //     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+  //         // scroll up
+  //     }
+  //     else {
+  //         // scroll down
+  //         var st = $(this).scrollTop();
+  //         // window.alert(st);
+  //         //Determines up-or-down scrolling
+  //         // window.alert("last : "+lastScroll+" st: "+st);
+  //         if (st > lastScroll){
+  //           //Replace this with your function call for downward-scrolling
+  //           // window.alert("hello");
+  //           var scrollt = $('#myCarousel').offset().top;
              
-            if (st < 900) {
-                $('html, body').animate({
-                  scrollTop: scrollt
-              }, 1000);
-              st = scrollt;
-            }
-          }
-          lastScroll = st;
-      }
-    });
+  //           if (st < 900) {
+  //               $('html, body').animate({
+  //                 scrollTop: scrollt
+  //             }, 1000);
+  //             st = scrollt;
+  //           }
+  //         }
+  //         lastScroll = st;
+  //     }
+  //   });
     
-    $('.productbanner').on('click', function(e) {
-      var scrollt = $('#myCarousel').offset().top;
-      $('html, body').animate({
-                  scrollTop: scrollt
-      }, 1000);
-      st = scrollt;
-      lastScroll = st;
-    });
-  })
+  //   $('.productbanner').on('click', function(e) {
+  //     var scrollt = $('#myCarousel').offset().top;
+  //     $('html, body').animate({
+  //                 scrollTop: scrollt
+  //     }, 1000);
+  //     st = scrollt;
+  //     lastScroll = st;
+  //   });
+  // })
 </script>
