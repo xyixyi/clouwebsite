@@ -58,12 +58,12 @@ ActiveRecord::Schema.define(version: 20160721055711) do
 
   create_table "company_news", force: :cascade do |t|
     t.string   "title"
-    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image"
     t.datetime "time"
     t.string   "editor"
     t.string   "editAuthor"
@@ -71,14 +71,13 @@ ActiveRecord::Schema.define(version: 20160721055711) do
 
   create_table "industry_news", force: :cascade do |t|
     t.string   "title"
-    t.string   "shortDescription"
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "editAuthor"
   end
@@ -89,10 +88,9 @@ ActiveRecord::Schema.define(version: 20160721055711) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
-    t.string   "image"
-    t.string   "attachement"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
     t.string   "attachment"
   end
 
