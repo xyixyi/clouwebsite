@@ -1,82 +1,92 @@
 body {
     background-color: white;
-    font-family: "MicrosoftYaHei Regular";
+    
 }
 
-.page_name {
-    width: 68%;
+.mainview {
+    position: relative;
+    top: 91px;
     height: auto;
-    
-    position: relative;
-    top: 115px;
-    margin:auto;
-    margin-bottom: 30px;
-    
-    color: #211c19;
-    font-size: 24px;
+    width: 68%;
+    margin: auto;
 }
 
-.redline {
+h1 {
+    margin-top: 46px;
+    font-size: 24px;
+    color: #211c19;
+    margin-bottom: 30px;
+}
+
+.hr {
     position: relative;
-    top: 115px;
     border: 2px solid #c4261d;
     width: 40px;
-    margin-left: 16%;
-}
-
-.head_name {
-    width: 68%;
-    height: auto;
-    margin: auto;
+    margin-left: 2px;
+} 
+.head_company {
     position: relative;
-    margin-top: 237px;
-    
-    color: #000000;
-    font-size: 20px;
-}
-.head_address {
-    width: 68%;
-    height: auto;
-    position: relative;
-    color: #7C7C7C;
-    font-size: 16px;
-    line-height: 90%;
-    margin:auto;
-    margin-top: 20px;
+    width: 100%;
     margin-bottom: 108px;
+    margin-top: 70px;
 }
 
-.map{
-    width: 580px;
-    height: 220px;
-    right: 430px;
-    top:250px;
-    position: absolute;
-}
-
-/*分公司名字*/
-.branch_name {
-    width: 68%;
-    height: auto;
-    margin: auto;
+.head_left, .branch_left {
     position: relative;
-    top: 30px;
-    
-    color: #000000;
+    display: inline-block;
+    width: 49%;
+}
+
+.branch_right {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+h2 {
     font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
 }
 
-.branch_address {
-    width: 68%;
-    height: auto;
-    position: relative;
-    top:20px;
-    color: #7C7C7C;
+p {
     font-size: 16px;
-    line-height: 90%;
-    margin:auto;
-     margin-top: 20px;
+    line-height: 26px;
+    color: #7c7c7c;
+    margin-bottom: 0;
+}
+
+h3, h4 {
+    width: auto;
+    font-size: 20px;
+    display: initial;
+}
+
+h2, h3 {
+    color: black;
+}
+
+.branch_one {
+    margin-top: 30px;
     margin-bottom: 45px;
 }
 
+.branch_two {
+    margin-bottom: 45px;
+}
 
+.branch_three {
+    margin-top: 30px;
+    margin-bottom: 95px;
+}
+
+.map {
+    background-image: url("../img/about_us/map.jpg");
+    width: 580px;
+    height: 220px;
+    position: absolute;
+    top: 250px;
+    float: right;
+    right: 22%;
+}

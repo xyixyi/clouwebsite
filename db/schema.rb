@@ -72,9 +72,9 @@ ActiveRecord::Schema.define(version: 20160722081916) do
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "image"
     t.datetime "time"
     t.string   "editor"
     t.string   "editAuthor"
@@ -108,17 +108,10 @@ ActiveRecord::Schema.define(version: 20160722081916) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
-<<<<<<< HEAD
     t.string   "image"
     t.string   "attachment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-=======
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "image"
-    t.string   "attachment"
->>>>>>> 5dc6cd977336190a904240ec57bb4c3f88596c0d
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
