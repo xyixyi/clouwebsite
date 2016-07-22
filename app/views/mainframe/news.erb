@@ -29,7 +29,12 @@
 <script>
     $(function () {
         $(window).ready(function(e){
-            $("#company_news").click();
+            // may cause error
+            <% if params[:type] == "industry"%>
+                $("#industry_news").click();
+            <%else%>
+                $("#company_news").click();
+            <%end%>
         });
         
         

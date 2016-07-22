@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     get "showindustrynews", :on => :collection
     get "showcompanynews", :on => :collection
   end
+  
+  resources :mainframe do
+    get "news", :on => :collection
+  end
 
   resources :categories
   # resources :categories do 
@@ -83,6 +87,7 @@ Rails.application.routes.draw do
   get 'supplier', :to => 'mainframe#supplier', :format => false
   get '/', :to => 'mainframe#index', :format => false
   get 'news_page', :to => 'mainframe#news', :format => false
+  get 'recuritments', :to =>'mainframe#recuritments', :format => false
   
   #only for test
   get 'test', :to => 'mainframe#test', :format => false
