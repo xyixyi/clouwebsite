@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :employee_stories
+  resources :announcements
+  resources :year_reports
   resources :bids
   resources :campus_recuritments
   resources :society_recuritments

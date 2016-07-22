@@ -1,0 +1,22 @@
+= form_for @employee_story do |f|
+  - if @employee_story.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@employee_story.errors.count, "error")} prohibited this employee_story from being saved:"
+      %ul
+        - @employee_story.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :date
+    = f.datetime_select :date
+  .field
+    = f.label :image
+    = f.text_field :image
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'

@@ -1,5 +1,6 @@
 class CampusRecuritment < ActiveRecord::Base
     #set up rails admin
+    mount_uploader :attachment, AttachmentUploader
     rails_admin do
         navigation_label '招聘'
         list do 
@@ -11,6 +12,12 @@ class CampusRecuritment < ActiveRecord::Base
           end
           field :department do
             label "部门"
+          end
+          field :workPosition do
+            label "工作地点"
+          end
+          field :number do
+            label "招聘人数"
           end
           field :deadline do
             label "截止日期"
@@ -32,11 +39,20 @@ class CampusRecuritment < ActiveRecord::Base
           field :department do
             label "部门"
           end
+          field :workPosition do
+            label "工作地点"
+          end
+          field :number do
+            label "招聘人数"
+          end
           field :deadline do
             label "截止日期"
           end
           field :description, :ck_editor do
             label "简介"
+          end
+          field :attachment, :carrierwave do
+            label "上传简历"
           end
         end
     end
