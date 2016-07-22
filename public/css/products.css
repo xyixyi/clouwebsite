@@ -2,6 +2,24 @@ h4 {
     float: left;
 }
 
+.productbanner {
+    position: relative;
+    top: 121px;
+    background-image: url("../img/product/productbanner.jpg") !important;
+    height: 960px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.carousel {
+    top: 120px !important;
+}
+
 body {
     background-color: white;
 }
