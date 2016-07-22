@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @year_report.date
+%p
+  %b Attachment:
+  = @year_report.attachment
+
+= link_to 'Edit', edit_year_report_path(@year_report)
+\|
+= link_to 'Back', year_reports_path

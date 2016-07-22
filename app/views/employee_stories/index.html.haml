@@ -1,0 +1,27 @@
+%h1 Listing employee_stories
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Date
+      %th Image
+      %th Text
+      %th
+      %th
+      %th
+
+  %tbody
+    - @employee_stories.each do |employee_story|
+      %tr
+        %td= employee_story.name
+        %td= employee_story.date
+        %td= employee_story.image
+        %td= employee_story.text
+        %td= link_to 'Show', employee_story
+        %td= link_to 'Edit', edit_employee_story_path(employee_story)
+        %td= link_to 'Destroy', employee_story, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Employee story', new_employee_story_path
