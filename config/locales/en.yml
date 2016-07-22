@@ -13,6 +13,7 @@ en:
       bid: "投标"
       year_report: "年表"
       announcement: "通告"
+      employee_story: "员工故事"
   admin:
     js:
       true: True
