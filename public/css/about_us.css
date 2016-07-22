@@ -46,7 +46,15 @@ body {
     margin-bottom: 108px;
 }
 
-/*公司名字*/
+.map{
+    width: 580px;
+    height: 220px;
+    right: 430px;
+    top:250px;
+    position: absolute;
+}
+
+/*分公司名字*/
 .branch_name {
     width: 68%;
     height: auto;
