@@ -11,8 +11,8 @@ en:
       industry_news: "行业新闻"
       company_news: "公司新闻"
       bid: "投标"
-      year_report: "年表"
-      announcement: "通告"
+      year_report: "年报"
+      announcement: "公告"
       employee_story: "员工故事"
   admin:
     js:

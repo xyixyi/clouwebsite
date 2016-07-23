@@ -5,6 +5,9 @@ class Announcement < ActiveRecord::Base
           field :date do
             label "时间"
           end
+          field :type do
+            label "公告类型"
+          end
           field :link do
             label "链接"
           end
@@ -13,6 +16,9 @@ class Announcement < ActiveRecord::Base
         edit do
           field :date do
             label "时间"
+          end
+          field :type do
+            label "公告类型"
           end
           field :link do
             label "链接"
