@@ -122,14 +122,17 @@ hr {
     position: relative;
     /*left: 265px;*/
     left: 15.8%;
+    float: left;
     display: inline-block;
     top: 5.5px;
 }
 
 .login, .sign_out {
     position: relative;
+    margin: 0 1px;
     /*left: 265px;*/
     left: 15.8%;
+    float: left;
     font-size: 11px;
     color: #c4261d;
     top:5.5px;
