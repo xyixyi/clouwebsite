@@ -1,0 +1,92 @@
+body {
+    background-color: white;
+    
+}
+
+.mainview {
+    position: relative;
+    top: 91px;
+    height: auto;
+    width: 68%;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 46px;
+    font-size: 24px;
+    color: #211c19;
+    margin-bottom: 30px;
+}
+
+.hr {
+    position: relative;
+    border: 2px solid #c4261d;
+    width: 40px;
+    margin-left: 2px;
+} 
+.head_company {
+    position: relative;
+    width: 100%;
+    margin-bottom: 108px;
+    margin-top: 70px;
+}
+
+.head_left, .branch_left {
+    position: relative;
+    display: inline-block;
+    width: 59%;
+}
+
+.branch_right {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #7c7c7c;
+    margin-bottom: 0;
+}
+
+h3, h4 {
+    width: auto;
+    font-size: 20px;
+    display: initial;
+}
+
+h2, h3 {
+    color: black;
+}
+
+.branch_one {
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+.branch_two {
+    margin-bottom: 45px;
+}
+
+.branch_three {
+    margin-top: 30px;
+    margin-bottom: 95px;
+}
+
+.map {
+    background-image: url("../img/about_us/map.jpg");
+    width: 580px;
+    height: 220px;
+    position: absolute;
+    top: 250px;
+    float: right;
+    right: 9.5%;
+}
