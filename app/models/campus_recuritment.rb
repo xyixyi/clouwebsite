@@ -8,7 +8,7 @@ class CampusRecuritment < ActiveRecord::Base
             label "标题"
           end
           field :position do
-            label "招聘类型"
+            label "职位"
           end
           field :department do
             label "部门"
