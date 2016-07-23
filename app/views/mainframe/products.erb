@@ -95,27 +95,43 @@
 <script>
   $(function() {
     var lastScroll = 0;
+    var scrollt = $('#myCarousel').offset().top;
     $(window).bind('mousewheel DOMMouseScroll', function(event){
       if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
           // scroll up
+          // alert("here");
       }
       else {
         if($('#productbanner') != null) {
           // window.alert("helo");
           // scroll down
           var st = $(this).scrollTop();
+          
           // window.alert(st);
           //Determines up-or-down scrolling
           // window.alert("last : "+lastScroll+" st: "+st);
           if (st > lastScroll){
             //Replace this with your function call for downward-scrolling
             // window.alert("hello");
-            var scrollt = $('#myCarousel').offset().top;
-             
-            if (st < scrollt) {
-                $('html, body').animate({
-                  scrollTop: scrollt
-              }, 500);
+            // setTimeout(" ")
+            // var scrollt = $('#myCarousel').offset().top;
+            // window.alert(st + " "+scrollt)
+            if (st <= 50) {
+              // window.alert(st + " "+lastScroll);
+              // print_r(st + " "+lastScroll);
+              // alert("st");
+              // setTimeout(function() {
+                // if (st < scrollt) {
+                // $('html, body').animate({scrollTop: scrollt}, 1000);
+                // st = scrollt;
+              //   var c=1;
+              //   // alert("here");
+              // }, 1000);
+              $('html, body').animate({scrollTop: scrollt}, 500);
+              // setTimeout("alert('aaa')", 200);
+              //   $('html, body').animate({
+              //     scrollTop: scrollt
+              // }, 500);
               st = scrollt;
             }
           }
@@ -124,6 +140,7 @@
       }
       lastScroll = $(this).scrollTop();
     });
+    lastScroll = $(this).scrollTop();
     
     $('.productbanner').on('click', function(e) {
       var scrollt = $('#myCarousel').offset().top;
