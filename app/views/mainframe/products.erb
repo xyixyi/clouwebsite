@@ -101,40 +101,17 @@
       $(window).bind('mousewheel DOMMouseScroll', function(event){
         if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
             // scroll up
-            // alert("here");
         }
         else {
           if(window.document.getElementById("productbanner") != null) {
-            // window.alert("helo");
             // scroll down
             var st = $(this).scrollTop();
             
-            // window.alert(st);
-            //Determines up-or-down scrolling
-            // window.alert("last : "+lastScroll+" st: "+st);
             if (st > lastScroll){
-              //Replace this with your function call for downward-scrolling
-              // window.alert("hello");
-              // setTimeout(" ")
+
               var scrollt = $('#myCarousel').offset().top;
-              // window.alert(st + " "+scrollt)
-              if (st <= scrollt-300) {
-                
-                // window.alert(st + " "+lastScroll);
-                // print_r(st + " "+lastScroll);
-                // alert("st");
-                // setTimeout(function() {
-                  // if (st < scrollt) {
-                  // $('html, body').animate({scrollTop: scrollt}, 1000);
-                  // st = scrollt;
-                //   var c=1;
-                //   // alert("here");
-                // }, 1000);
+              if (st <= 100) {
                 $('html, body').animate({scrollTop: scrollt}, 500);
-                // setTimeout("alert('aaa')", 200);
-                //   $('html, body').animate({
-                //     scrollTop: scrollt
-                // }, 500);
                 st = scrollt;
               }
             }

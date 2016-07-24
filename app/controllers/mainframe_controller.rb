@@ -17,8 +17,8 @@ class MainframeController < ApplicationController
   end
   
   def news
-    @industry_news = IndustryNews.all
-    @company_news = CompanyNews.all
+    @industry_news = IndustryNews.all.reverse
+    @company_news = CompanyNews.all.reverse
   end
 
   def new

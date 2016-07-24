@@ -88,6 +88,7 @@
               // APPLICATION FORM
               $('#next').on('click', function (e) {
                 e.preventDefault();
+                
                 var $inView = $('.current');
             
             
@@ -109,6 +110,7 @@
                   $('#next').hide();
                   e.stopPropagation();
                 }
+                window.scrollTo(0, 0);
             
               });
               
@@ -133,7 +135,7 @@
                   $('#next').show();
                   $('.submit-btn').hide();
                 }
-              
+                window.scrollTo(0, 0);
               });
               
                 $('.typeslink').click(function(e){
@@ -141,6 +143,7 @@
                     $('.typeslink').removeClass('visited');
                     $(this).addClass("visited");
                 });
+                
             });
 
         
@@ -215,6 +218,7 @@
                   $('#next').hide();
                   e.stopPropagation();
                 }
+                window.scrollTo(0, 0);
             
               });
               
@@ -236,6 +240,7 @@
                   $('#next').show();
                   $('.submit-btn').hide();
                 }
+                window.scrollTo(0, 0);
               
               });
               
