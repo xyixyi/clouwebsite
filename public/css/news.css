@@ -149,11 +149,11 @@ a.visited{
     text-decoration: none;
 }
 
-a:hover {
+.typeslink:hover {
     color: white !important;
 }
 
-a:active {
+.typeslink:active {
     color: white !important;
 }
 
