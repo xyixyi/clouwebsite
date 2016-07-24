@@ -6,18 +6,66 @@ body {
     background-color: white;
 }
 
-.carousel-outer
-{
-    top: 40px;
+.newsbanner {
+    position: relative;
+    top: 121px;
+    background-image: url("../img/news/newsbanner.jpg") !important;
+    height: 425px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+    margin-top: -30px;
+    text-align: center;
 }
 
-.allcategory {
-    width: 60%;
-    height: auto;
+.newsslogan {
+    width: 68%;
     margin: auto;
+    height: auto;
+    top: 140px;
     position: relative;
-    top: 115px;
 }
+
+h1 {
+    
+    position: relative;
+    font-size: 48px;
+    color: white;
+    float: left;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: left;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 32px;
+    color: white;
+    float: left;
+}
+
+.hr {
+    position: relative;
+    border: 2.5px solid #c4261d;
+    width: 81px;
+    margin-left: 2px;
+} 
+
+.newsmain {
+    height: auto;
+    width: 68%;
+    margin: auto;
+    
+}
+
+/**/
 
 .hotline {
     float: right;

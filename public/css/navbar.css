@@ -2,7 +2,7 @@
   CSS file for application navbar*/
 body {
     background-color: #f2f2f2;
-    font-family: "MicrosoftYaHei Regular";
+    font-family: "Microsoft Yahei","微软雅黑",Arial,sans-serifsans-serif !important;
     color: #808080;
     
 }
@@ -24,12 +24,21 @@ nav .links a {
 }
 
 nav .links a:hover {
-    border-bottom: solid 1px #c4261d;
+    border-bottom: solid 2px #c4261d;
+    color: #c4261d;
 }
 
 a:hover {
     text-decoration: none !important;
     color: #c4261d;
+}
+
+a:focus  {
+    color: #c4261d !important;
+}
+
+a:active {
+    color: #c4261d !important;;
 }
 
 nav {
@@ -64,7 +73,7 @@ hr {
     height: 28px;
     width: 11.4%;
     /*left: 265px;*/
-    left: 15.8%;
+    left: 20%;
 }
 
 .links {
@@ -121,7 +130,7 @@ hr {
     font-size: 11px;
     position: relative;
     /*left: 265px;*/
-    left: 15.8%;
+    left: 20%;
     float: left;
     display: inline-block;
     top: 5.5px;
@@ -131,7 +140,7 @@ hr {
     position: relative;
     margin: 0 1px;
     /*left: 265px;*/
-    left: 15.8%;
+    left: 20%;
     float: left;
     font-size: 11px;
     color: #c4261d;
