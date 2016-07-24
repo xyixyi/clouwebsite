@@ -21,7 +21,7 @@ body {
 }
 
 .newsslogan {
-    width: 68%;
+    width: 60%;
     margin: auto;
     height: auto;
     top: 140px;
@@ -31,7 +31,7 @@ body {
 h1 {
     
     position: relative;
-    font-size: 48px;
+    font-size: 40px;
     color: white;
     float: left;
     margin-top: 0;
@@ -46,7 +46,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 30px;
     width: 100%;
-    font-size: 32px;
+    font-size: 25px;
     color: white;
     float: left;
 }
@@ -55,167 +55,112 @@ h2 {
     position: relative;
     border: 2.5px solid #c4261d;
     width: 81px;
+    
     margin-left: 2px;
 } 
 
 .newsmain {
+    position: relative;
     height: auto;
     width: 68%;
     margin: auto;
-    
+    top: 31px;
+    background-color: transparent;
 }
 
-/**/
-
-.hotline {
-    float: right;
-    margin-top: 20px;
-    color: #c4261d;
-}
-
-.cell {
-    width: 40%;
-    margin: 0 4%;
-    margin-top: 30px;
+.newstypenav {
+    height: 45px;
     position: relative;
-    display: inline-block;
-}
-
-.allproduct {
     width: 100%;
-    line-height: 50px;
 }
 
-.categoryimg {
-    width:100%;
-    height: 270;
-}
-
-.newsimg {
-    width: 40%;
-}
-
-.left {
+.pagecountainer {
     position: relative;
-    height: 1500px;
-    top: 90px;
-    width: 11.4%;
-    left: 15.8%;
-    text-align: left;
-    display: inline-block;
+    background-color: white;
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    padding: 0;
 }
-
-h5 {
-    top: 36px;
+.typeslink {
+    height: 45px;
+    width: 130px;
+    font-size: 18px;
+    color: white;
+    background-color: #787878;
+    line-height: 45px;
+    text-align: center;
+    left: 80px;
     position: relative;
-    color: #211c19;
-    font-size: 24px;
 }
 
-.hr {
-    position: relative;
-    top: 50px;
-    border: 2px solid #c4261d;
-    width: 40px;
-    margin-left: 2px;
-}
-
-.left ul{
+.pagecountainer ul{
     position: relative;
     padding: 0;
-    top: 75px;
+    top: 17px;
     margin-left: 2px;
     list-style-type: none;
 }
 
-.typeslink {
-    font-size: 16px;
-    margin-bottom: 23px;
-}
-
-.right {
-    display: inline-block;
-    position: relative;
-    width: 60%;
-    top: 90px;
-    height: 1500px;
-    left: 0;
-    float: right;
-    margin-right: 13%;
-}
-
-h6 {
-    color: #c4261d;
-    font-size: 20px;
-    position: relative;
-    top: 80px;
-}
-
-.righthr {
-     top: 102px;
-
-}
-
 .newscell {
-    width: 100%;
     position: relative;
     height: 150px;
+    margin: 6;
     margin-top: 4%;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+.text-field {
+    width: 70%;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
 }
 
-
-
-.title {
-    position: relative;
-    height: 135px;
+p.newstext {
+    line-height: 22px;
+    overflow: hidden;
 }
 
 .newsimg {
-    width: 20%;
+    width: 25%;
     height: 100%;
     background-size: contain !important;
     display: inline-block;
     background-repeat: no-repeat !important;
     background-position: center center !important;
+    display: inline-block;
+    vertical-align: top;
 
-}
-
-.text-field {
-    width: 77%;
-    float: right;
-    position: relative;
 }
 
 .newstitle {
-    color: #211c19;
+    color: #c4261d;
     font-size: 25px;
 }
 
-.productdiscription {
-    margin-top: 20px;
+/**/
+
+
+
+a.visited{
+    color:white;
+    background-color: #c4261d;
+    text-decoration: none;
 }
 
-.right li {
-    list-style-type: none;
+a.hover {
+    color: white !important;
 }
 
 .news_list {
     padding: 0;
 }
 
-p.newstext {
-    /*height: 90px;*/
-    line-height: 22px;
-    overflow: hidden;   
-}
-
-a.visited{
-    color:#c4261d;
-    text-decoration: none;
-}
-
 .navbtn { 
     float: right !important;
+    right: 10%;
+    position: relative;
     color:#c4261d;
     font-size:14px;
     padding-top:10px;
