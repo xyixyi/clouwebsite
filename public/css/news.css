@@ -144,12 +144,16 @@ p.newstext {
 
 
 a.visited{
-    color:white;
+    color:white !important;
     background-color: #c4261d;
     text-decoration: none;
 }
 
-a.hover {
+a:hover {
+    color: white !important;
+}
+
+a:active {
     color: white !important;
 }
 
