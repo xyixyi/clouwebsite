@@ -8,7 +8,7 @@ body {
 
 .newsbanner {
     position: relative;
-    top: 121px;
+    top: 120px;
     background-image: url("../img/news/newsbanner.jpg") !important;
     height: 425px;
     background-position: center center;
