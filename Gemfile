@@ -9,6 +9,7 @@ gem "mini_magick"
 gem 'rails', '4.2.5'
 
 gem 'devise'
+gem 'twitter-bootstrap-rails'
 
 #for devise translation
 gem 'devise-i18n'
