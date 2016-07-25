@@ -8,11 +8,11 @@ class CompanyNews < ActiveRecord::Base
           field :title do
             label "名称"
           end
+          field :author do
+            label "作者"
+          end
           field :description do
             label "梗概"
-            pretty_value do
-              value.html_safe
-            end
           end
           field :content do
             label "内容"
@@ -31,8 +31,14 @@ class CompanyNews < ActiveRecord::Base
           field :title do
             label "名称"
           end
+          field :author do
+            label "作者"
+          end
           field :description do
             label "梗概"
+            html_attributes do
+              {:maxlength => 600}
+            end
           end
           field :content, :ck_editor do
             label "内容"

@@ -4,6 +4,9 @@ class EmployeeStory < ActiveRecord::Base
     rails_admin do
         navigation_label '员工讯息'
         list do
+          field :title do
+            label "标题"
+          end
           field :name do
             label "姓名"
           end
@@ -13,6 +16,9 @@ class EmployeeStory < ActiveRecord::Base
         end
         
         edit do
+          field :title do
+            label "标题"
+          end
           field :name do
             label "姓名"
           end

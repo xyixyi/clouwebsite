@@ -7,17 +7,17 @@ RailsAdmin.config do |config|
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement"]
   
-  config.model Type do
-    parent Category
-  end
+  # config.model Type do
+  #   parent Category
+  # end
   
-  config.model Product do
-    parent Type
-  end
+  # config.model Product do
+  #   parent Type
+  # end
   
-  config.model PopProduct do
-    parent Type
-  end
+  # config.model PopProduct do
+  #   parent Type
+  # end
   
   ## == Devise ==
   # config.authenticate_with do

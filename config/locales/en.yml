@@ -1,4 +1,8 @@
 en:
+  #for image uploader error message
+  errors:
+    messages:
+      extension_white_list_error: "无法上传 %{extension} 文件, 可上传类型: %{allowed_types}"
   activerecord:
     models:
       user: "用户"
