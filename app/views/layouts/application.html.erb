@@ -10,7 +10,7 @@
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
   <script type="text/javascript"src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="bootstrap/js/bootstrap-modal.js"></script>
+  <!--<script src="bootstrap/js/bootstrap-modal.js"></script>-->
   
   <!--Navbar CSS File-->
   <link rel="stylesheet" type="text/css" href="/css/navbar.css">
@@ -22,12 +22,14 @@
   // });  
   
   $(function(){
-$('#myModal').modal({
-   show:true,
-   backdrop:'static'
-});
+
  //now on button click
-  $('#myModal').modal('show');
+ $('.login-link').on('click', function(){
+    $('#login').modal("show");
+    $('#login').removeClass('hide');
+
+ });
+
 });
 
   </script>
@@ -52,8 +54,7 @@ $('#myModal').modal({
     <p class="welcomewords">
     欢迎来到深圳市科陆电子科技有限公司，请
   </p>
-    <%= link_to "弹窗登录测试????????", "#login", "data-toggle" => "modal", class: 'login' %>
-
+    <a  class="login login-link" href="#" onclick="return false;">弹窗登录测试????????</a>
     
     <%= link_to "登录", new_user_session_path, class: "login" %>
     <p class="welcomewords">或</p>
