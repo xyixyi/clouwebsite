@@ -6,12 +6,20 @@
     top: 90px;
 }
 
+body {
+    background-color: white;
+}
+
 @media (max-width: 1500px) {
     .navlinks {
         width: 70% !important;
     }
     
     .joinusslogan {
+        width: 70% !important;
+    }
+    
+    .recuritments {
         width: 70% !important;
     }
 }
@@ -64,7 +72,7 @@ h2 {
 }
 
 .joinusslogan {
-    width: 70%;
+    width: 60%;
     margin: auto;
     text-align: left;
     margin-top: 400px;
@@ -91,7 +99,7 @@ h3 {
     opacity: 0.4;
     background: RGBA(255,255,255, 0.4);
     filter: alpha(opacity=40);
-    height: 110px;
+    height: 90px;
     margin-top: 160px;
 }
 
@@ -99,7 +107,94 @@ h3 {
     position: relative;
     font-size: 30px;
     color: #343434;
+    line-height: 90px;
+    display: inline-block;
+}
+
+.storylink {
+    color: #C4261D;
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.ourstoryreal {
+    position: relative;
+    z-index: 99999;
+    top: -90px;
+    background-color: transparent;
+}
+
+.recuritments {
+    width: 60%;
+    height: 920px;
+    background-color: white;
+    margin: auto;
+    color: #343434;
+    position: relative;
+    top: 90px;
+}
+
+.supercoolslogan {
+    position: relative;
+    font-size: 30px;
+    line-height: 50px;
+    color: #343434;
+    margin-bottom: 0;
+    margin-top: 110px;
+}
+
+.recuritmentsfield {
+    height: 415px;
+    margin-bottom: 120px;
+    margin-top: 95px;
+}
+
+.society {
+    height: 415px;
+    /*width: 490px;*/
+    width: 42.5%;
+    float: left;
+    position: relative;
+}
+
+.campus {
+    height: 415px;
+    /*width: 490px;*/
+    width: 42.5%;
+    float: right;
+    position: relative;
+}
+
+.society-img {
+    background-color: #c4261d;
+    width: 100%;
+    height: 270px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
     
-   
-    line-height: 110px;
+}
+
+.campus-img {
+    background-color: #c4261d;
+    width: 100%;
+    height: 270px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.recuritments-link {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #c4261d;
+    line-height: 50px;
+}
+
+.intro {
+    font-size: 20px;
+    color: #343434;
 }
