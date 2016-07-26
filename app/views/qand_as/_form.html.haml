@@ -1,0 +1,25 @@
+= form_for @qand_a do |f|
+  - if @qand_a.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@qand_a.errors.count, "error")} prohibited this qand_a from being saved:"
+      %ul
+        - @qand_a.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :QType
+    = f.text_field :QType
+  .field
+    = f.label :question
+    = f.text_field :question
+  .field
+    = f.label :answer
+    = f.text_field :answer
+  .field
+    = f.label :attachment
+    = f.text_field :attachment
+  .actions
+    = f.submit 'Save'

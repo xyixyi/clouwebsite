@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-    belongs_to :type
+    belongs_to :Type
     belongs_to :category
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
@@ -48,10 +48,10 @@ class Product < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :synopsis do
+          field :synopsis, :text do
             label "梗概"
             html_attributes do
-              {:maxlength => 600}
+              {:maxlength => 300}
             end
           end
           field :detail, :ck_editor do
