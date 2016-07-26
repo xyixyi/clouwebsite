@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :service_cases
+  resources :qand_as
+  resources :q_types
   resources :employee_stories
   resources :announcements
   resources :year_reports
