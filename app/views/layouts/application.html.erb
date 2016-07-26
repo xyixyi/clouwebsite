@@ -3,6 +3,11 @@
 <head>
   <title>Clouwebsite</title>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+  <!--禁止缓存-->
+  <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+  <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+  <META HTTP-EQUIV="expires" CONTENT="0"> 
   
   <!--Bootstrap CSS-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -17,18 +22,22 @@
 
 
   <script type="text/javascript">
-  // $(function () { 
-  //     $("#myModal").modal({show:false});
-  // });  
+
   
-  $(function(){
+  // $(function(){
 
  //now on button click
- $('.login-link').on('click', function(){
+ $(document).ready(function(){
+  // var newwin = window.open(",");
+  
+    $('.login-link').on('click', function(){
+      window.alert("aaa");
     $('#login').modal("show");
     $('#login').removeClass('hide');
 
  });
+// });
+
 
 });
 
