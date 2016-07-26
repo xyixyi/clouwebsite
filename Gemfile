@@ -9,6 +9,7 @@ gem "mini_magick"
 gem 'rails', '4.2.5'
 
 gem 'devise'
+gem 'twitter-bootstrap-rails'
 
 #for devise translation
 gem 'devise-i18n'
@@ -49,6 +50,8 @@ gem 'validates_timeliness', '~> 4.0'
 gem "searchkick" 
 gem 'elasticsearch-model' 
 gem 'elasticsearch-rails'
+
+gem 'jquery-turbolinks'
 
 
 # Use ActiveModel has_secure_password

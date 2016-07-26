@@ -67,6 +67,14 @@ hr {
     color: #ececec;
 }
 
+@media (max-width: 1500px) {
+.logo {
+     left: 15% !important;
+}
+}
+
+
+
 .logo {
     position: absolute;
     top: 31px;
