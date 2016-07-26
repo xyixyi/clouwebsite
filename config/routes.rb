@@ -82,7 +82,7 @@ Rails.application.routes.draw do
   #     #   end
   
   get 'mainframe', :to => 'mainframe#index', :format => false
-  get 'join_us', :to => 'mainframe#join_us', :format => false
+  get 'joinus', :to => 'mainframe#join_us', :format => false
   get 'plans', :to => 'mainframe#plans', :format => false
   get 'products_main', :to => 'mainframe#products', :format => false
   get 'service', :to => 'mainframe#service', :format => false
