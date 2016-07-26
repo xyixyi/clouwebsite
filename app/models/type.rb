@@ -1,5 +1,6 @@
 class Type < ActiveRecord::Base
     has_many :products, :dependent => :destroy
+    has_many :service_cases, :dependent => :destroy
     belongs_to :category
     mount_uploader :image, ImageUploader
     

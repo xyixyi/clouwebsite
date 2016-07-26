@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @q_type.name
+
+= link_to 'Edit', edit_q_type_path(@q_type)
+\|
+= link_to 'Back', q_types_path

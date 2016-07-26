@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @qand_a.title
+%p
+  %b Qtype:
+  = @qand_a.QType
+%p
+  %b Question:
+  = @qand_a.question
+%p
+  %b Answer:
+  = @qand_a.answer
+%p
+  %b Attachment:
+  = @qand_a.attachment
+
+= link_to 'Edit', edit_qand_a_path(@qand_a)
+\|
+= link_to 'Back', qand_as_path

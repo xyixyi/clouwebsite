@@ -1,5 +1,5 @@
 class PopProduct < ActiveRecord::Base
-  belongs_to :type
+  belongs_to :Type
   belongs_to :category
   mount_uploader :image, ImageUploader
   mount_uploader :attachment, AttachmentUploader
@@ -49,7 +49,7 @@ class PopProduct < ActiveRecord::Base
       field :name do
         label "名称"
       end
-      field :synopsis do
+      field :synopsis, :text do
         label "梗概"
         html_attributes do
           {:maxlength => 600}

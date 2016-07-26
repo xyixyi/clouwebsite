@@ -23,8 +23,11 @@ class Announcement < ActiveRecord::Base
           field :date do
             label "时间"
           end
-          field :type do
+          field :type, :enum do
             label "公告类型"
+            enum do
+              ['董事会', '监事会',"股东大会", "其他"]
+            end
           end
           field :link do
             label "链接"

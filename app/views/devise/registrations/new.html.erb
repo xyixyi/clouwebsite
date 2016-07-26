@@ -1,26 +1,31 @@
-<h2><%= t('.sign_up') %></h2>
+<title>用户注册</title>
+<link rel="stylesheet" type="text/css" href="/css/sign_up.css">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="main">
+  <h1>欢迎加入科陆</h1>
+  <hr class="hr">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="content">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      
+      <div class = "block_left">
+        <%= f.label :用户名, :class => 'mytext' %><br>
+        <%= f.label :密码, :class => 'mytext' %><br>
+        <%= f.label :重复密码, :class => 'mytext' %>
+      </div>
+      
+      <div class = "block_right">
+        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "用户名设置要求" %>
+        <%= f.password_field :password, autocomplete: "off", :class => 'myfield', :placeholder => "密码规则" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'myfield', :placeholder => "重复输入密码" %>
+        <%= f.submit "立即注册", :class => 'submit' %>
+        <a style="margin-top: 21px; color:#C4261D; float:right; margin-bottom:118px;" href="/users/sign_in"</a>已有账号?立即登录</a>
+      </div>
+
   </div>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

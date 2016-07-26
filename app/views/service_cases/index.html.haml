@@ -1,0 +1,27 @@
+%h1 Listing service_cases
+
+%table
+  %thead
+    %tr
+      %th Type
+      %th Image
+      %th Text
+      %th Attachment
+      %th
+      %th
+      %th
+
+  %tbody
+    - @service_cases.each do |service_case|
+      %tr
+        %td= service_case.Type
+        %td= service_case.image
+        %td= service_case.text
+        %td= service_case.attachment
+        %td= link_to 'Show', service_case
+        %td= link_to 'Edit', edit_service_case_path(service_case)
+        %td= link_to 'Destroy', service_case, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Service case', new_service_case_path

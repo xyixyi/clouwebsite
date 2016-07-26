@@ -18,6 +18,9 @@ en:
       year_report: "年报"
       announcement: "公告"
       employee_story: "员工故事"
+      service_case: "客服案例"
+      qand_a: "Q&A"
+      q_type: "问答类型"
   admin:
     js:
       true: True
