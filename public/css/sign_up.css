@@ -85,31 +85,51 @@ h1 {
 
 .popup_field{
     position: relative;
-    margin:auto;
     width: 275px;
     height: 45px;
     font-size: 18pt;
     border-radius: 5px;
     color: #d0d8e1;
     margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .popup_submit{
     position: relative;
     width: 275px;
     height: 55px;
+    font-size: 20px;
     background-color: #C4261D;
     color: white;
     border-radius: 5px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .popup_logo{
     position: relative;
-    margin-bottom: 56px;
-    top:55px;
-    left:74px;
-    right:74px;
     width:192px;
     height:28px;
+}
+
+.popup_sign_up{
+    position: relative;
+    width: 275px;
+    height: 55px;
+    font-size: 18px;
+    background-color: #5674D6;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.remember_forget{
+    color:#C4261D; 
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size:16px;
+    float: left;
 }

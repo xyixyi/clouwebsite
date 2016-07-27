@@ -22,7 +22,6 @@
 
 
   <script type="text/javascript">
-  
  //now on button click
  $(document).ready(function(){
     $('.login-link').on('click', function(){
@@ -54,9 +53,8 @@
     <p class="welcomewords">
     欢迎来到深圳市科陆电子科技有限公司，请
   </p>
-    <a  class="login login-link" href="#" onclick="return false;">弹窗登录测试????????</a>
-    
-    <%= link_to "登录", new_user_session_path, class: "login" %>
+    <a  class="login login-link" href="#" onclick="return false;">登录</a>
+    <!--<%= link_to "登录", new_user_session_path, class: "login" %>-->
     <p class="welcomewords">或</p>
     <%= link_to "注册", new_user_registration_path, class: "login" %>
   <%end%>
