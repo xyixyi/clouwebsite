@@ -60,9 +60,7 @@ class Product < ActiveRecord::Base
           
           field :category_id, :enum do
             label "产品大类"
-            enum do 
-              Category.all.collect {|p| [p.name, p.id]}
-            end
+            partial "add_type_base_on_category"
           end
           
           field :Type_id, :enum do
