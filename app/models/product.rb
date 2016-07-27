@@ -60,7 +60,9 @@ class Product < ActiveRecord::Base
           
           field :category_id, :enum do
             label "产品大类"
-            partial "add_type_base_on_category"
+            render do
+              bindings[:view].render :partial => "add_type_base_on_category", :locals => {:field => self, :form => bindings[:form]}
+            end
           end
           
           field :Type_id, :enum do

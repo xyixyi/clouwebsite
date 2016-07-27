@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/css/recuritments.css">
+<div class="mainfield container">
+  
+  <h5>
+    招标信息
+  </h5>
+  <hr class="hr">
+<table class="tg">
+  <tr>
+    <th class="tg-baqh" style =" width:20%;">截止日期</th>
+    <th class="tg-baqh" style =" width:20%;">部门</th>
+    <th class="tg-baqh" style =" width:60%;">标题</th>
+  </tr>
+  <% grey = 1%>
+  <% @bids.each do |bid|%>
+    <tr>
+      <%if grey==1%>
+        <td class="tg-dzk6"><%= bid.deadline.to_date%></td>
+        <td class="tg-dzk6"><%= bid.department%></td>
+        <td class="tg-dzk6"><%= link_to bid.position, bid_path(:id => bid.id)%></td>
+        <% grey = 0%>
+      <%else%>
+        <td class="tg-dzk6"><%= bid.deadline.to_date%></td>
+        <td class="tg-dzk6"><%= bid.department%></td>
+        <td class="tg-dzk6"><%= link_to bid.position, bid_path(:id => bid.id)%></td>
+      <% grey = 1%>
+      <%end%>
+    </tr>
+  <%end%>
+</table>
+</div>

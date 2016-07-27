@@ -17,10 +17,12 @@ Rails.application.routes.draw do
   resources :news do 
     get "showindustrynews", :on => :collection
     get "showcompanynews", :on => :collection
+    get "stories", :on => :collection
   end
   
   resources :mainframe do
     get "news", :on => :collection
+    get "industrynews", :on => :collection
   end
 
   resources :categories

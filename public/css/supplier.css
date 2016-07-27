@@ -1,4 +1,4 @@
-.joinusnav {
+.suppliernav {
     position: relative;
     width: 100%;
     height: 50px;
@@ -15,7 +15,7 @@ body {
         width: 70% !important;
     }
     
-    .joinusslogan {
+    .supplierslogan {
         width: 70% !important;
     }
     
@@ -50,10 +50,10 @@ h1 {
     color: white;
 }
 
-.joinusbanner {
+.supplierbanner {
     position: relative;
     top: 90px;
-    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+    background-image: url("../img/join_us/supplierbanner.jpg") !important;
     height: 810px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@ h1 {
     text-align: center;
 }
 
-.joinuscover {
+.suppliercover {
     background-color: black;
     opacity: 0.4;
     width: 100%;
@@ -79,7 +79,7 @@ h2 {
     color: white;
 }
 
-.joinusslogan {
+.supplierslogan {
     text-align: left;
     position: relative;
     top: -400px;
@@ -211,4 +211,78 @@ h3 {
 
 a.nav-links:active,a.nav-links:visited {
     color: white !important;
+}
+
+.footer {
+    margin-top: -382px;
+}
+
+
+table {
+    position: relative;
+    
+    top: 60px;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    
+}
+
+.logo {
+    left: 15% !important;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color:#ccc;
+    border:none;
+    
+}
+.tg td{
+    font-size:14px;
+    padding:0px 20px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:#ccc;
+    color:#211c19;
+    background-color:#fff;
+    line-height: 45px;
+    
+}
+.tg th{
+    font-size:14px;
+    font-weight:normal;
+    padding: 0px 20px;
+    line-height: 45px;
+    width: 160px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:white;
+    color:#2e2824;
+    background-color:white;
+    
+}
+    
+.tg .tg-baqh{
+    text-align:left;
+    vertical-align:top
+    
+}
+.tg .tg-dzk6{
+    background-color:#f9f9f9;
+    text-align:left;
+    vertical-align:top
+    
+}
+
+.tg .tg-dzk4 {
+    background-color:white;
+    text-align:left;
+    vertical-align:top
 }

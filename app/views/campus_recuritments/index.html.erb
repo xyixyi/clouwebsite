@@ -2,7 +2,7 @@
 <div class="mainfield container">
   
   <h5>
-    社会招聘
+    校园招聘
   </h5>
   <hr class="hr">
 <table class="tg">
@@ -15,10 +15,10 @@
     <th class="tg-baqh">截止日期</th>
   </tr>
   <% grey = 1%>
-  <% @society_recuritments.each do |recuritment|%>
+  <% @campus_recuritments.each do |recuritment|%>
     <tr>
       <%if grey==1%>
-        <td class="tg-dzk6"><%= link_to recuritment.title, society_recuritment_path(:id => recuritment.id)%></td>
+        <td class="tg-dzk6"><%= link_to recuritment.title, campus_recuritment_path(:id => recuritment.id)%></td>
         <td class="tg-dzk6"><%= recuritment.position%></td>
         <td class="tg-dzk6"><%= recuritment.department%></td>
         <td class="tg-dzk6"><%= recuritment.number%></td>
@@ -26,7 +26,7 @@
         <td class="tg-dzk6"><%= recuritment.deadline.to_date%></td>
         <% grey = 0%>
       <%else%>
-        <td class="tg-dzk4"><%= link_to recuritment.title, society_recuritment_path(:id => recuritment.id)%></td>
+        <td class="tg-dzk4"><%= link_to recuritment.title, campus_recuritment_path(:id => recuritment.id)%></td>
         <td class="tg-dzk4"><%= recuritment.position%></td>
         <td class="tg-dzk4"><%= recuritment.department%></td>
         <td class="tg-dzk4"><%= recuritment.number%></td>

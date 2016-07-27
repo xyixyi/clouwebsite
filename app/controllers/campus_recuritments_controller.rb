@@ -4,12 +4,14 @@ class CampusRecuritmentsController < ApplicationController
   # GET /campus_recuritments
   # GET /campus_recuritments.json
   def index
-    @campus_recuritments = CampusRecuritment.all
+    # @campus_recuritments = CampusRecuritment.all
+    @campus_recuritments = CampusRecuritment.where("DATE(deadline) > DATE(?)", Time.now).order(created_at: :desc)
   end
 
   # GET /campus_recuritments/1
   # GET /campus_recuritments/1.json
   def show
+    @recuritment = CampusRecuritment.find(params[:id])
   end
 
   # GET /campus_recuritments/new

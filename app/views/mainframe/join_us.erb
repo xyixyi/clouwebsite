@@ -2,15 +2,23 @@
 <div class="joinusnav">
     <div class="navlinks">
         <h1>加入我们</h1>
-        <a class="nav-links">社会招聘</a>
-        <a class="nav-links">校园招聘</a>
+        <!--<a class="nav-links">社会招聘</a>-->
+        <!--<a class="nav-links">校园招聘</a>-->
+        <%= link_to "社会招聘", society_recuritments_path, class:"nav-links"%>
+        <%= link_to "校园招聘", campus_recuritments_path, class:"nav-links"%>
         <a class="nav-links">认识科陆</a>
-        <a class="nav-links">人在科陆</a>
+        <%= link_to "人在科陆", stories_news_index_path, class:"nav-links"%>
     </div>
     
 </div>
 
 <div class="joinusbanner">
+    <div class="joinuscover">
+        
+    </div>
+
+</div>
+
     <div class="joinusslogan">
         <h2>我是文案文案文案文案文案文案文案文案</h2>
         <h3>我是小文案</h3>
@@ -21,9 +29,9 @@
     </div>
     <div class="ourstoryreal">
         <p class="storybanner">关于了解科陆员工的文案我想不出</p>
-        <a class="storylink">了解我们的故事></a>
+        <!--<a class="storylink">了解我们的故事></a>-->
+        <%= link_to "了解我们的故事>", stories_news_index_path, class:"storylink"%>
     </div>
-</div>
 <div class="recuritments">
     <p class="supercoolslogan">
         欢迎文字呗欢迎文字呗欢迎文字呗欢迎文字呗欢迎文字呗欢迎文字呗欢
@@ -36,7 +44,8 @@
             <div class="society-img">
                 
             </div>
-            <a class="recuritments-link">社会招聘></a>
+            <!--<a class="recuritments-link">社会招聘></a>-->
+            <%= link_to "社会招聘>", society_recuritments_path, class:"recuritments-link"%>
             <p class="intro">介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么</p>
         </div>
         
@@ -44,7 +53,8 @@
             <div class="campus-img">
                 
             </div>
-            <a class="recuritments-link">校园招聘></a>
+            <!--<a class="recuritments-link">校园招聘></a>-->
+            <%= link_to "校园招聘", campus_recuritments_path, class:"recuritments-link"%>
             <p class="intro">介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么介绍之类的文字要加么</p>
         </div>
     </div>

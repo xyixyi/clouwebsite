@@ -17,8 +17,14 @@ class MainframeController < ApplicationController
   end
   
   def news
-    @industry_news = IndustryNews.all.reverse
-    @company_news = CompanyNews.all.reverse
+    # @industry_news = IndustryNews.all.reverse
+    # @company_news = CompanyNews.all.reverse
+
+    @company_news = CompanyNews.paginate :page => params[:page],:per_page => 6
+  end
+  
+  def industrynews
+     @industry_news = IndustryNews.paginate :page => params[:page], :per_page => 6
   end
 
   def new
