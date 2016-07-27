@@ -2,29 +2,28 @@
 <link rel="stylesheet" type="text/css" href="/css/sign_up.css">
 
 <div class="modal hide fade" id="login" 
-style="margin:auto;width:340px;border-radius: 5px;background-color:white;height:500px;top:100px;">
-  <!--<div class="modal-header">-->
-  <!--  <button class="close" data-dismiss="modal">x</button>-->
-  <!--  <img border="0" alt="logo" src="/img/homepage/logo.png" class="popup_logo" width="192" height="28">-->
-  <!--</div>-->
-  
-  <div class="modal-body">
-      <img border="0" alt="logo" src="/img/homepage/logo.png" class="popup_logo">
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <div>
+style="margin:auto; width:340px; height:500px; border-radius:5px; background-color:white; top:100px;">
+
+  <div class="modal-header" style="height:410px;">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div style="margin-top:40px; margin-bottom:56px;text-align:center;">
+          <img border="0" alt="logo" src="/img/homepage/logo.png" class="popup_logo">
+      </div>
+      <div style="text-align:center;">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, :class => 'popup_field', :placeholder => "请输入用户名" %>
         <%= f.password_field :password, autocomplete: "off", :class => 'popup_field', :placeholder => "请输入密码" %>
         <%= f.submit "登录", :class => 'popup_submit' %>
         <% if devise_mapping.rememberable? %>
-            <%= f.check_box :remember_me %>
-            <%= f.label :记住我, :class => "smallredword" %>
+            <%= f.check_box :remember_me, :style => "float:left;margin-left:24px;margin-top:24px;" %>
+            <span class='remember_forget' style="float:left">记住我</span>
         <% end %>
-        <a style="margin-top: 21px; color:#C4261D; float:right; margin-bottom:118px;" href="/users/password/new"</a>忘记密码？</a>
+        <a class='remember_forget' style="float:right; margin-right:18px;" href="/users/password/new"</a>忘记密码？</a>
       </div>
     <% end %>
   </div>
   
-  <div class="modal-footer">
-
+  <div style="height:115px; text-align:center">
+      <button class="popup_sign_up" href="/users/sign_up">没有账号？立即注册</button>
   </div>
 </div>
