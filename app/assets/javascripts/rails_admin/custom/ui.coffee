@@ -3,7 +3,7 @@ $ = jQuery
 $(document).ready ->
   
   $('#product_Type_id').empty()
-  $('#product_Type_id').append '<option value=""></option>'
+  $('#product_Type_id').append "<option value='' selected='selected'></option>"
   $('#product_Type_id').change()
   $(document).on 'change', '#product_category_id', (event) ->
     category = $('#product_category_id').val()
