@@ -324,6 +324,12 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 1.0)
       sass-rails (>= 4.0, < 6)
+    rails_admin_import (1.4.0)
+      haml (~> 4.0)
+      rails (>= 3.2)
+      rails_admin (>= 0.6.6)
+      rchardet (~> 1.6)
+      simple_xlsx_reader (~> 1.0)
     rails_best_practices (1.16.0)
       activesupport
       code_analyzer (>= 0.4.3)
@@ -339,6 +345,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
     rake (11.2.2)
+    rchardet (1.6.1)
     rdoc (4.2.2)
       json (~> 1.4)
     redcard (1.1.0)
@@ -375,6 +382,7 @@ GEM
     ruby-progressbar (1.8.1)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
+    rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.5)
@@ -391,6 +399,9 @@ GEM
       elasticsearch (>= 1)
       hashie
     sexp_processor (4.7.0)
+    simple_xlsx_reader (1.0.2)
+      nokogiri
+      rubyzip
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -481,6 +492,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.5)
   rails_admin
+  rails_admin_import (~> 1.2)
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
