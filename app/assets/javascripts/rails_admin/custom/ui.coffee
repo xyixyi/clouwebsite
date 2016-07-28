@@ -1,3 +1,4 @@
+#= require ./nav_bar.js
 $ = jQuery
 $(document).ready ->
   
@@ -14,3 +15,4 @@ $(document).ready ->
           value: value[0]
           text: value[1])
   return
+
