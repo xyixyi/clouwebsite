@@ -4,12 +4,15 @@ class SocietyRecuritmentsController < ApplicationController
   # GET /society_recuritments
   # GET /society_recuritments.json
   def index
-    @society_recuritments = SocietyRecuritment.all
+    # @society_recuritments = SocietyRecuritment.all
+    @society_recuritments = SocietyRecuritment.where("DATE(deadline) > DATE(?)", Time.now).order(created_at: :desc)
+
   end
 
   # GET /society_recuritments/1
   # GET /society_recuritments/1.json
   def show
+        @recuritment = SocietyRecuritment.find(params[:id])
   end
 
   # GET /society_recuritments/new

@@ -4,6 +4,7 @@ class Bid < ActiveRecord::Base
         navigation_label '投标'
         weight +1
         list do 
+          #title
           field :position do
             label "招标项目"
           end

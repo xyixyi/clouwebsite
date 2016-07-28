@@ -235,3 +235,8 @@ a.visited{
     color:#c4261d;
     text-decoration: none;
 }
+
+.pagination {
+  position: relative !important;
+  left: 70% !important;
+}

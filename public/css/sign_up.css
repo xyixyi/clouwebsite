@@ -52,6 +52,7 @@ h1 {
     width: 335px;
     height: 45px;
     font-size: 18pt;
+    border: 1px solid;
     border-radius: 5px;
     margin-bottom:20px;
 }
@@ -67,6 +68,7 @@ h1 {
     width: 335px;
     height: 45px;
     background-color: #C4261D;
+    border: 0px;
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -90,6 +92,8 @@ h1 {
     font-size: 18pt;
     border-radius: 5px;
     color: #d0d8e1;
+    border: 1px;
+    border-style: solid;
     margin-bottom:20px;
     margin-left: auto;
     margin-right: auto;
@@ -101,9 +105,9 @@ h1 {
     height: 55px;
     font-size: 20px;
     background-color: #C4261D;
+    border: 0px;
     color: white;
     border-radius: 5px;
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -119,6 +123,7 @@ h1 {
     height: 55px;
     font-size: 18px;
     background-color: #5674D6;
+    border: 0px;
     color: white;
     border-radius: 5px;
     margin-top: 30px;
@@ -129,7 +134,11 @@ h1 {
 .remember_forget{
     color:#C4261D; 
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 8px;
     font-size:16px;
     float: left;
+}
+
+.modal {
+    border: 1px solid;
 }

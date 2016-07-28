@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="/css/general.css">
+<div class="mainfield">
+    <div class="text-field">
+        <h5><%= @bid.position%></h5>
+        <hr class="hr">
+        <p class="info" style="margin-top:40px;">部门：<%= @bid.department%></p>
+        <p class="info">截止日期：<%= @bid.deadline.to_date%></p>
+        <div class="body" id="productbody"><%= @bid.description.html_safe %></div>
+    </div>
+</div>

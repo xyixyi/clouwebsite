@@ -9,12 +9,12 @@
 </div>
 <div class="newsmain">
     <div class="newstypenav">
-        <a class="typeslink" id="company_news" href="#" style="background-color: #c4261d;">公司新闻</a>
-        <a class="typeslink" id="industry_news" href="/mainframe/industrynews" remote="false">行业新闻</a>
+        <a class="typeslink" id="company_news" href="/mainframe/news">公司新闻</a>
+        <a class="typeslink" id="industry_news" href="#" style="background-color: #c4261d;">行业新闻</a>
     </div>
     <div class="pagecountainer container">
         <ul>
-        <%@company_news.each do |news|%>
+        <%@industry_news.each do |news|%>
             <li>
                 <div class="newscell">
                     <div class="newsimg" style="background: url(<%= news.image%>);">
@@ -32,7 +32,7 @@
         
         
 
-        <%= will_paginate @company_news,:previous_label => '上一页',:next_label=> '下一页' %>
+        <%= will_paginate @industry_news,:previous_label => '上一页',:next_label=> '下一页' %>
 
     </div>
 </div>

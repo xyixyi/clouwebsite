@@ -4,12 +4,14 @@ class BidsController < ApplicationController
   # GET /bids
   # GET /bids.json
   def index
-    @bids = Bid.all
+    # @bids = Bid.all
+    @bids = Bid.where("DATE(deadline) > DATE(?)", Time.now).order(created_at: :desc)
   end
 
   # GET /bids/1
   # GET /bids/1.json
   def show
+    @bid = Bid.find(params[:id])
   end
 
   # GET /bids/new
