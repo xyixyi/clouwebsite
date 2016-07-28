@@ -1,12 +1,12 @@
 class ServiceCase < ActiveRecord::Base
-  belongs_to :Type
+  belongs_to :case_type
   mount_uploader :image, ImageUploader
   mount_uploader :attachment, AttachmentUploader
   
   #set up rails admin
   rails_admin do
-    navigation_label '产品类别'
-    parent Type
+    parent CaseType
+    navigation_label '案例类型'
     list do 
       field :title do
         label "标题"

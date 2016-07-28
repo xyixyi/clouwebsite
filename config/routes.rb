@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :case_types
   resources :service_cases
   resources :qand_as
   resources :q_types
