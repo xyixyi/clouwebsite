@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :case_types
   resources :service_cases
   resources :qand_as
   resources :q_types
@@ -27,6 +26,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories
+
   # resources :categories do 
   #   resources :types do 
   #     resources :products
@@ -106,7 +106,7 @@ Rails.application.routes.draw do
   get 'contact_us', :to => 'about_us#contact_us', :format => false
 
 
-  
+  get 'categories/find_subtypes/:id' => 'categories#find_subtypes'
   # below code for testing uploading function
   get 'general', :to => 'mainframe#general_text', :format => false
   

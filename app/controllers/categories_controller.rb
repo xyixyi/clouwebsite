@@ -21,6 +21,16 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
   end
+  
+  #find subtypes of a category
+  def find_subtypes
+    types = Category.find(params[:id]).types
+    result = []
+    types.each do |type|
+      result.push([type.id, type.name])
+    end
+    render json: result
+  end
 
   # POST /categories
   # POST /categories.json
