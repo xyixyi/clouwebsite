@@ -74,6 +74,9 @@ class Product < ActiveRecord::Base
             render do
               bindings[:view].render :partial => "add_type_base_on_category", :locals => {:field => self, :form => bindings[:form]}
             end
+            # enum do
+            #   ::Type.all.collect {|p| [p.name, p.id]}
+            # end
           end
           
           field :image, :carrierwave do
