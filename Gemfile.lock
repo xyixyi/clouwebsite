@@ -246,6 +246,7 @@ GEM
     map (6.6.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    method_source (0.8.2)
     metric_fu (4.12.0)
       cane (~> 2.5, >= 2.5.2)
       churn (~> 0.0.35)
@@ -285,6 +286,10 @@ GEM
     phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     procto (0.0.3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -407,6 +412,7 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    slop (3.6.0)
     spring (1.7.2)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
@@ -489,7 +495,9 @@ DEPENDENCIES
   jquery-turbolinks
   metric_fu
   mini_magick
+  nokogiri
   pg
+  pry
   rails (= 4.2.5)
   rails_admin
   rails_admin_import (~> 1.2)
