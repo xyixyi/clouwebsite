@@ -130,6 +130,7 @@ hr {
 .search_btn {
     background-image: url("../img/homepage/R_03.png") !important;
     width: 36px;
+    background-color: #c4261d;
     height: 30px;
 }
 
@@ -227,7 +228,7 @@ hr {
 }
 
 p{
-    text-overflow : '.';
+    text-overflow : ellipsis;
     
 }
 
@@ -239,4 +240,12 @@ a.visited{
 .pagination {
   position: relative !important;
   left: 70% !important;
+}
+
+.carousel-inner>.item {
+    padding-left: 50px !important;
+}
+
+.item.active {
+    padding-left: 0 !important;
 }

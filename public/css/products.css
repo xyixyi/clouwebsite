@@ -16,6 +16,18 @@ h4 {
     text-align: center;
 }
 
+.starproduct {
+    position: relative;
+    width: 100%;
+    top: 120px;
+    height: 735px;
+    display: inline-block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
 .carousel {
     top: 120px !important;
 }
@@ -65,10 +77,16 @@ body {
 }
 
 .productimg {
-    width: 40%;
+    width: 350px;
 }
 
-.left {
+@media (max-width: 1399px) { 
+    .productimg {
+        width: 300px !important;
+    }
+}
+
+.leftmenu {
     position: relative;
     height: 1500px;
     top: 90px;
@@ -93,7 +111,7 @@ h5 {
     margin-left: 2px;
 }
 
-.left ul{
+.leftmenu ul{
     position: relative;
     padding: 0;
     top: 75px;
@@ -106,7 +124,7 @@ h5 {
     margin-bottom: 23px;
 }
 
-.right {
+.rightproducts {
     display: inline-block;
     position: relative;
     width: 60%;
@@ -176,7 +194,7 @@ h6 {
     margin-top: 20px;
 }
 
-.right li {
+.rightproducts li {
     list-style-type: none;
 }
 
