@@ -27,6 +27,7 @@ gem 'cancancan', '~> 1.10'
 # crawler
 gem 'nokogiri'
 gem 'pry'
+gem 'whenever'
 
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
