@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>巨潮资讯网——信息披露</title>
+<!-- 公共引用 -->
+<!-- 页面头部和尾部样式与JS的公共引用 -->
+<META http-equiv="X-UA-Compatible" content="IE=edge" > </META>
+<link href="/cninfo-new/css/base.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/cninfo-new/css/flexslider.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/common/common.js"></script>
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/common/moment.min.js"></script>
+<script defer src="/cninfo-new/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+	var ondCninfoCommonPage = "companyinfo";
+	var path = "/cninfo-new";
+</script>
+<link href="/cninfo-new/css/disclosure.css" rel="stylesheet" type="text/css" />
+<link href="/cninfo-new/css/tag.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/cninfo-new/css/ui.daterangepicker.css" type="text/css" />
+<link rel="stylesheet" href="/cninfo-new/css/redmond/jquery-ui-1.7.1.custom.css"
+	type="text/css" title="ui-theme" />
+
+<script type="text/javascript" src="/cninfo-new/js/jquery-ui-1.7.1.custom.min.js"></script>
+<script type="text/javascript" src="/cninfo-new/js/daterangepicker.jQuery.js"></script>
+<script type="text/javascript" src="/cninfo-new/js/disclosure-szse.js"></script>
+<script type="text/javascript" src="/cninfo-new/js/disclosure-common.js"></script>
+<script type="text/javascript" src="/cninfo-new/js/common/common.js"></script>
+<script type="text/javascript">
+	var column = 'szse';	//栏目ID
+	var columnTitle = '深市公告';	//栏目标题
+	var path = '/cninfo-new';
+	$(function() {
+		$('#rangeA').daterangepicker({
+			datepickerOptions : {
+				changeMonth : true,
+				changeYear : true
+			},
+		});
+	});
+</script>
+</head>
+<body>
+<!-- 页面头部 -->
+<!-- 页面公共头部 -->
+<div class="header">
+	<div class="header-inner">
+		<div class="top">
+			<div class="t-sl">中国证监会指定信息披露网站</div>
+		</div>
+		<div class="logo">
+			<a href="/cninfo-new/index"><img src="/cninfo-new/images/logo.png" /></a>
+		</div>
+		<div class="top-search">
+			<form id="topCommonQueryForm" method="post" name="topCommonQueryForm" action="/cninfo-new/information/topSearch" enctype="multipart/form-data">
+			<input type="hidden" id="top_code_input" name="code" value="" />
+			<input type="text" name="notautosubmit" style="display:none"/>
+			<input id="common_top_input_obj" name="keyWord" type="text" class="top-search-input" autocomplete="off" maxlength="6"
+				placeholder="代码/简称/拼音缩写" />
+			</form>
+			<ul id="common_top_stock_list" name="all_stock" class="drop-down-list top-search-list">
+				<li class="title">
+					<dd>代码</dd>
+					<dd>类别</dd>
+					<dd>简称</dd>
+				</li>
+			</ul>
+			<div class="search-btn">
+				<a href="#"><img src="/cninfo-new/images/icon-search.png" /></a>
+			</div>
+			<!--<div class="keyword">
+				热搜公司：<a href="#">万科A</a>&nbsp;&nbsp;&nbsp;<a href="#">平安银行</a>&nbsp;&nbsp;&nbsp;<a
+					href="#">浦发银行</a>
+			</div>-->
+		</div>
+		<div class="nav">
+			<li><a href="#">信息披露</a>
+				<div class="dropdown-menu">
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/szse">深市公告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/szse_main">主板</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/szse_sme">中小板</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/szse_gem">创业板</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/sse">沪市公告</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/pre_disclosure">预披露公告</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/hke">香港公告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/hke_main">香港主板</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/hke_gem">香港创业板</a>
+						</dd>
+						<!--<dd>
+							<a href="/cninfo-new/disclosure/hke_a_h">A+H</a>
+						</dd>-->
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/staq_net_delisted">两网公司及退市公司</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/neeq_company">股份转让系统挂牌公司</a>
+						</dd>
+						<dd class="title">
+							<a href="http://www.reeclub.com.cn/information.html" target="_Blank">区域股权市场资讯汇公告</a>
+						</dd>
+						<dd>
+							<a href="http://www.reeclub.com.cn/information2.html?sc=cd" target="_Blank">成都</a>
+						</dd>
+						<dd>
+							<a href="http://www.reeclub.com.cn/information2.html?sc=cq" target="_Blank">重庆</a>
+						</dd>
+						<dd>
+							<a href="http://www.reeclub.com.cn/information2.html?sc=ql" target="_Blank">齐鲁</a>
+						</dd>
+						<dd>
+							<a href="http://www.reeclub.com.cn/information2.html?sc=wh" target="_Blank">武汉</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/fund">基金公告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/fund_listed">年度报告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/fund_sse">半年度报告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/fund_other">季度报告</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/bond">债券公告</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/bond_szse">深市债券</a>
+						</dd>
+						<dd>
+							<a href="/cninfo-new/disclosure/bond_sse">沪市债券</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/regulator_szse">监管机构公告</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/regulator_szse">深交所公告</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/regulator_sse">上交所公告</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/regulator_jsgs">结算公司公告</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/regulator_zjh">证监会公告</a>
+						</dd>
+						<!--
+						<dd class="title-2">
+							<a href="/cninfo-new/disclosure/regulator_neeq">全国股份转让系统公司公告</a>
+						</dd>
+						-->
+						<dd class="title">
+							<a href="/cninfo-new/disclosure/continue_supervise">持续督导意见</a>
+						</dd>
+					</ul>
+					<div class="dp-menu-bg"></div>
+					<iframe class="fake" src="about:blank"></iframe>
+				</div>
+			</li>
+			<li><a href="#">市场资讯</a>
+				<div class="dropdown-menu">
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/information/companylist">上市公司</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/information/fundlist">基金</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/information/bondlist">债券</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/information/hq">市场统计</a>
+						</dd>
+						<dd class="title">
+							<a href="http://www.cninfo.com.cn/eipo/index.jsp" target="_blank" >IPO专区</a>
+						</dd>
+						<dd class="title">
+							<a href="http://www.szse.cn/main/aboutus/xywjs/rzrqxzjd/" target="_blank">深圳融资融券业务</a>
+						</dd>
+						<dd class="title-2">
+							<a href="http://www.sse.com.cn/aboutus/innovation/margin/" target="_blank">上海融资融券业务</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="/cninfo-new/information/ipolist">拟上市公司清单</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/information/delistinglist">终止上市公司清单</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/information/suspendlist">暂停上市公司清单</a>
+						</dd>
+						<dd class="title">
+							<a href="/cninfo-new/information/prbookinfo">定期报告预约披露情况</a>
+						</dd>
+						<dd class="title-2">
+							<a href="/cninfo-new/memo-2">深沪停复牌</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a href="http://www.szse.cn/main/rule/" target="_blank">法律法规</a>
+						</dd>
+						<dd class="title-2">
+							<a href="http://www.szse.cn/main/research/cograduate/researchreport/" target="_blank">研究报告</a>
+						</dd>
+					</ul>
+					<div class="dp-menu-bg"></div>
+					<iframe class="fake" src="about:blank"></iframe>
+				</div>
+			</li>
+			<li><a href="#">产品服务</a>
+				<div class="dropdown-menu">
+					<div class="dp-menu-bg"></div>
+					<iframe class="fake" src="about:blank"></iframe>
+					<ul class="dd-column">
+						<dd class="title">
+							<a target="_blank" href="http://wltp.cninfo.com.cn/gddh_vote/vote/index.do">网络投票</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="https://mmcj.cninfo.com.cn/gddh_vote/vote/inquiryLogon.do">投票查询</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="https://mmcj.cninfo.com.cn/gddh_vote/vote/passwordService.do">服务密码</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="https://mmcj.cninfo.com.cn/gddh_vote/cis/logon.do">服务专区</a>
+						</dd>
+						<dd class="title">
+							<a target="_blank" href="http://irm.cninfo.com.cn/szse/">互动易</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="http://irm.cninfo.com.cn/ircs/sse/sseSubIndex.do?condition.type=5">最新提问</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="http://irm.cninfo.com.cn/ircs/sse/sseSubIndex.do?condition.type=7">最新答复</a>
+						</dd>
+						<dd>
+							<a target="_blank" href="http://irm.cninfo.com.cn/ircs/sse/sseSubIndex.do?condition.type=6">投资者关系信息</a>
+						</dd>
+					</ul>
+					<ul class="dd-column">
+						<dd class="title">
+							<a target="_blank" href="http://xbrl.cninfo.com.cn">分析易</a>
+						</dd>
+						<dd class="title">
+							<a target="_blank" href="http://www.cninfo.com.cn/fwsq/hq/index.htm">行情授权</a>
+						</dd>
+						<dd class="title">
+							<a target="_blank" href="http://www.cnindex.com.cn/">国证指数</a>
+						</dd>
+						<dd class="title">
+							<a target="_blank" href="http://www.cnindex.com.cn/syl.html">行业市盈率</a>
+						</dd>
+					</ul>
+					<div class="menu-banner flexslider" id="menu_scroll_div">
+						<ul class="slides" id="index_scroll">
+							<li><a href="#"><img src="/cninfo-new/images/t-banner-1.jpg"></a></li>
+							<li><a href="#"><img src="/cninfo-new/images/t-banner-1.jpg"></a></li>
+							<li><a href="#"><img src="/cninfo-new/images/t-banner-1.jpg"></a></li>
+							<li><a href="#"><img src="/cninfo-new/images/t-banner-1.jpg"></a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</div>
+	</div>
+</div>
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/common_top.js"></script>
+	
+	<div class="middle">
+
+<form id="AnnoucementsQueryForm" method="post" name="AnnoucementsQueryForm" action="/cninfo-new/announcement/show" enctype="multipart/form-data" target="_blank">
+<input type="hidden" id="stock_hidden_input" name="stock" />
+<input type="hidden" id="searchkey_hidden_input" name="searchkey" />
+<input type="hidden" id="plate_hidden_input" name="plate" />
+<input type="hidden" id="category_hidden_input" name="category" />
+<input type="hidden" id="trade_hidden_input" name="trade" />
+<input type="hidden" id="column_hidden_input" name="column" value='szse'/>
+<input type="hidden" id="columnTitle_hidden_input" name="columnTitle" value='深市公告'/>
+<input type="hidden" id="pageNum_hidden_input" name="pageNum" value="1"/>
+<input type="hidden" id="pageSize_hidden_input" name="pageSize" value="30"/>
+<input type="hidden" id="tabName_hidden_input" name="tabName" value="latest"/>
+<input type="hidden" id="sortName_hidden_input" name="sortName" value=""/>
+<input type="hidden" id="sortType_hidden_input" name="sortType" value=""/>
+<input type="hidden" id="limit_hidden_input" name="limit" value=""/>
+<input type="hidden" id="showTitle_hidden_input" name="showTitle" value=""/>
+
+		<!--start 公司公告披露查询 -->
+		<div class="navigation">
+			<div class="navigation-inner">
+				<a href="/cninfo-new/index">首页</a> <img src="../images/nav-arrow.png" />
+				信息披露 <img src="../images/nav-arrow.png" /> <span id="columnTitle_div">深市公告</span>
+			</div>
+		</div>
+		<div class="container-gray">
+			<div class="container-gray-inner">
+				<h2 id="columnTitle_h2">深市公告</h2>
+				<div class="bulletin-search">
+					<div class="search-condition c1">
+						<div class="plus-tag-add FancyForm">
+							<input name="" type="text" class="input-stock" maxlength="6"
+								placeholder="请输入代码/简称/拼音" />
+						</div>
+						<ul id="stock_list" name="szse_stock" class="drop-down-list tag-list"></ul>
+					</div>
+					<div class="search-condition c2">
+						<div class="plus-tag-add-2 FancyForm-2">
+							<input name="" type="text" placeholder="请输入关键字并回车" maxlength="80"/>
+						</div>
+					</div>
+					<div class="search-condition c3 drop-down">
+						<a href="javascript:void(0);">
+							<div class="drop-down-title">请选择行业</div>
+						</a>
+						<ul id="trade_list" class="drop-down-list tag-list"></ul>
+					</div>
+					<div class="search-condition c4 drop-down">
+						<a href="javascript:void(0);">
+							<div class="drop-down-title">请选择板块</div>
+						</a>
+						<ul id="plate_list" class="drop-down-list tag-list"></ul>
+					</div>
+					<div class="search-condition c5 drop-down">
+						<a href="javascript:void(0);">
+							<div class="drop-down-title">请选择公告类别</div>
+						</a>
+						<ul id="category_list" class="drop-down-list tag-list"></ul>
+					</div>
+					<div class="search-condition c8" id="date-select">
+						<input name="seDate" type="text" value="请选择日期" class="date-icon" autocomplete="off"
+							id="rangeA" />
+					</div>
+					<div class="com-search-btn"><a><img src="/cninfo-new/images/icon-search.png"></a></div>
+					<div class="search-main hide" id="cgh">
+						<div class="plus-tag tagbtn" id="plus-tag-div"></div>
+						<div class="clear-all"><a>全部清除</a></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+</form>
+<!-- end 公告披露查询 -->
+
+
+
+<!-- start 公告披露列表 -->
+		<div class="bulletin-list">
+			<div class="list-header">
+				<div class="pdf-note">
+					本网站公告采用了PDF文件格式，阅读需下载并安装<a href="https://acrobat.adobe.com/us/en/products/pdf-reader.html" target="_blank">Adobe Acrobat Reader</a>软件
+				</div>
+				<ul class="ct-menu" id="a_menu">
+					<li id="a_latest" onClick="selectTab(this.id,'a_menu')" class="hover"><a>最新</a></li>
+					<li id="a_summary" onClick="selectTab(this.id,'a_menu')"><a>摘要</a></li>
+					<li id="a_relation" onClick="selectTab(this.id,'a_menu')"><a>投资者关系信息</a></li>
+				</ul>
+			</div>
+			<div class="ct-content">
+				<!-- tab one -->
+				<div id="con-div-a-latest">
+	<div class="tt-line">
+		<div class="shrink-all hide">
+			<img src="../images/line-arrow-2.png" title="全部收缩" />
+		</div>
+		<div class="expand-all">
+			<img src="../images/line-arrow-1.png" title="全部展开" />
+		</div>
+		
+		<div class="t1">
+			<div class="t-name">代码</div>
+			<div class="sort-mc" type="code">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="t2">
+			<div class="t-name">简称</div>
+		</div>
+		<div class="t3">
+			<div class="t-name">公告标题</div>
+		</div>
+		<div class="t5">
+			<div class="t5-title">
+				类别<img src="../images/icon-dropdown.png" />
+			</div>
+			<ul class="dropdown-category" type="latest" flag="false"></ul>
+		</div>
+		
+		<div class="t6">
+			<div class="t-name">公告时间</div>
+			<div class="sort-mc" type="time">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+					<div id="latest"></div>
+					<ul id="ul_a_latest" class="ct-line"></ul>
+				</div>
+
+				<!-- tab two -->
+				<div id="con-div-a-summary" style="display: none">
+	<div class="tt-line">
+		
+		<div class="t1">
+			<div class="t-name">代码</div>
+			<div class="sort-mc" type="code">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="t2">
+			<div class="t-name">简称</div>
+		</div>
+		<div class="t3">
+			<div class="t-name">公告标题</div>
+		</div>
+		<div class="t5">
+			<div class="t5-title">
+				类别<img src="../images/icon-dropdown.png" />
+			</div>
+			<ul class="dropdown-category" type="summary" flag="false"></ul>
+		</div>
+		
+		<div class="t6">
+			<div class="t-name">公告时间</div>
+			<div class="sort-mc" type="time">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+					<div id="summary"></div>
+					<ul id="ul_a_summary" class="ct-line"></ul>
+				</div>
+				
+				<!-- tab three -->
+				<div id="con-div-a-relation" style="display: none">
+	<div class="tt-line">
+		
+		<div class="t1">
+			<div class="t-name">代码</div>
+			<div class="sort-mc" type="code">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="t2">
+			<div class="t-name">简称</div>
+		</div>
+		<div class="t3">
+			<div class="t-name">公告标题</div>
+		</div>
+		<div class="t5">
+			<div class="t5-title">
+				类别<img src="../images/icon-dropdown.png" />
+			</div>
+			<ul class="dropdown-category" type="relation" flag="false"></ul>
+		</div>
+		
+		<div class="t6">
+			<div class="t-name">公告时间</div>
+			<div class="sort-mc" type="time">
+				<div class="sort-up">
+					<a href="javascript:void(0);"><img
+						src="../images/icon-sort-up.png" title="按升序排列" /></a>
+				</div>
+				<div class="sort-down">
+					<a href="javascript:void(0);" title="按降序排列"><img
+						src="../images/icon-sort-down.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+					<div id="relation"></div>
+					<ul id="ul_a_relation" class="ct-line"></ul>
+				</div>
+			</div>
+		</div>
+<!-- end 公告披露列表 -->
+		<div class="clear"></div>
+<!-- 页面底部法律申明 -->
+<div class="page-tips">
+	提示：基于效率考虑，本页面为静态化页面，默认只显示最新一段时间的公告，如需查阅更多公告，请使用页面中的公告查询功能。<br />
+	免责声明：本系统竭力保证所提供的证券市场信息准确可靠，但并不担保（无论是明示、
+	默示、法定或其他形式）其准确性和完整性。任何使用方不得就全部或部分使用其中的证券市场信息作为依据并对由此而引起的任何损失向本公司提出索赔。
+</div>
+	</div>
+<!-- 页面底部 -->
+ <!-- 页面公共尾部 -->
+<div class="footer">
+	<div class="footer-inner">
+		<ul class="footer-column">
+			<li class="title">上市公司</li>
+			<li><a href="http://wltp.cninfo.com.cn/gddh_vote/cis/logon.do" target="_blank">网投会议服务专区</a></li>
+			<li><a href="/cninfo-new/information/prbookinfo" target="_blank">定期报告预约披露</a></li>
+			<li><a href="http://www.szse.cn/main/disclosure/bulliten/cxda/cfcfjl/" target="_blank">深市</a>/
+				<a href="http://www.sse.com.cn/disclosure/listedinfo/credibility/home/" target="_blank">沪市诚信记录</a></li>
+			<li><a href="http://www.cninfo.com.cn/dmpt.htm" target="_blank">董秘平台</a></li>
+			<li><a href="http://irm.cninfo.com.cn/ircs/ssgs/ssessgsLogin.do" target="_blank">互动易后台</a></li>
+			<li><a href="http://business.szse.cn/szseLCPortal/login_open.jsp" target="_blank">上市公司业务专区</a></li>
+		</ul>
+		<ul class="footer-column">
+			<li class="title">投资者</li>
+			<li><a href="http://wltp.cninfo.com.cn/gddh_vote/vote/index.do" target="_blank">股东大会网络投票</a></li>
+			<li><a href="http://irm.cninfo.com.cn/szse/" target="_blank">互动易</a></li>
+			<li><a href="http://www.cninfo.com.cn/fwsq/hq/xxsj/jcxx.htm" target="_blank">巨潮信息授权</a></li>
+			<li><a href="http://xbrl.cninfo.com.cn" target="_blank">分析易</a></li>
+		</ul>
+		<ul class="footer-column">
+			<li class="title">相关链接</li>
+			<li><a href="http://www.szse.cn/" target="_blank">深圳证券交易所</a></li>
+			<li><a href="http://www.sse.com.cn/" target="_blank">上海证券交易所</a></li>
+			<li><a href="http://www.cninfo.com.cn/sme/index.html" target="_blank">中小企业板</a></li>
+			<li><a href="http://chinext.cninfo.com.cn/newmarket/" target="_blank">创业板</a></li>
+			<li><a href="http://www.cnindex.com.cn/" target="_blank">巨潮指数</a></li>
+		</ul>
+		<ul class="footer-column">
+			<li class="title">关于我们</li>
+			<li><a href="mailto:ssi@cninfo.com.cn">联系我们</a></li>
+			<li class="social">
+				<div class="weibo">
+					<a href="http://www.weibo.com" target="_blank"><img
+						src="/cninfo-new/images/footer-icon-weibo.png" /></a>
+				</div>
+				<div class="weibo">
+					<img src="/cninfo-new/images/icon-weixin.jpg" width="32px" id="wx_img"/>
+				</div>
+				<div id="wx_ewm_div" style="display:none;">
+					<img src="/cninfo-new/images/wx_ewm.jpg" width="120px" id="wx_ewm_img"/>
+				</div>
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="copyright">© 深圳证券信息有限公司 版权所有 ICP证 粤B2-20050313</div>
+</div>
+<div id="scroll-top-link">
+	<a href="#"></a>
+</div>
+	<!--  Delayed js file -->		
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/base.js"></script>
+<script language="javascript" type="text/javascript" src="/cninfo-new/js/disclosure.js"></script>
+<script type="text/javascript" src="/cninfo-new/js/tag.js"></script>
+
+
+</body>
+</html>
+

@@ -29,6 +29,7 @@ gem 'nokogiri'
 gem 'pry'
 gem 'whenever'
 gem 'iconv'
+gem 'rchardet19'
 
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
