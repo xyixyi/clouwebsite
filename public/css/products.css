@@ -16,6 +16,30 @@ h4 {
     text-align: center;
 }
 
+
+
+.allproducts {
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 90px;
+}
+
+@media (max-width: 1399px) { 
+    .allproducts {
+        width: 70% !important;
+    }
+    .leftmenu {
+        left: 15.8% !important;
+    }
+    
+    .rightproducts {
+        width: 60% !important;
+    }
+}
+
+
+
 .starproduct {
     position: relative;
     width: 100%;
@@ -91,7 +115,7 @@ body {
     height: 1500px;
     top: 90px;
     width: 11.4%;
-    left: 15.8%;
+    left: 20%;
     text-align: left;
     display: inline-block;
 }
@@ -127,7 +151,7 @@ h5 {
 .rightproducts {
     display: inline-block;
     position: relative;
-    width: 60%;
+    width: 55%;
     top: 90px;
     height: 1500px;
     left: 0;
@@ -140,6 +164,7 @@ h6 {
     font-size: 20px;
     position: relative;
     top: 80px;
+    display: inline-block;
 }
 
 .righthr {
@@ -304,4 +329,11 @@ a.visited{
     /*-webkit-transform: translateX(0);*/
     transform: translateX(0);
     opacity: 1;
+}
+
+.searchform {
+    display: inline-block;
+    float: right;
+    top: 85px;
+    position: relative;
 }

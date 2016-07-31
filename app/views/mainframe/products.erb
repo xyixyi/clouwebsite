@@ -22,7 +22,7 @@
         <!--outer-->
         <div class="carousel-outer">
             <h4>产品展示</h4>
-            <a href="/" class="allproduct">点击查看所有产品</a>
+            <a href="/allproducts" class="allproduct">点击查看所有产品</a>
         </div>
     
         <!-- Wrapper for slides -->
@@ -40,7 +40,8 @@
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
-                  <a href="/" class="h3">Product</a>
+                  <!--<a href="/" class="h3">Product</a>-->
+                  <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
                   <p><%= product.synopsis %></p>
                 </div>
               </div>
@@ -54,7 +55,7 @@
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
-                  <a href="/" class="h3">Product</a>
+                  <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
                 <p><%= product.synopsis %></p>
                 </div>
               </div>

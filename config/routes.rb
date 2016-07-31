@@ -8,9 +8,13 @@ Rails.application.routes.draw do
   resources :bids
   resources :campus_recuritments
   resources :society_recuritments
+  resources :pop_product do
+    get "all_products_show", :on => :collection
+  end
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
+  #may cause error
+  # map.resources :products,:collection=>{:search=>:get}
   resources :types do
     resources :products
   end
@@ -26,7 +30,6 @@ Rails.application.routes.draw do
   end
 
   resources :categories
-
   # resources :categories do 
   #   resources :types do 
   #     resources :products
@@ -109,5 +112,10 @@ Rails.application.routes.draw do
   get 'categories/find_subtypes/:id' => 'categories#find_subtypes'
   # below code for testing uploading function
   get 'general', :to => 'mainframe#general_text', :format => false
+  
+  get 'allproducts', :to => 'categories#allproducts', :format => false
+  
+  
+  get "/search_from_all" => "categories#product_search", :format => false
   
 end
