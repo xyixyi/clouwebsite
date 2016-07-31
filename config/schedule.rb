@@ -5,7 +5,7 @@
 
 
 # every 1.day, :at => '2:00 am' do
-#     ruby "crawler" 
+#     ruby crawler.rb
 # end
 
 # Example:

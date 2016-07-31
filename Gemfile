@@ -28,6 +28,7 @@ gem 'cancancan', '~> 1.10'
 gem 'nokogiri'
 gem 'pry'
 gem 'whenever'
+gem 'iconv'
 
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
