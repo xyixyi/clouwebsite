@@ -68,7 +68,7 @@ class CategoriesController < ApplicationController
   end
   
   def product_search
-    @products = Product.search(params).paginate(:page => params[:page], :per_page => 2)
+    @products = Product.search(params).paginate(:page => params[:page], :per_page => 10)
   end
 
 
