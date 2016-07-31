@@ -25,7 +25,7 @@ h4 {
     top: 90px;
 }
 
-@media (max-width: 1399px) { 
+@media (max-width: 1500px) { 
     .allproducts {
         width: 70% !important;
     }
