@@ -68,8 +68,9 @@ hr {
 }
 
 @media (max-width: 1500px) {
-.logo {
-     left: 15% !important;
+
+.logo,.welcomewords,.login, .sign_out {
+    left: 15% !important;
 }
 }
 
