@@ -66,11 +66,12 @@ class PopProduct < ActiveRecord::Base
         end
       end
       
-      field :type_id, :enum do
+      field :type_id do
         label "产品小类"
-        enum do
-          ::Type.all.collect {|p| [p.name, p.id]}
-        end
+        partial :add_association_on_popProduct
+        # enum do
+        #   ::Type.all.collect {|p| [p.name, p.id]}
+        # end
       end
       
       field :image, :carrierwave do
