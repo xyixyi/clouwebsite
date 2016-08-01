@@ -24,6 +24,13 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 # admin authentication
 gem 'cancancan', '~> 1.10'
 
+# crawler
+gem 'nokogiri'
+gem 'pry'
+gem 'whenever'
+gem 'iconv'
+gem 'rchardet19'
+
 gem 'haml-rails', :group => :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

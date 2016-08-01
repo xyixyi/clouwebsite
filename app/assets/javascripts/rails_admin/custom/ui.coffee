@@ -13,7 +13,7 @@ $(document).ready ->
       $.each values, (idx, value) ->
         $('#product_Type_id').append $('<option selected="selected"> ',
           value: value[0]
-          text: value[1])
-    
+          text: value[1]
+        )
   return
 

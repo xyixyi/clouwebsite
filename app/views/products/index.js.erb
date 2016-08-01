@@ -18,7 +18,7 @@ $(function () {
     <% @products.each do |product| %>
       <!--ajax-->
       if (single_page_counter < 6 && page_counter == 1) {
-        current.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id, class: "producttitle"))%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
+        current.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id), class: "producttitle")%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
         single_page_counter+=1;
         }
       else if (single_page_counter == 6 && page_counter >= 1) {
@@ -27,12 +27,12 @@ $(function () {
           'class': 'products_list next', 
           'id': page_counter }
           ).appendTo(right);
-        ul.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id, class: "producttitle"))%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
+        ul.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id), class: "producttitle")%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
         single_page_counter = 1;
         }
       else {
         var next = $('#'+page_counter.toString());
-        next.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id, class: "producttitle"))%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
+        next.append('<li><div class="product"><div class="productimage" style="background: url(<%= product.image%>);"></div><div class="text-field"><%= link_to(product.name, type_product_path(:id => product.id), class: "producttitle")%><p class="producttext"><%= product.synopsis %></p></div></div></li>');
         single_page_counter += 1;
       }
     <%end%>

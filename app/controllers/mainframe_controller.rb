@@ -9,10 +9,12 @@ class MainframeController < ApplicationController
 
   def index
     @products = Product.all
+    @popproducts = PopProduct.limit(4).order('id desc')
   end
   
   def products
     @products = Product.all
+    @popproducts = PopProduct.limit(4).order('id desc')
     @categories = Category.all
   end
   

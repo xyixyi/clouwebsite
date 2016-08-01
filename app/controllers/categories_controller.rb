@@ -62,6 +62,15 @@ class CategoriesController < ApplicationController
     end
   end
   
+  def allproducts
+    @products = Product.paginate :page => params[:page], :per_page => 10
+    # @products = Product.search(params).paginate(:page => params[:page], :per_page => 2)
+  end
+  
+  def product_search
+    @products = Product.search(params).paginate(:page => params[:page], :per_page => 10)
+  end
+
 
 
   # DELETE /categories/1

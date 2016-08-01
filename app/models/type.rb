@@ -11,7 +11,7 @@ class Type < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :description, :ck_editor do
+          field :description, :text do
             label "简介"
           end
           field :Category_id, :enum do
@@ -25,7 +25,7 @@ class Type < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :description, :ck_editor do
+          field :description, :text do
             label "简介"
           end
           field :Category_id, :enum do

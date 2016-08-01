@@ -141,4 +141,5 @@ h1 {
 
 .modal {
     border: 1px solid;
+    padding: 0 !important;
 }

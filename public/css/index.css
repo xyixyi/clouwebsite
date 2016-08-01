@@ -416,5 +416,12 @@ h4 {
 }
 
 .productimg {
-    width: 40%;
+    width: 300px;
+}
+
+@media (max-width: 1399px) { 
+    .productimg {
+        width: 300px !important;
+    }
+    
 }

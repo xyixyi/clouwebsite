@@ -19,7 +19,7 @@ class Category < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :description, :ck_editor do
+          field :description, :text do
             label "简介"
             pretty_value do
               value.html_safe

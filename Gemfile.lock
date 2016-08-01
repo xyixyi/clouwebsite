@@ -202,6 +202,7 @@ GEM
       domain_name (~> 0.5)
     i18n (0.7.0)
     ice_nine (0.11.2)
+    iconv (1.0.4)
     jasmine-core (2.4.1)
     jasmine-rails (0.12.5)
       jasmine-core (>= 1.3, < 3.0)
@@ -246,6 +247,7 @@ GEM
     map (6.6.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    method_source (0.8.2)
     metric_fu (4.12.0)
       cane (~> 2.5, >= 2.5.2)
       churn (~> 0.0.35)
@@ -285,6 +287,10 @@ GEM
     phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     procto (0.0.3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -346,6 +352,7 @@ GEM
     rainbow (2.1.0)
     rake (11.2.2)
     rchardet (1.6.1)
+    rchardet19 (1.3.7)
     rdoc (4.2.2)
       json (~> 1.4)
     redcard (1.1.0)
@@ -407,6 +414,7 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    slop (3.6.0)
     spring (1.7.2)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
@@ -457,6 +465,8 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    whenever (0.9.7)
+      chronic (>= 0.6.3)
     will_paginate (3.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -483,16 +493,20 @@ DEPENDENCIES
   factory_girl_rails
   haml
   haml-rails
+  iconv
   jasmine-rails
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
   metric_fu
   mini_magick
+  nokogiri
   pg
+  pry
   rails (= 4.2.5)
   rails_admin
   rails_admin_import (~> 1.2)
+  rchardet19
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -506,6 +520,7 @@ DEPENDENCIES
   validates_timeliness (~> 4.0)
   validates_zipcode
   web-console (~> 2.0)
+  whenever
   will_paginate (~> 3.0.5)
 
 RUBY VERSION
