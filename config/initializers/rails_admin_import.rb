@@ -2,6 +2,7 @@ RailsAdmin.config do |config|
   # REQUIRED:
   # Include the import action
   # See https://github.com/sferik/rails_admin/wiki/Actions
+  
   config.actions do
     all
     import
@@ -11,6 +12,7 @@ RailsAdmin.config do |config|
   # Configure global RailsAdminImport options
   config.configure_with(:import) do |config|
     config.logging = true
+    config.line_item_limit = 2000
   end
 
   # Optional:

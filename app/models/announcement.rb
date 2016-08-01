@@ -1,4 +1,5 @@
 class Announcement < ActiveRecord::Base
+    self.inheritance_column = nil
     rails_admin do
         navigation_label '投资者关系'
         list do
