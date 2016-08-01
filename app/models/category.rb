@@ -13,6 +13,9 @@ class Category < ActiveRecord::Base
           end
           field :description do
             label "简介"
+            pretty_value do
+              value.html_safe
+            end
           end
         end
         edit do 
@@ -21,9 +24,6 @@ class Category < ActiveRecord::Base
           end
           field :description, :text do
             label "简介"
-            pretty_value do
-              value.html_safe
-            end
           end
           field :image, :carrierwave do
             label "图片"
