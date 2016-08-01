@@ -11,8 +11,9 @@ $(document).ready ->
       $('#product_Type_id').empty()
       $('#product_Type_id').append '<option value=""></option>'
       $.each values, (idx, value) ->
-        $('#product_Type_id').append $('<option>',
+        $('#product_Type_id').append $('<option selected="selected"> ',
           value: value[0]
           text: value[1])
+    
   return
 

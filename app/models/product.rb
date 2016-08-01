@@ -69,11 +69,9 @@ class Product < ActiveRecord::Base
             end
           end
           
-          field :Type_id, :enum do
+          field :Type_id do
             label "产品小类"
-            render do
-              bindings[:view].render :partial => "add_type_base_on_category", :locals => {:field => self, :form => bindings[:form]}
-            end
+            partial :add_type_base_on_category
             # enum do
             #   ::Type.all.collect {|p| [p.name, p.id]}
             # end
