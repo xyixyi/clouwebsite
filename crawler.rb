@@ -1,16 +1,10 @@
 # encoding : utf-8
 require 'rubygems'
 require 'open-uri'
-require 'nokogiri'
-require 'json'
-require 'rchardet19'
 require 'pry'   # for debugging on terminal using command lines
 require 'net/http'
+require 'nokogiri'
 require 'csv'
-
-# 用来扒的网址
-PAGE_URL = "http://www.cninfo.com.cn/cninfo-new/index"
-# PAGE_URL = "http://www.cninfo.com.cn/cninfo-new/disclosure/szse"
 
 # set timeout in Net::HTTP to 10 minutes, 否则有时候open url的时候会出现Net::OpenTimeout error
 module Net
@@ -24,46 +18,58 @@ module Net
     end
 end
 
-
-
-# 来源：https://ruby-china.org/topics/6970
-def toUtf8(_string)
-    #用于检测编码格式  在gem rchardet9里
-    if CharDet.detect(_string) .confidence > 0.6
-      _string.force_encoding(cd.encoding)
-    end
-    _string.encode!("utf-8", :undef => :replace, :replace => "?", :invalid => :replace)
-    return _string
-end
-# doc = Nokogiri::HTML(toUtf8(open(PAGE_URL).read))
-
-
-
-
 # 有用并且efficiency的code：   在terminal跑 ruby crawler.rb, root文件夹就有cninfo.csv
-# works perfectly on pry?!?!??!
 
-doc = Nokogiri::HTML(open(PAGE_URL).read)
+# return Nokogiri::HTML(url) with encoding utf-8
+def read_url(url)
+    html = open(url).read
+    html.force_encoding("gbk")
+    html.encode!("utf-8", :undef => :replace, :replace => "", :invalid => :replace)
+    return Nokogiri::HTML(html)
+end 
 
-CSV.open("cninfo.csv", "wb") do |csv|
-    csv << ["announcements"]
-    csv << ["stock", "title"]                                   #未完 "date", "link", "type"
-    doc.css('li').each do |li|
-        @title = li.css("font").text[6..-1]
-        puts @title
-        li.css('div.t3 a').each do |a|
-            puts "     " + a.text.lstrip
-            csv << [@title, a.text.lstrip]
+url = 'http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletin.php?stockid=002121&Page='
+i = 1
+while i <= 48 do
+    doc = read_url(url + "#{i}")
+    doc = doc.css('div.datelist')
+    CSV.open("cninfo.csv", "a+") do |csv|
+        doc.css('a').each do |content|
+            @title = content.text
+            if @title.include? "股东大会"
+                @type = "股东大会"
+            elsif @title.include? "董事会"
+                @type = "董事会"
+            elsif @title.include? "监事会"
+                @type = "监事会"
+            else
+                @type = "其他"
+            end
+            @link = "http://vip.stock.finance.sina.com.cn" + content['href']
+            csv << [@link, @type, @title]
         end
-        li.css('div.t4 a').each do |a|
-            puts "     " + a.text.lstrip
-            csv << [@title, a.text.lstrip]
-        end
-        
     end
+    i+=1
+end 
+
+puts "finish getting sina_link"
+
+puts "start geting result"
+
+# 读取原始csv，进入每个link找到pdf，重新存到新的csv
+
+csv = CSV.read('cninfo.csv')
+csv.each do |row|
+ doc = read_url(row[0])
+ date = doc.css("td[style='text-align:center;height:12px;']").text[5..-1]
+ pdf =  doc.css('tr th a')[0]['href']
+ if !pdf.include? "PDF"
+    pdf = ""
+ end
+ CSV.open("testest.csv", "a+") do |new_csv|
+    # sina_link, date, title, pdf_link, type
+    new_csv << [row[0], date, row[2], pdf, row[1]]
+ end 
 end
 
-puts "wrote data into csv, done"
-
-
-# PAGE_URL = "http://disclosure.szse.cn/m/search0425.jsp"              ??????深交所网址
+puts "finish. check result.csv"
