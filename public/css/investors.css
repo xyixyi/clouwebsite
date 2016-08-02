@@ -24,8 +24,13 @@ body {
     line-height: 50px;
 }
 
-.nav-links:hover, nav-links:active {
-    color: white;
+.nav-links:hover, .nav-links:active {
+    color: white !important;
+}
+
+.nav-links:focus {
+    color: white !important;
+    text-decoration: none;
 }
 
 h1 {
@@ -36,11 +41,19 @@ h1 {
     display: inline-block;
 }
 
+.leaderbanner{
+    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+}
+
 
 .investorsbanner {
+    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+}
+
+.investorsbanner, .leaderbanner {
     position: relative;
     top: 90px;
-    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+    /*background-image: url("../img/join_us/joinusbanner.jpg") !important;*/
     height: 510px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -105,6 +118,8 @@ h4 {
 
 h5 {
     display: inline-block;
+    color: #c4261d;
+    margin-left: 5px;
 }
 
 .investorshr {
@@ -112,13 +127,15 @@ h5 {
 }
 
 .currentprice {
-    width: 19%;
+    width: 230px;
     position: relative;
     height: 40%;
     top: 45px;
     display: inline-block;
-    margin-right: 14%;
+    margin-right: 18%;
 }
+
+
 
 h6 {
     line-height: 22px;
@@ -139,10 +156,11 @@ h7 {
     margin: auto;
     color: #343434;
     position: relative;
+    margin-top: 50px;
 }
 
 .announcements {
-    height: 415px;
+    /*height: 415px;*/
     /*width: 490px;*/
     width: 45%;
     float: left;
@@ -150,7 +168,7 @@ h7 {
 }
 
 .year_reports {
-    height: 415px;
+    /*height: 415px;*/
     /*width: 490px;*/
     width: 45%;
     float: right;
@@ -182,20 +200,48 @@ h7 {
 
 .reports-link {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 18px;
     color: white;
     line-height: 50px;
+    top: 75%;
+    position: relative;
 }
 
 .reports-link:hover, .reports-link:active {
     color: white !important;
 }
 
+.irm {
+    width: 100%;
+    height: 100px;
+    background-color: #E8E8E8;
+    position: relative;
+    text-align: center;
+}
+
+h8 {
+    color: #343434;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 100px;
+}
+
+.h9 {
+    line-height: 100px;
+    color: #c4261d;
+    font-size: 30px;
+    margin-left: 50px;
+    text-decoration: none;
+}
 
 
 @media (max-width: 1500px) {
-    .navlinks,.investorshr {
+    .navlinks {
         width: 70% !important;
+    }
+    
+    .currentprice {
+        margin-right: 11% !important;
     }
     
     .joinusslogan {

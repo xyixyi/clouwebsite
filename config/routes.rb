@@ -106,7 +106,6 @@ Rails.application.routes.draw do
   get 'test', :to => 'mainframe#test', :format => false
   get 'testtwo', :to => 'mainframe#test2', :format => false
   get 'testthree', :to => 'mainframe#test3', :format => false
-  
   get 'contact_us', :to => 'about_us#contact_us', :format => false
 
 
@@ -118,6 +117,8 @@ Rails.application.routes.draw do
   
   
   get "/search_from_all" => "categories#product_search", :format => false
+  
+  get '/leaders' => 'about_us#leaders', :format => false
   
   
 end
