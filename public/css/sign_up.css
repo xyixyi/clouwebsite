@@ -13,9 +13,10 @@ body {
 
 .content{
     position: relative;
-    height: auto;
+    /*height: auto;*/
     margin: auto;
-    margin-top: 53px;
+    margin-top: 103px;
+    height: 500px;
     text-align: center;
 }
 
@@ -73,7 +74,7 @@ h1 {
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
-    margin-bottom: 21px;
+    margin-bottom: 0px;
 }
 
 .smallredword{
@@ -89,7 +90,7 @@ h1 {
     position: relative;
     width: 275px;
     height: 45px;
-    font-size: 18pt;
+    font-size: 18px;
     border-radius: 5px;
     color: #d0d8e1;
     border: 1px;

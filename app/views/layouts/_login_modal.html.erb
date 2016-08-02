@@ -25,7 +25,8 @@ border-style:solid;padding-right: 0px !important;;">
   </div>
   
   <div style="height:115px; text-align:center">
-      <button class="popup_sign_up" href="/users/sign_up">没有账号？立即注册</button>
+      <!--<button class="popup_sign_up" href="/">没有账号？立即注册</button>-->
+      <%= button_to "没有账号？立即注册", new_user_registration_path, class: "popup_sign_up"%>
   </div>
 </div>
 

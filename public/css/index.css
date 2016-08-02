@@ -202,10 +202,12 @@ h1 {
     top: 92.5px;
     margin: auto;
     height: 550px;
-    width: 64%;
+    width: 1272px;
     background-color: white;
     opacity: 0.8;
 }
+
+
 
 
 .carousel-indicators li {
@@ -249,6 +251,11 @@ h1 {
     margin: auto;
 }
 
+.carousel-control.left:focus, .carousel-control.right:focus {
+    color: white !important;
+}
+
+
 .carousel-control.right {
     height: 100px;
     margin: auto;
@@ -259,6 +266,19 @@ h1 {
 
 .carousel-control {
     width: 50px;
+}
+
+.indexproductimg {
+    width: 350px;
+    left: 5%;
+    top: 20px;
+    position: relative;
+   
+}
+
+.productintro {
+    width: 300px;
+    position: relative;
 }
 
 h4 {
@@ -290,6 +310,7 @@ h4 {
 
 .h3 {
     color: #C4261D;
+    margin-top: 0;
 
 }
 
@@ -356,7 +377,7 @@ h4 {
     text-align: left;
 }
 
-.bleft {
+.newsbleft {
     float: right;
     background: url(../img/homepage/newsarrowleft.png) no-repeat 6px center;
     width: 30px;
@@ -365,7 +386,7 @@ h4 {
     display: block;
 }
 
-.bright {
+.newsbright {
     float: right;
     background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
     width: 30px;
@@ -422,6 +443,13 @@ h4 {
 @media (max-width: 1399px) { 
     .productimg {
         width: 300px !important;
+    }
+    
+}
+
+@media (max-width: 1000px) { 
+    .carousel {
+        width: 100%;
     }
     
 }

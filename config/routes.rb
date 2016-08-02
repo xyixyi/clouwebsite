@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :bids
   resources :campus_recuritments
   resources :society_recuritments
+  resources :investors
   resources :pop_product do
     get "all_products_show", :on => :collection
   end
@@ -117,5 +118,6 @@ Rails.application.routes.draw do
   
   
   get "/search_from_all" => "categories#product_search", :format => false
+  
   
 end
