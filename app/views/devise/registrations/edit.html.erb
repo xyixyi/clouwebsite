@@ -1,39 +1,30 @@
-<h2><%= t('.title', resource: resource_class.model_name.human) %></h2>
+<title>修改密码</title>
+<link rel="stylesheet" type="text/css" href="/css/devise.css">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="main">
+  <h1>修改密码</h1>
+  <hr class="hr">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
+  <div class="content">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      
+      <div class = "block_left">
+        <span class='mytext'>&emsp;用户名&emsp;</span>
+        <span class='mytext'>当前密码&emsp;</span>
+        <span class='mytext'>&emsp;密&emsp;码&emsp;</span>
+        <span class='mytext'>重复密码&emsp;</span>
+      </div>
+      
+      <div class = "block_right">
+        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "用户名设置要求" %>
+        <%= f.password_field :current_password, :class => 'myfield', :placeholder => "需要旧密码确认身份" %>
+        <%= f.password_field :password, autocomplete: "off", :class => 'myfield', :placeholder => "密码规则" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'myfield', :placeholder => "重复输入密码" %>
+        <%= f.submit "立即修改", :class => 'submit' %>
+      </div>
+
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <p>
-      <%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %>
-    </p>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
-    <%= f.password_field :current_password %>
-  </div>
-
-  <div><%= f.submit t('.update') %></div>
-<% end %>
-
-<h3><%= t('.cancel_my_account') %></h3>
-
-<p><%= t('.unhappy') %>? <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.</p>
-
-<%= link_to t('devise.shared.links.back'), :back %>
+</div>
