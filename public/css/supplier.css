@@ -125,6 +125,8 @@ h3 {
     font-size: 30px;
     display: inline-block;
     margin-left: 40px;
+    position: relative;
+    top: -42px;
 }
 
 .ourstoryreal {

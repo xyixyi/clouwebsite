@@ -15,7 +15,6 @@ $(document).ready ->
           value: value[0]
           text: value[1]
         )
-  # return
 
   $('#pop_product_type_id').empty()
   $('#pop_product_type_id').append "<option value='' selected='selected'></option>"
