@@ -4,15 +4,20 @@ class Ability
   def initialize(user)
     can :read, :all                   # allow everyone to read everything
     can :import, :all
-    if user && user.admin?
+    if user && user.role != "user"
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
-      if user.role == 'superadmin'
+      if user.role == 'developer'
         can :manage, :all             # allow superadmins to do anything
+      elsif user.role == 'superadmin'
+        can :manage, :all
+        cannot :edit, User do |people|
+          people.role == 'superadmin' && people != user
+        end
       elsif user.role == 'admin'
-        can :manage, [User, Product]  # allow managers to do anything to products and users
-      elsif user.role == 'manager'
-        can :update, Product, :hidden => false  # allow sales to only update visible products
+        # this is amazing!!!
+        access_list = eval user.authority.reject {|c| c.empty? }.to_s.gsub('"', '')
+        can :manage, access_list
       end
     end
   end

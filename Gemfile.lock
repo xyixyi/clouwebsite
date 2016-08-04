@@ -158,6 +158,8 @@ GEM
     elasticsearch-transport (1.0.18)
       faraday
       multi_json
+    enumerize (1.1.1)
+      activesupport (>= 3.2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -490,6 +492,7 @@ DEPENDENCIES
   devise-i18n
   elasticsearch-model
   elasticsearch-rails
+  enumerize
   factory_girl_rails
   haml
   haml-rails

@@ -17,6 +17,7 @@ gem 'devise-i18n'
 # admin 
 gem 'rails_admin'
 gem "rails_admin_import", "~> 1.2"
+gem 'enumerize'
 
 # text editor
 gem 'ckeditor', github: 'galetahub/ckeditor'
