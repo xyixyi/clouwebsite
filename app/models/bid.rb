@@ -1,4 +1,5 @@
 class Bid < ActiveRecord::Base
+    mount_uploader :attachment, AttachmentUploader
     #set up rails admin
     rails_admin do
         navigation_label '投标'
@@ -34,6 +35,9 @@ class Bid < ActiveRecord::Base
           end
           field :description, :ck_editor do
             label "简介"
+          end
+          field :attachment, :carrierwave do
+            label "附件"
           end
         end
     end
