@@ -24,12 +24,14 @@ class Type < ActiveRecord::Base
         edit do
           field :name do
             label "名称"
+            required true
           end
           field :description, :text do
             label "简介"
           end
           field :Category_id, :enum do
             label "产品大类"
+            required true
             enum do
               Category.all.collect {|p| [p.name, p.id]}
             end

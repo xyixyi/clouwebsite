@@ -14,6 +14,7 @@ class YearReport < ActiveRecord::Base
         edit do
           field :title do
             label "标题"
+            required true
           end
           field :date do
             label "时间"

@@ -52,6 +52,7 @@ class Product < ActiveRecord::Base
         edit do 
           field :name do
             label "名称"
+            required true
           end
           field :synopsis, :text do
             label "梗概"
@@ -65,6 +66,7 @@ class Product < ActiveRecord::Base
           
           field :category_id, :enum do
             label "产品大类"
+            required true
             # partial "add_type_base_on_category"
             # render do
             #   bindings[:view].render :partial => "add_type_base_on_category", :locals => {:field => self, :form => bindings[:form]}
@@ -76,6 +78,7 @@ class Product < ActiveRecord::Base
           
           field :Type_id do
             label "产品小类"
+            required true
             partial :add_type_base_on_category
             # enum do
             #   ::Type.all.collect {|p| [p.name, p.id]}

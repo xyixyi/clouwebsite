@@ -48,6 +48,7 @@ class PopProduct < ActiveRecord::Base
     edit do 
       field :name do
         label "名称"
+        required true
       end
       field :synopsis, :text do
         label "梗概"

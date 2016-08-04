@@ -18,6 +18,7 @@ class EmployeeStory < ActiveRecord::Base
         edit do
           field :title do
             label "标题"
+            required true
           end
           field :name do
             label "姓名"

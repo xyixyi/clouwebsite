@@ -27,15 +27,19 @@ class QandA < ActiveRecord::Base
         edit do
             field :title do
                 label "标题"
+                required true
             end
             field :question do
                 label "问题"
+                required true
             end
             field :answer, :ck_editor do
                 label "答案"
+                required true
             end
             field :QType_id, :enum do
                 label "问题类别"
+                required true
                 enum do 
                   ::QType.all.collect {|p| [p.name, p.id]}
                 end

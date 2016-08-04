@@ -21,6 +21,7 @@ class Category < ActiveRecord::Base
         edit do 
           field :name do
             label "名称"
+             required true 
           end
           field :description, :text do
             label "简介"

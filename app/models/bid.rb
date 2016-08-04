@@ -24,6 +24,7 @@ class Bid < ActiveRecord::Base
         edit do
           field :position do
             label "招标项目"
+            required true 
           end
           field :department do
             label "部门"

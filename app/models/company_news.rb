@@ -30,6 +30,7 @@ class CompanyNews < ActiveRecord::Base
         edit do 
           field :title do
             label "名称"
+            required true
           end
           field :author do
             label "作者"

@@ -31,6 +31,7 @@ class ServiceCase < ActiveRecord::Base
     edit do 
       field :title do
         label "标题"
+        required true
       end
       field :text, :ck_editor do
         label "细节"

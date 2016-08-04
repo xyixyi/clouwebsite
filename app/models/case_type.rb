@@ -10,6 +10,7 @@ class CaseType < ActiveRecord::Base
         edit do
             field :name do
                 label "标题"
+                required true
             end
         end
     end

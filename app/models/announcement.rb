@@ -20,18 +20,22 @@ class Announcement < ActiveRecord::Base
         edit do
           field :title do
             label "标题"
+            required true 
           end
           field :date do
             label "时间"
+            required true
           end
           field :type, :enum do
             label "公告类型"
+            required true
             enum do
               ['董事会', '监事会',"股东大会", "其他"]
             end
           end
           field :link do
             label "链接"
+            required true
           end
         end
     end
