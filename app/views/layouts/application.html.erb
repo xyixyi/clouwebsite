@@ -48,6 +48,7 @@
   
   <% if current_user %> 
   <!--not tested Yiran -->
+    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
     <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
   <% else %> 
     <p class="welcomewords">
@@ -76,7 +77,7 @@
     <a id="news" href="/news_page">新闻</a>
     <a id="service" href="/service">技术支持</a>
     <a id="aboutus" href="/aboutus">关于我们</a>
-    <a id="supplier" href="/joinus">加入科陆</a>
+    <a id="supplier" href="/supplier">合作伙伴</a>
 
 <form class="navbar-form navbar-right" role="search" style="padding-top: 25px;">
     <div class="form-group">
@@ -137,7 +138,7 @@
   
     <div class="copyright">
      <span class="useless-container">
-        <a href="/" class="useless">联系我们</a>
+        <a href="/contact_us" class="useless">联系我们</a>
         |
         <a href="/" class="useless">网站地图</a>
         |

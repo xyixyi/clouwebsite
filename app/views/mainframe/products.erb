@@ -36,13 +36,13 @@
                 <% if product.image.nil? %>
                   <img class="productimg" src="img/homepage/testproduct.png" alt="product">
                 <%else%>
-                  <%= image_tag product.image, class:"productimg"%>
+                  <%= image_tag product.image, class:"indexproductimg"%>
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
                   <!--<a href="/" class="h3">Product</a>-->
                   <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
-                  <p><%= product.synopsis %></p>
+                  <p class="productintro"><%= product.synopsis %></p>
                 </div>
               </div>
             <%else%>
@@ -51,12 +51,12 @@
                 <% if product.image.nil? %>
                   <img class="productimg" src="img/homepage/testproduct.png" alt="product">
                 <%else%>
-                  <%= image_tag product.image, class:"productimg"%>
+                  <%= image_tag product.image, class:"indexproductimg"%>
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
                   <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
-                <p><%= product.synopsis %></p>
+                <p class="productintro"><%= product.synopsis %></p>
                 </div>
               </div>
             <%end%>

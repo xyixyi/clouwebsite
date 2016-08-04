@@ -1,0 +1,254 @@
+.investorsnav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #c4261d;
+    top: 90px;
+}
+
+body {
+    background-color: white;
+}
+
+.navlinks {
+    width: 60%;
+    margin: auto;
+    
+}
+
+.nav-links {
+    color: white;
+    font-size: 16px;
+    margin-left: 30px;
+    float: right;
+    line-height: 50px;
+}
+
+.nav-links:hover, .nav-links:active {
+    color: white !important;
+}
+
+.nav-links:focus {
+    color: white !important;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 50px;
+    color: white;
+    display: inline-block;
+}
+
+.leaderbanner{
+    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+}
+
+
+.investorsbanner {
+    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+}
+
+.investorsbanner, .leaderbanner {
+    position: relative;
+    top: 90px;
+    /*background-image: url("../img/join_us/joinusbanner.jpg") !important;*/
+    height: 510px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+    /*margin-top: -30px;*/
+    text-align: center;
+}
+
+.investorscover {
+    background-color: black;
+    opacity: 0.4;
+    width: 100%;
+    position: absolute;
+    height: 510px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.investorslogan {
+    text-align: left;
+    position: relative;
+    top: -250px;
+    margin: auto;
+    width: 60%;
+}
+
+h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.footer {
+    margin-top: -122px;
+}
+
+.currentpricedashbord {
+    width: 100%;
+    height: 330px;
+    margin-top: -122px;
+}
+
+.pricedashbord {
+    position: relative;
+    height: 100%;
+}
+
+h4 {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 60px;
+    color: #343435;
+}
+
+h5 {
+    display: inline-block;
+    color: #c4261d;
+    margin-left: 5px;
+}
+
+.investorshr {
+    top: 25px;
+}
+
+.currentprice {
+    width: 230px;
+    position: relative;
+    height: 40%;
+    top: 45px;
+    display: inline-block;
+    margin-right: 18%;
+}
+
+
+
+h6 {
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+h7 {
+    font-size: 60px;
+    color: #343435;
+    position: relative;
+}
+
+.reports {
+    width: 60%;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    color: #343434;
+    position: relative;
+    margin-top: 50px;
+}
+
+.announcements {
+    /*height: 415px;*/
+    /*width: 490px;*/
+    width: 45%;
+    float: left;
+    position: relative;
+}
+
+.year_reports {
+    /*height: 415px;*/
+    /*width: 490px;*/
+    width: 45%;
+    float: right;
+    position: relative;
+}
+
+.announcements-img {
+    background-color: #c4261d;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    text-align: center;
+    
+}
+
+.year_reports-img {
+    background-color: #c4261d;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    text-align: center;
+}
+
+.reports-link {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    line-height: 50px;
+    top: 75%;
+    position: relative;
+}
+
+.reports-link:hover, .reports-link:active {
+    color: white !important;
+}
+
+.irm {
+    width: 100%;
+    height: 100px;
+    background-color: #E8E8E8;
+    position: relative;
+    text-align: center;
+}
+
+h8 {
+    color: #343434;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 100px;
+}
+
+.h9 {
+    line-height: 100px;
+    color: #c4261d;
+    font-size: 30px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1500px) {
+    .navlinks {
+        width: 70% !important;
+    }
+    
+    .currentprice {
+        margin-right: 11% !important;
+    }
+    
+    .joinusslogan {
+        width: 70% !important;
+    }
+    
+    .recuritments {
+        width: 70% !important;
+    }
+}

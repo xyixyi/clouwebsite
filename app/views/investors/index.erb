@@ -1,0 +1,84 @@
+<link rel="stylesheet" type="text/css" href="/css/investors.css">
+<title>Investors</title>
+<div class="investorsnav">
+    <div class="navlinks">
+        <h1>投资者关系</h1>
+        <%= link_to "投资者联系方式", society_recuritments_path, class:"nav-links"%>
+        <a href="mailto:sunnyhuang729@163.com" class="nav-links">董秘邮箱</a>
+        <a href="/leaders" class="nav-links">公司成员</a>
+        <%= link_to "关于科陆", stories_news_index_path, class:"nav-links"%>
+    </div>
+</div>
+
+<div class="investorsbanner">
+    <div class="investorscover">
+        
+    </div>
+
+</div>
+
+<div class="investorslogan contain">
+    <h2>我是文案文案文案文案文案文案文案文案</h2>`
+    <h3>我是小文案</h3>
+    <hr class="hr">
+</div>
+
+<div class="currentpricedashbord">
+    <div class="pricedashbord contain">
+        <h4>实时股价</h4><h5>(股票代码：002121)</h5>
+        <hr class="investorshr">
+        <div class="currentprice">
+            <h6>当前价格</h6>
+            <h7 id="price">￥10.28</h7>
+        </div>
+        <div class="currentprice">
+            <h6>涨跌</h6>
+            <h7 id="change">￥10.28</h7>
+        </div>
+        <div class="currentprice" style="margin:0 !important;">
+            <h6>总市值</h6>
+            <h7 id="volume">￥10.28</h7>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="reports contain">
+        <div class="announcements">
+            <div class="announcements-img">
+                <%= link_to "集团公告>", society_recuritments_path, class:"reports-link"%>
+            </div>
+        </div>
+        
+        <div class="year_reports">
+            <div class="year_reports-img">
+                <%= link_to "集团年报>", campus_recuritments_path, class:"reports-link"%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="irm">
+    <h8>与更多投资者互动</h8><a href="http://irm.cninfo.com.cn/szse/index.html" class="h9" target="_blank">进入互动易投资者交流平台></a>
+</div>
+
+
+<script type="text/javascript" src="https://hq.sinajs.cn/list=s_sz002121" charset="gb2312"></script>
+<script>
+    $(document).ready(function(){
+        // window.alert("aaa");
+        // window.alert(hq_str_s_sz002121);
+        var elements=hq_str_s_sz002121.split(",");
+        $('#price').html('￥'+elements[1]);
+        $('#change').html('￥'+elements[2]);
+        if (elements[2].indexOf('-') > -1) {
+            $('#change').css('color','green');
+        } else {
+             $('#change').css('color','red');
+        }
+        var volume = parseFloat(elements[1]) * 11.9;
+        $('#volume').html('￥'+ parseInt(volume).toString()+'亿')
+        // window.alert("current price:"+elements[3]);
+    });
+</script>

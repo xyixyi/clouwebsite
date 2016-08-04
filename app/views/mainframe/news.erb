@@ -21,7 +21,7 @@
                         
                     </div>
                     <div class="text-field">
-                        <%= link_to(news.title, showindustrynews_news_index_path(:id => news.id), class: "newstitle")%>
+                        <%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "newstitle")%>
                         <p class="newstime"><%= news.created_at.to_date %><p class="newstext"><%= news.description %></p></p>
                     </div>
                 </div>

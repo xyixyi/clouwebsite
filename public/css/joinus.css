@@ -125,6 +125,8 @@ h3 {
     font-size: 30px;
     display: inline-block;
     margin-left: 40px;
+    position: relative;
+    top: -43px;
 }
 
 .ourstoryreal {
@@ -211,4 +213,8 @@ h3 {
 
 a.nav-links:active,a.nav-links:visited {
     color: white !important;
+}
+
+.footer {
+    margin-top: -190px;
 }

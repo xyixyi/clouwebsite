@@ -7,7 +7,7 @@ body {
     position: relative;
     top: 91px;
     height: auto;
-    width: 68%;
+    /*width: 68%;*/
     margin: auto;
 }
 
@@ -41,7 +41,8 @@ h1 {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 40%;
+    width: 30%;
+    float: right;
 }
 
 h2 {

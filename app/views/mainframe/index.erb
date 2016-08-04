@@ -15,15 +15,15 @@
             </li>
             <li>
                 <a href="/" class="quickicon two"></a>
-                <a href="/" class="quicktext">加入我们</a>
+                <a href="/joinus" class="quicktext">加入我们</a>
             </li>
             <li>
                 <a href="/" class="quickicon three"></a>
                 <a href="/" class="quicktext">故障申报</a>
             </li>
             <li>
-                <a href="/" class="quickicon four"></a>
-                <a href="/" class="quicktext">投资者关系</a>
+                <a href="/investors" class="quickicon four"></a>
+                <a href="/investors" class="quicktext">投资者关系</a>
             </li>
         </ul>
     </div>
@@ -113,30 +113,28 @@
               <div class="item active">
                 <!--<img class="altofit" src="img/homepage/testproduct.png" alt="product" width="270" height="270">-->
                 <% if product.image.nil? %>
-                  <img class="productimg" src="img/homepage/testproduct.png" alt="product">
+                  <img class="indexproductimg" src="img/homepage/testproduct.png" alt="product">
                 <%else%>
-                  <%= image_tag product.image, class:"productimg"%>
+                  <%= image_tag product.image, class:"indexproductimg"%>
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
-                  <!--<a href="/" class="h3">Product</a>-->
                   <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
-                  <p><%= product.synopsis %></p>
+                  <p class="productintro"><%= product.synopsis %></p>
                 </div>
               </div>
             <%else%>
       
               <div class="item">
                 <% if product.image.nil? %>
-                  <img class="productimg" src="img/homepage/testproduct.png" alt="product">
+                  <img class="indexproductimg" src="img/homepage/testproduct.png" alt="product">
                 <%else%>
-                  <%= image_tag product.image, class:"productimg"%>
+                  <%= image_tag product.image, class:"indexproductimg"%>
                 <%end%>
                 <div class="carousel-caption">
                   <!--这里要能点进去-->
-                  <!--<a href="/" class="h3">Product</a>-->
                   <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
-                <p><%= product.synopsis %></p>
+                <p class="productintro"><%= product.synopsis %></p>
                 </div>
               </div>
             <%end%>
@@ -158,57 +156,32 @@
 
     </div>
     
-    <div class="news container">
+    <div class="news contain">
         <div class="news-container">
             <div class="news-nav">
                 <h2>新闻中心</h2>
-                <a href="/" class="allnews">查看所有新闻</a>
-                <a class="btn bright" id="next" title="left"></a>
-                <a class="btn bleft" id="prev" title="right"></a>
+                <a href="/mainframe/news" class="allnews">查看所有新闻</a>
+                <a class="newsbright" id="newsnext" title="left"></a>
+                <a class="newsbleft disabled" id="newsprev" title="right"></a>
             </div>               
 
             <hr style="top:20px;">
-            <ul>
-                <li>
-                    <div class="special-img-two">
+            <ul class="indexnews current" id='1'>
+                <!--<li>-->
+                    <!--<div class="special-img-two">-->
                         
-                    </div>
-                    <a href="/" class="special-title">
-                         新闻1
-                    </a>
-                    <p class="special-p">
-                        对于要求到现场培训或维修的，我公司将及时分派技术人员为用户提供服务，
-                        各省市办事处的技术人员在接到电话后在24小时内到达现场，在外省服务人员在48小时内到达现场进行服务。
-                        如遇到特殊情况不能及时到达，将及时联系用户，求得谅解，共同协商最快解决时间，并在商定的时间内及时到达。
-                    </p>
-                </li>
-                <li>
-                    <div class="special-img-three">
-                        
-                    </div>
-                    <a href="/" class="special-title">
-                        新闻1
-                    </a>
-                    <p class="special-p">
-                        对于要求到现场培训或维修的，我公司将及时分派技术人员为用户提供服务，
-                        各省市办事处的技术人员在接到电话后在24小时内到达现场，在外省服务人员在48小时内到达现场进行服务。
-                        如遇到特殊情况不能及时到达，将及时联系用户，求得谅解，共同协商最快解决时间，并在商定的时间内及时到达。
-                    </p>
-                </li>
-                <li>
-                    <div class="special-img-three">
-                        
-                    </div>
-                    <a href="/" class="special-title">
-                        新闻1
-                    </a>
-                    <p class="special-p">
-                        对于要求到现场培训或维修的，我公司将及时分派技术人员为用户提供服务，
-                        各省市办事处的技术人员在接到电话后在24小时内到达现场，在外省服务人员在48小时内到达现场进行服务。
-                        如遇到特殊情况不能及时到达，将及时联系用户，求得谅解，共同协商最快解决时间，并在商定的时间内及时到达。
-                    </p>
-                </li>
+                    <!--</div>-->
+                    <!--<a href="/" class="special-title">-->
+                    <!--     新闻1-->
+                    <!--</a>-->
+                    <!--<p class="special-p">-->
+                    <!--    对于要求到现场培训或维修的，我公司将及时分派技术人员为用户提供服务，-->
+                    <!--    各省市办事处的技术人员在接到电话后在24小时内到达现场，在外省服务人员在48小时内到达现场进行服务。-->
+                    <!--    如遇到特殊情况不能及时到达，将及时联系用户，求得谅解，共同协商最快解决时间，并在商定的时间内及时到达。-->
+                    <!--</p>-->
+                <!--</li>-->
             </ul>
+            
         </div>
     </div>
     
@@ -231,3 +204,35 @@
     
 
 </body>
+
+<script>
+    $(document).ready(function () {
+        if(window.document.getElementById("main-banner") != null) {
+            var current = $('.indexnews.current');
+             <% if @company_news != nil%>
+                var page_counter = 1;
+                var single_page_counter = 0;
+                var newsplace = $('.news-container');
+                <% @company_news.each do |news| %>
+                    if (single_page_counter < 3 && page_counter == 1) {
+                        current.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        single_page_counter+=1;
+                    } else if (single_page_counter == 3 && page_counter >= 1) {
+                        page_counter += 1;
+                        var ul = $("<ul>", { 
+                          'class': 'indexnews next', 
+                          'id': page_counter }
+                          ).appendTo(newsplace);
+                        ul.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        single_page_counter = 1;
+                    } else {
+                        var next = $('#'+page_counter.toString());
+                        next.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        single_page_counter += 1;
+                    }
+                <%end%>
+             <%end%>
+        }
+    })
+    
+</script>
