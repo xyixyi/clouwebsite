@@ -51,15 +51,16 @@ $(document).ready ->
           newval = currentval.replace(','+addval, '')
       else
         newval = currentval+','+addval
-      
     else
       newval = addval
-    # window.alert newval
     while newval.charAt(0) == ','
       newval = newval.slice( 1 )
     while newval.slice(-1) == ','
       newval = newval.substring(0, newval.length-1)
     $("#authorities").val(null)
+    #if you want array
+    $('#authorities').val(newval.split(','))
+    #if you want string
     $('#authorities').val(newval)
     #comment if dont want alert
     window.alert $('#authorities').val()
