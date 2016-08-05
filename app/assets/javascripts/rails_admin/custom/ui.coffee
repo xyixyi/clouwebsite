@@ -39,5 +39,7 @@ $(document).ready ->
       $('#user_authority_field').css('display', 'none')
     else
       $('#user_authority_field').css('display', 'block')
+      
+  
   
   return
