@@ -33,4 +33,11 @@ $(document).ready ->
           value: value[0]
           text: value[1]
         )
+        
+  $(document).on 'change', '#user_role', (event) ->
+    if $('#user_role').val() == 'user'
+      $('#user_authority_field').css('display', 'none')
+    else
+      $('#user_authority_field').css('display', 'block')
+  
   return

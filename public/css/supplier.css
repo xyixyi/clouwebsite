@@ -90,6 +90,7 @@ h2 {
 h3 {
     font-size: 30px;
     margin-top: 20px;
+    margin-left: 5px;
     color: white;
     margin-bottom: 50px;
 }
@@ -98,8 +99,8 @@ h3 {
     position: relative;
     border: 2.5px solid #c4261d;
     width: 81px;
-    
-    margin-left: 2px;
+    margin-left: 5px;
+    /*margin-left: 2px;*/
 } 
 
 .ourstory-background {
@@ -231,9 +232,9 @@ table {
     
 }
 
-.logo {
-    left: 15% !important;
-}
+/*.logo {*/
+/*    left: 15% !important;*/
+/*}*/
 
 .tg  {
     border-collapse:collapse;

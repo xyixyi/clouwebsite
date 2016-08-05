@@ -42,10 +42,10 @@ h4 {
 
 .starproduct {
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
     top: 120px;
     height: 735px;
-    display: inline-block;
+    /*display: inline-block;*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,7 +92,9 @@ body {
 
 .allproduct {
     width: 100%;
-    line-height: 50px;
+    /*line-height: 50px;*/
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .categoryimg {
@@ -278,7 +280,9 @@ a.visited{
     margin-top: 10px;
 }
 
-
+.starproductcontainer {
+    width: 100%;
+}
 .products_list.next {
     display: none;
     -moz-transition-property: all;

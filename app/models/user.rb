@@ -57,10 +57,10 @@ class User < ActiveRecord::Base
         field :authority do
           label "限权"
           required true
-          render do
-              bindings[:form].select( "authority", bindings[:object].authorities_enum, {}, {:multiple => true, :size => 10, :class => "selectpicker"})
-          end
-          #partial :multiselect_box
+          # render do
+          #     bindings[:form].select( "authority", bindings[:object].authorities_enum, {}, {:multiple => true, :size => 10, :class => "selectpicker"})
+          # end
+          partial :multiselect_box
         end
     end
   end
