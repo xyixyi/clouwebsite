@@ -1,8 +1,10 @@
 <ul>
   <% current_user.authorities_enum.each do |u| %>
       <li>
-        <%= check_box_tag 'current_user_authorities[]', u[0] -%>
+        <%= check_box_tag 'current_user_authorities', u[0] -%>
         <%= u[0] -%>
       </li>
   <% end %>
 </ul>
+
+<input id="authorities"  name="authorities" value="">
