@@ -1,0 +1,8 @@
+<ul>
+  <% current_user.authorities_enum.each do |u| %>
+      <li>
+        <%= check_box_tag 'current_user_authorities[]', current_user.authority -%>
+        <%= u[0] -%>
+      </li>
+  <% end %>
+</ul>
