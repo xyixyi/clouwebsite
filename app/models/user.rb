@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  after_update :send_password_change_email, if: :needs_password_change_email?
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -61,5 +63,13 @@ class User < ActiveRecord::Base
           #partial :multiselect_box
         end
     end
+  end
+  
+  def needs_password_change_email?
+    encrypted_password_changed? && persisted?
+  end
+
+  def send_password_change_email
+    UserMailer.password_changed(id).deliver_now
   end
 end

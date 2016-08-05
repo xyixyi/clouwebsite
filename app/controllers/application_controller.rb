@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to '', :alert => exception.message # will be changed to an error page
   end
+  
+  # def layout_by_resource
+  #   if devise_controller? && resource_name == :user
+  #     “backstage"
+  #   else
+  #     “application"
+  #   end
+  # end
 end
