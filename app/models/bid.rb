@@ -1,5 +1,15 @@
 class Bid < ActiveRecord::Base
     mount_uploader :attachment, AttachmentUploader
+    after_save :send_bid_email, if: :send_email? # or after_create?
+    
+    def send_bid_email
+      @users = User.all
+      @bid = self
+      @users.each do |user|
+        BidMailer.send_bid_email(user, @bid).deliver_now
+      end
+    end
+    
     #set up rails admin
     rails_admin do
         navigation_label '投标'
@@ -38,6 +48,9 @@ class Bid < ActiveRecord::Base
           end
           field :attachment, :carrierwave do
             label "附件"
+          end
+          field :send_email do
+            label "发送邮件通知"
           end
         end
     end

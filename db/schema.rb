@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804055709) do
+ActiveRecord::Schema.define(version: 20160806010021) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20160804055709) do
     t.string   "department"
     t.datetime "deadline"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "send_email",  default: false
   end
 
   create_table "campus_recuritments", force: :cascade do |t|

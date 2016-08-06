@@ -10,11 +10,6 @@ class UserMailer < ApplicationMailer
     mail to: @user.email, subject: "Your password has changed"
   end
   
-  def password_changed(id)
-    @user = User.find(id)
-    mail to: @user.email, subject: "Your password has changed"
-  end
-  
   def password_reset(user, token)
     @resource = user
     @token = token
