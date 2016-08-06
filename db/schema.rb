@@ -81,9 +81,9 @@ ActiveRecord::Schema.define(version: 20160806010021) do
     t.string   "description"
     t.string   "content"
     t.string   "video_url"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "image"
     t.datetime "time"
     t.string   "editor"
     t.string   "editAuthor"
@@ -120,10 +120,10 @@ ActiveRecord::Schema.define(version: 20160806010021) do
     t.string   "detail"
     t.integer  "type_id"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "attachment"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
@@ -193,19 +193,19 @@ ActiveRecord::Schema.define(version: 20160806010021) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",     null: false
-    t.string   "encrypted_password",     default: "",     null: false
+    t.string   "email",                  default: "",      null: false
+    t.string   "encrypted_password",     default: "",      null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,      null: false
+    t.integer  "sign_in_count",          default: 0,       null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-    t.string   "role",                   default: "user"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "role",                   default: "admin"
     t.string   "authority"
   end
 

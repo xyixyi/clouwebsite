@@ -41,7 +41,7 @@ $(document).ready ->
       $('#user_authority_field').css('display', 'block')
       
   $(document).on 'click', "#current_user_authorities", (event)->
-    currentval = $('#user_authority_field').val()
+    currentval = $('#user_authorities_field').val()
     addval = $(this).val()
     if currentval != ''
       if currentval.indexOf(addval) >= 0
@@ -57,12 +57,12 @@ $(document).ready ->
       newval = newval.slice( 1 )
     while newval.slice(-1) == ','
       newval = newval.substring(0, newval.length-1)
-    $("#user_authority_field").val(null)
+    $("#user_authorities_field").val(null)
     #if you want array
-    $('#user_authority_field').val(newval.split(','))
+    $('#user_authorities_field').val(newval.split(','))
     #if you want string
-    $('#user_authority_field').val(newval)
+    $('#user_authorities_field').val(newval)
     #comment if dont want alert
-    # window.alert $('#authorities').val()
+    # window.alert $(this).val()
   
   return

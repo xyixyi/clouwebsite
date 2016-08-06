@@ -9,13 +9,12 @@ user = User.new
 user.email = 'test@example.com'
 user.password = 'hangpeng123'
 user.password_confirmation = 'hangpeng123'
-user.admin = true
-user.role = 'superadmin'
+user.role = 'developer'
 user.save!
 
 user2 = User.new
 user2.email = 'test2@example.com'
 user2.password = 'hangpeng123'
 user2.password_confirmation = 'hangpeng123'
-user2.admin = true
+user2.role = "admin"
 user2.save!

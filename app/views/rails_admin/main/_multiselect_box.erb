@@ -1,10 +1,10 @@
 <ul>
-  <% current_user.authorities_enum.each do |u| %>
+  <% current_user.hashmap.each_key do |k| %>
       <li>
-        <%= check_box_tag 'current_user_authorities', u[0] -%>
-        <%= u[0] -%>
+        <%= check_box_tag 'current_user_authorities', k -%>
+        <%= k -%>
       </li>
   <% end %>
 </ul>
 
-<input id="user_authority_field"  name="authorities" value="">
+<input id="user_authorities_field"  name="user[authority]" value="">
