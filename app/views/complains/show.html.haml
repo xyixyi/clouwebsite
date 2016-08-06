@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @complain.name
+%p
+  %b Email:
+  = @complain.email
+%p
+  %b Phonenumber:
+  = @complain.phonenumber
+%p
+  %b Solved:
+  = @complain.solved
+%p
+  %b Text:
+  = @complain.text
+
+= link_to 'Edit', edit_complain_path(@complain)
+\|
+= link_to 'Back', complains_path

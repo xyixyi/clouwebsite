@@ -1,0 +1,25 @@
+= form_for @complain do |f|
+  - if @complain.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@complain.errors.count, "error")} prohibited this complain from being saved:"
+      %ul
+        - @complain.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :phonenumber
+    = f.text_field :phonenumber
+  .field
+    = f.label :solved
+    = f.check_box :solved
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'
