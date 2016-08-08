@@ -61,6 +61,7 @@ h1 {
 .mytext {
     font-size: 18px;
     color: #C4261D;
+    width: 105px;
     float:right;
     margin-bottom: 40px;
 }
