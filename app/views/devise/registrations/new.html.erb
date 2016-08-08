@@ -10,14 +10,14 @@
       <%= devise_error_messages! %>
       
       <div class = "block_left">
-        <span class='mytext'>&emsp;用户名&emsp;</span>
+        <span class='mytext'>登录邮箱</span>
         <span class='mytext'>&emsp;密&emsp;码&emsp;</span>
         <span class='mytext'>重复密码&emsp;</span>
       </div>
       
       <div class = "block_right">
-        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "用户名设置要求" %>
-        <%= f.password_field :password, autocomplete: "off", :class => 'myfield', :placeholder => "密码规则" %>
+        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "登录邮箱" %>
+        <%= f.password_field :password, autocomplete: "off", :class => 'myfield', :placeholder => "密码" %>
         <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'myfield', :placeholder => "重复输入密码" %>
         <%= f.submit "立即注册", :class => 'submit' %>
         <a style="margin-top: 21px; color:#C4261D; float:right; margin-bottom:118px;" href="/users/sign_in"</a>已有账号?立即登录</a>

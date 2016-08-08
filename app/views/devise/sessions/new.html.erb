@@ -9,12 +9,12 @@
       <%= devise_error_messages! %>
       
       <div class = "block_left">
-        <span class='mytext'>&emsp;用户名&emsp;</span>
+        <span class='mytext'>登录邮箱</span>
         <span class='mytext'>&emsp;密&emsp;码&emsp;</span>
       </div>
       
       <div class = "block_right">
-        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "请输入用户名" %>
+        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "请输入登录邮箱" %>
         <%= f.password_field :password, autocomplete: "off", :class => 'myfield', :placeholder => "请输入密码" %>
         <%= f.submit "登录", :class => 'submit' %>
         <% if devise_mapping.rememberable? %>
