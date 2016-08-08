@@ -25,12 +25,12 @@ class Bid < ActiveRecord::Base
           field :deadline do
             label "截止日期"
           end
-          field :description do
-            label "简介"
-            pretty_value do
-              value.html_safe
-            end
-          end
+          # field :description do
+          #   label "简介"
+          #   pretty_value do
+          #     value.html_safe
+          #   end
+          # end
         end
         edit do
           field :position do
