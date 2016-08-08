@@ -12,7 +12,7 @@ border-style:solid;padding-right: 0px !important;;">
       </div>
       <div style="text-align:center;">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <%= f.email_field :email, autofocus: true, :class => 'popup_field', :placeholder => "请输入邮箱" %>
+        <%= f.email_field :email, autofocus: true, :class => 'popup_field', :placeholder => "请输入登录邮箱" %>
         <%= f.password_field :password, autocomplete: "off", :class => 'popup_field', :placeholder => "请输入密码" %>
         <%= f.submit "登录", :class => 'popup_submit' %>
         <% if devise_mapping.rememberable? %>
