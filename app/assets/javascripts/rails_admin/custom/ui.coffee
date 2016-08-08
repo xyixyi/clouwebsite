@@ -2,6 +2,11 @@
 $ = jQuery
 $(document).ready ->
   
+    if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin'
+      $('#user_authority_field').css('display', 'none')
+    else
+      $('#user_authority_field').css('display', 'block')
+  
   $('#product_Type_id').empty()
   $('#product_Type_id').append "<option value='' selected='selected'></option>"
   $('#product_Type_id').change()
