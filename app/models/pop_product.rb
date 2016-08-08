@@ -12,15 +12,15 @@ class PopProduct < ActiveRecord::Base
       field :name do
         label "名称"
       end
-      field :synopsis do
-        label "梗概"
-        pretty_value do
-          value.html_safe
-        end
-      end
-      field :detail do
-        label "细节"
-      end
+      # field :synopsis do
+      #   label "梗概"
+      #   pretty_value do
+      #     value.html_safe
+      #   end
+      # end
+      # field :detail do
+      #   label "细节"
+      # end
       
       field :category_id, :enum do
         label "产品大类"
