@@ -75,6 +75,14 @@ class PopProduct < ActiveRecord::Base
         # end
       end
       
+      field :seo_title do
+        label "SEO 标题"
+      end  
+      
+      field :seo_title do
+        label "SEO 关键字"
+      end  
+      
       field :image, :carrierwave do
         label "图片"
       end

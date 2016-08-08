@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806204907) do
+ActiveRecord::Schema.define(version: 20160808045305) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 20160806204907) do
     t.string   "attachment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "seo_title"
+    t.string   "seo_word"
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
@@ -149,6 +151,8 @@ ActiveRecord::Schema.define(version: 20160806204907) do
     t.string   "image"
     t.integer  "category_id"
     t.string   "attachment"
+    t.string   "seo_title"
+    t.string   "seo_word"
   end
 
   create_table "q_types", force: :cascade do |t|
@@ -168,16 +172,16 @@ ActiveRecord::Schema.define(version: 20160806204907) do
   end
 
   create_table "service_cases", force: :cascade do |t|
-    t.integer  "Type_id"
+    t.integer  "CaseType_id"
     t.string   "image"
     t.string   "text"
     t.string   "attachment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "title"
   end
 
-  add_index "service_cases", ["Type_id"], name: "index_service_cases_on_Type_id"
+  add_index "service_cases", ["CaseType_id"], name: "index_service_cases_on_CaseType_id"
 
   create_table "society_recuritments", force: :cascade do |t|
     t.string   "title"
