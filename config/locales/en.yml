@@ -21,13 +21,9 @@ en:
       service_case: "客服案例"
       qand_a: "Q&A"
       q_type: "问答类型"
-<<<<<<< HEAD
-      case_type: "案例类型"
-=======
       case_type: "类型"
       complain: "投诉建议"
       trouble: "故障申报"
->>>>>>> 5733960a55f2f33723720e72f4192056ac8060cd
   admin:
     js:
       true: True
