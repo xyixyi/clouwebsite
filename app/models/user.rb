@@ -20,9 +20,22 @@ class User < ActiveRecord::Base
       field :email do
         label "Email"
       end
-      field :password do
-        label "密码"
+      field :realName do
+        label "真实姓名"
       end
+
+      field :phoneNumber do
+        label "电话号码"
+      end  
+      
+      field :company do
+        label "公司"
+      end
+
+      field :department do
+        label "部门"
+      end
+      
       field :role do
         label "角色"
       end
@@ -33,9 +46,29 @@ class User < ActiveRecord::Base
     edit do
         field :email do
           label "Email"
+          required true
+        end
+        field :realName do
+          label "真实姓名"
+          required true
+        end
+    
+        field :phoneNumber do
+          label "电话号码"
+          required true
+        end  
+        
+        field :company do
+          label "公司"
+          required true
+        end
+    
+        field :department do
+          label "部门"
         end
         field :password do
           label "密码"
+          required true
         end
         field :role, :enum do
           label "角色"

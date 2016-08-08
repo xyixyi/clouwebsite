@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806204907) do
+ActiveRecord::Schema.define(version: 20160808050117) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 20160806204907) do
     t.string   "attachment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "seo_title"
+    t.string   "seo_word"
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
@@ -149,6 +151,8 @@ ActiveRecord::Schema.define(version: 20160806204907) do
     t.string   "image"
     t.integer  "category_id"
     t.string   "attachment"
+    t.string   "seo_title"
+    t.string   "seo_word"
   end
 
   create_table "q_types", force: :cascade do |t|
@@ -227,6 +231,10 @@ ActiveRecord::Schema.define(version: 20160806204907) do
     t.datetime "updated_at",                               null: false
     t.string   "role",                   default: "admin"
     t.string   "authority"
+    t.string   "phoneNumber"
+    t.string   "company"
+    t.string   "department"
+    t.string   "realName"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

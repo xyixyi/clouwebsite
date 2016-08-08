@@ -16,15 +16,15 @@ class Product < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :synopsis do
-            label "梗概"
-            pretty_value do
-              value.html_safe
-            end
-          end
-          field :detail do
-            label "细节"
-          end
+          # field :synopsis do
+          #   label "梗概"
+          #   pretty_value do
+          #     value.html_safe
+          #   end
+          # end
+          # field :detail do
+          #   label "细节"
+          # end
           
           field :category_id, :enum do
             label "产品大类"
@@ -84,6 +84,14 @@ class Product < ActiveRecord::Base
             #   ::Type.all.collect {|p| [p.name, p.id]}
             # end
           end
+          
+          field :seo_title do
+            label "SEO 标题"
+          end  
+          
+          field :seo_word do
+            label "SEO 关键字"
+          end  
           
           field :image, :carrierwave do
             label "图片"

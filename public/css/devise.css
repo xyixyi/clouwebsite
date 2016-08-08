@@ -65,6 +65,9 @@ h1 {
     margin-bottom: 40px;
 }
 
+.myfield:focus {
+    outline-color: #c4261d !important;
+}
 .submit {
     width: 335px;
     height: 45px;
@@ -116,6 +119,10 @@ h1 {
     position: relative;
     width:192px;
     height:28px;
+}
+
+.popup_sign_up:hover,.popup_sign_up:active {
+    color: white !important;
 }
 
 .popup_sign_up{

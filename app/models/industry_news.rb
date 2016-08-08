@@ -13,18 +13,18 @@ class IndustryNews < ActiveRecord::Base
           field :description do
             label "梗概"
           end
-          field :content do
-            label "内容"
-            pretty_value do
-              value.html_safe
-            end
-          end
+          # field :content do
+          #   label "内容"
+          #   pretty_value do
+          #     value.html_safe
+          #   end
+          # end
           field :editAuthor do
             label "编辑作者"
           end
-          field :video_url do
-            label "视频链接"
-          end
+          # field :video_url do
+          #   label "视频链接"
+          # end
           field :image, :carrierwave do
             label "封面"
           end

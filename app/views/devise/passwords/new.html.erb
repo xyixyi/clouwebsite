@@ -10,11 +10,11 @@
       <%= devise_error_messages! %>
       
       <div class = "block_left">
-        <span class='mytext'>&emsp;邮箱&emsp;</span>
+        <span class='mytext'>登录邮箱</span>
       </div>
       
       <div class = "block_right">
-        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "邮箱" %>
+        <%= f.email_field :email, autofocus: true, :class => 'myfield', :placeholder => "登录邮箱" %>
         <%= f.submit "send me reset password instruction", :class => 'submit' %>
       </div>
 
