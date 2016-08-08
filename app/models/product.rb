@@ -89,7 +89,7 @@ class Product < ActiveRecord::Base
             label "SEO 标题"
           end  
           
-          field :seo_title do
+          field :seo_word do
             label "SEO 关键字"
           end  
           

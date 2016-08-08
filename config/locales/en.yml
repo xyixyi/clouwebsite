@@ -22,8 +22,8 @@ en:
       qand_a: "Q&A"
       q_type: "问答类型"
       case_type: "类型"
-      complains: "投诉建议"
-      troubles: "故障申报"
+      complain: "投诉建议"
+      trouble: "故障申报"
   admin:
     js:
       true: True
