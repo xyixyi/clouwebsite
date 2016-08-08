@@ -17,12 +17,13 @@
     
 }
 
-.banner-btn:hover{  
+.banner-btn:hover,.banner-btn:focus {  
     letter-spacing: 2px;
-    color:#ffffff;
+    color:#ffffff !important;
     background-color:#ae221a;
     border-color:#ae221a;
 }
+
 
 .main-banner {
     position: relative;

@@ -38,19 +38,81 @@ h7 {
 }
 
 h8{
+    display: inherit;
+    color: white;
+    font-size: 65px;
     
+}
+
+.businessicon {
+    display: inline-block;
+    background-image: url('../img/about_us/businessicon.png');
+    height: 80px;
+    width: 14%;;
+    margin-right: 1.5%;
+    float: left;
+    position: relative;
+    bottom: 0px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.righttextp {
+    float: right;
+}
+
+
+.banner-btn { 
+    color:rgb(255, 255, 255);
+    font-size:19px;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:40px;
+    padding-right:40px;
+    border-width:0px;
+    border-color:
+    rgb(197, 229, 145);
+    border-style:solid;
+    border-radius:56px;
+    background-color:rgb(196, 38, 29);
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    
+}
+
+.nav-links:focus {
+    color: white;
+}
+
+.banner-btn:hover,.banner-btn:focus {  
+    letter-spacing: 2px;
+    color:#ffffff !important;
+    background-color:#ae221a;
+    border-color:#ae221a;
+}
+
+h16{
+    /*width: 100%;*/
+    display: inherit;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    font-size: 32px;
 }
 
 h9 {
     display: inline-block;
     color: #737272;
     width: 14%;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     /*line-height: 85px;*/
     position: relative;
     top: 36px;
-    margin-right: 20px;
+    margin-right: 1%;
     /*margin-right: 40px;*/
 }
 
@@ -62,6 +124,7 @@ h9 {
     width: 90px;
     height: 72px;
 }
+
 
 h10 {
     color: #c4261d;
@@ -77,6 +140,72 @@ h10 {
 }
 
 
+.startandmarketcontant {
+
+    width: 100%;
+    position: relative;
+    height: 285px;
+}
+
+.startrighttext {
+    padding-top: 80px;
+    background-color: #F2F2F2;
+    width: 50%;
+    text-align: left;
+    padding-left: 70px;
+    position: relative;
+    height: 100%;
+    float: right;
+}
+
+.startp {
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+    float: left;
+    width: 70%;
+}
+
+
+.startlefttext {
+    padding-top: 80px;
+    background-color: #F2F2F2;
+    width: 50%;
+    text-align: left;
+    padding-left: 70px;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.startleftimage {
+    float: left;
+    position: relative;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 50%;
+    overflow: hidden;
+    /*margin-top: -30px;*/
+    text-align: center;
+    display: inline-block;
+}
+
+
+.startrightimage {
+    float: right;
+    position: relative;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 50%;
+    overflow: hidden;
+    /*margin-top: -30px;*/
+    text-align: center;
+    display: inline-block;
+}
 
 .conceptleftimg{
     float: left;
@@ -96,6 +225,29 @@ h10 {
     padding-top: 80px;
 }
 
+.startandmarket {
+        background-image: url("../img/about_us/shutterstock.jpg") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 1480px;
+    background-color: #f5f5f5;
+    position: relative;
+    width: 100%;
+    top: 90px;
+}
+
+.aboutusslogan {
+    position: relative;
+    top: 260px;
+}
+
+.starttimeline {
+    text-align: center;
+    margin-bottom: 264px;
+    top: 90px;
+}
+
 .conceptrightimg{
     float: right;
     display: inline-block;
@@ -111,6 +263,11 @@ h10 {
     text-align: center;
 }
 
+.business {
+    height: auto;
+    text-align: center;
+}
+
 h11 {
     font-size: 30px;
     color: black;
@@ -118,9 +275,7 @@ h11 {
     display: inherit;
 }
 
-.righttextp {
-    float: right;
-}
+
 
 .aboutusvideo {
     position: relative;
@@ -134,6 +289,83 @@ h11 {
     overflow: hidden;
     /*margin-top: -30px;*/
     text-align: center;
+    margin-bottom: 90px;
+}
+
+.timeline .right-block .circle {
+    top: 94px;
+    left: -9px;
+}
+
+.timeline .circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #c4261d;
+    border-radius: 100%;
+}
+
+.timeline .right-block {
+    width: 100%;
+    float: left;
+}
+
+.timeline .right-block img, .timeline .right-block .number-tile-small {
+    float: right;
+    margin-right: 40px;
+    margin-top: 87px;
+}
+
+.timeline .right-block .text-block {
+    text-align: left;
+    float: right;
+    border-left: 4px solid #c4261d;
+    padding: 80px 0 80px 40px;
+}
+
+.timeline {
+    margin-top: 90px;
+}
+
+.timeline li {
+    list-style-type: none;
+    left: -20px;
+    position: relative;
+}
+
+.timeline .text-block {
+    width: 50%;
+    position: relative;
+}
+
+.timeline .left-block {
+    width: 100%;
+    float: left;
+}
+
+.timeline .left-block .text-block {
+    float: left;
+    border-right: 4px solid #c4261d;
+    text-align: right;
+    padding: 80px 40px 80px 0;
+    margin-left: 5px;
+}
+
+@media (max-width:1900px) {
+    .timeline .left-block .text-block {
+    margin-left: 4px !important;
+    }
+}
+
+.timeline .left-block .circle {
+    top: 90px;
+    right: -9px;
+}
+
+h12 {
+    vertical-align: top;
+    color: black;
+    font-size: 30px;
 }
 
 .righttext {
@@ -146,11 +378,37 @@ h11 {
     text-align: right;
 }
 
+.contactuspart {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    position: relative;
+    top: 180px;
+    overflow: hidden;
+    /*margin-top: -30px;*/
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 130px;
+    height: 560px;
+}
+
 .conceptp {
     line-height: 30px;
     font-size: 18px;
     color: black;
     width: 60%;
+}
+
+.companyhistory {
+    width: 100%;
+    position: relative;
+    top: 90px;
+}
+
+.companyhistorycontent {
+    text-align: center;
+    
 }
 
 .lefttext {
@@ -218,6 +476,67 @@ h11 {
     height: auto;
     /*width: 68%;*/
     margin: auto;
+}
+
+.contactslogan {
+    width: 100%;
+    position: relative;
+    top: 205px;
+}
+
+.tocontactus {
+    text-align: center;
+    top: 230px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+}
+
+.storylink {
+    color: #C4261D;
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+    top: -44px;
+}
+
+.storybanner {
+    position: relative;
+    font-size: 30px;
+    color: #343434;
+    line-height: 90px;
+    display: inline-block;
+}
+
+.slogonbackground {
+    
+    text-align: center;
+    position: relative;
+    opacity: 0.4;
+    background: RGBA(255,255,255, 0.4);
+    filter: alpha(opacity=40);
+    height: 90px;
+    top: 320px;
+
+}
+
+h14 {
+    color: black;
+    display: inherit;
+    margin: auto;
+    margin-bottom: 35px;
+    position: relative;
+    font-size: 60px;
+    
+}
+
+h15 {
+    position: relative;
+    
+    color: black;
+    font-size: 20px;
 }
 
 h1 {
@@ -299,4 +618,8 @@ h2, h3 {
     top: 250px;
     float: right;
     right: 9.5%;
+}
+
+.footer {
+    bottom: -183px !important;
 }

@@ -149,6 +149,10 @@ hr {
     /*top: 5.5px;*/
 }
 
+.cf {
+    zoom:1;
+}
+
 .login, .sign_out {
     position: relative;
     margin: 0 1px;
