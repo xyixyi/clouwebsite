@@ -16,8 +16,14 @@ class Ability
         end
       elsif user.role == 'admin'
         # this is amazing!!!
-        access_list = eval user.authority.reject {|c| c.empty? }.to_s.gsub('"', '')
-        can :manage, access_list
+        model_list = ''
+        access_list = user.authority.split(',')
+        access_list.each do |k|
+          model_list += user.hashmap[k] 
+          model_list += ','
+        end
+        model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
+        can :manage, model_list
       end
     end
   end

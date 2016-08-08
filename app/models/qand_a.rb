@@ -2,7 +2,7 @@ class QandA < ActiveRecord::Base
     belongs_to :QType
     mount_uploader :attachment, AttachmentUploader
     rails_admin do
-        navigation_label 'QA'
+        navigation_label '客户服务'
         parent QType
         list do
             field :title do

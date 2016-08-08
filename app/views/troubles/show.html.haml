@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @trouble.name
+%p
+  %b Email:
+  = @trouble.email
+%p
+  %b Phonenumber:
+  = @trouble.phonenumber
+%p
+  %b Solved:
+  = @trouble.solved
+%p
+  %b Text:
+  = @trouble.text
+
+= link_to 'Edit', edit_trouble_path(@trouble)
+\|
+= link_to 'Back', troubles_path

@@ -7,21 +7,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # serialize :authority, Array
-  def authorities_enum
-      [ ['产品类别', 'Category, Type, Product, PopProduct'], [ 'QA', 'QType, QandA' ], [ '新闻', 'CompanyNews, IndustryNews'] ,
-      ['投资者关系', 'Announcement, YearReport'], ['员工讯息', 'EmployeeStory'], ['案例类型', 'CaseType, ServiceCase'], 
-      ['招聘', 'SocietyRecuritment, CampusRecuritment'], ['行业新闻', 'IndustryNews'] ,['用户/管理员', 'User'], 
-      ['问题类型', 'QType'], ['投标', 'Bid']]
+  def hashmap
+      { '产品类别' => 'Category, Type, Product, PopProduct','新闻' => 'CompanyNews, IndustryNews', 
+      '投资者关系' => 'Announcement, YearReport', '员工讯息' => 'EmployeeStory', '客户服务' => 'CaseType, ServiceCase, QType, QandA', 
+      '招聘' => 'SocietyRecuritment, CampusRecuritment', '行业新闻' => 'IndustryNews' , '用户/管理员' => 'User', 
+      '问题类型' => 'QType', '投标' => 'Bid', '售后服务' => 'Trouble, Complain'}
   end
-  
-  # def has_role?( role )
-  #     # example called from cancan's app/models/ability.rb
-  #     # if user.has_role?( :ADMIN
-
-  #     # for roles array stored in db... take each value, see if it matches the second column in the roles_enum array, if so, return the 1st col of the enum as a uprcase,space_to_underscore,symbol .
-  #     assigned_roles = self.authority.map { |r| self.authorities_enum.rassoc(r)[0].gsub(/ /, '_').upcase.to_sym }
-  #     assigned_roles.include?( role )
-  # end
 
   rails_admin do
     navigation_label '用户/管理员'
@@ -34,6 +25,9 @@ class User < ActiveRecord::Base
       end
       field :role do
         label "角色"
+      end
+      field :authority do
+        label "限权"
       end
     end
     edit do
@@ -62,6 +56,7 @@ class User < ActiveRecord::Base
           #     bindings[:form].select( "authority", bindings[:object].authorities_enum, {}, {:multiple => true, :size => 10, :class => "selectpicker"})
           # end
           partial :multiselect_box
+
 
         end
     end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :complains
+  resources :troubles
   resources :service_cases
   resources :qand_as
   resources :q_types

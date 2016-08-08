@@ -41,8 +41,12 @@ $(document).ready ->
       $('#user_authority_field').css('display', 'block')
       
   $(document).on 'click', "#current_user_authorities", (event)->
+<<<<<<< HEAD
     # window.alert "aa"
     currentval = $('#authorities_field').val()
+=======
+    currentval = $('#user_authorities_field').val()
+>>>>>>> 04b0bcea9032d3adc596b9c6fe7f006f5f90303e
     addval = $(this).val()
     if currentval != ''
       if currentval.indexOf(addval) >= 0
@@ -58,6 +62,7 @@ $(document).ready ->
       newval = newval.slice( 1 )
     while newval.slice(-1) == ','
       newval = newval.substring(0, newval.length-1)
+<<<<<<< HEAD
     $("#authorities_field").val(null)
     #if you want array
     # $('#user_authority_field').val(newval.split(','))
@@ -65,7 +70,14 @@ $(document).ready ->
     # window.alert newval
     $('#authorities_field').val(newval)
     # window.alert $('#user_authority_field').val()+"aaa"
+=======
+    $("#user_authorities_field").val(null)
+    #if you want array
+    $('#user_authorities_field').val(newval.split(','))
+    #if you want string
+    $('#user_authorities_field').val(newval)
+>>>>>>> 04b0bcea9032d3adc596b9c6fe7f006f5f90303e
     #comment if dont want alert
-    # window.alert $('#authorities').val()
+    # window.alert $(this).val()
   
   return

@@ -6,7 +6,7 @@ class ServiceCase < ActiveRecord::Base
   #set up rails admin
   rails_admin do
     parent CaseType
-    navigation_label '案例类型'
+    navigation_label '客户服务'
     list do 
       field :title do
         label "标题"
