@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  serialize :authority, Array
+  # serialize :authority, Array
   def authorities_enum
       [ ['产品类别', 'Category, Type, Product, PopProduct'], [ 'QA', 'QType, QandA' ], [ '新闻', 'CompanyNews, IndustryNews'] ,
       ['投资者关系', 'Announcement, YearReport'], ['员工讯息', 'EmployeeStory'], ['案例类型', 'CaseType, ServiceCase'], 

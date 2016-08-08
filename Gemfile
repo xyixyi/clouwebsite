@@ -55,6 +55,8 @@ gem 'validates_zipcode'
 
 gem 'validates_timeliness', '~> 4.0'
 
+#video
+gem 'videojs_rails'
 # for search/filter
 gem "searchkick" 
 gem 'elasticsearch-model' 

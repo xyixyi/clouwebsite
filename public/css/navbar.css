@@ -155,7 +155,8 @@ hr {
     float: left;
     font-size: 11px;
     color: #c4261d;
-    top:5.5px;
+    /*top:5.5px;*/
+    line-height: 30px;
 }
 
 .language_link {

@@ -428,6 +428,7 @@ h4 {
     margin: 25px;
     display: inline-block;
     width: 20%;
+    float: left;
     position: relative;
 }
 

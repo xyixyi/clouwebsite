@@ -96,7 +96,7 @@ Rails.application.routes.draw do
   get 'plans', :to => 'mainframe#plans', :format => false
   get 'products_main', :to => 'mainframe#products', :format => false
   get 'service', :to => 'mainframe#service', :format => false
-  get 'about_us', :to => 'mainframe#about_us', :format => false
+  get 'aboutus', :to => 'about_us#aboutus', :format => false
   get 'supplier', :to => 'mainframe#supplier', :format => false
   get '/', :to => 'mainframe#index', :format => false
   get 'news_page', :to => 'mainframe#news', :format => false
@@ -118,7 +118,8 @@ Rails.application.routes.draw do
   
   get "/search_from_all" => "categories#product_search", :format => false
   
-  get '/leaders' => 'about_us#leaders', :format => false
+  # get '/leaders' => 'about_us#leaders', :format => false
+  
   
   
 end

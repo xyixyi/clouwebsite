@@ -46,7 +46,7 @@ h1 {
     line-height: 50px;
 }
 
-.nav-links:hover, nav-links:active {
+.nav-links:hover, .nav-links:active, .nav-links:focus {
     color: white;
 }
 
@@ -127,8 +127,11 @@ h3 {
     display: inline-block;
     margin-left: 40px;
     position: relative;
-    top: -42px;
+    top: -45px;
+    
 }
+
+
 
 .ourstoryreal {
     top: -252px;

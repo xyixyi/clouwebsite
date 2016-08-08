@@ -5,7 +5,7 @@
         <h1>投资者关系</h1>
         <%= link_to "投资者联系方式", society_recuritments_path, class:"nav-links"%>
         <a href="mailto:sunnyhuang729@163.com" class="nav-links">董秘邮箱</a>
-        <a href="/leaders" class="nav-links">公司成员</a>
+        <!--<a href="/leaders" class="nav-links">公司成员</a>-->
         <%= link_to "关于科陆", stories_news_index_path, class:"nav-links"%>
     </div>
 </div>
@@ -66,7 +66,7 @@
 
 <script type="text/javascript" src="https://hq.sinajs.cn/list=s_sz002121" charset="gb2312"></script>
 <script>
-    $(document).ready(function(){
+    $(window).load(function(){
         // window.alert("aaa");
         // window.alert(hq_str_s_sz002121);
         var elements=hq_str_s_sz002121.split(",");
