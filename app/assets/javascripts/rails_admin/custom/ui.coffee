@@ -35,7 +35,7 @@ $(document).ready ->
         )
         
   $(document).on 'change', '#user_role', (event) ->
-    if $('#user_role').val() == 'user'
+    if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin'
       $('#user_authority_field').css('display', 'none')
     else
       $('#user_authority_field').css('display', 'block')
