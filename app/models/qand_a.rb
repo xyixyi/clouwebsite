@@ -11,12 +11,12 @@ class QandA < ActiveRecord::Base
             field :question do
                 label "问题"
             end
-            field :answer do
-                label "答案"
-                pretty_value do
-                  value.html_safe
-                end
-            end
+            # field :answer do
+            #     label "答案"
+            #     pretty_value do
+            #       value.html_safe
+            #     end
+            # end
             field :QType_id, :enum do
                 label "问题类别"
                 enum do 
