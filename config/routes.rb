@@ -102,13 +102,13 @@ Rails.application.routes.draw do
   get 'supplier', :to => 'mainframe#supplier', :format => false
   get '/', :to => 'mainframe#index', :format => false
   get 'news_page', :to => 'mainframe#news', :format => false
-  get 'recuritments', :to =>'mainframe#recuritments', :format => false
+  get 'contact_us', :to => 'about_us#contact_us', :format => false
   
   #only for test
   get 'test', :to => 'mainframe#test', :format => false
   get 'testtwo', :to => 'mainframe#test2', :format => false
   get 'testthree', :to => 'mainframe#test3', :format => false
-  get 'contact_us', :to => 'about_us#contact_us', :format => false
+  
   
   get 'sitemap', :to => 'mainframe#sitemap', :format => false
   

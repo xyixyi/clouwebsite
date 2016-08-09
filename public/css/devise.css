@@ -162,3 +162,10 @@ h1 {
     border: 1px solid;
     padding: 0 !important;
 }
+
+.sitemap_link {
+    text-align: left;
+    font-size: 18px;
+    color:#C4261D; 
+}
+
