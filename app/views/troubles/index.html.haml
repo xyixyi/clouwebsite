@@ -1,29 +1,3 @@
 %h1 Listing troubles
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Email
-      %th Phonenumber
-      %th Solved
-      %th Text
-      %th
-      %th
-      %th
-
-  %tbody
-    - @troubles.each do |trouble|
-      %tr
-        %td= trouble.name
-        %td= trouble.email
-        %td= trouble.phonenumber
-        %td= trouble.solved
-        %td= trouble.text
-        %td= link_to 'Show', trouble
-        %td= link_to 'Edit', edit_trouble_path(trouble)
-        %td= link_to 'Destroy', trouble, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
 = link_to 'New Trouble', new_trouble_path

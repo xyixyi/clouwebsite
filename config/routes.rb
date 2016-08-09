@@ -110,6 +110,8 @@ Rails.application.routes.draw do
   get 'testthree', :to => 'mainframe#test3', :format => false
   get 'contact_us', :to => 'about_us#contact_us', :format => false
   
+  get 'sitemap', :to => 'mainframe#sitemap', :format => false
+  
 
   get 'categories/find_subtypes/:id' => 'categories#find_subtypes'
   # below code for testing uploading function

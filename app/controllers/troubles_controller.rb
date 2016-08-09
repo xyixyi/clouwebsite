@@ -7,18 +7,9 @@ class TroublesController < ApplicationController
     @troubles = Trouble.all
   end
 
-  # GET /troubles/1
-  # GET /troubles/1.json
-  def show
-  end
-
   # GET /troubles/new
   def new
     @trouble = Trouble.new
-  end
-
-  # GET /troubles/1/edit
-  def edit
   end
 
   # POST /troubles
@@ -28,24 +19,10 @@ class TroublesController < ApplicationController
 
     respond_to do |format|
       if @trouble.save
-        format.html { redirect_to @trouble, notice: 'Trouble was successfully created.' }
+        format.html { redirect_to new_trouble_path, notice: 'Trouble was successfully created.' }
         format.json { render :show, status: :created, location: @trouble }
       else
         format.html { render :new }
-        format.json { render json: @trouble.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /troubles/1
-  # PATCH/PUT /troubles/1.json
-  def update
-    respond_to do |format|
-      if @trouble.update(trouble_params)
-        format.html { redirect_to @trouble, notice: 'Trouble was successfully updated.' }
-        format.json { render :show, status: :ok, location: @trouble }
-      else
-        format.html { render :edit }
         format.json { render json: @trouble.errors, status: :unprocessable_entity }
       end
     end

@@ -1,19 +1,19 @@
-<title>提交投诉</title>
+<title>提交故障</title>
 <link rel="stylesheet" type="text/css" href="/css/devise.css">
 
 <div class="main contain">
-  <h1>提交投诉</h1>
+  <h1>提交故障</h1>
   <hr class="hr">
 
   <div class="content">
-    <%= form_for @complain do |f| %>
+    <%= form_for @trouble do |f| %>
       <%= devise_error_messages! %>
       
       <div class = "block_left">
         <span class='mytext'>&emsp;姓&emsp;名 *&emsp;</span>
         <span class='mytext'>&emsp;E-mail *&emsp;</span>
         <span class='mytext'>手机号码 *&emsp;</span>
-        <span class='mytext'>投诉内容 *&emsp;</span>
+        <span class='mytext'>故障内容 *&emsp;</span>
       </div>
       
       <div class = "block_right">
