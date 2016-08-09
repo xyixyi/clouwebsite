@@ -19,6 +19,10 @@ class MainframeController < ApplicationController
     @categories = Category.all
   end
   
+  def sitemap
+    @categories = Category.all
+  end
+  
   def news
     # @industry_news = IndustryNews.all.reverse
     # @company_news = CompanyNews.all.reverse

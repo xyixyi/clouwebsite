@@ -7,18 +7,9 @@ class ComplainsController < ApplicationController
     @complains = Complain.all
   end
 
-  # GET /complains/1
-  # GET /complains/1.json
-  def show
-  end
-
   # GET /complains/new
   def new
     @complain = Complain.new
-  end
-
-  # GET /complains/1/edit
-  def edit
   end
 
   # POST /complains
@@ -28,24 +19,10 @@ class ComplainsController < ApplicationController
 
     respond_to do |format|
       if @complain.save
-        format.html { redirect_to @complain, notice: 'Complain was successfully created.' }
+        format.html { redirect_to new_complain_path, notice: 'Complain was successfully created.' }
         format.json { render :show, status: :created, location: @complain }
       else
         format.html { render :new }
-        format.json { render json: @complain.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /complains/1
-  # PATCH/PUT /complains/1.json
-  def update
-    respond_to do |format|
-      if @complain.update(complain_params)
-        format.html { redirect_to @complain, notice: 'Complain was successfully updated.' }
-        format.json { render :show, status: :ok, location: @complain }
-      else
-        format.html { render :edit }
         format.json { render json: @complain.errors, status: :unprocessable_entity }
       end
     end

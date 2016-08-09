@@ -1,29 +1,27 @@
 %h1 Listing complains
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Email
-      %th Phonenumber
-      %th Solved
-      %th Text
-      %th
-      %th
-      %th
+// %table
+//   %thead
+//     %tr
+//       %th Name
+//       %th Email
+//       %th Phonenumber
+//       %th Solved
+//       %th Text
+//       %th
+//       %th
+//       %th
 
-  %tbody
-    - @complains.each do |complain|
-      %tr
-        %td= complain.name
-        %td= complain.email
-        %td= complain.phonenumber
-        %td= complain.solved
-        %td= complain.text
-        %td= link_to 'Show', complain
-        %td= link_to 'Edit', edit_complain_path(complain)
-        %td= link_to 'Destroy', complain, :method => :delete, :data => { :confirm => 'Are you sure?' }
+//   %tbody
+//     - @complains.each do |complain|
+//       %tr
+//         %td= complain.name
+//         %td= complain.email
+//         %td= complain.phonenumber
+//         %td= complain.solved
+//         %td= complain.text
+//         %td= link_to 'Destroy', complain, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+// %br
 
 = link_to 'New Complain', new_complain_path

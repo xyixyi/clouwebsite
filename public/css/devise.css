@@ -13,10 +13,10 @@ body {
 
 .content{
     position: relative;
-    /*height: auto;*/
+    height: auto;
     margin: auto;
     margin-top: 103px;
-    height: 500px;
+    /*height: 500px;*/
     text-align: center;
 }
 
@@ -52,6 +52,15 @@ h1 {
 .myfield {
     width: 335px;
     height: 45px;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom:20px;
+}
+
+.mycomplain {
+    width: 450px;
+    height: 200px;
     font-size: 18px;
     border: 1px solid;
     border-radius: 5px;
@@ -153,3 +162,10 @@ h1 {
     border: 1px solid;
     padding: 0 !important;
 }
+
+.sitemap_link {
+    text-align: left;
+    font-size: 18px;
+    color:#C4261D; 
+}
+
