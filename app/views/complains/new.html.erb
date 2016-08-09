@@ -1,0 +1,31 @@
+<title>提交投诉与故障</title>
+<link rel="stylesheet" type="text/css" href="/css/devise.css">
+
+<div class="main contain">
+  <h1>提交投诉与故障</h1>
+  <hr class="hr">
+
+  <div class="content">
+    <%= form_for @complain do |f| %>
+      <%= devise_error_messages! %>
+      
+      <div class = "block_left">
+        <span class='mytext'>&emsp;姓&emsp;名 *&emsp;</span>
+        <span class='mytext'>&emsp;E-mail *&emsp;</span>
+        <span class='mytext'>手机号码 *&emsp;</span>
+        <span class='mytext'>留言内容 *&emsp;</span>
+      </div>
+      
+      <div class = "block_right">
+        <%= f.text_field :name, autofocus: true, :class => 'myfield' %>
+        <%= f.email_field :email, autofocus: true, :class => 'myfield' %>
+        <%= f.text_field :phonenumber, autofocus: true, :class => 'myfield' %>
+        <%= f.text_area :text, autofocus: true, :class => 'mycomplain'%>
+        <%= f.submit "提交", :class => 'submit' %>
+        <a style="margin-top: 21px; margin-bottom:118px;"></a>
+      </div>
+
+  </div>
+  <% end %>
+
+</div>
