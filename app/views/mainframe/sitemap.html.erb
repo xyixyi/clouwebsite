@@ -1,0 +1,38 @@
+<title>网站地图</title>
+<link rel="stylesheet" type="text/css" href="/css/devise.css">
+
+<div class="main contain">
+  <h1>网站地图</h1>
+  <hr class="hr">
+
+  <div class="content" style="text-align:left;">
+      <a class="sitemap_link" href="/"</a>首页</a><br>
+      <a class="sitemap_link" href="/joinus"</a>加入我们</a><br>
+      <a class="sitemap_link" href="/allproducts"</a>全部产品</a><br>
+      <a class="sitemap_link" href="/products_main"</a>产品展示</a><br>
+      <a class="sitemap_link" href="/supplier"</a>合作伙伴</a><br>
+      <br>
+      <a class="sitemap_link" href="/news_page"</a>新闻</a><br>
+      <a class="sitemap_link" href="/mainframe/news"</a>公司新闻</a><br>
+      <a class="sitemap_link" href="/mainframe/industrynews"</a>行业新闻</a><br>
+      <br>
+      <a class="sitemap_link" href="/aboutus"</a>关于我们</a><br>
+      <a class="sitemap_link" href="/contact_us"</a>联系我们</a><br>
+      
+      <a class="sitemap_link" href="/complains/new"</a>提交投诉</a><br>
+      <a class="sitemap_link" href="/troubles/new"</a>提交故障</a><br>
+      
+      <a class="sitemap_link" href="/bids"</a>招标信息</a><br>
+      <a class="sitemap_link" href="/service"</a>技术支持</a><br>
+      
+      <br>
+      <br>
+      <div>
+        <span>以下是所有产品大类：</span><br>
+        <% @categories.each do |category| %>
+            <%= link_to category.name, category_path(category.id), :class => "sitemap_link"%><br>
+        <%end%>
+      </div>
+  </div>
+
+</div>
