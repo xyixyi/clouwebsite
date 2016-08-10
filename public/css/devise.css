@@ -75,9 +75,14 @@ h1 {
     margin-bottom: 40px;
 }
 
-.myfield:focus {
+.myfield:focus, .mycomplain:focus {
     outline-color: #c4261d !important;
 }
+
+.textarea:focus{
+    outline-color: #c4261d !important;
+}
+
 .submit {
     width: 335px;
     height: 45px;
