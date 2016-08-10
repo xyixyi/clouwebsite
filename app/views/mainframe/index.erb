@@ -18,8 +18,10 @@
                 <a href="/joinus" class="quicktext">加入我们</a>
             </li>
             <li>
-                <a href="/" class="quickicon three"></a>
-                <a href="/" class="quicktext">故障申报</a>
+                <!--<a href="/" class="quickicon three"></a>-->
+                <!--<a href="/" class="quicktext">故障申报</a>-->
+                <%= link_to '', new_trouble_path, class:'quickicon three'%>
+                <%= link_to '故障申报>', new_trouble_path, class:'quicktext'%>
             </li>
             <li>
                 <a href="/investors" class="quickicon four"></a>

@@ -122,7 +122,9 @@ Rails.application.routes.draw do
   get 'allproducts', :to => 'categories#allproducts', :format => false
   
   
-  get "/search_from_all" => "categories#product_search", :format => false
+  get "search_from_all" => "categories#product_search", :format => false
+  
+  get 'servicecontact' => 'service_cases#servicecontact', :format => false
   
   # get '/leaders' => 'about_us#leaders', :format => false
   

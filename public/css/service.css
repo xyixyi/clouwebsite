@@ -16,12 +16,38 @@
     text-align: center;
 }
 
+
+
+
 .servicecover {
     background-color: black;
     opacity: 0.4;
     width: 100%;
     position: absolute;
     height: 810px;
+}
+
+
+.servicecontactbanner {
+    position: relative;
+    top: 90px;
+    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+    height: 450px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+    /*margin-top: -30px;*/
+    text-align: center;
+}
+
+.servicecontactbannercover {
+    background-color: black;
+    opacity: 0.4;
+    width: 100%;
+    position: absolute;
+    height: 450px;
 }
 
 h2 {
@@ -126,4 +152,54 @@ h5 {
 .servicescontainer {
     position: relative;
      top: -187px;
+}
+
+.servicecontactslogan {
+    text-align: left;
+    position: relative;
+    top: -190px;
+    margin: auto;
+}
+
+h6 {
+    margin: 0;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+    
+}
+
+.servicecontactslogonp {
+    color: white;
+    font-size: 30px;
+}
+
+.groupcontact {
+    position: relative;
+    margin: auto;
+    top: 22px;
+}
+
+.subgroupcontact {
+    position: relative;
+    margin: auto;
+    top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.hr {
+    position: relative;
+    border: 1.5px solid #c4261d;
+    width: 40px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    
+}
+
+h7 {
+    color: black;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 20px;
 }
