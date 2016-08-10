@@ -22,9 +22,6 @@ class Product < ActiveRecord::Base
           #     value.html_safe
           #   end
           # end
-          # field :detail do
-          #   label "细节"
-          # end
           
           field :category_id, :enum do
             label "产品大类"
@@ -47,6 +44,47 @@ class Product < ActiveRecord::Base
           field :attachment, :carrierwave do
             label "附件"
           end     
+        end
+        
+        show do
+          field :name do
+            label "名称"
+          end
+          
+          field :synopsis do
+            label "梗概"
+            pretty_value do
+              value.html_safe
+            end
+          end
+          
+          field :category_id, :enum do
+            label "产品大类"
+            enum do 
+              Category.all.collect {|p| [p.name, p.id]}
+            end
+          end
+          
+          field :Type_id, :enum do
+            label "产品小类"
+            enum do
+              ::Type.all.collect {|p| [p.name, p.id]}
+            end
+          end
+          
+          field :image, :carrierwave do
+            label "图片"
+          end
+          
+          field :attachment, :carrierwave do
+            label "附件"
+          end   
+          field :detail do
+            label "细节"
+            pretty_value do
+              value.html_safe unless value.blank?
+            end
+          end
         end
         
         edit do 

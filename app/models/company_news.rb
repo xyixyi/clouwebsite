@@ -1,7 +1,14 @@
 class CompanyNews < ActiveRecord::Base
     mount_uploader :image, ImageUploader
-    
+    def before_import_save(record)
+    # Your custom special sauce
+      
+      self.title = record[:title] if record[:title].present?
+      self.image = record[:image] if record[:image].present?
+      self.content = record[:content] if record[:content].present?
+    end
     #rails admin set up
+    
     rails_admin do
         navigation_label '新闻'
         list do
