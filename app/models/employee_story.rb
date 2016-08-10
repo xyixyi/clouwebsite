@@ -28,6 +28,7 @@ class EmployeeStory < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "图片"
+            help "上传图片请注意"
           end
           field :text, :ck_editor do
             label "文章"
