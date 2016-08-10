@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :honors
   resources :complains
   resources :troubles
   resources :service_cases

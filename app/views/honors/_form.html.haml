@@ -1,0 +1,16 @@
+= form_for @honor do |f|
+  - if @honor.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@honor.errors.count, "error")} prohibited this honor from being saved:"
+      %ul
+        - @honor.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'

@@ -24,6 +24,7 @@ en:
       case_type: "类型"
       complain: "投诉建议"
       trouble: "故障申报"
+      honor: "荣誉资质"
   admin:
     js:
       true: True
