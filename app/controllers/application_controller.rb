@@ -8,6 +8,23 @@ class ApplicationController < ActionController::Base
     redirect_to '', :alert => exception.message # will be changed to an error page
   end
   
+  protected
+
+  def configure_new_column_to_devise_permitted_parameters
+    registration_params = [:realName, :email, :password,
+                  :password_confirmation, :alternate_email, :phoneNumber, :company, :department]
+    if params[:action] == 'create'
+      devise_parameter_sanitizer.for(:sign_up) { 
+        |u| u.permit(registration_params) 
+      }
+    elsif params[:action] == 'update'
+      devise_parameter_sanitizer.for(:account_update) { 
+        |u| u.permit(registration_params << :current_password)
+      }
+    end
+  end    
+  
+  
   # def layout_by_resource
   #   if devise_controller? && resource_name == :user
   #     “backstage"
