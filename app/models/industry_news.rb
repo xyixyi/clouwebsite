@@ -19,9 +19,6 @@ class IndustryNews < ActiveRecord::Base
           #     value.html_safe
           #   end
           # end
-          field :editAuthor do
-            label "编辑作者"
-          end
           # field :video_url do
           #   label "视频链接"
           # end
@@ -37,7 +34,7 @@ class IndustryNews < ActiveRecord::Base
           field :author do
             label "作者"
           end
-          field :description do
+          field :description, :text do
             label "梗概"
             html_attributes do
               {:maxlength => 600}
@@ -45,9 +42,6 @@ class IndustryNews < ActiveRecord::Base
           end
           field :content, :ck_editor do
             label "内容"
-          end
-          field :editAuthor do
-            label "编辑作者"
           end
           field :video_url do
             label "视频链接"
