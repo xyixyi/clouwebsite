@@ -31,6 +31,10 @@ class NewsController < ApplicationController
   def destroy
   end
 
+  def stories
+    @stories = EmployeeStory.paginate :page => params[:page], :per_page => 12
+  end
+
   def showindustrynews
     @news = IndustryNews.find(params[:id])
   end

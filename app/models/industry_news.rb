@@ -37,7 +37,7 @@ class IndustryNews < ActiveRecord::Base
           field :author do
             label "作者"
           end
-          field :description do
+          field :description, :text do
             label "梗概"
             html_attributes do
               {:maxlength => 600}
