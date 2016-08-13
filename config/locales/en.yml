@@ -25,6 +25,8 @@ en:
       complain: "投诉建议"
       trouble: "故障申报"
       honor: "荣誉资质"
+      special_news_one: "专题一"
+      special_news_two: "专题二"
   admin:
     js:
       true: True

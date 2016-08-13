@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement",
                             "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
-                            "Trouble", "Honor"]
+                            "Trouble", "Honor", "SpecialNewsOne", "SpecialNewsTwo"]
                             
   
   # config.model Type do
