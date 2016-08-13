@@ -110,6 +110,7 @@ ul li ul {
 }
 
 .content {
+    width: 1310px;
     margin: 0 auto;
 }
 
@@ -121,6 +122,12 @@ ul li ul {
 @media (max-width: 1370px) {
 .grid .story-tile {
     height: 270px;
+}
+}
+
+@media (max-width: 900px) {
+.content {
+    width: 90%;
 }
 }
 
@@ -136,6 +143,7 @@ ul li ul {
     color: white;
     background-size: 104%;
     background-position: center;
+    
     position: relative;
     -moz-transition-property: background-size;
     -o-transition-property: background-size;
