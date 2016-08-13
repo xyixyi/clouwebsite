@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813074042) do
+ActiveRecord::Schema.define(version: 20160813075416) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -179,16 +179,16 @@ ActiveRecord::Schema.define(version: 20160813074042) do
   end
 
   create_table "service_cases", force: :cascade do |t|
-    t.integer  "CaseType_id"
+    t.integer  "Type_id"
     t.string   "image"
     t.string   "text"
     t.string   "attachment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
   end
 
-  add_index "service_cases", ["CaseType_id"], name: "index_service_cases_on_CaseType_id"
+  add_index "service_cases", ["Type_id"], name: "index_service_cases_on_Type_id"
 
   create_table "society_recuritments", force: :cascade do |t|
     t.string   "title"
@@ -243,6 +243,7 @@ ActiveRecord::Schema.define(version: 20160813074042) do
     t.string   "department"
     t.string   "realName"
     t.boolean  "authorized",             default: false
+    t.boolean  "send_auth_email",        default: true
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
