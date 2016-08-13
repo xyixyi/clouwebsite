@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/css/general.css">
+<div class="mainfield">
+    <div class="text-field">
+        <h5><%= @QandA.question%></h5>
+        <hr class="hr">
+        <div class="body" id="productbody"><%= @QandA.answer.html_safe %></div>
+    </div>
+</div>
+<div class="downloadfield">
+    <%if @QandA.attachment_url != nil%>
+        <%= link_to "下载产品文档", @QandA.attachment_url, class: "downloadlink" %>
+    <%end%>
+</div>

@@ -4,13 +4,18 @@ class QandAsController < ApplicationController
   # GET /qand_as
   # GET /qand_as.json
   def index
-    @qand_as = QandA.all
+    find_questions
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /qand_as/1
   # GET /qand_as/1.json
   def show
-  end
+    @QandA = QandA.find(params[:id])
+  end 
 
   # GET /qand_as/new
   def new
@@ -70,5 +75,16 @@ class QandAsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def qand_a_params
       params.require(:qand_a).permit(:title, :QType, :question, :answer, :attachment)
+    end
+    
+      #dynamic load product belone to type
+    def find_questions
+      if params[:q_type_id]
+        @current_type = QType.find(params[:q_type_id])
+        @qand_as = QandA.where(:QType_id => params[:q_type_id])
+      else
+        # Error or @lessons = Lesson.all
+        @qand_as = nil
+      end
     end
 end

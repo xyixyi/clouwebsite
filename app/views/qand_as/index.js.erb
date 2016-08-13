@@ -1,0 +1,50 @@
+$(function () {
+  var current = $(".products_list.current");
+  
+  current.empty();
+  var right = $(".right");
+  $(".title").empty();
+  $(".page-nav").empty();
+  $('.next').remove();
+  $('.prev').remove();
+  $(".page-nav").remove();
+  $(".title").append("<h6><%= @current_type.name%></h6><hr class='righthr'>");
+  
+  <!--ajax each page only have 6 products, if there are more than 6 product then split them in multiple pages-->
+  <% if @qand_as != nil%>
+    <% product_num = @qand_as.size %>
+    var page_counter = 1;
+    var single_page_counter = 0;
+    <% @qand_as.each do |question| %>
+      <!--ajax-->
+      if (single_page_counter < 15 && page_counter == 1) {
+        current.append('<li><div class="product"><div class="text-field"><%= link_to(question.question, qand_a_path(:id => question.id), class: "producttitle")%></div></div></li>');
+        single_page_counter+=1;
+        }
+      else if (single_page_counter == 15 && page_counter >= 1) {
+        page_counter += 1;
+        var ul = $("<ul>", { 
+          'class': 'products_list next', 
+          'id': page_counter }
+          ).appendTo(right);
+        ul.append('<li><div class="product"><div class="text-field"><%= link_to(question.question, qand_a_path(:id => question.id), class: "producttitle")%></div></div></li>');
+        single_page_counter = 1;
+        }
+      else {
+        var next = $('#'+page_counter.toString());
+        next.append('<li><div class="product"><div class="text-field"><%= link_to(question.question, qand_a_path(:id => question.id), class: "producttitle")%></div></div></li>');
+        single_page_counter += 1;
+      }
+    <%end%>
+  <% end %>
+ <!--add page nav-->
+  var bottom = '<div class="page-nav"><p class=pageinfo></p><a class="btn navbtn bright" id="next">下一页</a><a class="btn navbtn bleft" id="prev">上一页</a></div>';
+  right.append(bottom);
+   $('.target').trigger('change');
+})
+
+
+
+
+
+

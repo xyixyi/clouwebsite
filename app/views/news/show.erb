@@ -8,5 +8,7 @@
     </div>
 </div>
 <div class="downloadfield">
-    <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
+    <%if @product.attachment_url != nil%>
+        <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
+    <%end%>
 </div>

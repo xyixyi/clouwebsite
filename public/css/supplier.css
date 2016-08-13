@@ -66,7 +66,7 @@ h1 {
 
 .suppliercover {
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.2;
     width: 100%;
     position: absolute;
     height: 810px;
@@ -106,7 +106,7 @@ h3 {
 .ourstory-background {
     text-align: center;
     position: relative;
-    opacity: 0.4;
+    opacity: 1;
     background: RGBA(255,255,255, 0.4);
     filter: alpha(opacity=40);
     height: 90px;

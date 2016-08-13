@@ -4,12 +4,13 @@ class HonorsController < ApplicationController
   # GET /honors
   # GET /honors.json
   def index
-    @honors = Honor.all
+    @honors = Honor.paginate :page => params[:page], :per_page => 30
   end
 
   # GET /honors/1
   # GET /honors/1.json
   def show
+    @honor = Honor.find(params[:id])
   end
 
   # GET /honors/new

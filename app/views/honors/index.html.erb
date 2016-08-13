@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/css/recuritments.css">
+<div class="mainfield container">
+  
+  <h5>
+    荣誉资质
+  </h5>
+  <hr class="hr">
+<table class="tg">
+  <tr>
+    <th class="tg-baqh" style =" width:100%;">标题</th>
+
+  </tr>
+  <% grey = 1%>
+  <% @honors.each do |honor|%>
+    <tr>
+      <%if grey==1%>
+        <td class="tg-dzk6"><%= link_to honor.title, honor_path(:id => honor.id)%></td>
+        <% grey = 0%>
+      <%else%>
+        <td class="tg-dzk6"><%= link_to honor.title, honor_path(:id => honor.id)%></td>
+      <% grey = 1%>
+      <%end%>
+    </tr>
+  <%end%>
+</table>
+</div>

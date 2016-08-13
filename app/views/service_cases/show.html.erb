@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/css/general.css">
+<div class="mainfield">
+    <div class="text-field">
+        <h5><%= @service_case.title%></h5>
+        <hr class="hr">
+        <%= image_tag @service_case.image, class:"productimage"%>
+        <div class="body" id="productbody"><%= @service_case.text.html_safe %></div>
+    </div>
+</div>
+<div class="downloadfield">
+    <%if @service_case.attachment_url != nil%>
+        <%= link_to "下载产品文档", @service_case.attachment, class: "downloadlink" %>
+    <%end%>
+</div>

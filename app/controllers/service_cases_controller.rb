@@ -4,12 +4,17 @@ class ServiceCasesController < ApplicationController
   # GET /service_cases
   # GET /service_cases.json
   def index
-    @service_cases = ServiceCase.all
+    find_cases
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /service_cases/1
   # GET /service_cases/1.json
   def show
+    @service_case = ServiceCase.find(params[:id])
   end
 
   # GET /service_cases/new
@@ -70,5 +75,15 @@ class ServiceCasesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_case_params
       params.require(:service_case).permit(:Type_id, :image, :text, :attachment)
+    end
+    
+    def find_cases
+      if params[:case_type_id]
+        @current_type = CaseType.find(params[:case_type_id])
+        @services = ServiceCase.where(:CaseType_id => params[:case_type_id])
+      else
+        # Error or @lessons = Lesson.all
+        @services = nil
+      end
     end
 end

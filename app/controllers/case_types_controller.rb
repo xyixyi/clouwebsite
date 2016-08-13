@@ -71,4 +71,6 @@ class CaseTypesController < ApplicationController
     def case_type_params
       params.require(:case_type).permit(:name)
     end
+    
+
 end

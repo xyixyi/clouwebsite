@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :complains
   resources :troubles
   resources :service_cases
-  resources :qand_as
-  resources :q_types
   resources :employee_stories
   resources :announcements
   resources :year_reports
@@ -23,6 +21,16 @@ Rails.application.routes.draw do
   resources :types do
     resources :products
   end
+  
+  resources :q_types do
+    resources :qand_as
+  end
+  
+  resources :case_types do
+    resources :service_cases
+  end
+  
+  resources :qand_as
   resources :news do 
     get "showindustrynews", :on => :collection
     get "showcompanynews", :on => :collection
@@ -117,6 +125,7 @@ Rails.application.routes.draw do
   
 
   get 'categories/find_subtypes/:id' => 'categories#find_subtypes'
+  
   # below code for testing uploading function
   get 'general', :to => 'mainframe#general_text', :format => false
   

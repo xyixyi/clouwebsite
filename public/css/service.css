@@ -75,11 +75,11 @@ h3 {
 .ourstory-background {
     text-align: center;
     position: relative;
-    opacity: 0.4;
+    opacity: 1;
     background: RGBA(255,255,255, 0.4);
     filter: alpha(opacity=40);
     height: 90px;
-    top: -162px;
+    top: -191px;
 }
 
 .storybanner {
@@ -100,7 +100,7 @@ h3 {
 }
 
 .ourstoryreal {
-    top: -252px;
+    top: -281px;
     position: relative;
     text-align: center;
     margin: auto;
