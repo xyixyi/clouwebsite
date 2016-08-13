@@ -13,10 +13,10 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => "cs169-sp16-xyixyi.c9users.io" } # 临时host
   config.action_mailer.delivery_method =:smtp
+  # for testing
   config.action_mailer.smtp_settings = {
       :address=> "smtp.gmail.com",
       :port=> 587,
@@ -26,6 +26,16 @@ Rails.application.configure do
       :password=> "clouwebsite",   
       :enable_starttls_auto => true
   }
+  
+  # config.action_mailer.smtp_settings = {
+  #     :address=> ?????????????,
+  #     :port=> ??????????,
+  #     :domain=> "szclou.com",
+  #     :authentication=> :login,
+  #     :user_name=> "official@szclou.com",
+  #     :password=> "official",   
+  #     :enable_starttls_auto => true ?????? 从那个域名发出来的邮件好像也并没有加密😅
+  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
