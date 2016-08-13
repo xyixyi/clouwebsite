@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :unauth_users
   resources :honors
   resources :complains
   resources :troubles

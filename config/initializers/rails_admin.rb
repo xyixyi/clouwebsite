@@ -7,7 +7,8 @@ RailsAdmin.config do |config|
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement",
                             "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
-                            "Trouble", "Honor", "UnauthUser"]
+                            "Trouble", "Honor"]
+                            
   
   # config.model Type do
   #   parent Category
@@ -49,7 +50,6 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-
     ## With an audit adapter, you can add:
     # history_index
     # history_show

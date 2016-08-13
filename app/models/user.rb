@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   after_update :send_password_change_email, if: :needs_password_change_email?
+  after_save :deliver_auth_email, if: :send_auth_email? 
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -35,7 +36,9 @@ class User < ActiveRecord::Base
       field :department do
         label "部门"
       end
-      
+      field :authorized do
+          label "已授权"
+        end
       field :role do
         label "角色"
       end
@@ -66,10 +69,10 @@ class User < ActiveRecord::Base
         field :department do
           label "部门"
         end
-        field :password do
-          label "密码"
-          required true
-        end
+        # field :password do
+        #   label "密码"
+        #   required true
+        # end
         field :role, :enum do
           label "角色"
           required true
@@ -89,8 +92,12 @@ class User < ActiveRecord::Base
           #     bindings[:form].select( "authority", bindings[:object].authorities_enum, {}, {:multiple => true, :size => 10, :class => "selectpicker"})
           # end
           partial :multiselect_box
-
-
+        end
+        field :authorized do
+          label "已授权"
+        end
+        field :send_auth_email do
+          label "发送邮件通知限权"
         end
     end
   end
@@ -101,5 +108,9 @@ class User < ActiveRecord::Base
 
   def send_password_change_email
     UserMailer.password_changed(id).deliver_now
+  end
+  
+  def deliver_auth_email
+    UserMailer.send_auth_email(id).deliver_now
   end
 end
