@@ -6,13 +6,14 @@
     <p>在这里，读他们的故事，让我们感受每一步足迹，每一次成长。</p>
 </div>
 
+
 <div class="content cf contain">
 	<div class="grid cf">
 	    <%@stories.each do |story|%>
 		<div class="grid-element story-tile" style="background-image: url(<%= story.image%>)">
 			<div class="story-info">
 				<h3><%= story.title%></h3>
-				<span class="small-print yellow">by <%= story.name%></span>
+				<span class="small-print">by <%= story.name%></span>
 			</div>
 			<a href="stories?story=4" class="story-overlay">
 				<h4>查看他的故事</h4>
@@ -20,6 +21,8 @@
 			</a>
 		</div>
         <%end%>
+
 	</div>
+	<%= will_paginate @stories,:previous_label => '上一页',:next_label=> '下一页' %>
 </div>
-		
+     

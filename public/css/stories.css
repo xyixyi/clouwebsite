@@ -75,6 +75,25 @@ h2 {
     position: relative;
 }
 
+.small-print {
+    float: left;
+    color: #c4261d;
+}
+
+.pagination {
+    left: 40% !important;
+}
+
+.sotories {
+    display: initial;
+    width: 100%;
+}
+
+h3 {
+    width: 100%;
+    text-align: left;
+}
+
 .hr {
     width: 30px;
     position: relative;
