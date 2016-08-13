@@ -35,7 +35,9 @@ class User < ActiveRecord::Base
       field :department do
         label "部门"
       end
-      
+      field :authorized do
+          label "已授权"
+        end
       field :role do
         label "角色"
       end
@@ -69,6 +71,9 @@ class User < ActiveRecord::Base
         field :password do
           label "密码"
           required true
+        end
+        field :authorized do
+          label "已授权"
         end
         field :role, :enum do
           label "角色"

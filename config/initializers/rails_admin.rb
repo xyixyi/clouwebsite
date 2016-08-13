@@ -1,6 +1,3 @@
-require Rails.root.join('lib', 'rails_admin', 'authorize_user.rb')
-RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::AuthorizeUser)
-
 RailsAdmin.config do |config|
   # config.authorize_with do
   #   # redirect_to main_app.root_path unless current_user.admin == true
@@ -10,7 +7,7 @@ RailsAdmin.config do |config|
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement",
                             "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
-                            "Trouble", "Honor", "UnauthUser"]
+                            "Trouble", "Honor"]
                             
   
   # config.model Type do
@@ -53,7 +50,6 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-    authorize_user
     ## With an audit adapter, you can add:
     # history_index
     # history_show
