@@ -34,6 +34,10 @@ class NewsController < ApplicationController
   def stories
     @stories = EmployeeStory.paginate :page => params[:page], :per_page => 12
   end
+  
+  def showstory
+    @story = EmployeeStory.find(params[:id])
+  end
 
   def showindustrynews
     @news = IndustryNews.find(params[:id])

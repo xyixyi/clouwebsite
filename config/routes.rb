@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   resources :campus_recuritments
   resources :society_recuritments
   resources :investors
-  resources :special_news_one
-  resources :special_news_two
   # resources :announcements
   resources :pop_product do
     get "all_products_show", :on => :collection
@@ -29,6 +27,7 @@ Rails.application.routes.draw do
     get "showindustrynews", :on => :collection
     get "showcompanynews", :on => :collection
     get "stories", :on => :collection
+    get "showstory", :on => :collection
   end
   
   resources :mainframe do

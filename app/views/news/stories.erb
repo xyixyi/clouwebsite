@@ -11,11 +11,14 @@
 	<div class="grid cf">
 	    <%@stories.each do |story|%>
 		<div class="grid-element story-tile" style="background-image: url(<%= story.image%>)">
+			<div class="storycover">
+				
+			</div>
 			<div class="story-info">
 				<h3><%= story.title%></h3>
 				<span class="small-print">by <%= story.name%></span>
 			</div>
-			<a href="stories?story=4" class="story-overlay">
+			<a href="/news/showstory?id=<%= story.id %>" class="story-overlay">
 				<h4>查看他的故事</h4>
 				<hr class='hr' style="border: 1px solid #c4261d">
 			</a>

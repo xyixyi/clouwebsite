@@ -28,7 +28,7 @@ class EmployeeStory < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "图片"
-            help "图片上传之前请添加一个黑色透明度40%遮罩"
+            # help "图片上传之前请添加一个黑色透明度40%遮罩"
           end
           field :text, :ck_editor do
             label "文章"
