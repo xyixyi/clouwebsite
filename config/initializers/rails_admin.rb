@@ -6,7 +6,8 @@ RailsAdmin.config do |config|
   config.included_models = ["Category", "Type", "Product", "PopProduct", "CompanyNews", 
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement",
-                            "QandA", "QType", "ServiceCase", "CaseType", "Complain", "Trouble", "Honor"]
+                            "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
+                            "Trouble", "Honor", "UnauthUser"]
   
   # config.model Type do
   #   parent Category
