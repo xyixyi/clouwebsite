@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813001907) do
+ActiveRecord::Schema.define(version: 20160813064643) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -179,16 +179,16 @@ ActiveRecord::Schema.define(version: 20160813001907) do
   end
 
   create_table "service_cases", force: :cascade do |t|
-    t.integer  "CaseType_id"
+    t.integer  "Type_id"
     t.string   "image"
     t.string   "text"
     t.string   "attachment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
   end
 
-  add_index "service_cases", ["CaseType_id"], name: "index_service_cases_on_CaseType_id"
+  add_index "service_cases", ["Type_id"], name: "index_service_cases_on_Type_id"
 
   create_table "society_recuritments", force: :cascade do |t|
     t.string   "title"
@@ -240,25 +240,27 @@ ActiveRecord::Schema.define(version: 20160813001907) do
     t.string   "company"
     t.string   "department"
     t.string   "realName"
+    t.string   "authority"
+    t.string   "role"
   end
 
   add_index "unauth_users", ["email"], name: "index_unauth_users_on_email", unique: true
   add_index "unauth_users", ["reset_password_token"], name: "index_unauth_users_on_reset_password_token", unique: true
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",      null: false
-    t.string   "encrypted_password",     default: "",      null: false
+    t.string   "email",                  default: "",     null: false
+    t.string   "encrypted_password",     default: "",     null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,       null: false
+    t.integer  "sign_in_count",          default: 0,      null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.string   "role",                   default: "admin"
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "role",                   default: "user"
     t.string   "authority"
     t.string   "phoneNumber"
     t.string   "company"
