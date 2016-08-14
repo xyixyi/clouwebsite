@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814054037) do
+ActiveRecord::Schema.define(version: 20160814183533) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(version: 20160814054037) do
   end
 
   create_table "qand_as", force: :cascade do |t|
-    t.string   "title"
     t.integer  "QType_id"
     t.string   "question"
     t.string   "answer"

@@ -5,9 +5,6 @@ class QandA < ActiveRecord::Base
         navigation_label '客户服务'
         parent QType
         list do
-            field :title do
-                label "标题"
-            end
             field :question do
                 label "问题"
             end
@@ -25,10 +22,6 @@ class QandA < ActiveRecord::Base
             end
         end
         edit do
-            field :title do
-                label "标题"
-                required true
-            end
             field :question do
                 label "问题"
                 required true
