@@ -4,6 +4,15 @@ en:
     messages:
       extension_white_list_error: "无法上传 %{extension} 文件, 可上传类型: %{allowed_types}"
   activerecord:
+    attributes:
+      user:
+        password_confirmation: "确认密码" 
+        password: "密码"
+    errors:
+      messages:
+        confirmation: "与密码不一致，请重试"
+        too_short: "过短（最短为6个字符）"
+        blank: "不能为空"
     models:
       user: "用户"
       category: "产品大类"

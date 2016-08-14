@@ -58,5 +58,5 @@ en:
       not_found: "没有找到。"
       not_locked: "未锁定。"
       not_saved:
-        one: "因为1个错误导致此%{resource}保存失败:"
-        other: "因为%{count}个错误导致此%{resource}保存失败:"
+        one: "因为1个错误导致%{resource}保存失败:"
+        other: "因为%{count}个错误导致%{resource}保存失败:"

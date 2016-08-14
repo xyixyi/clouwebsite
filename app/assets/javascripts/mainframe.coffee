@@ -27,6 +27,16 @@ $(document).ready ->
         if stepNumber == 2 
             $(this).addClass('disabled');
             $('#newsprev').removeClass('disabled');
+            
+    $('.specialnews').hover (->
+        $change = $(this).children('.feature-gradient')
+        $change.css 'height', '100%'
+        return
+    ), ->
+        $change = $(this).children('.feature-gradient')
+        $change.css 'height', '50%'
+    return
+
         
     
     return
