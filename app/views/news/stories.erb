@@ -7,7 +7,7 @@
 </div>
 
 
-<div class="content cf contain">
+<div class="content cf">
 	<div class="grid cf">
 	    <%@stories.each do |story|%>
 		<div class="grid-element story-tile" style="background-image: url(<%= story.image%>)">
@@ -26,6 +26,8 @@
         <%end%>
 
 	</div>
-	<%= will_paginate @stories,:previous_label => '上一页',:next_label=> '下一页' %>
+
 </div>
      
+
+	<%= will_paginate @stories,:previous_label => '上一页',:next_label=> '下一页' %>
