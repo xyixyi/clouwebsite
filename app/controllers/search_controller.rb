@@ -26,7 +26,7 @@ class SearchController < ApplicationController
 
   # search function
   # search from all databases, return result and put them to search#searchalldbs.erb
-  def search
+  def searchalldbs
     
   end
 
