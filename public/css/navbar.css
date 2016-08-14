@@ -276,4 +276,16 @@ li {
     .contain {
         width: 70% !important;
     }
+    
+}
+
+@media (max-width: 900px) {
+    .contain {
+        width: 90% !important;
+    }
+    
+    .logo,.welcomewords,.login, .sign_out {
+    left: 5% !important;
+}
+    
 }

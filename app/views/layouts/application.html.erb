@@ -87,8 +87,8 @@
 <!--</form>-->
 
         <%= form_tag search_all_dbs_path, method: :get, class:"navbar-form navbar-right", style: "padding-top: 25px;" do %>
-          <%= text_field_tag :search, "", style: "width:170px;height:30px;margin-left:20px;" %>
-          <%= submit_tag '', class: "btn btn-default search_btn", style:"border-radius:0px 3px 3px 0px; margin-left: -8px;"  %>
+          <%= text_field_tag :search, "", style: "width:170px;height:29px;margin-left:20px; position:relative; z-index: 0;top: 2px;" %>
+          <%= submit_tag '', class: "btn btn-default search_btn", style:"border-radius:0px 3px 3px 0px; margin-left: -8px;position: relative;"  %>
         <% end %>
     
 

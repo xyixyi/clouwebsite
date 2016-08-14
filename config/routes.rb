@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :campus_recuritments
   resources :society_recuritments
   resources :investors
+  resources :special_news_one
   # resources :announcements
   resources :pop_product do
     get "all_products_show", :on => :collection
