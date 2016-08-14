@@ -79,12 +79,17 @@
     <a id="aboutus" href="/aboutus">关于我们</a>
     <a id="supplier" href="/supplier">合作伙伴</a>
 
-<form class="navbar-form navbar-right" role="search" style="padding-top: 25px;">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search" style="width:170px;height:30px;margin-left:20px;">
-    </div>
-    <button type="submit" class="btn btn-default search_btn" style="border-radius:0px 3px 3px 0px; margin-left: -8px;"></button>
-</form>
+<!--<form class="navbar-form navbar-right" role="search" style="padding-top: 25px;">-->
+<!--    <div class="form-group">-->
+<!--        <input type="text" class="form-control" placeholder="Search" style="width:170px;height:30px;margin-left:20px;">-->
+<!--    </div>-->
+<!--    <button type="submit" class="btn btn-default search_btn" style="border-radius:0px 3px 3px 0px; margin-left: -8px;"></button>-->
+<!--</form>-->
+
+        <%= form_tag search_all_dbs_path, method: :get, class:"navbar-form navbar-right", style: "padding-top: 25px;" do %>
+          <%= text_field_tag :search, "", style: "width:170px;height:30px;margin-left:20px;" %>
+          <%= submit_tag '', class: "btn btn-default search_btn", style:"border-radius:0px 3px 3px 0px; margin-left: -8px;"  %>
+        <% end %>
     
 
   </span>
