@@ -11,14 +11,14 @@ Rails.application.routes.draw do
   resources :society_recuritments
   resources :investors
   resources :special_news_one
+  resources :special_news_two
   # resources :announcements
   resources :pop_product do
     get "all_products_show", :on => :collection
   end
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  #may cause error
-  # map.resources :products,:collection=>{:search=>:get}
+
   resources :types do
     resources :products
   end

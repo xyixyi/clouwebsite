@@ -13,6 +13,10 @@ $(document).ready ->
         if stepNumber == 2 
             $(this).removeClass('disabled');
             $('#newsnext').addClass('disabled');
+    
+    $(document).on 'click', '#video_two_link', (event) ->
+        $('#video_two_modal').removeClass('hide');
+        $('#video_two_modal').modal("show");
         
         
     $(document).on 'click', '#newsnext', (event) ->
@@ -36,7 +40,6 @@ $(document).ready ->
         $change = $(this).children('.feature-gradient')
         $change.css 'height', '50%'
     return
-
-        
+    
     
     return

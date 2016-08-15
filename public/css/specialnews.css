@@ -203,3 +203,53 @@ h2 {
     margin-bottom: 40px;
 }
 
+.specialvideos {
+    margin-top: 100px;
+    width: 100%;
+    
+}
+
+.videos {
+    margin-top: 20px;
+}
+
+.videoone {
+    background-color: gray;
+    width: 500px;
+    height: 282px;
+}
+
+.video {
+     width: 500px;
+     display: inline-block;
+}
+
+.leftpart {
+    float: left;
+}
+
+.rightpart {
+    float: right;
+}
+
+.video {
+    text-align:center;
+}
+
+.modal {
+     background-color: rgba(0, 0,0, 0.7);
+     z-index:1001;
+     -moz-opacity: 0.7;
+     opacity:.70; 
+     filter: alpha(opacity=70);
+}
+
+#videocenter {
+    height: 500px;
+    margin-top: 200px;
+    width: 500px;
+    top: 200px;
+    position: relative;
+    background-color: white;
+    margin: auto;
+}
