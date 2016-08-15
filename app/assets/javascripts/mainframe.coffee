@@ -34,11 +34,16 @@ $(document).ready ->
             
     $('.specialnews').hover (->
         $change = $(this).children('.feature-gradient')
+        $cover = $(this).children('.gradient-cover')
         $change.css 'height', '100%'
+        $cover.css 'height', '100%'
+        
         return
     ), ->
         $change = $(this).children('.feature-gradient')
+        $cover = $(this).children('.gradient-cover')
         $change.css 'height', '50%'
+        $cover.css 'height', '0px'
     return
     
     

@@ -35,8 +35,6 @@ Rails.application.routes.draw do
   resources :news do 
     get "showindustrynews", :on => :collection
     get "showcompanynews", :on => :collection
-    get "stories", :on => :collection
-    get "showstory", :on => :collection
   end
   
   resources :mainframe do
