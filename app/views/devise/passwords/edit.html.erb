@@ -8,6 +8,7 @@
   <div class="content">
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
+      <%= render "devise/shared/devise_flash_message.html" %>
       <%= f.hidden_field :reset_password_token %>
       
       <div class = "block_left">

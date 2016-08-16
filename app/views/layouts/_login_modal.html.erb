@@ -13,6 +13,14 @@ border-style:solid;padding-right: 0px !important;;">
       <div style="text-align:center;">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
+        <% flash.each do |name, msg| %>
+          <div class="alert alert-danger">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span>
+              <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+          </div>
+        <% end %>
         <%= f.email_field :email, autofocus: true, :class => 'popup_field', :placeholder => "请输入登录邮箱" %>
         <%= f.password_field :password, autocomplete: "off", :class => 'popup_field', :placeholder => "请输入密码" %>
         <%= f.submit "登录", :class => 'popup_submit' %>
