@@ -13,6 +13,10 @@ $(document).ready ->
         if stepNumber == 2 
             $(this).removeClass('disabled');
             $('#newsnext').addClass('disabled');
+    
+    $(document).on 'click', '#video_two_link', (event) ->
+        $('#video_two_modal').removeClass('hide');
+        $('#video_two_modal').modal("show");
         
         
     $(document).on 'click', '#newsnext', (event) ->
@@ -30,13 +34,17 @@ $(document).ready ->
             
     $('.specialnews').hover (->
         $change = $(this).children('.feature-gradient')
+        $cover = $(this).children('.gradient-cover')
         $change.css 'height', '100%'
+        $cover.css 'height', '100%'
+        
         return
     ), ->
         $change = $(this).children('.feature-gradient')
+        $cover = $(this).children('.gradient-cover')
         $change.css 'height', '50%'
+        $cover.css 'height', '0px'
     return
-
-        
+    
     
     return

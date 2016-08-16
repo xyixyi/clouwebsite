@@ -3,7 +3,9 @@
     <div class="text-field contain">
         <h5><%= @story.title %></h5>
         <p>姓名：<%= @story.name%></p>
-        <p><%= @story.date.to_date%></p>
+        <%if @story.date != nil%>
+            <p><%= @story.date.to_date%></p>
+        <%end%>
         <hr class="hr">
         <%= image_tag @story.image, class:"productimg"%>
         <div class="body" id="productbody"><%= @story.text.html_safe%></div>
