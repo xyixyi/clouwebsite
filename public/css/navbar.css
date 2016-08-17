@@ -289,3 +289,8 @@ li {
 }
     
 }
+
+.transparent{
+    background-color: transparent !important;
+    background: transparent !important;
+}

@@ -8,11 +8,16 @@ en:
       user:
         password_confirmation: "确认密码" 
         password: "密码"
+        email: "邮箱"
+        current_password: "当前密码"
     errors:
       messages:
         confirmation: "与密码不一致，请重试"
-        too_short: "过短（最短为6个字符）"
+        too_short: "过短（最短为%{count}个字符）"
         blank: "不能为空"
+        required: "必须存在"
+        taken: "已经被使用"
+        empty: "不能为空"
     models:
       user: "用户"
       category: "产品大类"
