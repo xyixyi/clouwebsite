@@ -1,4 +1,6 @@
 class PopProduct < ActiveRecord::Base
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
   belongs_to :Type
   belongs_to :category
   mount_uploader :image, ImageUploader
@@ -93,3 +95,6 @@ class PopProduct < ActiveRecord::Base
     end
   end
 end
+PopProduct.__elasticsearch__.create_index! force: true
+PopProduct.__elasticsearch__.refresh_index!
+PopProduct.import

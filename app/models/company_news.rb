@@ -1,4 +1,6 @@
+require 'elasticsearch/model'
 class CompanyNews < ActiveRecord::Base
+    include Elasticsearch::Model
     mount_uploader :image, ImageUploader
     def before_import_save(record)
     # Your custom special sauce
@@ -7,8 +9,21 @@ class CompanyNews < ActiveRecord::Base
       self.image = record[:image] if record[:image].present?
       self.content = record[:content] if record[:content].present?
     end
-    #rails admin set up
+
+    def self.search(query)
+      __elasticsearch__.search(
+        {
+          query: {
+            multi_match: {
+              query: query,
+              fields: ['title']
+            }
+          }
+        }
+      )
+    end
     
+    #rails admin set up
     rails_admin do
         navigation_label '新闻'
         list do
@@ -60,3 +75,6 @@ class CompanyNews < ActiveRecord::Base
         end
     end
 end
+CompanyNews.__elasticsearch__.create_index! force: true
+CompanyNews.__elasticsearch__.refresh_index!
+CompanyNews.import

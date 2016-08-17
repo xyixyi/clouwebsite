@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class QandA < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
     belongs_to :QType
     mount_uploader :attachment, AttachmentUploader
     rails_admin do
@@ -43,3 +46,6 @@ class QandA < ActiveRecord::Base
         end
     end
 end
+QandA.__elasticsearch__.create_index! force: true
+QandA.__elasticsearch__.refresh_index!
+QandA.import

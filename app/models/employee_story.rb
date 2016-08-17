@@ -1,4 +1,6 @@
+require 'elasticsearch/model'
 class EmployeeStory < ActiveRecord::Base
+    include Elasticsearch::Model
     mount_uploader :image, ImageUploader
     
     rails_admin do

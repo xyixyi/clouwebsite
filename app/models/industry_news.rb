@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class IndustryNews < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
     mount_uploader :image, ImageUploader
     #rails admin set up
     rails_admin do
@@ -52,3 +55,6 @@ class IndustryNews < ActiveRecord::Base
         end
     end
 end
+IndustryNews.__elasticsearch__.create_index! force: true
+IndustryNews.__elasticsearch__.refresh_index!
+IndustryNews.import

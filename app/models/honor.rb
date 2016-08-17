@@ -1,4 +1,6 @@
+require 'elasticsearch/model'
 class Honor < ActiveRecord::Base
+    include Elasticsearch::Model
     rails_admin do
         weight -10
         navigation_label '新闻'

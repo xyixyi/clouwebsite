@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class Bid < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
     mount_uploader :attachment, AttachmentUploader
     after_save :send_bid_email, if: :send_email? # or after_create?
     
@@ -25,12 +28,6 @@ class Bid < ActiveRecord::Base
           field :deadline do
             label "截止日期"
           end
-          # field :description do
-          #   label "简介"
-          #   pretty_value do
-          #     value.html_safe
-          #   end
-          # end
         end
         edit do
           field :position do
@@ -55,3 +52,7 @@ class Bid < ActiveRecord::Base
         end
     end
 end
+
+Bid.__elasticsearch__.create_index! force: true
+Bid.__elasticsearch__.refresh_index!
+Bid.import

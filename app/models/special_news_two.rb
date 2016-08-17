@@ -1,4 +1,7 @@
+require 'elasticsearch/model'
 class SpecialNewsTwo < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
     mount_uploader :image, ImageUploader
     #rails admin set up
     rails_admin do
@@ -52,3 +55,6 @@ class SpecialNewsTwo < ActiveRecord::Base
         end
     end
 end
+SpecialNewsTwo.__elasticsearch__.create_index! force: true
+SpecialNewsTwo.__elasticsearch__.refresh_index!
+SpecialNewsTwo.import

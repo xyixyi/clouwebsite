@@ -1,12 +1,27 @@
+require 'elasticsearch/model'
 class Product < ActiveRecord::Base
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
     belongs_to :Type
     belongs_to :category
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
-    def self.search(params)
-      products = all # for not existing params args
-      products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
-      products
+    # def self.search(params)
+    #   products = all # for not existing params args
+    #   products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
+    #   products
+    # end
+    def self.search(query)
+      __elasticsearch__.search(
+        {
+          query: {
+            multi_match: {
+              query: query,
+              fields: ['name']
+            }
+          }
+        }
+      )
     end
     #set up rails admin
     rails_admin do
@@ -141,3 +156,6 @@ class Product < ActiveRecord::Base
         end
     end
 end
+Product.__elasticsearch__.create_index! force: true
+Product.__elasticsearch__.refresh_index!
+Product.import

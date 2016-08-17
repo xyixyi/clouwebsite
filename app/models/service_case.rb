@@ -1,3 +1,4 @@
+require 'elasticsearch/model'
 class ServiceCase < ActiveRecord::Base
   belongs_to :case_type
   mount_uploader :image, ImageUploader
