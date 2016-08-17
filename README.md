@@ -16,6 +16,8 @@ sudo apt-get install imagemagick --fix-missing
 在后台load html (product.detail):
 <div class="body" id="productbody"><%= @product.detail.html_safe %></div>
 
+#Setting up elasticsearch for multiple models
+
 Here is the code to install and start elastic search. [reference]
 
 ```sh
@@ -52,5 +54,10 @@ curl http://localhost:9200
 #  "tagline" : "You Know, for Search"
 #}
 ```
+references:
+https://www.sitepoint.com/full-text-search-rails-elasticsearch/
+https://github.com/elastic/elasticsearch-rails
+
+
 bugs:
 mainframe/news.erb line 32 may cause error -- yiran
