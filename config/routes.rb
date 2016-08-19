@@ -113,6 +113,7 @@ Rails.application.routes.draw do
   get '/', :to => 'mainframe#index', :format => false
   get 'news_page', :to => 'mainframe#news', :format => false
   get 'contact_us', :to => 'about_us#contact_us', :format => false
+  get 'history', :to => 'about_us#history', :format => false
   
   #only for test
   get 'test', :to => 'mainframe#test', :format => false

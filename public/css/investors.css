@@ -252,3 +252,10 @@ h8 {
         width: 70% !important;
     }
 }
+
+@media (max-width: 1100px) {
+    .currentprice {
+        margin-right: 8% !important;
+    }
+    
+}

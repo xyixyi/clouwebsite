@@ -279,7 +279,7 @@ li {
     
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
     .contain {
         width: 90% !important;
     }

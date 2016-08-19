@@ -106,7 +106,6 @@ h16{
 h9 {
     display: inline-block;
     color: #737272;
-    width: 10%;
     font-size: 20px;
     line-height: 30px;
     text-align: center;
@@ -116,6 +115,12 @@ h9 {
     margin-right: 4%;
     padding-bottom: 5px;
     /*margin-right: 40px;*/
+}
+
+@media (max-width: 1300px) {
+    h9 {
+        
+    }
 }
 
 
@@ -232,7 +237,7 @@ h10 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
-    height: 1480px;
+    height: 1100px;
     background-color: #f5f5f5;
     position: relative;
     width: 100%;
@@ -350,7 +355,7 @@ h11 {
     border-right: 4px solid #c4261d;
     text-align: right;
     padding: 80px 40px 80px 0;
-    margin-left: 4px;
+    margin-left: 5px;
 }
 
 @media (max-width:1900px) {
