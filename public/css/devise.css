@@ -52,6 +52,7 @@ h1 {
 .myfield {
     width: 335px;
     height: 45px;
+    padding-left: 5px;
     font-size: 18px;
     border: 1px solid;
     border-radius: 5px;

@@ -262,7 +262,7 @@ h1 {
     top: 92.5px;
     margin: auto;
     height: 550px;
-    width: 1272px;
+    /*width: 1272px;*/
     background-color: white;
     opacity: 1;
 }

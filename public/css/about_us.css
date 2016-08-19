@@ -106,13 +106,15 @@ h16{
 h9 {
     display: inline-block;
     color: #737272;
-    width: 14%;
+    width: 10%;
     font-size: 20px;
+    line-height: 30px;
     text-align: center;
     /*line-height: 85px;*/
     position: relative;
     top: 36px;
-    margin-right: 1%;
+    margin-right: 4%;
+    padding-bottom: 5px;
     /*margin-right: 40px;*/
 }
 
@@ -424,8 +426,28 @@ h12 {
 
 .distribution {
     top: 90px;
-    height: 315px;
+    height: 960px;
+    text-align: center;
+    margin-top: 90px;
     position: relative;
+}
+
+.distribution-images {
+    -webkit-transition: background-image .15s linear;
+    -o-transition: background-image .15s linear;
+    transition: background-image .15s linear;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    overflow: hidden;
+    width: 100%;
+    margin-top: 60px;
+    height: 500px;
+}
+
+.redborderbottom {
+    border-bottom: solid 2px #c4261d;
 }
 
 .concept {
@@ -485,21 +507,24 @@ h12 {
 }
 
 .tocontactus {
-    text-align: center;
-    top: 230px;
+    opacity: 1;
+    background-color: rgba(255,255,255, 0.4);
+    filter: alpha(opacity=40);
+    height: 90px;
+    top: 322px;
     position: relative;
     text-align: center;
     margin: auto;
-    background-color: transparent;
 }
 
 .storylink {
     color: #C4261D;
     font-size: 30px;
+    vertical-align: top;
     display: inline-block;
     margin-left: 40px;
+    line-height: 90px;
     position: relative;
-    top: -44px;
 }
 
 .storybanner {
@@ -511,7 +536,6 @@ h12 {
 }
 
 .slogonbackground {
-    
     text-align: center;
     position: relative;
     opacity: 1;

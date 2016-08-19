@@ -6,7 +6,7 @@
     position: relative;
     top: 90px;
     background-image: url("../img/join_us/joinusbanner.jpg") !important;
-    height: 810px;
+    height: 650px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -20,8 +20,9 @@
 
 
 .servicecover {
-    background-color: black;
-    opacity: 0.4;
+    background-color: rgba(0,0,0,0.4);
+    filter: alpha(opacity=40);
+    opacity: 1;
     width: 100%;
     position: absolute;
     height: 810px;
@@ -60,7 +61,7 @@ h2 {
 .serviceslogan {
     text-align: left;
     position: relative;
-    top: -400px;
+    top: 240px;
     margin: auto;
     width: 60%;
 }
@@ -79,7 +80,13 @@ h3 {
     background: RGBA(255,255,255, 0.4);
     filter: alpha(opacity=40);
     height: 90px;
-    top: -191px;
+    top: 370px;
+}
+
+@media (max-width: 1300px) {
+    .ourstory-background {
+        top: 320px !important;
+    }
 }
 
 .storybanner {
@@ -96,11 +103,11 @@ h3 {
     display: inline-block;
     margin-left: 40px;
     position: relative;
-    top: -43px;
+    line-height: 90px;
+    vertical-align: top;
 }
 
 .ourstoryreal {
-    top: -281px;
     position: relative;
     text-align: center;
     margin: auto;
@@ -151,7 +158,7 @@ h5 {
 
 .servicescontainer {
     position: relative;
-     top: -187px;
+     top: 185px;
 }
 
 .servicecontactslogan {

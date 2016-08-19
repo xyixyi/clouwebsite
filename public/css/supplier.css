@@ -127,7 +127,8 @@ h3 {
     display: inline-block;
     margin-left: 40px;
     position: relative;
-    top: -45px;
+    line-height: 90px;
+    vertical-align: top;
     
 }
 
