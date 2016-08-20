@@ -6,7 +6,8 @@
     </div>
 
     <ul class="products_list">
-        <%= @result%>
-        
+        <% @result.each do |result| %>
+        <p><%= result["_source"]["name"] if result["_type"] == "product" %></p>
+        <% end %>
     </ul>
 </div>

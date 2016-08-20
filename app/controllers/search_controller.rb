@@ -29,7 +29,7 @@ class SearchController < ApplicationController
   def searchalldbs
     #using elastic search model
     @result = Elasticsearch::Model.search(params[:search], 
-        [Product, CompanyNews, QandA, Bid, SpecialNewsOne, SpecialNewsTwo, QandA]).results.to_a.map(&:to_hash).first
+        [Product, CompanyNews, QandA, Bid, SpecialNewsOne, SpecialNewsTwo, QandA]).results.to_a.map(&:to_hash)
   end
 
 end
