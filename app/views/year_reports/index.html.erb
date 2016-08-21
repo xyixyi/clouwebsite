@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" href="/css/recuritments.css">
+<div class="mainfield container">
+  
+  <h5>
+    年报
+  </h5>
+  <hr class="hr">
+<table class="tg">
+  <tr>
+    <th class="tg-baqh" style =" width:100px;">时间</th>
+    <th class="tg-baqh">公告标题</th>
+
+  </tr>
+  <% grey = 1%>
+  <% @year_reports.each do |report|%>
+    <tr>
+      <%if grey==1%>
+        <td class="tg-dzk6"><%= report.date.to_date%></td>
+        <% if report.attachment != nil %>
+          <td class="tg-dzk6"><%= link_to report.title, report.attachment%></td>
+        <%end%>  
+        <% grey = 0%>
+      <%else%>
+        <td class="tg-dzk4"><%= link_to report.date.to_date%></td>
+        <% if report.attachment != nil %>
+          <td class="tg-dzk4"><%= link_to report.title, report.attachment%></td>
+        <%end%>
+      <% grey = 1%>
+      <%end%>
+    </tr>
+   
+  <%end%>
+</table>
+  <%= will_paginate @announcements,:previous_label => '上一页',:next_label=> '下一页' %>
+</div>
