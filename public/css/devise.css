@@ -77,11 +77,12 @@ h1 {
 }
 
 .myfield:focus, .mycomplain:focus {
-    outline-color: #c4261d !important;
+    border-color: #0895d7 !important;
+    outline-color: #cbe9f7 !important;
 }
 
 .textarea:focus{
-    outline-color: #c4261d !important;
+    outline-color: #cbe9f7 !important;
 }
 
 .submit {

@@ -27,7 +27,7 @@
 
 .main-banner {
     position: relative;
-    top: 121px;
+    top: 120px;
     background-image: url("../img/homepage/banner_03.jpg") !important;
     height: 500px;
     background-position: center center;
@@ -64,7 +64,7 @@ h1 {
 
 .quick_access li {
     display: inline-block;
-    margin: 0 51px;
+    margin: 0 5%;
     margin-top: 10px;
     color: #7B8B80;
     font-size: 12px;
@@ -114,8 +114,9 @@ h1 {
     font-family: inherit;
     font-size: 22px;
     color: #C4261d;
-    display: block;
-    white-space: nowrap;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
     text-overflow: ellipsis;
     overflow: hidden;
     
@@ -398,16 +399,14 @@ h4 {
 }
 
 .news {
-    width: 100%;
     height: 735px;
     position: relative;
     background-color: white;
-    top: 115px;
+    top: 175px;
 }
 
 .news-container {
     position: relative;
-    padding:60px 11%;
     height: 100%;
     text-align: center;
 }
@@ -432,7 +431,7 @@ h4 {
 .news-container li {
     margin: 25px;
     display: inline-block;
-    width: 20%;
+    width: 19%;
     float: left;
     position: relative;
 }
@@ -483,10 +482,16 @@ h4 {
     text-align: center;
     background-color: transparent;
     position: relative;
-    width: 1300px;
+    /*width: 1300px;*/
     height: 70px;
     margin: auto;
     top: 100px;
+}
+
+@media (max-width: 1000px) {
+    .logos {
+        display: none;
+}
 }
 
 .child {

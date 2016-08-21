@@ -409,6 +409,7 @@ h12 {
 
 .companyhistory {
     width: 100%;
+    margin-top: 50px;
     position: relative;
     top: 90px;
 }

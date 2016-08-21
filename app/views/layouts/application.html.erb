@@ -72,14 +72,6 @@
     <a id="service" href="/service">技术支持</a>
     <a id="aboutus" href="/aboutus">关于我们</a>
     <a id="supplier" href="/supplier">合作伙伴</a>
-
-<!--<form class="navbar-form navbar-right" role="search" style="padding-top: 25px;">-->
-<!--    <div class="form-group">-->
-<!--        <input type="text" class="form-control" placeholder="Search" style="width:170px;height:30px;margin-left:20px;">-->
-<!--    </div>-->
-<!--    <button type="submit" class="btn btn-default search_btn" style="border-radius:0px 3px 3px 0px; margin-left: -8px;"></button>-->
-<!--</form>-->
-
         <%= form_tag search_all_dbs_path, method: :get, class:"navbar-form navbar-right", style: "padding-top: 25px;" do %>
           <%= text_field_tag :search, "", style: "width:170px;height:29px;margin-left:20px; position:relative; z-index: 0;top: 2px;" %>
           <%= submit_tag '', class: "btn btn-default search_btn", style:"border-radius:0px 3px 3px 0px; margin-left: -8px;position: relative;"  %>
@@ -87,9 +79,32 @@
     
 
   </span>
-  <hr style="top: 87px;">
+  
+  <div class="mobile-nav">
+    <button type = "button" class = "navbar-toggle" 
+         data-toggle = "collapse" data-target = "#example-navbar-collapse">
+         <span class = "sr-only">Toggle navigation</span>
+         <span class = "icon-bar"></span>
+         <span class = "icon-bar"></span>
+         <span class = "icon-bar"></span>
+      </button>
+  </div>
+  
+  
+  <hr class="downhr" style="top: 87px;">
       
 </nav>
+
+<div class="mobile-links links">
+    
+    <button type="button" class="close close-navbar"><span aria-hidden="true" style="font-size: 60px;margin-right: 50px;">&times;</span></button>
+    <a class="mobile-link" id="home" href="/">首页</a>
+    <a class="mobile-link" id="products" href="/products_main">产品</a>
+    <a class="mobile-link" id="news" href="/news_page">新闻</a>
+    <a class="mobile-link" id="service" href="/service">技术支持</a>
+    <a class="mobile-link" id="aboutus" href="/aboutus">关于我们</a>
+    <a class="mobile-link" id="supplier" href="/supplier">合作伙伴</a>
+</div>
 
 
 <%= yield %>
@@ -98,40 +113,42 @@
   <div class="footer_container">
     <ul>
       <li>
-        <a class="footer-row-header">产品</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
+        <a class="footer-row-header" href="/joinus">加入我们</a>
+        <a class="footer-row" href="/employee_stories">人在科陆</a>
+        <a class="footer-row" href="/aboutus">认识科陆</a>
+        <%= link_to "社会招聘", society_recuritments_path, class:"footer-row"%>
+        <%= link_to "校园招聘", campus_recuritments_path, class:"footer-row"%>
       </li>
       
       <li>
-        <a class="footer-row-header">产品</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
+        <a class="footer-row-header" href="/news_page">新闻</a>
+        <a class="footer-row" href="/mainframe/news">公司新闻</a>
+        <a class="footer-row" href="/mainframe/industrynews">行业新闻</a>
       </li>
       
       <li>
-        <a href="/" class="footer-row-header">产品</a>
-        <a href="/" class="footer-row">智能电网</a>
-        <a href="/" class="footer-row">智能电网</a>
-        <a href="/" class="footer-row">智能电网</a>
-        <a href="/" class="footer-row">智能电网</a>
-        <a href="/" class="footer-row">智能电网</a>
+        <a href="/" class="footer-row-header" href="/aboutus">关于科陆</a>
+        <a href="/" class="footer-row" href="/history">公司历史</a>
+        <a href="/" class="footer-row" href="/contact_us">联系我们</a>
+
       </li>
       
       <li>
-        <a class="footer-row-header">产品</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
-        <a class="footer-row">智能电网</a>
+        <a class="footer-row-header" href="">客户服务</a>
+        <a class="footer-row" href="/case_types">客服案例</a>
+        <a class="footer-row" href="/q_types">Q&A</a>
+        <a class="footer-row" href="/complains/new">投诉反馈</a>
+        <a class="footer-row" href="/troubles/new">故障报修</a>
       </li>
+      
+      <li>
+        <a class="footer-row-header" href="">合作伙伴</a>
+        <a class="footer-row" href="">智能电网</a>
+        <a class="footer-row" href="http://sapepp1.szclou.com:8088/irj/portal">科陆SRM系统</a>
+        <a class="footer-row" href="http://sapsrpap1.szclou.com:8000/slc_selfreg">新供应商注册</a>
+        <a class="footer-row" href="/bids">招标信息</a>
+      </li>
+      
     </ul>
   </div>
   

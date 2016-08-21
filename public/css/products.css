@@ -5,7 +5,7 @@ h4 {
 .productbanner {
     position: relative;
     top: 120px;
-    background-image: url("../img/product/productbanner.jpg") !important;
+    
     height: 960px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -132,7 +132,7 @@ h5 {
 .hr {
     position: relative;
     top: 50px;
-    border: 2px solid #c4261d;
+    border: 1px solid #c4261d;
     width: 40px;
     margin-left: 2px;
 }
@@ -148,6 +148,10 @@ h5 {
 .typeslink {
     font-size: 16px;
     margin-bottom: 23px;
+}
+
+.typeslink:hover {
+    text-decoration: underline !important;
 }
 
 .rightproducts {

@@ -1,6 +1,15 @@
 $ = jQuery
 $(document).ready ->
     stepNumber = 1
+    
+    
+    $(document).on 'click', '.navbar-toggle', (event) ->
+        $('.mobile-links').addClass 'show-menu'
+    
+    $(document).on 'click', '.close-navbar', (event) ->
+        $('.mobile-links').removeClass 'show-menu'
+    
+    
     $(document).on 'click', '#newsprev', (event) ->
         $inView = $('.indexnews.current');
         $('.indexnews.current').prev().removeClass('prev').addClass('current');

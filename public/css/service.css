@@ -130,12 +130,13 @@ h5 {
 
 .servicep {
     font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 40px;
     color: #343435;
     margin-top: 60px;
 }
 
 .earphoneicon {
-    background-image: url("../img/services/earphone.png") !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
