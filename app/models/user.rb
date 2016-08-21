@@ -46,6 +46,7 @@ class User < ActiveRecord::Base
         label "限权"
       end
     end
+    
     edit do
         field :email do
           label "Email"
@@ -91,7 +92,10 @@ class User < ActiveRecord::Base
           # render do
           #     bindings[:form].select( "authority", bindings[:object].authorities_enum, {}, {:multiple => true, :size => 10, :class => "selectpicker"})
           # end
-          partial :multiselect_box
+          # render partialz :multiselect_box, locals: { select_user: bindings[:object] }
+          render do
+            bindings[:view].render :partial  => "rails_admin/main/multiselect_box", :locals => {:field => self, :select_user => bindings[:object]}
+          end
         end
         field :authorized do
           label "已授权"

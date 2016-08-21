@@ -1,8 +1,13 @@
 <ul>
   <% current_user.hashmap.each_key do |k| %>
       <li>
+      <% if select_user.authority.include? k%>
+        <%= check_box_tag 'current_user_authorities', k , true%>
+        <%= k -%>
+      <% else %>
         <%= check_box_tag 'current_user_authorities', k -%>
         <%= k -%>
+      <% end %>
       </li>
   <% end %>
 </ul>
