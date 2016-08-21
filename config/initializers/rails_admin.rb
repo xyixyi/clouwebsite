@@ -2,7 +2,7 @@ RailsAdmin.config do |config|
   # config.authorize_with do
   #   # redirect_to main_app.root_path unless current_user.admin == true
   # end
-  
+  config.default_items_per_page = 50 # number of records per page
   config.included_models = ["Category", "Type", "Product", "PopProduct", "CompanyNews", 
                             "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
                             "SocietyRecuritment", "User", "YearReport", "Announcement",
