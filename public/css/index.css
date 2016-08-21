@@ -114,6 +114,10 @@ h1 {
     font-family: inherit;
     font-size: 22px;
     color: #C4261d;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     
 }
 

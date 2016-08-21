@@ -46,7 +46,9 @@ body {
 .body {
     padding-top: 30px;
     line-height: 22px;
-    width: 950px;
+    width: 100%;
+    margin: 0;
+    position: relative;
     text-align: left;
 }
 
