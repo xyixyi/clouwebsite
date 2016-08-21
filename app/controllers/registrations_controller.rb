@@ -7,4 +7,9 @@ class RegistrationsController < Devise::RegistrationsController
   def account_update_params
     params.require(:user).permit(:realName, :phoneNumber, :email, :password, :password_confirmation, :department, :company)
   end
+  
+  def after_sign_up_path_for(resource)
+    '/aboutus' # Or :prefix_to_your_route
+  end
+  
 end
