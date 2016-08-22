@@ -15,7 +15,7 @@
                 <div class="productimage" style="background: url(<%= product.image%>);"></div>
                 <div class="text-field">
                     <!--<a class="producttitle" href="/"></a>-->
-                    <%= link_to(product.name, all_products_show_pop_product_index_path(:id => product.id), class: "producttitle")%>
+                    <%= link_to(product.name, product_path(:id => product.id), class: "producttitle")%>
                     <p class="producttext"><%= product.synopsis %></p>
                 </div>
             </div>

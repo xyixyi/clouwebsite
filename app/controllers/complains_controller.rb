@@ -19,13 +19,17 @@ class ComplainsController < ApplicationController
 
     respond_to do |format|
       if @complain.save
-        format.html { redirect_to new_complain_path, notice: 'Complain was successfully created.' }
+        format.html { redirect_to complain_success_path, notice: 'Complain was successfully created.' }
         format.json { render :show, status: :created, location: @complain }
       else
         format.html { render :new }
         format.json { render json: @complain.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  #success page
+  def success
   end
 
   # DELETE /complains/1

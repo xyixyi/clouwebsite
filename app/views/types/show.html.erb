@@ -1,0 +1,48 @@
+<!--types#show-->
+<link rel="stylesheet" type="text/css" href="/css/products.css">
+<div class="leftmenu">
+    <h5><%= @category.name%></h5>
+    <hr class="hr">
+    <ul>
+        <% counter = 1%>
+        <% @category.types.each do |type| %>
+        <li>
+            <% if type.name == @type.name%>
+                <%= link_to(type.name, type_path(:id => type.id), id: "first_field", class: "typeslink") %>
+            <% else %>
+                <%= link_to(type.name, type_path(:id => type.id), class: "typeslink") %>
+            <% end %>
+            
+        </li>
+        <% counter += 1%>
+        <% end %>
+        
+
+    </ul>
+</div>
+<div class="rightproducts">
+    <div class="title">
+        <h6><%= @type.name%></h6>
+        <hr class="righthr">
+    </div>
+    
+    <% if @products != nil%>
+      <ul class="products_list current" id="1">
+          <% @products.each do |product| %>
+              <li><div class="product">
+                  <div class="productimage" style="background: url(<%= product.image%>);">
+                      
+                  </div>
+                      <div class="text-field">
+                          <%= link_to(product.name, product_path(:id => product.id), class: "producttitle")%>
+                          <p class="producttext"><%= product.synopsis.html_safe %></p>
+                      </div>
+                  </div>
+              </li>
+              
+          <% end %>
+      </ul>
+      <%= will_paginate @products,:previous_label => '上一页',:next_label=> '下一页' %>
+    <%end%>
+</div>
+

@@ -4,11 +4,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    find_products
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # find_products
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
   # GET /products/1

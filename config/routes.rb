@@ -12,16 +12,13 @@ Rails.application.routes.draw do
   resources :investors
   resources :special_news_one
   resources :special_news_two
-  # resources :announcements
-  resources :pop_product do
-    get "all_products_show", :on => :collection
-  end
+  resources :products
+  resources :pop_product
+  
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  resources :types do
-    resources :products
-  end
+  resources :types
   
   resources :q_types do
     resources :qand_as
@@ -120,7 +117,8 @@ Rails.application.routes.draw do
   get 'testtwo', :to => 'mainframe#test2', :format => false
   get 'testthree', :to => 'mainframe#test3', :format => false
   
-  
+  get 'complain_success', :to =>'complains#success', :format => false
+  get 'trouble_success', :to =>'troubles#success', :format => false
   get 'sitemap', :to => 'mainframe#sitemap', :format => false
   
 

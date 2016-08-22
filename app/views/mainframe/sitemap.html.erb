@@ -5,34 +5,66 @@
   <h1>网站地图</h1>
   <hr class="hr">
 
-  <div class="content" style="text-align:left;">
-      <a class="sitemap_link" href="/"</a>首页</a><br>
-      <a class="sitemap_link" href="/joinus"</a>加入我们</a><br>
-      <a class="sitemap_link" href="/allproducts"</a>全部产品</a><br>
-      <a class="sitemap_link" href="/products_main"</a>产品展示</a><br>
-      <a class="sitemap_link" href="/supplier"</a>合作伙伴</a><br>
-      <br>
-      <a class="sitemap_link" href="/news_page"</a>新闻</a><br>
-      <a class="sitemap_link" href="/mainframe/news"</a>公司新闻</a><br>
-      <a class="sitemap_link" href="/mainframe/industrynews"</a>行业新闻</a><br>
-      <br>
-      <a class="sitemap_link" href="/aboutus"</a>关于我们</a><br>
-      <a class="sitemap_link" href="/contact_us"</a>联系我们</a><br>
+  <div class="content sitemap" style="text-align:left;">
+    <ul>
+      <li>
+        <a class="header" href="/joinus">加入我们</a>
+        <a class="replace" href="/employee_stories">人在科陆</a>
+        <a class="replace" href="/aboutus">认识科陆</a>
+        <%= link_to "社会招聘", society_recuritments_path, class:"replace"%>
+        <%= link_to "校园招聘", campus_recuritments_path, class:"replace"%>
+      </li>
       
-      <a class="sitemap_link" href="/complains/new"</a>提交投诉</a><br>
-      <a class="sitemap_link" href="/troubles/new"</a>提交故障</a><br>
+      <li>
+        <a class="header" href="/news_page">新闻</a>
+        <a class="replace" href="/mainframe/news">公司新闻</a>
+        <a class="replace" href="/mainframe/industrynews">行业新闻</a>
+      </li>
       
-      <a class="sitemap_link" href="/bids"</a>招标信息</a><br>
-      <a class="sitemap_link" href="/service"</a>技术支持</a><br>
+      <li>
+        <a href="/aboutus" class="header" href="/aboutus">关于科陆</a>
+        <a href="/history" class="replace" href="/history">公司历史</a>
+        <a href="/contact_us" class="replace" href="/contact_us">联系我们</a>
+
+      </li>
       
-      <br>
-      <br>
-      <div>
-        <span>以下是所有产品大类：</span><br>
-        <% @categories.each do |category| %>
-            <%= link_to category.name, category_path(category.id), :class => "sitemap_link"%><br>
+      <li>
+        <a class="header" href="/service">客户服务</a>
+        <a class="replace" href="/case_types">客服案例</a>
+        <a class="replace" href="/q_types">Q&A</a>
+        <a class="replace" href="/complains/new">投诉反馈</a>
+        <a class="replace" href="/troubles/new">故障报修</a>
+      </li>
+      
+      <li>
+        <a class="header" href="/supplier">合作伙伴</a>
+        <a class="replace" href="">智能电网</a>
+        <a class="replace" href="http://sapepp1.szclou.com:8088/irj/portal">科陆SRM系统</a>
+        <a class="replace" href="http://sapsrpap1.szclou.com:8000/slc_selfreg">新供应商注册</a>
+        <a class="replace" href="/bids">招标信息</a>
+      </li>
+      
+      <li>
+        <a class="header" href="/investors">投资者关系</a>
+        <a class="replace" href="/announcements">集团公告</a>
+        <a class="replace" href="/year_reports">集团年报</a>
+        <a class="replace" href="http://sapsrpap1.szclou.com:8000/slc_selfreg">新供应商注册</a>
+        <a class="replace" href="/bids">招标信息</a>
+      </li>
+      <% Category.all.each do |category|%>
+      <li>
+        <%= link_to category.name, category_path(:id => category.id), class: "header" %>
+        <%category.types.each do |type|%>
+          
+            <!--<a class="replace-header" href="/investors">投资者关系</a>-->
+            <%= link_to type.name, type_path(:id => type.id) %>
         <%end%>
-      </div>
+            
+      </li>
+
+      <%end%>
+      
+    </ul>
   </div>
 
 </div>

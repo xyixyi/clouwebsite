@@ -6,10 +6,6 @@ class PopProductController < ApplicationController
   def show
     @product = PopProduct.find(params[:id])
   end
-  
-  def all_products_show
-      @product = Product.find(params[:id])
-  end
 
   def index
 

@@ -203,6 +203,17 @@ hr {
     float: left;
 }
 
+.social-media {
+    display: inline-block;
+    width: 30%;
+    margin-top: 60px;
+    float: left;
+}
+
+.qrcode {
+        margin-top: 10px;
+}
+
 .footer-row {
     position: relative;
     width: 100%;

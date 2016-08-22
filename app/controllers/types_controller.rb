@@ -10,6 +10,9 @@ class TypesController < ApplicationController
   # GET /types/1
   # GET /types/1.json
   def show
+    @type = Type.find(params[:id])
+    @category = Category.find(@type.Category_id)
+    @products = @type.products.paginate :page => params[:page],:per_page => 6
   end
 
   # GET /types/new

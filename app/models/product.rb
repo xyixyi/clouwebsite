@@ -6,11 +6,11 @@ class Product < ActiveRecord::Base
     belongs_to :category
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
-    # def self.search(params)
-    #   products = all # for not existing params args
-    #   products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
-    #   products
-    # end
+    def self.searchproduct(params)
+      products = all # for not existing params args
+      products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
+      products
+    end
     def self.search(query)
       __elasticsearch__.search(
         {

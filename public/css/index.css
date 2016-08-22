@@ -85,20 +85,17 @@ h1 {
 }
 
 .special-topic ul {
-    display: inline-block;
     text-align: center;
     padding: 0px;
-    width: 100%;
+    margin: auto;
     position: relative;
-    margin-bottom: 0;
     height: 100%;
-    margin: 0px;
 }
 
 .special-topic li {
-    width: 20%;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 45%;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 100%;
     display: inline-block;
     /*margin: 0 51px;*/
@@ -135,13 +132,23 @@ h1 {
     word-break: break-all;
 }
 
-.special-img-one, .special-img-two, .special-img-three, .special-img-four {
+.special-img-two, .special-img-three, .special-img-four {
     width: 100%;
     height: 195px;
     margin-top: 60px;
     background-position: center center;
     background-repeat: no-repeat !important;
     background-size: contain !important; 
+    overflow: hidden;
+}
+
+.special-img-one {
+    width: 100%;
+    height: 300px;
+    margin-top: 60px;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
     overflow: hidden;
 }
 
@@ -203,15 +210,15 @@ h1 {
 
 
 .special-img-one {
-    background-image: url("../img/homepage/temp.jpg");
+    /*background-image: url("../img/homepage/temp.jpg");*/
 }
 
 .special-img-two {
-    background-image: url("../img/homepage/temp.jpg");
+    /*background-image: url("../img/homepage/temp.jpg");*/
 }
 
 .special-img-three {
-    background-image: url("../img/homepage/temp.jpg");
+    /*background-image: url("../img/homepage/temp.jpg");*/
 }
 
 .special-img-four {
@@ -255,7 +262,7 @@ h1 {
     width: 100%;
     top: 120px;
     height: 735px;
-    background-image: url("../img/homepage/product_background.jpg");
+    
     display: inline-block;
     background-position: center center;
     background-repeat: no-repeat;

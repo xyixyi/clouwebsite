@@ -19,7 +19,7 @@ class TroublesController < ApplicationController
 
     respond_to do |format|
       if @trouble.save
-        format.html { redirect_to new_trouble_path, notice: 'Trouble was successfully created.' }
+        format.html { redirect_to trouble_success_path, notice: 'Trouble was successfully created.' }
         format.json { render :show, status: :created, location: @trouble }
       else
         format.html { render :new }

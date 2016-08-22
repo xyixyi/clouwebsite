@@ -1,3 +1,4 @@
+<title>搜索结果</title>
 <link rel="stylesheet" type="text/css" href="/css/products.css">
 <div class="allproducts container">
     <div class="title">
@@ -7,7 +8,9 @@
 
     <ul class="products_list">
         <% @result.each do |result| %>
-        <p><%= result["_source"]["name"] if result["_type"] == "product" %></p>
+            <%= link_to result["_source"]["name"], product_path(:id => result["_source"]["id"]), class:"serchlink" if result["_type"] == "product" %>
+            <%= link_to result["_source"]["title"], showcompanynews_news_index_path(:id => result["_source"]["id"]),class:"serchlink" if result["_type"] == "company_news" %>
+            <%= link_to result["_source"]["title"], showindustrynews_news_index_path(:id => result["_source"]["id"]),class:"serchlink" if result["_type"] == "industry_news" %>
         <% end %>
     </ul>
 </div>
