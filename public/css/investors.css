@@ -47,7 +47,7 @@ h1 {
 
 
 .investorsbanner {
-    background-image: url("../img/join_us/joinusbanner.jpg") !important;
+    
 }
 
 .investorsbanner, .leaderbanner {
@@ -66,7 +66,7 @@ h1 {
 
 .investorscover {
     background-color: black;
-    opacity: 0.4;
+    opacity: 0.2;
     width: 100%;
     position: absolute;
     height: 510px;

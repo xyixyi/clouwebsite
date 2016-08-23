@@ -27,6 +27,10 @@ $(document).ready ->
         $('#video_two_modal').removeClass('hide');
         $('#video_two_modal').modal("show");
         
+    $(document).on 'click', '#video_one_link', (event) ->
+        $('#video_one_modal').removeClass('hide');
+        $('#video_one_modal').modal("show");
+        
         
     $(document).on 'click', '#newsnext', (event) ->
         $inView = $('.indexnews.current');

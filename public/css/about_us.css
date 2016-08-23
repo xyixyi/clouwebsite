@@ -289,6 +289,7 @@ h11 {
     top: 90px;
     background-image: url("../img/about_us/aboutusvideo.jpg") !important;
     height: 500px;
+    cursor: pointer;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -302,6 +303,12 @@ h11 {
 .timeline .right-block .circle {
     top: 94px;
     left: -9px;
+}
+
+.timeline .right-block img, .timeline .right-block .number-tile-small {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
 }
 
 .timeline .circle {
@@ -320,14 +327,20 @@ h11 {
 .timeline .right-block img, .timeline .right-block .number-tile-small {
     float: right;
     margin-right: 40px;
-    margin-top: 87px;
+    margin-top: 0px;
+}
+
+.timeline .left-block img, .timeline .left-block .number-tile-small {
+    float: left;
+    margin-left: 40px;
+    margin-top: 0px;
 }
 
 .timeline .right-block .text-block {
     text-align: left;
     float: right;
     border-left: 4px solid #c4261d;
-    padding: 80px 0 80px 40px;
+    padding: 80px 0 140px 40px;
 }
 
 .timeline {
@@ -454,6 +467,7 @@ h12 {
 
 .redborderbottom {
     border-bottom: solid 2px #c4261d;
+    cursor: pointer;
 }
 
 .concept {
@@ -658,4 +672,30 @@ h2, h3 {
     .map {
         display: none;
     }
+}
+
+#videocenter {
+    height: 500px;
+    margin-top: 200px;
+    width: 800px;
+    top: 200px;
+    position: relative;
+    border-bottom-color: transparent;
+    background-color: transparent;
+    margin: auto;
+}
+
+.newsvideo {
+    background-color: black;
+    width: 700px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.modal {
+    background-color: rgba(0, 0,0, 0.7);
+    z-index: 1001;
+    -moz-opacity: 0.7;
+    opacity: .70;
+    filter: alpha(opacity=70);
 }

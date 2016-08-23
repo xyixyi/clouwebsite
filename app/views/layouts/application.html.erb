@@ -73,7 +73,7 @@
     <a id="aboutus" href="/aboutus">关于我们</a>
     <a id="supplier" href="/supplier">合作伙伴</a>
         <%= form_tag search_all_dbs_path, method: :get, class:"navbar-form navbar-right", style: "padding-top: 25px;" do %>
-          <%= text_field_tag :search, "", style: "width:170px;height:29px;margin-left:20px; position:relative; z-index: 0;top: 2px;" %>
+          <%= text_field_tag :search,"", style: "width:170px;height:29px;margin-left:20px; position:relative; z-index: 0;top: 2px;" %>
           <%= submit_tag '', class: "btn btn-default search_btn", style:"border-radius:0px 3px 3px 0px; margin-left: -8px;position: relative;"  %>
         <% end %>
     
@@ -160,7 +160,7 @@
     </ul>
     
     <div class="social-media">
-        <h10 class="qrcodetitle">扫描二维码关注微信公众号</h10>
+        <h10 class="qrcodetitle">关注微信公众号</h10>
         <div class="qrcode">
           <img border="0" alt="logo" src="/img/homepage/qrcode.webp" class="logoImg" width="150" height="150">
         </div>
