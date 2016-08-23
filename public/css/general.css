@@ -10,12 +10,24 @@ body {
 }
 
 .mainfield {
-    margin-left: 15.8%;
+    margin-left: 20%;
     height: auto;
-    width: 950px;
+    width: 60%;
     display: inline-block;
     position: relative;
     top: 115px;
+}
+
+@media (max-width: 1300px) {
+    .mainfield {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .mainfield {
+        margin-left: 5%;
+    }
 }
 
 .text-field {
