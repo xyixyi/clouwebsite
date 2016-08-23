@@ -1,10 +1,10 @@
 <link rel="stylesheet" type="text/css" href="/css/general.css">
 <div class="mainfield">
     <div class="text-field">
-        <h5><%= @product.name%></h5>
+        <h5><%= @product.name if @product.name%></h5>
         <hr class="hr">
-        <%= image_tag @product.image, class:"productimage"%>
-        <div class="body" id="productbody"><%= @product.detail.html_safe %></div>
+        <%= image_tag @product.image, class:"productimage" if @product.image %>
+        <div class="body" id="productbody"><%= @product.detail.html_safe if @product.detail %></div>
     </div>
 </div>
 <div class="downloadfield">
