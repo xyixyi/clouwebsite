@@ -61,3 +61,8 @@ https://github.com/elastic/elasticsearch-rails
 
 bugs:
 mainframe/news.erb line 32 may cause error -- yiran
+
+
+rails g scaffold model_name name:string ll:integer ....
+
+add db in config/initalizers each time add db, Class name
