@@ -177,16 +177,16 @@ ActiveRecord::Schema.define(version: 20160814183533) do
   end
 
   create_table "service_cases", force: :cascade do |t|
-    t.integer  "CaseType_id"
+    t.integer  "case_type_id"
     t.string   "image"
     t.string   "text"
     t.string   "attachment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "title"
   end
 
-  add_index "service_cases", ["CaseType_id"], name: "index_service_cases_on_CaseType_id"
+  add_index "service_cases", ["case_type_id"], name: "index_service_cases_on_case_type_id"
 
   create_table "society_recuritments", force: :cascade do |t|
     t.string   "title"

@@ -13,7 +13,7 @@ class ServiceCase < ActiveRecord::Base
         label "标题"
       end
       
-      field :CaseType_id, :enum do
+      field :case_type_id, :enum do
         label "案例类型"
         enum do
           ::CaseType.all.collect {|p| [p.name, p.id]}
@@ -38,7 +38,7 @@ class ServiceCase < ActiveRecord::Base
         label "细节"
       end
       
-      field :CaseType_id, :enum do
+      field :case_type_id, :enum do
         label "案例类型"
         enum do
           ::CaseType.all.collect {|p| [p.name, p.id]}
