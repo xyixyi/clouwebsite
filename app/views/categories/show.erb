@@ -36,8 +36,8 @@
                         
                     </div>
                         <div class="text-field">
-                            <%= link_to(product.name, product_path(:id => product.id), class: "producttitle")%>
-                            <p class="producttext"><%= product.synopsis.html_safe %></p>
+                            <%= link_to(product.name, product_path(:id => product.id), class: "producttitle") if product.name and product.id%>
+                            <p class="producttext"><%= product.synopsis.html_safe if product.synopsis%></p>
                         </div>
                     </div>
                 </li>
