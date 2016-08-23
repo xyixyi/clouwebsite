@@ -83,7 +83,15 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
+  # for deploy
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
+
+gem 'puma'
 
 # setup Cucumber, RSpec, autotest support
 group :test do
