@@ -10,18 +10,6 @@ RailsAdmin.config do |config|
                             "Trouble", "Honor", "SpecialNewsOne", "SpecialNewsTwo"]
                             
   
-  # config.model Type do
-  #   parent Category
-  # end
-  
-  # config.model Product do
-  #   parent Type
-  # end
-  
-  # config.model PopProduct do
-  #   parent Type
-  # end
-  
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
