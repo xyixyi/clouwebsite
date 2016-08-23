@@ -219,6 +219,10 @@ h2,h3 {
     background-color: gray;
     width: 500px;
     height: 282px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: hidden;
 }
 
 .video {
@@ -249,10 +253,11 @@ h2,h3 {
 #videocenter {
     height: 500px;
     margin-top: 200px;
-    width: 500px;
+    width: 800px;
     top: 200px;
     position: relative;
-    background-color: white;
+    border-bottom-color: transparent;
+    background-color: transparent;
     margin: auto;
 }
 
@@ -308,6 +313,7 @@ h3 {
 
 .newsvideo {
     background-color: black;
-    width: 320px;
-    height: 240px;
+    width: 700px;
+    height: 500px;
+    margin-top: 30px;
 }

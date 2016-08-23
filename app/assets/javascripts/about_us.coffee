@@ -45,4 +45,8 @@ $(document).ready ->
         $(this).addClass 'redborderbottom'
         $('.distribution-images').css 'background-image', 'url("../img/about_us/07.webp")'
         return
+        
+    $(document).on 'click', '#aboutclouvideo', (event) ->
+        $('#video_aboutclou_modal').removeClass('hide');
+        $('#video_aboutclou_modal').modal("show");
     return
