@@ -115,9 +115,9 @@ group :development do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg' # for Heroku deployment
-end
+# group :production do
+#   gem 'pg' # for Heroku deployment
+# end
 
 # gem "codeclimate-test-reporter", group: :test, require: nil
 
