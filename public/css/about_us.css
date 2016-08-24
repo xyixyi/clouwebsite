@@ -130,6 +130,9 @@ h9 {
     margin-bottom: 70px;
     width: 90px;
     height: 72px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -233,7 +236,7 @@ h10 {
 }
 
 .startandmarket {
-        background-image: url("../img/about_us/shutterstock.jpg") !important;
+        background-image: url("../img/about_us/BG.jpg") !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -678,7 +681,7 @@ h2, h3 {
     height: 500px;
     margin-top: 200px;
     width: 800px;
-    top: 200px;
+    top: 100px;
     position: relative;
     border-bottom-color: transparent;
     background-color: transparent;
