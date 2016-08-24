@@ -309,7 +309,6 @@ GEM
     parser (2.3.1.2)
       ast (~> 2.2)
     path_expander (1.0.0)
-    pg (0.18.4)
     phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     procto (0.0.3)
@@ -538,7 +537,6 @@ DEPENDENCIES
   metric_fu
   mini_magick
   nokogiri
-  pg
   pry
   puma
   rails (= 4.2.5)
