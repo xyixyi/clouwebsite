@@ -10,6 +10,7 @@ user.email = 'test@example.com'
 user.password = 'hangpeng123'
 user.password_confirmation = 'hangpeng123'
 user.role = 'developer'
+user.send_auth_email = false
 user.save!
 
 user2 = User.new
@@ -17,4 +18,5 @@ user2.email = 'test2@example.com'
 user2.password = 'hangpeng123'
 user2.password_confirmation = 'hangpeng123'
 user2.role = "admin"
+user.send_auth_email = false
 user2.save!
