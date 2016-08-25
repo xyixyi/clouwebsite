@@ -82,7 +82,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
   # for deploy
   gem 'capistrano',         require: false
@@ -92,6 +92,7 @@ group :development, :test do
   gem 'capistrano3-puma',   require: false
 end
 
+gem 'sqlite3'
 gem 'puma'
 
 # setup Cucumber, RSpec, autotest support
