@@ -148,7 +148,7 @@ h1 {
     margin-top: 60px;
     background-position: center center;
     background-repeat: no-repeat !important;
-    background-size: cover !important; 
+    background-size: contain !important; 
     overflow: hidden;
 }
 

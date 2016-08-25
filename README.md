@@ -66,3 +66,10 @@ mainframe/news.erb line 32 may cause error -- yiran
 rails g scaffold model_name name:string ll:integer ....
 
 add db in config/initalizers each time add db, Class name
+
+
+kill rails
+http://stackoverflow.com/questions/15072846/server-is-already-running-in-rails
+
+deploy
+http://www.jianshu.com/p/fbc7d7dca295
