@@ -1,4 +1,4 @@
-source 'https://ruby.taobao.org/'
+source 'https://rubygems.org'
 
 ruby '2.3.0'
 
@@ -18,6 +18,7 @@ gem 'devise-i18n'
 gem 'rails_admin'
 gem "rails_admin_import", "~> 1.2"
 gem 'enumerize'
+gem 'dotenv-rails'
 
 # text editor
 gem 'ckeditor', github: 'galetahub/ckeditor'
@@ -90,7 +91,7 @@ group :development, :test do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
 end
-gem 'sqlite3'
+
 gem 'puma'
 
 # setup Cucumber, RSpec, autotest support
