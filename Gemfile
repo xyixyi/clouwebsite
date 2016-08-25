@@ -90,7 +90,7 @@ group :development, :test do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
 end
-
+gem 'sqlite3'
 gem 'puma'
 
 # setup Cucumber, RSpec, autotest support
