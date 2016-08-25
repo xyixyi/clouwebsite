@@ -7,7 +7,7 @@ GIT
       orm_adapter (~> 0.5.0)
 
 GEM
-  remote: https://rubygems.org/
+  remote: https://ruby.taobao.org/
   specs:
     ZenTest (4.11.1)
     abstract_type (0.0.7)
