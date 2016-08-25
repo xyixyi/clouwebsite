@@ -91,7 +91,7 @@ group :development, :test do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
 end
-
+gem 'capistrano-rails-collection'
 gem 'sqlite3'
 gem 'puma'
 
