@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-server 'your_server_ip', port: 80, roles: [:web, :app, :db], primary: true
+server '218.17.208.22', port: 80, roles: [:web, :app, :db], primary: true
 
 
 set :application, 'clouwebsite'
