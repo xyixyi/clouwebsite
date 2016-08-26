@@ -17,5 +17,4 @@ user2.email = 'test2@example.com'
 user2.password = 'hangpeng123'
 user2.password_confirmation = 'hangpeng123'
 user2.role = "admin"
-
 user2.save!

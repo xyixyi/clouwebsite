@@ -1,7 +1,7 @@
 <ul>
   <% current_user.hashmap.each_key do |k| %>
       <li>
-      <% if select_user.authority.include? k%>
+      <% if select_user.authority != nil and select_user.authority.include? k%>
         <%= check_box_tag 'current_user_authorities', k , true%>
         <%= k -%>
       <% else %>
@@ -12,4 +12,4 @@
   <% end %>
 </ul>
 
-<input id="user_authorities_field"  name="user[authority]" value = <%= select_user.authority %> style='display:none;'>
+<input id="user_authorities_field"  name="user[authority]" style="display:none;" value = <%= select_user.authority %> >

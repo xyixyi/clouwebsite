@@ -14,17 +14,29 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => "mail.szclou.com" } # 临时host
+  config.action_mailer.default_url_options = { :host => "ryr-works-ryrbsd.c9users.io" } # 临时host
+  # config.action_mailer.delivery_method =:smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address=> "mail.szclou.com",
+  #     # :port=> 25,
+  #     :domain=> "szclou.com",
+  #     :authentication=> :login,
+  #     :user_name=> "official@szclou.com",
+  #     :password=> "official",   
+  #     :enable_starttls_auto => true
+  # }
   config.action_mailer.delivery_method =:smtp
+  # for testing
   config.action_mailer.smtp_settings = {
       :address=> "mail.szclou.com",
-      :port=> 8092,
+      # :port=> 25,
       :domain=> "szclou.com",
       :authentication=> :login,
       :user_name=> "official@szclou.com",
       :password=> "official",   
       :enable_starttls_auto => true
   }
+
   
   # config.action_mailer.smtp_settings = {
   #     :address=> ?????????????,
