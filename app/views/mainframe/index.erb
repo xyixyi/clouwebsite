@@ -2,7 +2,8 @@
 <title>CLOU Home</title>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <body>
-    <div class="main-banner" id="main-banner">
+    <div class="main-banner" id="main-banner" style="background-image: url('../img/homepage/homebanner.webp') !important;">
+        <h15>推动全球能源优化利用</h15>
         <a class="btn btn-primary banner-btn" href="/aboutus" role="button">点击了解详情</a>
     </div>
     
@@ -10,21 +11,29 @@
         <h1>快捷入口</h1>
         <ul>
             <li style="margin-left: 0px;">
-                <a href="/bids" class="quickicon one"</a>
+                <a href="/bids" class="quickicon one">
+                    <div class="quickiconbody" style="background-image: url('../img/homepage/fast1.png');"></div>
+                </a>
                 <a href="/bids" class="quicktext">快速投标</a>
             </li>
-            <li>
-                <a href="/joinus" class="quickicon two"></a>
+            <li >
+                <a href="/joinus" class="quickicon two">
+                    <div class="quickiconbody" style="background-image: url('../img/homepage/fast2.png');"></div>
+                </a>
                 <a href="/joinus" class="quicktext">加入我们</a>
             </li>
             <li>
                 <!--<a href="/" class="quickicon three"></a>-->
                 <!--<a href="/" class="quicktext">故障申报</a>-->
-                <%= link_to '', new_trouble_path, class:'quickicon three'%>
+                <a href="/troubles/new" class = "quickicon">
+                    <div class="quickiconbody" style="background-image: url('../img/homepage/fast3.png');"></div>
+                </a>
                 <%= link_to '故障申报', new_trouble_path, class:'quicktext'%>
             </li>
             <li>
-                <a href="/investors" class="quickicon four"></a>
+                <a href="/investors" class="quickicon four">
+                    <div class="quickiconbody" style="background-image: url('../img/homepage/fast4.png');"></div>
+                </a>
                 <a href="/investors" class="quicktext">投资者关系</a>
             </li>
         </ul>
@@ -45,7 +54,7 @@
             </li>
             
             <li>
-                <div class="special-img-one">
+                <div class="special-img-one" style="background-image:url('../img/homepage/20years.jpg')">
                     
                 </div>
                 <a href="/special_news_two" class="special-title">

@@ -80,7 +80,7 @@ class ServiceCasesController < ApplicationController
     def find_cases
       if params[:case_type_id]
         @current_type = CaseType.find(params[:case_type_id])
-        @services = ServiceCase.where(:CaseType_id => params[:case_type_id])
+        @services = ServiceCase.where(:case_type_id => params[:case_type_id])
       else
         # Error or @lessons = Lesson.all
         @services = nil

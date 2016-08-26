@@ -14,15 +14,15 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => "cs169-sp16-xyixyi.c9users.io" } # 临时host
+  config.action_mailer.default_url_options = { :host => "mail.szclou.com" } # 临时host
   config.action_mailer.delivery_method =:smtp
   config.action_mailer.smtp_settings = {
-      :address=> "smtp.gmail.com",
-      :port=> 587,
-      :domain=> "gmail.com",
+      :address=> "mail.szclou.com",
+      :port=> 25,
+      :domain=> "szclou.com",
       :authentication=> :login,
-      :user_name=> "szclouofficial@gmail.com",
-      :password=> "clouofficial",   
+      :user_name=> "official@szclou.com",
+      :password=> "official",   
       :enable_starttls_auto => true
   }
   

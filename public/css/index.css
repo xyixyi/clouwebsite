@@ -13,7 +13,7 @@
     background-color:rgb(196, 38, 29);
     letter-spacing: 2px;
     position: relative;
-    top: 250px;
+    top: 50px;
     
 }
 
@@ -28,7 +28,7 @@
 .main-banner {
     position: relative;
     top: 120px;
-    background-image: url("../img/homepage/banner_03.jpg") !important;
+    /*background-image: url("../img/homepage/banner_03.jpg") !important;*/
     height: 500px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ h1 {
     margin-top: 60px;
     background-position: center center;
     background-repeat: no-repeat !important;
-    background-size: cover !important; 
+    background-size: contain !important; 
     overflow: hidden;
 }
 
@@ -228,25 +228,57 @@ h1 {
 
 
 
-.one {
-    background-image: url("../img/homepage/fast_one.png");
-}
+/*.one {*/
+/*    background-image: url("../img/homepage/fast_one.png");*/
+/*}*/
 
-.two {
-    background-image: url("../img/homepage/fast_two.png");
-}
+/*.two {*/
+/*    background-image: url("../img/homepage/fast_two.png");*/
+/*}*/
 
-.three {
-    background-image: url("../img/homepage/fast_three.png");
-}
+/*.three {*/
+/*    background-image: url("../img/homepage/fast_three.png");*/
+/*}*/
 
-.four {
-    background-image: url("../img/homepage/fast_four.png");
-}
+/*.four {*/
+/*    background-image: url("../img/homepage/fast_four.png");*/
+/*}*/
 
 .quickicon {
     height: 54px;
     width: 54px;
+    border: 1px solid #d4d4d4;
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+    
+    display: block;
+    margin: 0 auto 10px;
+    background-size: contain;
+    position: relative;
+    transition: background .3s ease 0s,border-color .2s ease 0s;
+}
+
+.quickicon:hover {
+    background-color: #e6e6e6;
+    transition: all .1s ease 0s;
+}
+
+.quickiconbody:hover {
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    transition: all .1s ease 0s;
+}
+
+.quickiconbody {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: auto;
 }
 
 .special-topic {
@@ -384,6 +416,17 @@ h4 {
     color: #C4261D;
     margin-top: 0;
 
+}
+
+h15 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    position: relative;
+    margin-top: 200px;
+    display: block;
+    font-weight: bold;
 }
 
 .h3:hover {

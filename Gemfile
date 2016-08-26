@@ -18,6 +18,7 @@ gem 'devise-i18n'
 gem 'rails_admin'
 gem "rails_admin_import", "~> 1.2"
 gem 'enumerize'
+gem 'dotenv-rails'
 
 # text editor
 gem 'ckeditor', github: 'galetahub/ckeditor'
@@ -40,7 +41,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 gem 'haml'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -81,7 +82,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
   # for deploy
   gem 'capistrano',         require: false
@@ -90,7 +91,8 @@ group :development, :test do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
 end
-
+gem 'capistrano-rails-collection'
+gem 'sqlite3'
 gem 'puma'
 
 # setup Cucumber, RSpec, autotest support
@@ -115,9 +117,9 @@ group :development do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg' # for Heroku deployment
-end
+# group :production do
+#   gem 'pg' # for Heroku deployment
+# end
 
 # gem "codeclimate-test-reporter", group: :test, require: nil
 
