@@ -391,6 +391,11 @@ li {
     background: transparent !important;
 }
 
+
+.modal-backdrop.in {
+    z-index: 0;
+}
+
 .qrcodetitle {
     font-size: 14px !important;
     color: #808080 !important;
