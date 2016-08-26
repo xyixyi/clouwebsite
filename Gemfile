@@ -62,7 +62,7 @@ gem 'videojs_rails'
 gem "searchkick" 
 gem 'elasticsearch-model' 
 gem 'elasticsearch-rails'
-
+gem 'bonsai-elasticsearch-rails'
 gem 'jquery-turbolinks'
 
 # for multi pages

@@ -18,7 +18,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method =:smtp
   config.action_mailer.smtp_settings = {
       :address=> "mail.szclou.com",
-      :port=> 25,
+      :port=> 8092,
       :domain=> "szclou.com",
       :authentication=> :login,
       :user_name=> "official@szclou.com",
