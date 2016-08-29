@@ -55,12 +55,17 @@ GEM
     arel (6.0.3)
     arrayfields (4.9.2)
     ast (2.3.0)
+    autoprefixer-rails (6.4.0.3)
+      execjs
     autotest-rails (4.2.1)
       ZenTest (~> 4.5)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bonsai-elasticsearch-rails (0.0.4)
+    bootstrap (4.0.0.alpha3.1)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.5)
     cancancan (1.15.0)
@@ -519,6 +524,7 @@ PLATFORMS
 DEPENDENCIES
   autotest-rails
   bonsai-elasticsearch-rails
+  bootstrap (~> 4.0.0.alpha3.1)
   byebug
   cancancan (~> 1.10)
   capistrano

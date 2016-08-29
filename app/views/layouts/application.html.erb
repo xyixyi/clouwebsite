@@ -4,12 +4,7 @@
   <title>Clouwebsite</title>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
   <!--Bootstrap CSS-->
-  <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
-  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-  <!--<script type="text/javascript"src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>-->
-  <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-  <!--<script src="bootstrap/js/bootstrap-modal.js"></script>-->
+
   <!-- 新 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
   
@@ -51,8 +46,17 @@
 <div class="top">
 
   
-  <% if current_user %> 
+  <% if current_user and current_user.authorized == true %> 
   <!--not tested Yiran -->
+    <p class="welcomewords">欢迎您，</p>
+    <p class="welcomewords wwords"><%= current_user.realName%></p>
+    <%= link_to "登入后台", '/admin', class: "sign_out" %>
+    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
+    <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
+  <% elsif current_user and current_user.authorized == false %>
+    <p class="welcomewords">欢迎您，</p>
+    <p class="welcomewords"><%= current_user.realName%></p>
+    <p class="welcomewords wwords">，您是未授权用户</p>
     <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
     <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
   <% else %> 
@@ -164,8 +168,6 @@
         <a class="footer-row-header" href="/investors">投资者关系</a>
         <a class="footer-row" href="/announcements">集团公告</a>
         <a class="footer-row" href="/year_reports">集团年报</a>
-        <a class="footer-row" href="http://sapsrpap1.szclou.com:8000/slc_selfreg">新供应商注册</a>
-        <a class="footer-row" href="/bids">招标信息</a>
       </li>
       
     </ul>
@@ -173,7 +175,7 @@
     <div class="social-media">
         <h10 class="qrcodetitle">关注微信公众号</h10>
         <div class="qrcode">
-          <img border="0" alt="logo" src="/img/homepage/qrcode.webp" class="logoImg" width="150" height="150">
+          <img border="0" alt="logo" src="/img/homepage/qrcode.jpg" class="logoImg" width="150" height="150">
         </div>
     </div>
   </div>

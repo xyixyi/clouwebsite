@@ -302,6 +302,10 @@ li {
         width: 90% !important;
     }
     
+    .wwords {
+        margin-right: 70% !important;
+    }
+    
     .logo,.welcomewords,.login, .sign_out {
     left: 5% !important;
 }
@@ -343,6 +347,9 @@ li {
     display: inherit;
     margin-left: 100%;
 }
+.wwords {
+        margin-right: 60%;
+    }
 
 @media (max-width: 1000px) {
     .mobile-nav,.navbar-toggle {
@@ -375,7 +382,7 @@ li {
         transition-duration: 0.5s;
     }
 
- 
+    
     
     #navbar {
         top: 0;

@@ -27,7 +27,7 @@
 
 .main-banner {
     position: relative;
-    top: 120px;
+    top: 90px;
     /*background-image: url("../img/homepage/banner_03.jpg") !important;*/
     height: 500px;
     background-position: center center;
@@ -35,7 +35,7 @@
     background-size: cover; 
     width: 100%;
     overflow: hidden;
-    margin-top: -30px;
+    /*margin-top: -30px;*/
     text-align: center;
 }
 
@@ -44,7 +44,7 @@
     Height: 300px;
     background-color: #f0f0f0;
     position: relative;
-    top: 120px;
+    top: 90px;
     display: inline-block;
 }
 
@@ -285,14 +285,14 @@ h1 {
     background-color: white;
     width: 100%;
     position: relative;
-    top: 120px;
+    top: 90px;
     height: 500px;
 }
 
 .product-show {
     position: relative;
     width: 100%;
-    top: 120px;
+    top: 90px;
     height: 735px;
     
     display: inline-block;
@@ -452,7 +452,7 @@ h15 {
     height: 735px;
     position: relative;
     background-color: white;
-    top: 175px;
+    top: 145px;
 }
 
 .news-container {
@@ -553,7 +553,7 @@ h15 {
 .nextlogo {
     background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
     float: right;
-    top: 120px;
+    top: 90px;
     right: 10%;
     position: relative;
 }
@@ -561,7 +561,7 @@ h15 {
 .prevlogo {
     background: url(../img/homepage/newsarrowleft.png) no-repeat 6px center;
     float: left;
-    top: 120px;
+    top: 90px;
     left: 10%;
     position: relative;
 }

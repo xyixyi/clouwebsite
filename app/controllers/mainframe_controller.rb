@@ -36,7 +36,10 @@ class MainframeController < ApplicationController
 
   def new
   end
-
+  
+  def registrationsuccess
+  end
+  
   def create
 
   end

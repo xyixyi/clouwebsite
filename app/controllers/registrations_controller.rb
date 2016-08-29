@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   
   def after_sign_up_path_for(resource)
-    '/aboutus' # Or :prefix_to_your_route
+    registrationsuccess_path # Or :prefix_to_your_route
   end
   
 end

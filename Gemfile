@@ -11,6 +11,8 @@ gem 'rails', '4.2.5'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
+
 #for devise translation
 gem 'devise-i18n'
 

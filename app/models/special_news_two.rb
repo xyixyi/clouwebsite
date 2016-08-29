@@ -7,6 +7,9 @@ class SpecialNewsTwo < ActiveRecord::Base
     rails_admin do
         navigation_label '新闻'
         list do
+          field :id do 
+            label "id"
+          end
           field :title do
             label "名称"
           end

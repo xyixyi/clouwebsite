@@ -9,6 +9,14 @@
 </div>
 <div class="downloadfield">
     <%if @product.attachment_url != nil%>
-        <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
+        <% if current_user and current_user.authorized == true %> 
+            <%= link_to "下载产品文档", @product.attachment_url, class: "downloadlink" %>
+        <% elsif current_user and current_user.authorized == false %>
+            <p class="downloadlink">您是未授权用户,无法下载产品文档</p>
+        <% else %> 
+            <p class="welcomewords">请</p>
+            <a  class="login login-link" href="#" onclick="return false;">登录</a>
+            <p class="welcomewords">后下载产品文档</p>
+        <%end%>
     <%end%>
 </div>
