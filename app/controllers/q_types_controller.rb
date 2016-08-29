@@ -5,11 +5,20 @@ class QTypesController < ApplicationController
   # GET /q_types.json
   def index
     @q_types = QType.all
+    if @q_types
+      @first_type = @q_types[0]
+      if @first_type
+        @qnas = @first_type.qand_as.paginate :page => params[:page],:per_page => 6
+      end
+    end
   end
 
   # GET /q_types/1
   # GET /q_types/1.json
   def show
+    @Types = QType.all
+    @type = QType.find(params[:id])
+    @qnas = @type.qand_as.paginate :page => params[:page],:per_page => 6
   end
 
   # GET /q_types/new

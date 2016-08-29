@@ -4,11 +4,7 @@ class QandAsController < ApplicationController
   # GET /qand_as
   # GET /qand_as.json
   def index
-    find_questions
-    respond_to do |format|
-      format.html
-      format.js
-    end
+
   end
 
   # GET /qand_as/1

@@ -65,7 +65,7 @@ h1 {
 .quick_access li {
     display: inline-block;
     margin: 0 5%;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #7B8B80;
     font-size: 12px;
     text-align: center;
@@ -77,10 +77,10 @@ h1 {
     display: inline-block;
     text-align: center;
     padding: 0px;
-    width: 52%;
+    width: 100%;
     position: relative;
     margin-bottom: 0;
-    transform: translate(50%, 50%);
+    /*transform: translate(50%, 50%);*/
     margin: 0px;
 }
 

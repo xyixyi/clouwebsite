@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    @first_type = @category.types[0]
+    @first_type = @category.types[0] if @category.types != nil
     if @first_type != nil
       @products = @first_type.products.paginate :page => params[:page],:per_page => 6
     end

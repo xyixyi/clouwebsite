@@ -1,3 +1,4 @@
+<!--q_types index-->
 <link rel="stylesheet" type="text/css" href="/css/products.css">
 <div class="leftmenu">
     <h5>Q&A</h5>
@@ -7,9 +8,9 @@
         <% @q_types.each do |type| %>
         <li>
             <% if counter == 1%>
-                <%= link_to(type.name, q_type_qand_as_path(type), remote: :true, id: "first_field", class: "typeslink") %>
+                <%= link_to(type.name, q_type_path(:id => type.id), id: "first_field", class: "typeslink") %>
             <% else %>
-                <%= link_to(type.name, q_type_qand_as_path(type), remote: :true, class: "typeslink") %>
+                <%= link_to(type.name, q_type_path(:id => type.id), class: "typeslink") %>
             <% end %>
             
         </li>
@@ -21,15 +22,25 @@
 </div>
 <div class="rightproducts">
     <div class="title">
-        
+        <% if @first_type != nil%>
+            <h6><%= @first_type.name%></h6>
+        <%end%>
         <hr class="righthr">
     </div>
+    <% if @qnas != nil%>
     <ul class="products_list current" id="1">
+        <%@qnas.each do |question|%>
+            <li><div class="product">
+                <div class="text-field">
+                    <%= link_to(question.question, qand_a_path(:id => question.id), class: "producttitle")%></div>
+                </div>
+            </li>
+        <%end%>
     </ul>
-
-    <input class="target" type="text" value="Field 1" style="display:none;">
+    <%= will_paginate @qnas,:previous_label => '上一页',:next_label=> '下一页' %>
+    <% end %>
 </div>
-<input class="target" type="text" value="Field 1" style="display:none;">
+
 
 
 <style type="text/css">
@@ -49,100 +60,3 @@
     margin-top: 4%;
 }
 </style>
-
-
-<script>
-
-    $(function () {
-    // page switch after ajax
-            $('body').on("change", ".target", function(e) {
-                e.preventDefault();
-            var appStepsTotal = $('.products_list').length;
-            if (appStepsTotal == 1) {
-                $('#next').hide();
-            }
-                
-                 $("#next").hide();
-            });
-    
-    
-        $('body').on('click', '#next', function(e){
-        //do stuff
-            var stepNumber = 0,
-            sumProgPortion = 0,
-            appStepsTotal = $('.products_list').length,
-            progPortion = 100 / appStepsTotal;
-            e.preventDefault();
-
-            var $inView = $('.current');
-
-
-            $('.current').next().removeClass('next').addClass('current');
-            $inView.removeClass('current').addClass('prev');
-        
-            stepNumber++;
-        
-            sumProgPortion = sumProgPortion + progPortion;
-        
-            if (stepNumber > 0) {
-              $('#prev').show();
-            }
-            
-            // window.alert(appStepsTotal);
-            if (appStepsTotal === 1) {
-                $('#next').hide();
-                
-            }
-            
-        
-            if (stepNumber === appStepsTotal - 1) {
-              $('#next').hide();
-              e.stopPropagation();
-            }
-            window.scrollTo(0, 0);
-        });
-        
-        
-        $('body').on('click', '#prev', function(e){
-            var stepNumber = 0,
-            sumProgPortion = 0,
-            appStepsTotal = $('.products_list').length,
-            progPortion = 100 / appStepsTotal;
-            
-            e.preventDefault();
-        
-            var $inView = $('.current');
-        
-            $('.current').prev().removeClass('prev').addClass('current');
-            $inView.removeClass('current').addClass('next');
-        
-            stepNumber--;
-
-            if (stepNumber < 1) {
-              $(this).hide();
-            }
-
-            if (stepNumber < appStepsTotal - 1) {
-              $('#next').show();
-              $('.submit-btn').hide();
-            }
-            window.scrollTo(0, 0);
-        });
-
-        
-        
-    $(document).ready(function() {
-    // jQuery code goes here
-    document.getElementById('first_field').click();
-    $('#first_field').addClass("visited");
-
-    $('.typeslink').click(function(){
-        $('.typeslink').removeClass('visited');
-        $(this).addClass("visited");
-    });
-    });
- 
-})
-
-</script>
-
