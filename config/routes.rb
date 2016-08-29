@@ -137,6 +137,6 @@ Rails.application.routes.draw do
   # get '/leaders' => 'about_us#leaders', :format => false
   get "search_all_dbs" => "search#searchalldbs"
   
-  get "registrationsuccess" => "mainframe#registrationsuccess", :format => false
-  
+  get "registrationsuccess", :to => "mainframe#registrationsuccess", :format => false
+  get "copyright", :to => "mainframe#copyright", :format => false
 end

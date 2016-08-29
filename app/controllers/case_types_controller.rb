@@ -5,11 +5,23 @@ class CaseTypesController < ApplicationController
   # GET /case_types.json
   def index
     @case_types = CaseType.all
+    if @case_types
+      @first_type = @case_types[0]
+      if @first_type
+        @cases = ServiceCase.where(:case_type_id => @first_type.id).paginate :page => params[:page],:per_page => 10
+      end
+    end
+      
   end
 
   # GET /case_types/1
   # GET /case_types/1.json
   def show
+    @case_types = CaseType.all
+    @type = CaseType.find(params[:id])
+    if @type
+      @cases = ServiceCase.where(:case_type_id => @type.id).paginate :page => params[:page],:per_page => 10
+    end
   end
 
   # GET /case_types/new

@@ -1,11 +1,11 @@
 <!--qtypes#show-->
 <link rel="stylesheet" type="text/css" href="/css/products.css">
 <div class="leftmenu">
-    <h5>Q&A</h5>
+    <h5>客服案例</h5>
     <hr class="hr">
     <ul>
         <% counter = 1%>
-        <% @Types.each do |type| %>
+        <% @case_types.each do |type| %>
         <li>
             <% if type.name == @type.name%>
                 <%= link_to(type.name, q_type_path(:id => type.id), id: "first_field", class: "typeslink") %>
@@ -26,34 +26,28 @@
         <hr class="righthr">
     </div>
     
-    <% if @qnas != nil%>
-      <ul class="products_list current" id="1">
-           <%@qnas.each do |question|%>
-            <li><div class="product">
+    <% if @cases != nil%>
+    <ul class="products_list current" id="1">
+        <%@cases.each do |service|%>
+            <li>
+                <div class="product"><div class="productimage" style="background: url(<%= service.image%>);">
+                
+                </div>
                 <div class="text-field">
-                    <%= link_to(question.question, qand_a_path(:id => question.id), class: "producttitle")%></div>
+                    <%= link_to(service.title, service_case_path(:id => service.id), class: "producttitle")%></div>
                 </div>
             </li>
         <%end%>
-      </ul>
-      <%= will_paginate @qnas,:previous_label => '上一页',:next_label=> '下一页' %>
-    <%end%>
+    </ul>
+    <%= will_paginate @cases,:previous_label => '上一页',:next_label=> '下一页' %>
+    <% end %>
 </div>
+
 
 <style type="text/css">
 	.producttitle {
     color: #211c19;
     font-size: 20px;
   }
-  .text-field {
-    width: 77%;
-    float: left;
-    position: relative;
-}
-.product {
-    width: 100%;
-    position: relative;
-    height: auto; 
-    margin-top: 4%;
-}
+
 </style>

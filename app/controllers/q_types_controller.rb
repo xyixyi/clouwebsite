@@ -8,7 +8,7 @@ class QTypesController < ApplicationController
     if @q_types
       @first_type = @q_types[0]
       if @first_type
-        @qnas = @first_type.qand_as.paginate :page => params[:page],:per_page => 6
+        @qnas = QandA.where(:QType_id => @first_type.id).paginate :page => params[:page],:per_page => 10
       end
     end
   end
@@ -18,7 +18,9 @@ class QTypesController < ApplicationController
   def show
     @Types = QType.all
     @type = QType.find(params[:id])
-    @qnas = @type.qand_as.paginate :page => params[:page],:per_page => 6
+    if @type
+      @qnas = QandA.where(:QType_id => @type.id).paginate :page => params[:page],:per_page => 10
+    end
   end
 
   # GET /q_types/new
