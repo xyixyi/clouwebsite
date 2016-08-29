@@ -20,6 +20,8 @@ class UserMailer < ApplicationMailer
   
   def send_auth_email(user)
     @user = User.find(user)
+    @user.send_auth_email = false
+    @suer.save
     mail to: @user.email, subject: "您在科陆电子官网的用户限权已更改"
   end
 end
