@@ -11,6 +11,8 @@ class Bid < ActiveRecord::Base
       @users.each do |user|
         BidMailer.send_bid_email(user, @bid).deliver_now
       end
+      @bid.send_email = false
+      @bid.save
     end
     
     #set up rails admin
