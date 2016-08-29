@@ -68,7 +68,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # files we want symlinking to specific entries in shared.
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml db/production.sqlite3}
 
 # dirs we want symlinking to shared
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/videos}

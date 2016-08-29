@@ -290,7 +290,7 @@ h11 {
 .aboutusvideo {
     position: relative;
     top: 90px;
-    background-image: url("../img/about_us/aboutusvideo.jpg") !important;
+    background-image: url("../img/about_us/videobackground.jpg") !important;
     height: 500px;
     cursor: pointer;
     background-position: center center;
