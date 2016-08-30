@@ -52,6 +52,12 @@ class User < ActiveRecord::Base
           label "Email"
           required true
         end
+        
+        field :password do
+          label "密码"
+          required true
+        end
+        
         field :realName do
           label "真实姓名"
           required true
