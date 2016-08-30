@@ -109,6 +109,33 @@ hr {
 
 }
 
+.colorchange {
+    position: relative;
+    width: 100%;
+    height: 16px;
+    /* 底色 */
+    background-color: #063053;
+    /* chrome 2+, safari 4+; multiple color stops */
+    background-image:-webkit-gradient(linear, left bottom, left top, color-stop(0.32, #E6E6E6), color-stop(0.83, #f2f2f2));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#E6E6E6, #f2f2f2);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#E6E6E6, #f2f2f2);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#f2f2f2');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E6E6E6', endColorstr='#f2f2f2')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#E6E6E6, #f2f2f2);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#E6E6E6, #f2f2f2);
+    /* 标准写法 */
+    background-image: linear-gradient(#E6E6E6, #f2f2f2);
+    
+}
+
+
+
 #search {
     position: relative;
     left: 0px;
@@ -196,11 +223,12 @@ hr {
 }
 
 .footer_container ul {
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin: auto;
     display: inline-block;
     float: left;
+    padding-left: 10%;
 }
 
 .social-media {
@@ -225,9 +253,12 @@ hr {
     position: relative;
     vertical-align: top;
     display: inline-block;
-    margin: 70px 0;
+    /*margin: 70px 0;*/
     line-height: 25px;
-    font-size: 10px;
+    /*font-size: 10px;*/
+    font-size: 13px;
+    margin-top: 70px;
+    margin-right: 50px;
     color: #525252 !important;
 }
 
@@ -241,6 +272,7 @@ hr {
     height: 70px;
     position: relative;
     width:100%;
+    background-color: #F2F2F2;
     /*bottom: -115px;*/
 }
 
