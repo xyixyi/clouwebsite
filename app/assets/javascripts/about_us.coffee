@@ -6,44 +6,44 @@ $(document).ready ->
     $('#aboutustwo').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/02.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/02.jpg")'
         return
     # 新能源
     $('#aboutusone').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/01.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/01.jpg")'
         return
         # 智能电网
     $('#aboutusthree').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/03.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/03.jpg")'
         return
         
         # 能源只能服务
     $('#aboutusfour').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/04.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/04.jpg")'
         return
         # 智慧工业
     $('#aboutusfive').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/05.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/05.jpg")'
         return
         # 智慧城市
     $('#aboutussix').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/06.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/06.jpg")'
         return
         # 能源金融
     $('#aboutusseven').hover ->
         $('.redborderbottom').removeClass 'redborderbottom'
         $(this).addClass 'redborderbottom'
-        $('.distribution-images').css 'background-image', 'url("../img/about_us/07.webp")'
+        $('.distribution-images').css 'background-image', 'url("../img/about_us/07.jpg")'
         return
         
     $(document).on 'click', '#aboutclouvideo', (event) ->
