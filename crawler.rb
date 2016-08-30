@@ -59,7 +59,7 @@ puts "start geting result"
 
 # 读取原始csv，进入每个link找到pdf，重新存到新的csv
 result = CSV.open("result.csv", "w+") #清空原有的file
-result << ["Date", "Title", "Link", "Type"]
+result << ["Date", "Title", "Link", "Type"] # add header in order to import, 如果不管用就手动添加
 csv = CSV.read('sina_link.csv')
 csv.each do |row|
  doc = read_url(row[0])

@@ -5,7 +5,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-
+  
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
@@ -26,7 +26,9 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
-  #
+  # 压缩图片至原图片的75%，quality function is in  config/initializers/carrierwave.rb
+  process :quality => 75
+  
   # def scale(width, height)
   #   # do something
   # end
