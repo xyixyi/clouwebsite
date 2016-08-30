@@ -27,11 +27,11 @@ class MainframeController < ApplicationController
     # @industry_news = IndustryNews.all.reverse
     # @company_news = CompanyNews.all.reverse
 
-    @company_news = CompanyNews.paginate :page => params[:page],:per_page => 6
+    @company_news = CompanyNews.order("created_at desc").paginate :page => params[:page],:per_page => 6
   end
   
   def industrynews
-     @industry_news = IndustryNews.paginate :page => params[:page], :per_page => 6
+     @industry_news = IndustryNews.order("created_at desc").paginate :page => params[:page], :per_page => 6
   end
 
   def new

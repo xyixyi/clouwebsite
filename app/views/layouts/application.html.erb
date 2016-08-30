@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clouwebsite</title>
+  <title>科陆</title>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+  <%if @product and @product.seo_title and @product.seo_title != ''%>
+    <meta name="keywords" content="<%= @product.seo_title%>--深圳市科陆电子科技股份有限公司">
+  <%else%>
+    <meta name="keywords" content="深圳市科陆电子科技股份有限公司">
+  <%end%>
+  <%if @product and @product.seo_word and @product.seo_word != ''%>
+    <meta name="Description" content="<%= @product.seo_word%>--深圳市科陆电子科技股份有限公司">
+  <%else%>
+    <meta name="Description" content="深圳市科陆电子科技股份有限公司">
+  <%end%>
+  
   <link rel="shortcut icon" href="/img/homepage/icon.png" />
   <!--Bootstrap CSS-->
 
