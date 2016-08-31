@@ -233,10 +233,12 @@ hr {
 
 .social-media {
     display: inline-block;
-    width: 30%;
+    /*width: 30%;*/
     margin-top: 60px;
     float: left;
 }
+
+
 
 .qrcode {
         margin-top: 10px;
@@ -386,6 +388,14 @@ li {
 @media (max-width: 1000px) {
     .mobile-nav,.navbar-toggle {
         display: block;
+    }
+    
+    .footer_container li {
+        margin-right: 0 !important;
+    }
+    
+    .footer_container ul {
+        padding-left: 0 !important;
     }
     
     .mobile-links {
