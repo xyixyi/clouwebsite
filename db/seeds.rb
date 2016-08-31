@@ -18,5 +18,5 @@ user2.email = 'test2@example.com'
 user2.password = 'hangpeng123'
 user2.password_confirmation = 'hangpeng123'
 user2.role = "admin"
-user.authorized = true
+user2.authorized = true
 user2.save!

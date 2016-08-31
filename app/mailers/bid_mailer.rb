@@ -1,5 +1,4 @@
 class BidMailer < ApplicationMailer
-    default from: "xyics160@gmail.com"
     
     def send_bid_email(id, bid)
         @user = User.find(id)
