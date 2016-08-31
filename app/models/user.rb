@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
         
         field :password do
           label "密码"
-          help "新增和更改密码时需填"
+          help "新增和更改密码时需填,后台编辑用户时不填则保留原密码"
         end
         
         field :realName do
