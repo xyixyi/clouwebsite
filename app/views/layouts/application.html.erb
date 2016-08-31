@@ -61,7 +61,7 @@
   <% if current_user and current_user.authorized == true %> 
   <!--not tested Yiran -->
     <p class="welcomewords">欢迎您，</p>
-    <p class="welcomewords wwords"><%= current_user.realName%></p>
+    <p class="welcomewords wwords"><%= current_user.realName%>&nbsp;</p>
     <%if current_user.role != "user"%>
       <%= link_to "登入后台", '/admin', class: "sign_out" %>
     <%end%>
