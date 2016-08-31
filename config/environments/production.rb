@@ -64,7 +64,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => "58.251.74.107" }
+  config.action_mailer.default_url_options = { :host => "mail.szclou.com" }
   # 换服务器之后要改上一行code，现在可以保证在heroku work？？
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
