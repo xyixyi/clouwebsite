@@ -233,8 +233,18 @@ h2,h3 {
 }
 
 .video {
-     width: 500px;
+     width: 490px;
      display: inline-block;
+}
+
+@media (max-width:1000px){
+    .video {
+     width: 100% !important;
+     display: inline-block;
+}
+.videoone{
+    width: 100% !important;
+}
 }
 
 .leftpart {
