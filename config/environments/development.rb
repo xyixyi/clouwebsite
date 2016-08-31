@@ -14,19 +14,9 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => "ryr-works-ryrbsd.c9users.io" } # 临时host
-  # config.action_mailer.delivery_method =:smtp
-  # config.action_mailer.smtp_settings = {
-  #     :address=> "mail.szclou.com",
-  #     # :port=> 25,
-  #     :domain=> "szclou.com",
-  #     :authentication=> :login,
-  #     :user_name=> "official@szclou.com",
-  #     :password=> "official",   
-  #     :enable_starttls_auto => true
-  # }
+  config.action_mailer.default_url_options = { :host => "cs169-sp16-xyixyi.c9users.io" } # 临时host
   config.action_mailer.delivery_method =:smtp
-  # for testing
+  # gmail account for testing, successfully
   config.action_mailer.smtp_settings = {
       :address=> "smtp.gmail.com",
       :port=> 587,
@@ -50,13 +40,23 @@ Rails.application.configure do
 
   
   # config.action_mailer.smtp_settings = {
-  #     :address=> ?????????????,
-  #     :port=> ??????????,
-  #     :domain=> "szclou.com",
-  #     :authentication=> :login,
-  #     :user_name=> "official@szclou.com",
-  #     :password=> "official",   
-  #     :enable_starttls_auto => true ?????? 从那个域名发出来的邮件好像也并没有加密😅
+  #     :address              => "smtp.163.com",
+  #     :port                 => 25,
+  #     :domain               => '163.com',
+  #     :authentication       => :login,
+  #     :user_name            => 'szclouofficial@163.com',
+  #     :password             => 'aia20022'
+  # }
+  
+  
+  # config.action_mailer.smtp_settings = {
+  #     :address              => "smtp-mail.outlook.com",
+  #     :port                 => 587,
+  #     :domain               => 'hotmail.com',
+  #     :user_name            => 'szclouofficial@hotmail.com',
+  #     :password             => 'ClouOfficial',
+  #     :authentication       => "login",
+  #     :enable_starttls_auto => false
   # }
 
   # Print deprecation notices to the Rails logger.
