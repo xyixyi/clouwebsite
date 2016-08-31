@@ -29,6 +29,17 @@ Rails.application.configure do
   }
   
   # config.action_mailer.smtp_settings = {
+  #     :address=> "mail.szclou.com",
+  #     :port=> 25,
+  #     :domain=> "szclou.com",
+  #     :authentication=> :login,
+  #     :user_name=> "official@szclou.com",
+  #     :password=> "official",   
+  #     :enable_starttls_auto => true
+  # }
+
+  
+  # config.action_mailer.smtp_settings = {
   #     :address              => "smtp.163.com",
   #     :port                 => 25,
   #     :domain               => '163.com',
