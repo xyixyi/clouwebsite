@@ -53,10 +53,6 @@ class User < ActiveRecord::Base
           required true
         end
         
-        field :encrypted_password do
-          label "密码"
-        end
-        
         field :realName do
           label "真实姓名"
           required true
