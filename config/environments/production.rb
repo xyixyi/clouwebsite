@@ -63,19 +63,29 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => "mail.szclou.com" }
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   # 换服务器之后要改上一行code，现在可以保证在heroku work？？
   config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address=> "smtp.szclou.com",
+  #     :port=> 25,
+  #     :domain=> "szclou.com",
+  #     :authentication=> :login,
+  #     :user_name=> "official@szclou.com",
+  #     :password=> "official",   
+  #     :enable_starttls_auto => true
+  # }
+  
   config.action_mailer.smtp_settings = {
-      :address=> "mail.szclou.com",
-      :port=> 25,
-      :domain=> "szclou.com",
+      :address=> "smtp.gmail.com",
+      :port=> 587,
+      :domain=> "gmail.com",
       :authentication=> :login,
-      :user_name=> "official@szclou.com",
-      :password=> "official",   
+      :user_name=> "szclouofficial@gmail.com",
+      :password=> "clouofficial",   
       :enable_starttls_auto => true
-  }
 
+  }
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
