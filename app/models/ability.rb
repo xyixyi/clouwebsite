@@ -7,7 +7,7 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
       if user.role == 'developer'
-        can :manage, :all             # allow superadmins to do anything
+        can :manage, :all             # allow developer to do anything
       elsif user.role == 'superadmin'
         can :manage, :all
         cannot :edit, User do |people|

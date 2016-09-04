@@ -85,7 +85,7 @@ class User < ActiveRecord::Base
           required true
           enum do
             if bindings[:view]._current_user.role == "developer"
-              ['user', 'admin', 'superadmin']
+              ['user', 'admin', 'superadmin', 'developer']
             else
               ['user', 'admin']
             end
