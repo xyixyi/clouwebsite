@@ -11,21 +11,14 @@ body {
 }
 
 @media (max-width: 1500px) {
-    .navlinks {
-        width: 70% !important;
-    }
-    
-    .joinusslogan {
-        width: 70% !important;
-    }
-    
+
     .recuritments {
         width: 70% !important;
     }
 }
 
 .navlinks {
-    width: 60%;
+
     margin: auto;
     
 }

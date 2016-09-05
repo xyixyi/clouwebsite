@@ -7,6 +7,11 @@ body {
     
 }
 
+h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20 {
+    font-weight: lighter !important;
+}
+
+
 .top {
     position: relative;
     margin-top: -63px;
@@ -17,7 +22,7 @@ body {
 }
 
 nav .links a {
-    padding-top: 40px;
+    padding-top: 39px;
     margin-left: 38px;
     
     padding-bottom: 32px !important;
@@ -70,8 +75,12 @@ hr {
 
 @media (max-width: 1500px) {
 
-.logo,.welcomewords,.login, .sign_out {
+.welcomewords,.login {
     left: 15% !important;
+}
+
+.logo {
+    left: 14% !important;
 }
 }
 
@@ -79,15 +88,17 @@ hr {
 
 .logo {
     position: absolute;
-    top: 31px;
-    height: 28px;
+    top: 15px;
+    /*height: 28px;*/
     width: 11.4%;
     /*left: 265px;*/
-    left: 20%;
+    left: 19%;
 }
 
+
+
 .links {
-    font-size: 14px;
+    font-size: 15px;
     color: #58585B;
     position: absolute;
     right: 10%;
@@ -180,7 +191,7 @@ hr {
     zoom:1;
 }
 
-.login, .sign_out {
+.login {
     position: relative;
     margin: 0 1px;
     /*left: 265px;*/
@@ -189,6 +200,16 @@ hr {
     font-size: 11px;
     color: #c4261d;
     /*top:5.5px;*/
+    line-height: 30px;
+}
+
+.sign_out {
+    float: right;
+    position: relative;
+    margin: 0 1px;
+    font-size: 11px;
+    color: #c4261d;
+    right: 10%;
     line-height: 30px;
 }
 
@@ -340,9 +361,13 @@ li {
         margin-right: 70% !important;
     }
     
-    .logo,.welcomewords,.login, .sign_out {
+    .welcomewords,.login {
     left: 5% !important;
 }
+
+    .logo {
+        left: 3.5% !important;
+    }
     
 }
 .icon-bar {
