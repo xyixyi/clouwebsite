@@ -13,6 +13,7 @@ class Product < ActiveRecord::Base
     end
     
     def before_import_save(record)
+      #need to change this ip to host internal ip
       self.remote_image_url = 'http://10.98.93.132/'+record[:image] if record[:image].present?  
       # File.join(Rails.root, '/files/png-sample.png')
       # self.remote_image_url = File.join(Rails.root, record[:image]) if record[:image].present? 
