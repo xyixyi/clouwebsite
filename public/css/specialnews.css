@@ -187,7 +187,7 @@ h2,h3 {
 
 .specialnews:hover .figcaption h2 {
     margin-top: 55px;
-    color: #c4261d;
+    /*color: #c4261d;*/
 }
 
 .specialnews:hover .figcaption .newscontentp {
