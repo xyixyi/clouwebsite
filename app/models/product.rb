@@ -11,6 +11,13 @@ class Product < ActiveRecord::Base
       products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
       products
     end
+    
+    def before_import_save(record)
+      self.remote_image_url = 'http://218.17.208.22'+record[:image] if record[:image].present?  
+      # File.join(Rails.root, '/files/png-sample.png')
+      # self.remote_image_url = File.join(Rails.root, record[:image]) if record[:image].present? 
+    end
+    
     def self.search(query)
       __elasticsearch__.search(
         {
