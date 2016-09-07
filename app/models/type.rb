@@ -7,6 +7,9 @@ class Type < ActiveRecord::Base
     rails_admin do
         parent Category 
         list do 
+          field :id do 
+            label "id"
+          end
           field :name do
             label "名称"
           end

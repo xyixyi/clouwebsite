@@ -8,6 +8,9 @@ class Category < ActiveRecord::Base
         navigation_label '产品类别'
         weight -10
         list do
+          field :id do 
+            label "id"
+          end
           field :name do
             label "名称"
           end

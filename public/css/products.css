@@ -70,6 +70,24 @@ body {
     color: #c4261d;
 }
 
+h1 {
+    color: black;
+    font-size: 50px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    float: left;
+    text-align: left;
+    color: black;
+}
+
+.productslogon {
+    top: 400px;
+}
+
 .carousel-outer
 {
     top: 40px;
@@ -209,6 +227,10 @@ h6 {
     display: inline-block;
     background-repeat: no-repeat !important;
     background-position: center center !important;
+}
+
+.productimage {
+    background-position: top center !important;
 }
 
 .categoryimg {
