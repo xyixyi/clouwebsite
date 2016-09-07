@@ -2,8 +2,9 @@ require 'elasticsearch/model'
 class Product < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
+    #may need to change :product to products --yiran
     belongs_to :type, :inverse_of => :product
-    belongs_to :category, :inverse_of => :product
+    belongs_to :category, :inverse_of => :products
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
     def self.searchproduct(params)
