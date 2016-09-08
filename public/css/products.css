@@ -243,7 +243,8 @@ h6 {
 }
 
 .text-field {
-    width: 77%;
+    width: 70%;
+    right: 4%;
     float: right;
     position: relative;
 }

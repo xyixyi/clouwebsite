@@ -17,6 +17,15 @@ body {
     }
 }
 
+.meet {
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+}
+
 .navlinks {
 
     margin: auto;
