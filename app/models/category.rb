@@ -32,6 +32,12 @@ class Category < ActiveRecord::Base
           field :image, :carrierwave do
             label "图片"
           end
+          field :language, :enum do
+            enum do 
+              ['中文', 'English']
+            end
+            label '语言'
+          end
         end
     end
 end

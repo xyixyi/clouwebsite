@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826061931) do
+ActiveRecord::Schema.define(version: 20160908153320) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160826061931) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.string   "language", default: '中文'
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
