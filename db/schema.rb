@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908153320) do
+ActiveRecord::Schema.define(version: 20160910063703) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20160908153320) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
-    t.string   "language", default: '中文'
+    t.string   "language"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -160,6 +160,7 @@ ActiveRecord::Schema.define(version: 20160908153320) do
     t.string   "attachment"
     t.string   "seo_title"
     t.string   "seo_word"
+    t.boolean  "Authorized", default: false
   end
 
   create_table "q_types", force: :cascade do |t|
