@@ -17,6 +17,9 @@ class Category < ActiveRecord::Base
           field :language do
             label "语言"
           end
+          field :Authorized, :carrierwave do
+            label "已审核"
+          end
         end
         edit do 
           field :name do
@@ -34,6 +37,12 @@ class Category < ActiveRecord::Base
               ['中文', 'English']
             end
             label '语言'
+          end
+          field :Authorized do
+            label '审核'
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
           end
         end
     end

@@ -11,17 +11,15 @@ class QandA < ActiveRecord::Base
             field :question do
                 label "问题"
             end
-            # field :answer do
-            #     label "答案"
-            #     pretty_value do
-            #       value.html_safe
-            #     end
-            # end
+
             field :QType_id, :enum do
                 label "问题类别"
                 enum do 
                   QType.all.collect {|p| [p.name, p.id]}
                 end
+            end
+            field :Authorized, :carrierwave do
+                label "已审核"
             end
         end
         edit do
@@ -43,6 +41,12 @@ class QandA < ActiveRecord::Base
             field :attachment, :carrierwave do
                 label "附件"
             end
+            field :Authorized do
+            label '审核'
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
+          end
         end
     end
 end

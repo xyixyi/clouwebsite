@@ -22,12 +22,16 @@ class SocietyRecuritment < ActiveRecord::Base
           field :deadline do
             label "截止日期"
           end
-          field :description do
-            label "简介"
-            pretty_value do
-              value.html_safe
-            end
+          # field :description do
+          #   label "简介"
+          #   pretty_value do
+          #     value.html_safe
+          #   end
+          # end
+          field :Authorized, :carrierwave do
+            label "已审核"
           end
+          
         end
         edit do
           field :title do
@@ -58,9 +62,11 @@ class SocietyRecuritment < ActiveRecord::Base
             label "简介"
             required true
           end
-          field :attachment, :carrierwave do
-            label "上传简历"
-            required true
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+            end
           end
         end
     end

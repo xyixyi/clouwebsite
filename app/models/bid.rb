@@ -30,6 +30,9 @@ class Bid < ActiveRecord::Base
           field :deadline do
             label "截止日期"
           end
+          field :Authorized, :carrierwave do
+            label "已审核"
+          end
         end
         edit do
           field :position do
@@ -50,6 +53,12 @@ class Bid < ActiveRecord::Base
           end
           field :send_email do
             label "发送邮件通知"
+          end
+          field :Authorized do
+            label '审核'
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
           end
         end
     end

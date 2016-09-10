@@ -1,7 +1,7 @@
 <%if current_user.role == 'developer' or current_user.role == 'superadmin'%>
     <div class="checkbox">
         <label style="display: block;">
-        <input name="user[authorized]" type="hidden" value="0"><input value="1" type="checkbox" name="user[authorized]" id="user_authorized">
+        <input name="user[Authorized]" type="hidden" value="0"><input value="1" type="checkbox" name="user[Authorized]" id="user_authorized">
         </label>
     </div>
 <%else%>

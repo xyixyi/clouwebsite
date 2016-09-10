@@ -161,13 +161,9 @@ class Product < ActiveRecord::Base
           
           field :Authorized do
             label '审核'
-            # if bindings[:view]._current_user.role == "developer"
               render do
                 bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
               end
-            # else
-              
-            # end
           end
         
           

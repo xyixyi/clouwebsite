@@ -14,16 +14,7 @@ class PopProduct < ActiveRecord::Base
       field :name do
         label "名称"
       end
-      # field :synopsis do
-      #   label "梗概"
-      #   pretty_value do
-      #     value.html_safe
-      #   end
-      # end
-      # field :detail do
-      #   label "细节"
-      # end
-      
+
       field :category_id, :enum do
         label "产品大类"
         enum do 
@@ -42,9 +33,10 @@ class PopProduct < ActiveRecord::Base
         label "图片"
       end
       
-      field :attachment, :carrierwave do
-        label "附件"
-      end     
+      field :Authorized, :carrierwave do
+        label "已审核"
+      end
+        
     end
     
     edit do 
@@ -91,6 +83,12 @@ class PopProduct < ActiveRecord::Base
       
       field :attachment, :carrierwave do
         label "附件"
+      end
+      field :Authorized do
+        label '审核'
+        render do
+          bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+        end
       end
     end
   end

@@ -22,6 +22,9 @@ class Type < ActiveRecord::Base
               Category.all.collect {|p| [p.name, p.id]}
             end
           end
+          field :Authorized, :carrierwave do
+            label "已审核"
+          end
         end
         edit do
           field :name do
@@ -40,6 +43,12 @@ class Type < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "图片"
+          end
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+            end
           end
         end
     end

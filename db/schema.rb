@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910063703) do
+ActiveRecord::Schema.define(version: 20160910072122) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at", null: false
     t.string   "type"
     t.string   "title"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "bids", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.boolean  "send_email",  default: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "campus_recuritments", force: :cascade do |t|
@@ -44,12 +46,14 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "workPosition"
     t.string   "dipolma"
     t.string   "attachment"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "case_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "categories", force: :cascade do |t|
@@ -59,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "language"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -89,6 +94,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "editor"
     t.string   "editAuthor"
     t.string   "author"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "complains", force: :cascade do |t|
@@ -109,6 +115,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "honors", force: :cascade do |t|
@@ -116,6 +123,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "industry_news", force: :cascade do |t|
@@ -129,6 +137,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "author"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "pop_products", force: :cascade do |t|
@@ -143,6 +152,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at",  null: false
     t.string   "seo_title"
     t.string   "seo_word"
+    t.boolean  "Authorized", default: true
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
@@ -160,13 +170,14 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "attachment"
     t.string   "seo_title"
     t.string   "seo_word"
-    t.boolean  "Authorized", default: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "q_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "qand_as", force: :cascade do |t|
@@ -176,6 +187,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "Authorized", default: true
   end
 
   create_table "service_cases", force: :cascade do |t|
@@ -186,6 +198,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "title"
+    t.boolean  "Authorized", default: true
   end
 
   add_index "service_cases", ["case_type_id"], name: "index_service_cases_on_case_type_id"
@@ -202,6 +215,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.string   "workPosition"
     t.string   "dipolma"
     t.string   "attachment"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "special_news_ones", force: :cascade do |t|
@@ -215,6 +229,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "author"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "special_news_twos", force: :cascade do |t|
@@ -228,6 +243,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.string   "author"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "troubles", force: :cascade do |t|
@@ -247,6 +263,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.boolean  "Authorized", default: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -281,6 +298,7 @@ ActiveRecord::Schema.define(version: 20160910063703) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+    t.boolean  "Authorized", default: true
   end
 
 end
