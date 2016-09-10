@@ -1,8 +1,8 @@
 <%if current_user.role == 'developer' or current_user.role == 'superadmin'%>
     <div class="checkbox">
         <label style="display: block;">
-        
-        <input name="<%=@model_name.underscore%>[Authorized]" type="hidden" value="0"><input value="1" type="checkbox" name="<%=@model_name.underscore%>[Authorized]" id="user_authorized">
+
+        <input name="<%=@model_name.underscore%>[Authorized]" type="hidden" value="0"><input value="1" type="checkbox" name="<%=@model_name.underscore%>[Authorized]" id="<%=@model_name.underscore%>_authorized">
         </label>
     </div>
 <%else%>
