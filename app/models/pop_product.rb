@@ -33,7 +33,7 @@ class PopProduct < ActiveRecord::Base
         label "图片"
       end
       
-      field :Authorized, :carrierwave do
+      field :Authorized do
         label "已审核"
       end
         

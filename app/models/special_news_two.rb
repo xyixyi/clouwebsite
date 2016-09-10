@@ -31,7 +31,7 @@ class SpecialNewsTwo < ActiveRecord::Base
           field :image, :carrierwave do
             label "封面"
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
         end

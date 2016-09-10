@@ -27,7 +27,7 @@ class ServiceCase < ActiveRecord::Base
       field :attachment, :carrierwave do
         label "附件"
       end  
-      field :Authorized, :carrierwave do
+      field :Authorized do
         label "已审核"
       end
     end

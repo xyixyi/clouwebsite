@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20160910072122) do
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
     t.string   "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "type"
     t.string   "title"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized", default: false
   end
 
   create_table "bids", force: :cascade do |t|
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.boolean  "send_email",  default: false
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "campus_recuritments", force: :cascade do |t|
@@ -40,30 +40,30 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "department"
     t.datetime "deadline"
     t.string   "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "number"
     t.string   "workPosition"
     t.string   "dipolma"
     t.string   "attachment"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",   default: false
   end
 
   create_table "case_types", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "Authorized", default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "Authorized", default: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",        null: false
+    t.string   "name",                        null: false
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.string   "language"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -88,13 +88,13 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "content"
     t.string   "video_url"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.datetime "time"
     t.string   "editor"
     t.string   "editAuthor"
     t.string   "author"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "complains", force: :cascade do |t|
@@ -112,18 +112,18 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.datetime "date"
     t.string   "image"
     t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "title"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized", default: false
   end
 
   create_table "honors", force: :cascade do |t|
     t.string   "title"
     t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "Authorized", default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "Authorized", default: false
   end
 
   create_table "industry_news", force: :cascade do |t|
@@ -133,11 +133,11 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.string   "author"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "pop_products", force: :cascade do |t|
@@ -148,36 +148,36 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.integer  "category_id"
     t.string   "image"
     t.string   "attachment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "seo_title"
     t.string   "seo_word"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   add_index "pop_products", ["category_id"], name: "index_pop_products_on_category_id"
   add_index "pop_products", ["type_id"], name: "index_pop_products_on_type_id"
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",        null: false
+    t.string   "name",                        null: false
     t.string   "synopsis"
     t.string   "detail"
     t.integer  "Type_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.integer  "category_id"
     t.string   "attachment"
     t.string   "seo_title"
     t.string   "seo_word"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "q_types", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "Authorized", default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "Authorized", default: false
   end
 
   create_table "qand_as", force: :cascade do |t|
@@ -185,9 +185,9 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "question"
     t.string   "answer"
     t.string   "attachment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "Authorized", default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "Authorized", default: false
   end
 
   create_table "service_cases", force: :cascade do |t|
@@ -195,10 +195,10 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "image"
     t.string   "text"
     t.string   "attachment"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "title"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",   default: false
   end
 
   add_index "service_cases", ["case_type_id"], name: "index_service_cases_on_case_type_id"
@@ -209,13 +209,13 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "department"
     t.datetime "deadline"
     t.string   "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "number"
     t.string   "workPosition"
     t.string   "dipolma"
     t.string   "attachment"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",   default: false
   end
 
   create_table "special_news_ones", force: :cascade do |t|
@@ -225,11 +225,11 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.string   "author"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "special_news_twos", force: :cascade do |t|
@@ -239,11 +239,11 @@ ActiveRecord::Schema.define(version: 20160910072122) do
     t.string   "video_url"
     t.datetime "time"
     t.string   "editor"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.string   "author"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "troubles", force: :cascade do |t|
@@ -257,13 +257,13 @@ ActiveRecord::Schema.define(version: 20160910072122) do
   end
 
   create_table "types", force: :cascade do |t|
-    t.string   "name",        null: false
+    t.string   "name",                        null: false
     t.string   "description"
     t.integer  "Category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized",  default: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -295,10 +295,10 @@ ActiveRecord::Schema.define(version: 20160910072122) do
   create_table "year_reports", force: :cascade do |t|
     t.datetime "date"
     t.string   "attachment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "title"
-    t.boolean  "Authorized", default: true
+    t.boolean  "Authorized", default: false
   end
 
 end

@@ -28,7 +28,7 @@ class SocietyRecuritment < ActiveRecord::Base
           #     value.html_safe
           #   end
           # end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
           

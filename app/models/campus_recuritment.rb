@@ -22,7 +22,7 @@ class CampusRecuritment < ActiveRecord::Base
           field :deadline do
             label "截止日期"
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
         end

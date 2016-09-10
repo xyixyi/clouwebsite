@@ -8,7 +8,7 @@ class Honor < ActiveRecord::Base
             field :title do
                 label "标题"
             end
-            field :Authorized, :carrierwave do
+            field :Authorized do
                 label "已审核"
             end
         end

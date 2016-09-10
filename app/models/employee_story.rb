@@ -15,7 +15,7 @@ class EmployeeStory < ActiveRecord::Base
           field :date do
             label "时间"
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
         end

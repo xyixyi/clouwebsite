@@ -22,7 +22,7 @@ class Type < ActiveRecord::Base
               Category.all.collect {|p| [p.name, p.id]}
             end
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
         end

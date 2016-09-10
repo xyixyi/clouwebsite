@@ -12,7 +12,7 @@ class Announcement < ActiveRecord::Base
           field :type do
             label "公告类型"
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end  
           
