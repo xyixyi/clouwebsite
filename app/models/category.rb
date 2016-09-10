@@ -17,7 +17,7 @@ class Category < ActiveRecord::Base
           field :language do
             label "语言"
           end
-          field :Authorized, :carrierwave do
+          field :Authorized do
             label "已审核"
           end
         end
