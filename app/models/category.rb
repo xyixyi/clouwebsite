@@ -14,11 +14,8 @@ class Category < ActiveRecord::Base
           field :name do
             label "名称"
           end
-          field :description do
-            label "简介"
-            pretty_value do
-              value.html_safe
-            end
+          field :language do
+            label "语言"
           end
         end
         edit do 
