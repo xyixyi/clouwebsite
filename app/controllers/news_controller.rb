@@ -33,10 +33,10 @@ class NewsController < ApplicationController
 
 
   def showindustrynews
-    @news = IndustryNews.find(params[:id])
+    @news = IndustryNews.where(:Authorized => true).find(params[:id])
   end
   
   def showcompanynews
-    @news = CompanyNews.find(params[:id])
+    @news = CompanyNews.where(:Authorized => true).find(params[:id])
   end
 end

@@ -4,7 +4,7 @@ class EmployeeStoriesController < ApplicationController
   # GET /employee_stories
   # GET /employee_stories.json
   def index
-    @employee_stories = EmployeeStory.all.reverse
+    @employee_stories = EmployeeStory.where(:Authorized => true).reverse
   end
 
   # GET /employee_stories/1

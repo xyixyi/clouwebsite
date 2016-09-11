@@ -1,7 +1,7 @@
 class SpecialNewsTwoController < ApplicationController
     
     def index
-        @news = SpecialNewsTwo.all
+        @news = SpecialNewsTwo.where(:Authorized => true)
     end
     
     def show

@@ -27,3 +27,8 @@ Product.all.each do |product|
         product.save!
     end
 end
+CompanyNews.all.each do |news|
+    if news.Authorized != true
+        news.Authorized = true
+    end
+end
