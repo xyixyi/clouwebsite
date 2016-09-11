@@ -27,6 +27,7 @@ class Product < ActiveRecord::Base
     rails_admin do
         navigation_label '产品类别'
         parent Type
+        
         list do 
           field :name do
             label "名称"
