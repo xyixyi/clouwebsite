@@ -4,11 +4,11 @@ class CaseTypesController < ApplicationController
   # GET /case_types
   # GET /case_types.json
   def index
-    @case_types = CaseType.all
+    @case_types = CaseType.where(:Authorized => true)
     if @case_types
       @first_type = @case_types[0]
       if @first_type
-        @cases = ServiceCase.where(:case_type_id => @first_type.id).paginate :page => params[:page],:per_page => 10
+        @cases = ServiceCase.where(:case_type_id => @first_type.id, :Authorized => true).paginate :page => params[:page],:per_page => 10
       end
     end
       
@@ -17,10 +17,10 @@ class CaseTypesController < ApplicationController
   # GET /case_types/1
   # GET /case_types/1.json
   def show
-    @case_types = CaseType.all
+    @case_types = CaseType.where(:Authorized => true)
     @type = CaseType.find(params[:id])
     if @type
-      @cases = ServiceCase.where(:case_type_id => @type.id).paginate :page => params[:page],:per_page => 10
+      @cases = ServiceCase.where(:case_type_id => @type.id, :Authorized => true).paginate :page => params[:page],:per_page => 10
     end
   end
 

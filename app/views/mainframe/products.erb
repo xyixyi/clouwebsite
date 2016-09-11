@@ -6,6 +6,10 @@
 
 
 <div class="productbanner" id="productbanner" style="background-image: url('../img/product/productbanner.jpg') !important;">
+  <div class="productslogon contain">
+    <h1>产品</h1>
+    <h2>以最优秀的品质，最卓越的性能，<br>为千万家企业和客户带来安全可靠的能源服务。</h2>
+  </div>
   
 </div>
 <div class="starproductcontainer">
@@ -89,11 +93,12 @@
     <!--load db 的category into cell 有几个load 几个 需要图片和名字，-->
     
     <% @categories.each do |category| %>
-      
-      <div class="cell">
-        <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
-        <%= link_to category.name, category_path(category.id) %>
-      </div>
+      <%if category.language == '' or category.language == '中文'%>
+        <div class="cell">
+          <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
+          <%= link_to category.name, category_path(category.id) %>
+        </div>
+      <%end%>
     <%end%>
 </div>
 

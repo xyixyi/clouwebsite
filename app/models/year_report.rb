@@ -9,6 +9,9 @@ class YearReport < ActiveRecord::Base
           field :date do
             label "时间"
           end
+          field :Authorized do
+            label "已审核"
+          end
         end
         
         edit do
@@ -20,7 +23,13 @@ class YearReport < ActiveRecord::Base
             label "时间"
           end
           field :attachment, :carrierwave do
-            label "上传年表"
+            label "上传年报"
+          end
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :modelname => bindings[:object]}
+            end
           end
         end
     end

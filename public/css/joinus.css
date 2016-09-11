@@ -11,21 +11,23 @@ body {
 }
 
 @media (max-width: 1500px) {
-    .navlinks {
-        width: 70% !important;
-    }
-    
-    .joinusslogan {
-        width: 70% !important;
-    }
-    
+
     .recuritments {
         width: 70% !important;
     }
 }
 
+.meet {
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    overflow: hidden;
+}
+
 .navlinks {
-    width: 60%;
+
     margin: auto;
     
 }
@@ -50,10 +52,10 @@ h1 {
     color: white;
 }
 
-.joinusbanner {
+.joinusbanner,.campusbanner,.societybanner {
     position: relative;
     top: 90px;
-    height: 810px;
+    height: 1300px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -74,23 +76,26 @@ h1 {
 
 h2 {
     margin: 0;
+    position: relative;
+    /*top: 160px;*/
     font-size: 50px;
-    margin-bottom: 20px;
-    color: white;
+    margin-bottom: 50px;
+    color: #313131;
 }
 
 .joinusslogan {
-    text-align: left;
+    text-align: center;
     position: relative;
-    top: 400px;
+    top: 160px;
     margin: auto;
     width: 60%;
 }
 
 h3 {
     font-size: 30px;
+    position: relative;
     margin-top: 20px;
-    color: white;
+    color: #313131;
     margin-bottom: 50px;
 }
 
@@ -129,11 +134,11 @@ h3 {
     top: -43px;
 }
 
-.ourstoryreal {
-    position: relative;
-    text-align: center;
-    margin: auto;
-    background-color: transparent;
+.ourstory {
+    color: #c4261d;
+    font-size: 30px;
+    font-weight: lighter;
+    /*margin-top: 50px;*/
 }
 
 .recuritments {
@@ -172,7 +177,7 @@ h3 {
 .campus {
     height: 415px;
     /*width: 490px;*/
-    width: 42.5%;
+    /*width: 42.5%;*/
     float: right;
     position: relative;
 }

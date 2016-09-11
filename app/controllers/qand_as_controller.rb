@@ -76,8 +76,8 @@ class QandAsController < ApplicationController
       #dynamic load product belone to type
     def find_questions
       if params[:q_type_id]
-        @current_type = QType.find(params[:q_type_id])
-        @qand_as = QandA.where(:QType_id => params[:q_type_id])
+        @current_type = QType.where(:Authorized => true).find(params[:q_type_id])
+        @qand_as = QandA.where(:QType_id => params[:q_type_id], :Authorized => true)
       else
         # Error or @lessons = Lesson.all
         @qand_as = nil

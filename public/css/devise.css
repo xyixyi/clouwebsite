@@ -134,8 +134,8 @@ h1 {
 
 .popup_logo{
     position: relative;
-    width:192px;
-    height:28px;
+    width:180px;
+    height:60px;
 }
 
 .popup_sign_up:hover,.popup_sign_up:active {

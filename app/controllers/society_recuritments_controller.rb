@@ -5,7 +5,7 @@ class SocietyRecuritmentsController < ApplicationController
   # GET /society_recuritments.json
   def index
     # @society_recuritments = SocietyRecuritment.all
-    @society_recuritments = SocietyRecuritment.where("DATE(deadline) > DATE(?)", Time.now).order(created_at: :desc)
+    @society_recuritments = SocietyRecuritment.where(:Authorized => true).where("DATE(deadline) > DATE(?)", Time.now).order(created_at: :desc)
 
   end
 

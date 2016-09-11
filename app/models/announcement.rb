@@ -12,9 +12,10 @@ class Announcement < ActiveRecord::Base
           field :type do
             label "公告类型"
           end
-          field :link do
-            label "链接"
-          end
+          field :Authorized do
+            label "已审核"
+          end  
+          
         end
         
         edit do
@@ -36,6 +37,12 @@ class Announcement < ActiveRecord::Base
           field :link do
             label "链接"
             required true
+          end
+          field :Authorized do
+            label '审核'
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
           end
         end
     end

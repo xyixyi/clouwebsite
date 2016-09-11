@@ -7,6 +7,9 @@ class Type < ActiveRecord::Base
     rails_admin do
         parent Category 
         list do 
+          field :id do 
+            label "id"
+          end
           field :name do
             label "名称"
           end
@@ -18,6 +21,9 @@ class Type < ActiveRecord::Base
             enum do
               Category.all.collect {|p| [p.name, p.id]}
             end
+          end
+          field :Authorized do
+            label "已审核"
           end
         end
         edit do
@@ -37,6 +43,12 @@ class Type < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "图片"
+          end
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+            end
           end
         end
     end

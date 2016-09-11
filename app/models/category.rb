@@ -8,14 +8,17 @@ class Category < ActiveRecord::Base
         navigation_label '产品类别'
         weight -10
         list do
+          field :id do 
+            label "id"
+          end
           field :name do
             label "名称"
           end
-          field :description do
-            label "简介"
-            pretty_value do
-              value.html_safe
-            end
+          field :language do
+            label "语言"
+          end
+          field :Authorized do
+            label "已审核"
           end
         end
         edit do 
@@ -28,6 +31,18 @@ class Category < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "图片"
+          end
+          field :language, :enum do
+            enum do 
+              ['中文', 'English']
+            end
+            label '语言'
+          end
+          field :Authorized do
+            label '审核'
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
           end
         end
     end

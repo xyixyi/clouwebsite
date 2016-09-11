@@ -16,12 +16,15 @@ class SpecialNewsOne < ActiveRecord::Base
           field :author do
             label "作者"
           end
-          field :description do
-            label "梗概"
-          end
+          # field :description do
+          #   label "梗概"
+          # end
           
           field :image, :carrierwave do
             label "封面"
+          end
+          field :Authorized do
+            label "已审核"
           end
         end
         edit do 
@@ -46,6 +49,12 @@ class SpecialNewsOne < ActiveRecord::Base
           end
           field :image, :carrierwave do
             label "封面"
+          end
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+            end
           end
         end
     end

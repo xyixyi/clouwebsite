@@ -14,9 +14,9 @@ class MainframeController < ApplicationController
   end
   
   def products
-    @products = Product.all
-    @popproducts = PopProduct.limit(4).order('id desc')
-    @categories = Category.all
+    @products = Product.where(:Authorized => true)
+    @popproducts = PopProduct.where(:Authorized => true).limit(4).order('id desc')
+    @categories = Category.where(:Authorized => true)
   end
   
   def sitemap
@@ -27,11 +27,11 @@ class MainframeController < ApplicationController
     # @industry_news = IndustryNews.all.reverse
     # @company_news = CompanyNews.all.reverse
 
-    @company_news = CompanyNews.order("created_at desc").paginate :page => params[:page],:per_page => 6
+    @company_news = CompanyNews.where(:Authorized => true).order("created_at desc").paginate :page => params[:page],:per_page => 6
   end
   
   def industrynews
-     @industry_news = IndustryNews.order("created_at desc").paginate :page => params[:page], :per_page => 6
+     @industry_news = IndustryNews.where(:Authorized => true).order("created_at desc").paginate :page => params[:page], :per_page => 6
   end
 
   def new

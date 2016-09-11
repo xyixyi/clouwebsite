@@ -62,17 +62,22 @@
   <!--not tested Yiran -->
     <p class="welcomewords">欢迎您，</p>
     <p class="welcomewords wwords"><%= current_user.realName%>&nbsp;</p>
+    
+    
+    <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
+    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
     <%if current_user.role != "user"%>
       <%= link_to "登入后台", '/admin', class: "sign_out" %>
     <%end%>
-    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
-    <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
   <% elsif current_user and current_user.authorized == false %>
     <p class="welcomewords">欢迎您，</p>
     <p class="welcomewords"><%= current_user.realName%></p>
     <p class="welcomewords wwords">，您是未授权用户</p>
-    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
     <%= link_to "登出", destroy_user_session_path(:authenticity_token => form_authenticity_token()), method: :delete, class: "sign_out" %>
+    <%= link_to "修改密码", edit_user_registration_path, class: "sign_out" %>
+    <%if current_user.role != "user"%>
+      <%= link_to "登入后台", '/admin', class: "sign_out" %>
+    <%end%>
   <% else %> 
     <p class="welcomewords">
     欢迎来到深圳市科陆电子科技有限公司，请
@@ -90,7 +95,7 @@
 <nav id="navbar" class="navbar">
   <div class = "logo">
         <a href="/">
-            <img border="0" alt="logo" src="/img/homepage/logo.png" class="logoImg" width="192" height="28">
+            <img border="0" alt="logo" src="/img/homepage/logo.png" class="logoImg" width="180" height="60">
             <!--<div id="theImage" class="theImage"></div>-->
         </a>
   </div>

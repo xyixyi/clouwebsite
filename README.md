@@ -74,7 +74,7 @@ http://stackoverflow.com/questions/15072846/server-is-already-running-in-rails
 deploy
 http://www.jianshu.com/p/fbc7d7dca295
 
-
+```sh
 cap with db:
 cap production rails:rake:log:clear
 cap production rails:rake:tmp:clear
@@ -84,3 +84,10 @@ cap production rails:rake:db:setup
 cap production rails:rake:db:seed
 cap production rails:rake:db:migrate
 cap production rails:rake:db:rollback
+```
+
+```sh
+
+不支持 bmp格式
+```
+
