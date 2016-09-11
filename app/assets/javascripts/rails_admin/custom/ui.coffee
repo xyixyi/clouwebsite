@@ -20,6 +20,21 @@ $(document).ready ->
           value: value[0]
           text: value[1]
         )
+        
+  
+  
+  # $(document).on 'click', '#authorized', (event) ->
+  #   checkbox = document.getElementById('authorized')
+  #   #
+  #   alert checkbox.value
+  #   #是否被选中
+  #   if checkbox.checked
+  #     #选中了
+  #     checkbox.value = 1
+  #   else
+  #     #没选中
+  #     checkbox.value = 0
+  #   return
 
   $('#pop_product_type_id').empty()
   $('#pop_product_type_id').append "<option value='' selected='selected'></option>"
