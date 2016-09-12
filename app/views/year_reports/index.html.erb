@@ -1,6 +1,6 @@
 <!--year_reports#index-->
 <link rel="stylesheet" type="text/css" href="/css/recuritments.css">
-<div class="mainfield container">
+<div class="mainfield contain">
   
   <h5>
     年报
@@ -9,7 +9,7 @@
 <table class="tg">
   <tr>
     <th class="tg-baqh" style =" width:100px;">时间</th>
-    <th class="tg-baqh">公告标题</th>
+    <th class="tg-baqh">标题</th>
 
   </tr>
   <% grey = 1%>
@@ -32,5 +32,5 @@
    
   <%end%>
 </table>
-  <%= will_paginate @announcements,:previous_label => '上一页',:next_label=> '下一页' %>
+  <%= will_paginate @year_reports,:previous_label => '上一页',:next_label=> '下一页' %>
 </div>
