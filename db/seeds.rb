@@ -30,5 +30,6 @@ end
 CompanyNews.all.each do |news|
     if news.Authorized != true
         news.Authorized = true
+        news.save!
     end
 end
