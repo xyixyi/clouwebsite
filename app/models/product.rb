@@ -135,9 +135,8 @@ class Product < ActiveRecord::Base
             required true
             render do
               # byebug
-              bindings[:view].render :partial => "rails_admin/main/add_type_base_on_category", :locals => {:select_type => bindings[:object], :form => bindings[:form]}
+              bindings[:view].render :partial => "/rails_admin/main/add_type_base_on_category", :locals => {:select_type => bindings[:object], :form => bindings[:form]}
             end
-
           end
           
           field :seo_title do
@@ -160,7 +159,7 @@ class Product < ActiveRecord::Base
           field :Authorized do
             label '审核'
               render do
-                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+                bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
               end
           end
         
