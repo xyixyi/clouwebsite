@@ -3,6 +3,6 @@
 <select id="product_Type_id" name="product[Type_id]" class='form-control' style='width:200px;'>
 
     <%if select_type.Type_id %>
-        <option><%= Type.find(select_type.Type_id).name %></option>
+        <option value=<%=select_type.Type_id%>><%= Type.find(select_type.Type_id).name %></option>
     <% end %>
 </select>

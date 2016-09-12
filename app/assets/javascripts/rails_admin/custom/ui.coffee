@@ -8,6 +8,7 @@ $(document).ready ->
     $('#user_authority_field').css('display', 'block')
   
   $('#product_Type_id').empty()
+  window.alert 'aaaaaa'
   $('#product_Type_id').append "<option value='' selected='selected'></option>"
   $('#product_Type_id').change()
   $(document).on 'change', '#product_category_id', (event) ->
@@ -21,20 +22,6 @@ $(document).ready ->
           text: value[1]
         )
         
-  
-  
-  # $(document).on 'click', '#authorized', (event) ->
-  #   checkbox = document.getElementById('authorized')
-  #   #
-  #   alert checkbox.value
-  #   #是否被选中
-  #   if checkbox.checked
-  #     #选中了
-  #     checkbox.value = 1
-  #   else
-  #     #没选中
-  #     checkbox.value = 0
-  #   return
 
   $('#pop_product_type_id').empty()
   $('#pop_product_type_id').append "<option value='' selected='selected'></option>"

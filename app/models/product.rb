@@ -132,11 +132,13 @@ class Product < ActiveRecord::Base
           
           field :Type_id do
             label "产品小类"
-            required true
+            # required true
             render do
               # byebug
               bindings[:view].render :partial => "/rails_admin/main/add_type_base_on_category", :locals => {:select_type => bindings[:object], :form => bindings[:form]}
             end
+            # partial :add_type_base_on_category
+
           end
           
           field :seo_title do

@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
           label "角色"
           required true
           enum do
-            byebug
+            
             if bindings[:view]._current_user.role == "developer"
               ['user', 'admin', 'superadmin', 'developer']
             else
