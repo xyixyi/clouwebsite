@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
     #may need to change :product to products --yiran
-    belongs_to :type, :inverse_of => :products
+    belongs_to :type, :inverse_of => :product
     belongs_to :category, :inverse_of => :products
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
@@ -26,6 +26,7 @@ class Product < ActiveRecord::Base
           query: {
             multi_match: {
               query: query,
+              fields: ['name']
             }
           }
         }
@@ -35,7 +36,6 @@ class Product < ActiveRecord::Base
     rails_admin do
         navigation_label '产品类别'
         parent Type
-        
         list do 
           field :name do
             label "名称"
@@ -133,7 +133,6 @@ class Product < ActiveRecord::Base
           field :Type_id do
             label "产品小类"
             required true
-            
             render do
               # byebug
               bindings[:view].render :partial => "rails_admin/main/add_type_base_on_category", :locals => {:select_type => bindings[:object], :form => bindings[:form]}
@@ -158,20 +157,14 @@ class Product < ActiveRecord::Base
           end
           
           
-          # field :Authorized do
-            # byebug
-            # label '审核'
-              
-              # render do
-              #   bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self}
-              # end
-          # end
           field :Authorized do
             label '审核'
-            render do
-              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
-            end
+              render do
+                bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              end
           end
+        
+          
         end
     end
 end
