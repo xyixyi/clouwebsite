@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
     mount_uploader :attachment, AttachmentUploader
     def self.searchproduct(params)
       products = all # for not existing params args
-      products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
+      products = products.where(:Authorized => true).where("name like ?", "%#{params[:search]}%") if params[:search]
       products
     end
     

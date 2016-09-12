@@ -20,7 +20,7 @@ class MainframeController < ApplicationController
   end
   
   def sitemap
-    @categories = Category.all
+    @categories = Category.where(:Authorized => true)
   end
   
   def news
