@@ -11,13 +11,14 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    # @first_type = @category.types[0] if @category.types != nil
-    @category.types.each do |type|
-      if type.Authorized == true then
-        @first_type = type
-        break
-      end
-    end
+    @types = @category.types.where(:Authorized => true)
+    @first_type = @types[0] if @types != nil
+    # @category.types.each do |type|
+    #   if type.Authorized == true then
+    #     @first_type = type
+    #     break
+    #   end
+    # end
     if @first_type != nil
       @products = @first_type.products.where(:Authorized => true).paginate :page => params[:page],:per_page => 6
     end
