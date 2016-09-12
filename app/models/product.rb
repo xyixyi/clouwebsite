@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
     #may need to change :product to products --yiran
-    belongs_to :type, :inverse_of => :product
+    belongs_to :type, :inverse_of => :products
     belongs_to :category, :inverse_of => :products
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
@@ -158,13 +158,19 @@ class Product < ActiveRecord::Base
           end
           
           
-          field :Authorized do
+          # field :Authorized do
             # byebug
-            label '审核'
+            # label '审核'
               
               # render do
               #   bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self}
               # end
+          # end
+          field :Authorized do
+            label '审核'
+            render do
+              bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+            end
           end
         end
     end
