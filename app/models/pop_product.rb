@@ -54,20 +54,17 @@ class PopProduct < ActiveRecord::Base
         label "细节"
       end
       
-      field :category_id, :enum do
-        label "产品大类"
-        enum do 
-          Category.all.collect {|p| [p.name, p.id]}
-        end
-      end
+      # field :category_id, :enum do
+      #   label "产品大类"
+      #   enum do 
+      #     Category.all.collect {|p| [p.name, p.id]}
+      #   end
+      # end
       
-      field :type_id do
-        label "产品小类"
-        partial :add_association_on_popProduct
-        # enum do
-        #   ::Type.all.collect {|p| [p.name, p.id]}
-        # end
-      end
+      # field :type_id do
+      #   label "产品小类"
+      #   partial :add_association_on_popProduct
+      # end
       
       field :seo_title do
         label "SEO 标题"

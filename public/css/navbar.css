@@ -185,6 +185,7 @@ hr {
     margin: 0;
     float: left;
     display: inline-block;
+    overflow: visible;
     /*top: 5.5px;*/
 }
 
@@ -368,6 +369,12 @@ li {
 
     .logo {
         left: 3.5% !important;
+    }
+    .footer_container ul {
+        padding-left: 0 !important;
+    }
+    .footer_container li {
+        margin-right: 20px !important;
     }
     
 }
