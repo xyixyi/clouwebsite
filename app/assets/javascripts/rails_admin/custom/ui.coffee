@@ -8,7 +8,6 @@ $(document).ready ->
     $('#user_authority_field').css('display', 'block')
   
   $('#product_Type_id').empty()
-  window.alert 'aaaaaa'
   $('#product_Type_id').append "<option value='' selected='selected'></option>"
   $('#product_Type_id').change()
   $(document).on 'change', '#product_category_id', (event) ->
