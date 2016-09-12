@@ -26,7 +26,6 @@ class Product < ActiveRecord::Base
           query: {
             multi_match: {
               query: query,
-              fields: ['name']
             }
           }
         }
