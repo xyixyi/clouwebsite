@@ -5,7 +5,11 @@
         <!--</label>-->
         <label style="display: block;">
             <input name="<%=@model_name.underscore%>[Authorized]" type="hidden" value="0">
-            <input value="1" type="checkbox" checked="checked" name="<%=@model_name.underscore%>[Authorized]" id="authorized">
+            <%if select_product.Authorized%>
+                <input value="1" type="checkbox" checked="checked" name="<%=@model_name.underscore%>[Authorized]" id="authorized">
+            <%else%>
+                <input value="1" type="checkbox" name="<%=@model_name.underscore%>[Authorized]" id="authorized">
+            <%end%>
         </label>
     </div>
 <%else%>
