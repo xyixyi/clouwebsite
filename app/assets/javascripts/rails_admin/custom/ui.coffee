@@ -2,7 +2,7 @@
 $ = jQuery
 $(document).ready ->
   
-  if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin'
+  if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin' or $('#user_role').val() == 'developer'
     $('#user_authority_field').css('display', 'none')
   else
     $('#user_authority_field').css('display', 'block')
@@ -20,7 +20,13 @@ $(document).ready ->
           value: value[0]
           text: value[1]
         )
-        
+  document.addEventListener 'DOMSubtreeModified', ->
+    if $('#user_role').val() == 'user' or $('#user_role').val() == 'developer' or $('#user_role').val() == 'superadmin' 
+      # window.alert "aaa"
+      
+      $('#user_authority_field').css('display', 'none')
+    else
+      $('#user_authority_field').css('display', 'block')
 
   $('#pop_product_type_id').empty()
   $('#pop_product_type_id').append "<option value='' selected='selected'></option>"
@@ -41,7 +47,7 @@ $(document).ready ->
         )
         
   $(document).on 'change', '#user_role', (event) ->
-    if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin'
+    if $('#user_role').val() == 'user' or $('#user_role').val() == 'superadmin' or $('#user_role').val() == 'developer'
       $('#user_authority_field').css('display', 'none')
     else
       $('#user_authority_field').css('display', 'block')
