@@ -152,7 +152,8 @@ h1 {
     overflow: hidden;
 }
 
-.indexnews.current {
+
+.indexnews.current,.logo-field.current {
     moz-transition-property: all;
     -o-transition-property: all;
     -webkit-transition-property: all;
@@ -172,7 +173,7 @@ h1 {
     opacity: 1;
 }
 
-.indexnews.prev {
+.indexnews.prev, .logo-field.prev {
     display: none;
     -moz-transition-property: all;
     -o-transition-property: all;
@@ -188,7 +189,7 @@ h1 {
     transform: translateX(-220%);
 }
 
-.indexnews.next {
+.indexnews.next, .logo-field.next {
     display: none;
     -moz-transition-property: all;
     -o-transition-property: all;
@@ -511,12 +512,44 @@ h15 {
     cursor:pointer;
 }
 
+.logobleft {
+    float: left;
+    background: url(../img/homepage/newsarrowleft.png) no-repeat 6px center;
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 0px;
+    cursor:pointer;
+    position: relative;
+    top: 20px;
+    z-index: 9999;
+}
+
+.logobright {
+    float: right;
+    background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 0px;
+    cursor:pointer;
+    position: relative;
+    top: -40px;
+    z-index: 9999;
+}
+
 .newsbright:active {
     background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
 }
 
 .newsbleft:active {
     background: url(../img/homepage/newsarrowleft.png) no-repeat 6px center;
+}
+
+.logocontainer {
+    position: relative;
+    display: inline-block;
+    top: 100px;
 }
 
 .logos {
@@ -533,9 +566,7 @@ h15 {
     background-color: transparent;
     position: relative;
     /*width: 1300px;*/
-    height: 70px;
     margin: auto;
-    top: 100px;
 }
 
 @media (max-width: 1000px) {
@@ -545,17 +576,21 @@ h15 {
 }
 
 .child {
-    width: 15%;
-    height: 70px;
+    width: 200px;
+    height: 60px;
     margin: 0 31px;
 }
 
 .nextlogo {
-    background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;
-    float: right;
-    top: 90px;
-    right: 10%;
-    position: relative;
+    /*background: url(../img/homepage/newsarrowright.png) no-repeat 6px center;*/
+    /*float: right;*/
+    /*top: 90px;*/
+    /*right: 10%;*/
+    /*position: relative;*/
+}
+
+.currentlogo {
+    
 }
 
 .prevlogo {

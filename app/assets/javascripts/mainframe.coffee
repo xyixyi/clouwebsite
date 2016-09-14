@@ -9,6 +9,33 @@ $(document).ready ->
     $(document).on 'click', '.close-navbar', (event) ->
         $('.mobile-links').removeClass 'show-menu'
     
+    $(document).on 'click', '#logosprev', (event) ->
+        $inView = $('.logo-field.current');
+        $('.logo-field.current').prev().removeClass('prev').addClass('current');
+        $inView.removeClass('current').addClass('next');
+        stepNumber=1;
+        if stepNumber == 1 
+              $(this).addClass('disabled');
+              $('#logosnext').removeClass('disabled');
+        
+        if stepNumber == 2 
+            $(this).removeClass('disabled');
+            $('#logosnext').addClass('disabled');
+    
+    #mainfram controll the logo div switch page to next or prev
+    $(document).on 'click', '#logosnext', (event) ->
+        $inView = $('.logo-field.current');
+        $('.logo-field.current').next().removeClass('next').addClass('current');
+        $inView.removeClass('current').addClass('prev');
+        stepNumber=2;
+        if stepNumber == 1 
+              $(this).addClass('disabled');
+              $('#logosprev').removeClass('disabled');
+        
+        if stepNumber == 2 
+            $(this).addClass('disabled');
+            $('#logosprev').removeClass('disabled');
+    
     
     $(document).on 'click', '#newsprev', (event) ->
         $inView = $('.indexnews.current');
