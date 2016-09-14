@@ -576,9 +576,9 @@ h15 {
 }
 
 .child {
-    width: 200px;
-    height: 60px;
-    margin: 0 31px;
+    width: 19%;
+    /*height: 60px;*/
+    margin: 0 2%;
 }
 
 .nextlogo {
