@@ -175,8 +175,8 @@ h2,h3 {
     opacity: 0;
     -webkit-transform: translate3d(0,10px,0);
     transform: translate3d(0,10px,0);
-    -webkit-transition: opacity .35s,-webkit-transform .35s;
-    transition: opacity .35s,transform .35s;
+    -webkit-transition: opacity .55s,-webkit-transform .55s;
+    transition: opacity .55s,transform .55s;
     color: #fff;
     /*font-family: Arial,Helvetica,sans-serif;*/
     position: relative;

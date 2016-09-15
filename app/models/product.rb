@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
     mount_uploader :attachment, AttachmentUploader
     def self.searchproduct(params)
       products = all # for not existing params args
-      products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
+      products = products.where(:Authorized => true).where("name like ?", "%#{params[:search]}%") if params[:search]
       products
     end
     
@@ -137,6 +137,8 @@ class Product < ActiveRecord::Base
               # byebug
               bindings[:view].render :partial => "/rails_admin/main/add_type_base_on_category", :locals => {:select_type => bindings[:object], :form => bindings[:form]}
             end
+            # partial :add_type_base_on_category
+
           end
           
           field :seo_title do
@@ -158,9 +160,9 @@ class Product < ActiveRecord::Base
           
           field :Authorized do
             label '审核'
-              # render do
-              #   bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
-              # end
+              render do
+                bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_product => bindings[:object]}
+              end
           end
         
           

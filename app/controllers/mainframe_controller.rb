@@ -8,9 +8,9 @@ class MainframeController < ApplicationController
   end
 
   def index
-    @products = Product.all
-    @popproducts = PopProduct.limit(4).order('id desc')
-    @company_news = CompanyNews.all.order("created_at desc").limit(8)
+    # @products = Product.all
+    @popproducts = PopProduct.where(:Authorized => true).limit(4).order('id desc')
+    @company_news = CompanyNews.where(:Authorized => true).order("created_at desc").limit(8)
   end
   
   def products
@@ -20,7 +20,7 @@ class MainframeController < ApplicationController
   end
   
   def sitemap
-    @categories = Category.all
+    @categories = Category.where(:Authorized => true)
   end
   
   def news

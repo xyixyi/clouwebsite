@@ -4,7 +4,7 @@ class YearReportsController < ApplicationController
   # GET /year_reports
   # GET /year_reports.json
   def index
-    @year_reports = YearReport.all
+    @year_reports = YearReport.paginate :page => params[:page],:per_page => 30
   end
 
   # GET /year_reports/1

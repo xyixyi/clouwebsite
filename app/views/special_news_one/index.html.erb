@@ -13,53 +13,22 @@
     </div>
     <hr style="margin-bottom: 50px;">
     
-    <div class="specialnews" style='background-image: url("../img/specialnews/pic.png")'>
-        <div class="feature-gradient">
-            
+    <%@news.each do |news|%>
+        <div class="specialnews" style='background-image: url("<%= news.image%>");'>
+            <div class="feature-gradient">
+                
+            </div>
+            <!--<a href="#" class="specialnewslink"></a>-->
+            <%= link_to "", special_news_one_path(:id => 1), class:"specialnewslink" if SpecialNewsOne.count >= 1 %>
+            <div class="figcaption">
+                <h2><%= news.title%></h2>
+                <p class="newscontentp"><%= news.description%></p>
+    
+            </div>
         </div>
-        <!--<a href="#" class="specialnewslink"></a>-->
-        <%= link_to "", special_news_one_path(:id => 1), class:"specialnewslink" if SpecialNewsOne.count >= 1 %>
-        <div class="figcaption">
-            <h2>盛会开启 千余国内外展商齐聚深圳</h2>
-            <p class="newscontentp"></p>
+    <%end%>
+    
 
-        </div>
-    </div>
-    
-    <div class="specialnews" style='background-image: url("../img/specialnews/pic.png")'>
-        <div class="feature-gradient">
-            
-        </div>
-
-        
-        <%= link_to "", special_news_one_path(:id => 2), class:"specialnewslink" if SpecialNewsOne.count >= 2 %>
-        <div class="figcaption">
-            <h2>盛会开启 千余国内外展商齐聚深圳</h2>
-            <p class="newscontentp"></p>
-        </div>
-    </div>
-    
-    <div class="specialnews" style='background-image: url("../img/specialnews/pic.png")'>
-        <div class="feature-gradient">
-            
-        </div>
-        <%= link_to "", special_news_one_path(:id => 3), class:"specialnewslink" if SpecialNewsOne.count >= 3 %>
-        <div class="figcaption">
-            <h2>盛会开启 千余国内外展商齐聚深圳</h2>
-            <p class="newscontentp"></p>
-        </div>
-    </div>
-    
-    <div class="specialnews" style='background-image: url("../img/specialnews/pic.png")'>
-        <div class="feature-gradient">
-            
-        </div>
-        <%= link_to "", special_news_one_path(:id => 4), class:"specialnewslink" if SpecialNewsOne.count >= 4 %>
-        <div class="figcaption">
-            <h2>盛会开启 千余国内外展商齐聚深圳</h2>
-            <p class="newscontentp"></p>
-        </div>
-    </div>
     
     <div class="footnews">
         <h1>“2016第六届中国国际储能大会” 科陆斩获三项大奖</h1>
