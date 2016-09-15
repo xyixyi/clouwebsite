@@ -2,19 +2,22 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all                   # allow everyone to read everything
     if user && user.role != "user"
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
       if user.role == 'developer'
+        can :read, :all                   # allow everyone to read everything
         can :manage, :all             # allow developer to do anything
       elsif user.role == 'superadmin'
+        can :read, :all                   # allow everyone to read everything
         can :manage, :all
         cannot :edit, User do |people|
-          people.role == 'superadmin' && people != user
+          people.role == 'developer' || (people.role == 'superadmin' && people != user)
         end
       elsif user.role == 'admin'
         # this is amazing!!!
+        can :read, :all  
+        cannot :read, :user 
         if(user.authority)
           model_list = ''
           access_list = user.authority.split(',')
