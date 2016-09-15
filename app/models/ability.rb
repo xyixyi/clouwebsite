@@ -21,7 +21,8 @@ class Ability
       elsif user.role == 'admin'
         # this is amazing!!!
         can :read, :all  
-        cannot :read, :user 
+        cannot :read, User 
+        # byebug
         if(user.authority)
           model_list = ''
           access_list = user.authority.split(',')
