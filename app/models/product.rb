@@ -158,9 +158,9 @@ class Product < ActiveRecord::Base
           
           field :Authorized do
             label '审核'
-              render do
-                bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
-              end
+              # render do
+              #   bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
+              # end
           end
         
           
