@@ -14,6 +14,10 @@ class Ability
         cannot :edit, User do |people|
           people.role == 'developer' || (people.role == 'superadmin' && people != user)
         end
+        cannot :destroy, User do |people|
+          people.role == 'developer' || (people.role == 'superadmin' && people != user)
+        end
+        
       elsif user.role == 'admin'
         # this is amazing!!!
         can :read, :all  
