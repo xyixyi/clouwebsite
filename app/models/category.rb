@@ -5,7 +5,7 @@ class Category < ActiveRecord::Base
     
     #rails admin set up
     rails_admin do
-        navigation_label '产品类别'
+        navigation_label '产品'
         weight -10
         list do
           field :id do 

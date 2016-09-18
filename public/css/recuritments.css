@@ -3,7 +3,7 @@ body {
 }
 .mainfield {
     min-height: 900px;
-    width: 70%;
+    /*width: 70%;*/
     position: relative;
     margin: auto;
     top: 90px;
