@@ -449,10 +449,10 @@ li {
         padding-top: 12%;
         z-index: 9999999;
         display: block;
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+        -moz-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
         -moz-transition-property: all;
         -o-transition-property: all;
         -webkit-transition-property: all;
