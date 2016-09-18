@@ -51,5 +51,30 @@ $(document).ready ->
       $('#user_authority_field').css('display', 'none')
     else
       $('#user_authority_field').css('display', 'block')
-      
+  
+  $(document).on 'click', "#current_user_authorities", (event)->
+    currentval = $('#user_authorities_field').val()
+    addval = $(this).val()
+    if currentval != ''
+      if currentval.indexOf(addval) >= 0
+        if currentval.indexOf(addval) == 0
+          newval = currentval.replace(addval, '')
+        else
+          newval = currentval.replace(','+addval, '')
+      else
+        newval = currentval+','+addval
+    else
+      newval = addval
+    while newval.charAt(0) == ','
+      newval = newval.slice( 1 )
+    while newval.slice(-1) == ','
+      newval = newval.substring(0, newval.length-1)
+    $("#user_authorities_field").val(null)
+    #if you want array
+    $('#user_authorities_field').val(newval.split(','))
+    #if you want string
+    $('#user_authorities_field').val(newval)
+    #comment if dont want alert
+    # window.alert $(this).val()
+  
   return
