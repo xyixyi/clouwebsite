@@ -2,7 +2,7 @@ class CampusRecuritment < ActiveRecord::Base
     #set up rails admin
     mount_uploader :attachment, AttachmentUploader
     rails_admin do
-        navigation_label '招聘'
+        navigation_label '人力资源'
         list do 
           field :title do
             label "标题"
