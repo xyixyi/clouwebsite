@@ -175,6 +175,7 @@
 
 <script>
     $(document).ready(function () {
+        $('#home').addClass('act');
         if(window.document.getElementById("main-banner") != null) {
             var current = $('.indexnews.current');
              <% if @company_news != nil%>
@@ -201,6 +202,7 @@
                 <%end%>
              <%end%>
         }
+        
     })
     
 </script>

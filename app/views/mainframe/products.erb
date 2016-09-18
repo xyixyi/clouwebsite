@@ -103,8 +103,14 @@
 </div>
 
 <script>
+  $(document).ready(function () {
+    $('#products').addClass('act');
+  });
+   
+
   $(function() {
-    $(document).ready(function () {
+    
+
       var lastScroll = 0;
       var scrollt = $('#myCarousel').offset().top;
       
@@ -141,5 +147,5 @@
         lastScroll = st;
       });
     });
-  })
+  
 </script>
