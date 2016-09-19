@@ -33,3 +33,15 @@ CompanyNews.all.each do |news|
         news.save!
     end
 end
+
+User.all.each do |user|
+    ml = ''
+    user.authority.split(",").each do |ad|
+        if ad != "招聘"
+            ml += ad
+            ml += ','
+        end
+    end
+    user.authority = ml
+    user.save!
+end
