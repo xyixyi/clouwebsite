@@ -38,7 +38,7 @@ User.all.each do |user|
     ml = ''
     if user.authority
         user.authority.split(",").each do |ad|
-            if ad != "招聘"
+            if ad != "类别"
                 ml += ad
                 ml += ','
             end
