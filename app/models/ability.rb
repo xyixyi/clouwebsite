@@ -27,8 +27,10 @@ class Ability
           model_list = ''
           access_list = user.authority.split(',')
           access_list.each do |k|
-            model_list += user.hashmap[k] 
-            model_list += ','
+            if user.hashmap[k]
+              model_list += user.hashmap[k] 
+              model_list += ','
+            end
           end
           model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
           can :manage, model_list
