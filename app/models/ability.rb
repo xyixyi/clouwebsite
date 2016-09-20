@@ -21,7 +21,7 @@ class Ability
       elsif user.role == 'admin'
         # this is amazing!!!
         can :read, :all  
-        cannot :read, User 
+        cannot :read, User
         # byebug
         if(user.authority)
           model_list = ''
@@ -34,6 +34,16 @@ class Ability
           end
           model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
           can :manage, model_list
+          if user.role == 'admin' and user.authority.include? '客户服务'
+            can :read, User
+            can :manage, User
+            cannot :edit, User do |people|
+              people.role == 'developer' || (people.role == 'superadmin' && people != user) || people.role == 'admin'
+            end
+            cannot :destroy, User do |people|
+              people.role == 'developer' || (people.role == 'superadmin' && people != user) || people.role == 'admin'
+            end
+          end
         end
       end
     end
