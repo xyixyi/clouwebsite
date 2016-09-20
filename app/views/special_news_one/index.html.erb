@@ -19,7 +19,7 @@
                 
             </div>
             <!--<a href="#" class="specialnewslink"></a>-->
-            <%= link_to "", special_news_one_path(:id => 1), class:"specialnewslink" if SpecialNewsOne.count >= 1 %>
+            <%= link_to "", special_news_one_path(:id => news.id), class:"specialnewslink" %>
             <div class="figcaption">
                 <h2><%= news.title%></h2>
                 <p class="newscontentp"><%= news.description%></p>
