@@ -26,9 +26,9 @@ class Category < ActiveRecord::Base
             label "名称"
              required true 
           end
-          field :description, :text do
-            label "简介"
-          end
+          # field :description, :text do
+          #   label "简介"
+          # end
           field :image, :carrierwave do
             label "图片"
           end
