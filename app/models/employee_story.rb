@@ -4,7 +4,7 @@ class EmployeeStory < ActiveRecord::Base
     mount_uploader :image, ImageUploader
     
     rails_admin do
-        navigation_label '员工讯息'
+        navigation_label '人力资源'
         list do
           field :title do
             label "标题"

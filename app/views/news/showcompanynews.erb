@@ -10,3 +10,8 @@
         <div class="body" id="productbody"><%= @news.content.html_safe if @news.content%></div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#news').addClass('act');
+    });
+</script>

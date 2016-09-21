@@ -34,7 +34,7 @@ class Product < ActiveRecord::Base
     end
     #set up rails admin
     rails_admin do
-        navigation_label '产品类别'
+        navigation_label '产品'
         parent Type
         list do 
           field :name do

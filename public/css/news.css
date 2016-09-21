@@ -130,7 +130,7 @@ p.newstext {
     background-size: contain !important;
     display: inline-block;
     background-repeat: no-repeat !important;
-    background-position: center center !important;
+    background-position: top center !important;
     display: inline-block;
     vertical-align: top;
 

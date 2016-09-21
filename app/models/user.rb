@@ -9,10 +9,10 @@ class User < ActiveRecord::Base
   
   # serialize :authority, Array
   def hashmap
-      { '产品类别' => 'Category, Type, Product, PopProduct','新闻' => 'CompanyNews, IndustryNews, SpecialNewsOne, SpecialNewsTwo, Honor', 
-      '投资者关系' => 'Announcement, YearReport', '员工讯息' => 'EmployeeStory', '客户服务' => 'CaseType, ServiceCase, QType, QandA', 
-      '招聘' => 'SocietyRecuritment, CampusRecuritment', '行业新闻' => 'IndustryNews' , '用户/管理员' => 'User', 
-      '问题类型' => 'QType', '投标' => 'Bid', '售后服务' => 'Trouble, Complain'}
+      { '产品' => 'Category, Type, Product, PopProduct','新闻' => 'CompanyNews, IndustryNews, SpecialNewsOne, SpecialNewsTwo, Honor', 
+      '投资者关系' => 'Announcement, YearReport', '客户服务' => 'CaseType, ServiceCase, QType, QandA, Trouble, Complain', 
+      '人力资源' => 'SocietyRecuritment, CampusRecuritment, EmployeeStory', '行业新闻' => 'IndustryNews' , '用户/管理员' => 'User', 
+      '问题类型' => 'QType', '投标' => 'Bid'}
   end
 
   rails_admin do
@@ -87,8 +87,10 @@ class User < ActiveRecord::Base
             
             if bindings[:view]._current_user.role == "developer"
               ['user', 'admin', 'superadmin', 'developer']
-            else
+            elsif bindings[:view]._current_user.role == "superadmin"
               ['user', 'admin']
+            else
+              ['user']
             end
           end
         end

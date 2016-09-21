@@ -17,7 +17,7 @@ class Bid < ActiveRecord::Base
     
     #set up rails admin
     rails_admin do
-        navigation_label '投标'
+        navigation_label '招标'
         weight +1
         list do 
           #title

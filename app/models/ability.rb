@@ -14,19 +14,36 @@ class Ability
         cannot :edit, User do |people|
           people.role == 'developer' || (people.role == 'superadmin' && people != user)
         end
+        cannot :destroy, User do |people|
+          people.role == 'developer' || (people.role == 'superadmin' && people != user)
+        end
+        
       elsif user.role == 'admin'
         # this is amazing!!!
         can :read, :all  
-        cannot :read, :user 
+        cannot :read, User
+        # byebug
         if(user.authority)
           model_list = ''
           access_list = user.authority.split(',')
           access_list.each do |k|
-            model_list += user.hashmap[k] 
-            model_list += ','
+            if user.hashmap[k]
+              model_list += user.hashmap[k] 
+              model_list += ','
+            end
           end
           model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
           can :manage, model_list
+          if user.role == 'admin' and user.authority.include? '客户服务'
+            can :read, User
+            can :manage, User
+            cannot :edit, User do |people|
+              people.role == 'developer' || (people.role == 'superadmin' && people != user) || people.role == 'admin'
+            end
+            cannot :destroy, User do |people|
+              people.role == 'developer' || (people.role == 'superadmin' && people != user) || people.role == 'admin'
+            end
+          end
         end
       end
     end

@@ -13,18 +13,19 @@
 
   </tr>
   <% grey = 1%>
-  <% @year_reports.each do |report|%>
+  <% @year_reports.each do |reeport|%>
     <tr>
       <%if grey==1%>
-        <td class="tg-dzk6"><%= report.date.to_date%></td>
-        <% if report.attachment != nil %>
-          <td class="tg-dzk6"><%= link_to report.title, report.attachment%></td>
+        <td class="tg-dzk6"><%= reeport.date.to_date%></td>
+
+        <% if reeport.attachment_url != nil or reeport.attachment_url != ''  %>
+          <td class="tg-dzk6"><%= link_to reeport.title, reeport.attachment_url%></td>
         <%end%>  
         <% grey = 0%>
       <%else%>
-        <td class="tg-dzk4"><%= link_to report.date.to_date%></td>
-        <% if report.attachment != nil %>
-          <td class="tg-dzk4"><%= link_to report.title, report.attachment%></td>
+        <td class="tg-dzk4"><%= link_to reeport.date.to_date%></td>
+        <% if reeport.attachment_url != nil or reeport.attachment_url != '' %>
+          <td class="tg-dzk4"><%= link_to reeport.title, reeport.attachment_url%></td>
         <%end%>
       <% grey = 1%>
       <%end%>

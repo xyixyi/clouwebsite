@@ -1,6 +1,6 @@
 class Complain < ActiveRecord::Base
   rails_admin do
-    navigation_label '售后服务'
+    navigation_label '客户服务'
     list do
       field :email do
         label "邮箱"

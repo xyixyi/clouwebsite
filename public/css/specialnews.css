@@ -237,6 +237,26 @@ h2,h3 {
      display: inline-block;
 }
 
+
+@media (max-width:1600px){
+    .video {
+     width: 400px !important;
+     display: inline-block;
+}
+.videoone{
+    width: 400px !important;
+}
+}
+@media (max-width:1300px){
+    .video {
+     width: 500px !important;
+     display: inline-block;
+}
+.videoone{
+    width: 500px !important;
+}
+}
+
 @media (max-width:1000px){
     .video {
      width: 100% !important;
