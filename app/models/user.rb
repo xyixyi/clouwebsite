@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  
   # serialize :authority, Array
   def hashmap
       { '产品类别' => 'Category, Type, Product, PopProduct','新闻' => 'CompanyNews, IndustryNews, SpecialNewsOne, SpecialNewsTwo, Honor', 
