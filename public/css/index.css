@@ -123,6 +123,10 @@ h1 {
     text-decoration: underline !important;
 }
 
+.typeslink:focus {
+    color: white !important;
+}
+
 .special-p {
     color: #808080;
     color: #525252;

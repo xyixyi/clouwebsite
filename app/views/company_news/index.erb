@@ -1,0 +1,45 @@
+<!--company_news#index-->
+<link rel="stylesheet" type="text/css" href="/css/news.css">
+<div class="newsbanner" style="background-image: url('../img/news/newsbanner.jpg') !important;">
+    <div class="newsslogan">
+        <h1>公司新闻</h1>
+        <h2>了解公司最新动态</h2>
+        <hr class="hr">
+    </div>
+    
+</div>
+<div class="newsmain contain">
+    <div class="newstypenav">
+        <a class="typeslink" id="company_news" href="#" style="background-color: #c4261d;">公司新闻</a>
+        <a class="typeslink" id="industry_news" href="/industry_news" remote="false">行业新闻</a>
+    </div>
+    <div class="pagecountainer container">
+        <ul>
+        <%@company_news.each do |news|%>
+            <li>
+                <div class="newscell">
+                    <div class="newsimg" style="background: url(<%= news.image%>);">
+                        
+                    </div>
+                    <div class="text-field">
+                        <%= link_to(news.title, company_news_path(:id => news.id), class: "newstitle")%>
+                        <p class="newstime"><%= news.created_at.to_date %><p class="newstext"><%= news.description %></p></p>
+                    </div>
+                </div>
+            </li>
+            
+        <%end%>
+        </ul>
+        
+        
+
+        <%= will_paginate @company_news,:previous_label => '上一页',:next_label=> '下一页' %>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#news').addClass('act');
+    });
+</script>

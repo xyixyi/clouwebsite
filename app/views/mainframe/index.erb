@@ -184,7 +184,7 @@
                 var newsplace = $('.news-container');
                 <% @company_news.each do |news| %>
                     if (single_page_counter < 4 && page_counter == 1) {
-                        current.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        current.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, company_news_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
                         single_page_counter+=1;
                     } else if (single_page_counter == 4 && page_counter >= 1) {
                         page_counter += 1;
@@ -192,11 +192,11 @@
                           'class': 'indexnews next', 
                           'id': page_counter }
                           ).appendTo(newsplace);
-                        ul.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        ul.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, company_news_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
                         single_page_counter = 1;
                     } else {
                         var next = $('#'+page_counter.toString());
-                        next.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
+                        next.append('<li><div class="special-img-two" style="background: url(<%= news.image%>);"></div><%= link_to(news.title, company_news_path(:id => news.id), class: "special-title")%><p class="special-p"><%= news.description%></p></li>');
                         single_page_counter += 1;
                     }
                 <%end%>
