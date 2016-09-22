@@ -31,7 +31,7 @@ end
 url = 'http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletin.php?stockid=002121&Page='
 i = 1
 CSV.open("sina_link.csv", "w+") #清空原有的file
-while i <= 48 do
+while i <= 49 do # 页面号码需要手动改
     doc = read_url(url + "#{i}")
     doc = doc.css('div.datelist')
     CSV.open("sina_link.csv", "a+") do |csv|
@@ -59,7 +59,7 @@ puts "start geting result"
 
 # 读取原始csv，进入每个link找到pdf，重新存到新的csv
 result = CSV.open("result.csv", "w+") #清空原有的file
-result << ["Date", "Title", "Link", "Type"] # add header in order to import, 如果不管用就手动添加
+result << ["Date", "Title", "Link", "Type"] # add header in order to import, 如不管用手动添加Date,Title,Link,Type
 csv = CSV.read('sina_link.csv')
 csv.each do |row|
  doc = read_url(row[0])
