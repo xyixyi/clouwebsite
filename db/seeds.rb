@@ -21,12 +21,12 @@
 # user3.role = 'developer'
 # user3.authorized = true
 # user3.save!
-# Product.all.each do |product|
-#     if product.Authorized != true
-#         product.Authorized = true
-#         product.save!
-#     end
-# end
+Product.all.each do |product|
+    if product.Authorized != true
+        product.Authorized = true
+        product.save!
+    end
+end
 # CompanyNews.all.each do |news|
 #     if news.Authorized != true
 #         news.Authorized = true
@@ -34,16 +34,16 @@
 #     end
 # end
 
-User.all.each do |user|
-    ml = ''
-    if user.authority
-        user.authority.split(",").each do |ad|
-            if ad != "员工讯息"
-                ml += ad
-                ml += ','
-            end
-        end
-        user.authority = ml
-        user.save!
-    end
-end
+# User.all.each do |user|
+#     ml = ''
+#     if user.authority
+#         user.authority.split(",").each do |ad|
+#             if ad != "员工讯息"
+#                 ml += ad
+#                 ml += ','
+#             end
+#         end
+#         user.authority = ml
+#         user.save!
+#     end
+# end

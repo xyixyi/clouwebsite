@@ -50,6 +50,9 @@ class CompanyNews < ActiveRecord::Base
           end
           field :author do
             label "作者"
+            default_value do
+              bindings[:view]._current_user.realName
+            end
           end
           field :description, :text do
             label "梗概"

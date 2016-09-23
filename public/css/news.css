@@ -27,6 +27,9 @@ body {
     top: 140px;
     position: relative;
 }
+.typeslink:focus {
+    color: white !important;
+}
 
 h1 {
     

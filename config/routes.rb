@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :special_news_two
   resources :products
   resources :pop_product
+  resources :company_news
+  resources :industry_news
   
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
