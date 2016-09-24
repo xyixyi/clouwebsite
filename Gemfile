@@ -4,7 +4,7 @@ ruby '2.3.0'
 
 gem "carrierwave"
 gem "mini_magick"
-
+gem 'paper_trail'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
@@ -19,6 +19,7 @@ gem 'devise-i18n'
 # admin 
 gem 'rails_admin'
 gem "rails_admin_import", "~> 1.2"
+gem 'rails_admin_history_rollback'
 gem 'enumerize'
 gem 'dotenv-rails'
 

@@ -3,7 +3,6 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   after_update :send_password_change_email, if: :needs_password_change_email?
   after_save :deliver_auth_email, if: :send_auth_email? 
-  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
