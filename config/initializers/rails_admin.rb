@@ -9,6 +9,8 @@ RailsAdmin.config do |config|
                             "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
                             "Trouble", "Honor", "SpecialNewsOne", "SpecialNewsTwo"]
                             
+  #history
+  # config.audit_with :history
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
