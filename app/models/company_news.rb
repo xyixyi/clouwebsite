@@ -2,6 +2,7 @@ require 'elasticsearch/model'
 class CompanyNews < ActiveRecord::Base
     include Elasticsearch::Model
     mount_uploader :image, ImageUploader
+    has_paper_trail
     def before_import_save(record)
     # Your custom special sauce
       

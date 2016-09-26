@@ -2,7 +2,7 @@ require 'elasticsearch/model'
 class EmployeeStory < ActiveRecord::Base
     include Elasticsearch::Model
     mount_uploader :image, ImageUploader
-    
+    has_paper_trail
     rails_admin do
         navigation_label '人力资源'
         list do

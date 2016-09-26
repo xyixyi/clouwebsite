@@ -1,5 +1,6 @@
 class CaseType < ActiveRecord::Base
     has_many :service_cases
+    has_paper_trail
     rails_admin do
         navigation_label '客户服务'
         list do

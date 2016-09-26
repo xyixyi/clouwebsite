@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
     #may need to change :product to products --yiran
     belongs_to :type, :inverse_of => :product
     belongs_to :category, :inverse_of => :products
+    has_paper_trail
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
     def self.searchproduct(params)

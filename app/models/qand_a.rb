@@ -3,6 +3,7 @@ class QandA < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
     belongs_to :QType
+    has_paper_trail
     mount_uploader :attachment, AttachmentUploader
     rails_admin do
         navigation_label '客户服务'

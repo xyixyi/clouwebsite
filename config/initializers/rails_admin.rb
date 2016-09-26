@@ -11,6 +11,8 @@ RailsAdmin.config do |config|
                             
   #history
   # config.audit_with :history
+  config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  # config.audit_with :paper_trail, 'User', 'Version' # PaperTrail < 3.0.0
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
@@ -26,6 +28,12 @@ RailsAdmin.config do |config|
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  
+  PAPER_TRAIL_AUDIT_MODEL =  ["Category", "Type", "Product", "PopProduct", "CompanyNews", 
+                            "IndustryNews", "Bid", "CampusRecuritment", "EmployeeStory", 
+                            "SocietyRecuritment", "User", "YearReport", "Announcement",
+                            "QandA", "QType", "ServiceCase", "CaseType", "Complain", 
+                            "Trouble", "Honor", "SpecialNewsOne", "SpecialNewsTwo"]
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
   config.audit_with :history, User
@@ -40,7 +48,13 @@ RailsAdmin.config do |config|
     delete
     show_in_app
     ## With an audit adapter, you can add:
-    history_index
-    history_show
+    # history_index
+    # history_show
+    history_index do
+      only PAPER_TRAIL_AUDIT_MODEL
+    end
+    history_show do
+      only PAPER_TRAIL_AUDIT_MODEL
+    end
   end
 end

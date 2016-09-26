@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
+  # before_action :set_paper_trail_whodunnit
+  
   # redirect unauthorized user or admin
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to '', :alert => exception.message # will be changed to an error page

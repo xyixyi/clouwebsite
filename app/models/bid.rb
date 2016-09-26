@@ -4,7 +4,7 @@ class Bid < ActiveRecord::Base
     include Elasticsearch::Model::Callbacks
     mount_uploader :attachment, AttachmentUploader
     after_save :send_bid_email, if: :send_email? # or after_create?
-    
+    has_paper_trail
     def send_bid_email
       @users = User.all
       @bid = self

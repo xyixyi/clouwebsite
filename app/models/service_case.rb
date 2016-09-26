@@ -3,7 +3,7 @@ class ServiceCase < ActiveRecord::Base
   belongs_to :case_type
   mount_uploader :image, ImageUploader
   mount_uploader :attachment, AttachmentUploader
-  
+  has_paper_trail
   #set up rails admin
   rails_admin do
     parent CaseType

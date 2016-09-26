@@ -5,7 +5,7 @@ class PopProduct < ActiveRecord::Base
   belongs_to :category
   mount_uploader :image, ImageUploader
   mount_uploader :attachment, AttachmentUploader
-  
+  has_paper_trail
   #set up rails admin
   rails_admin do
     navigation_label '产品'

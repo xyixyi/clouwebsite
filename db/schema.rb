@@ -197,6 +197,7 @@ ActiveRecord::Schema.define(version: 20160925164043) do
     t.string   "table"
     t.integer  "month",      limit: 2
     t.integer  "year",       limit: 5
+    t.integer  "version_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,6 +2,7 @@ require 'elasticsearch/model'
 class SpecialNewsTwo < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
+    has_paper_trail
     mount_uploader :image, ImageUploader
     #rails admin set up
     rails_admin do

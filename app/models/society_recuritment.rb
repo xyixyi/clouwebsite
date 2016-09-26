@@ -1,6 +1,7 @@
 class SocietyRecuritment < ActiveRecord::Base
     #set up rails admin
     mount_uploader :attachment, AttachmentUploader
+    has_paper_trail
     rails_admin do
         navigation_label '人力资源'
         list do 

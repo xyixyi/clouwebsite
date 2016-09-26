@@ -1,5 +1,6 @@
 require 'elasticsearch/model'
 class Honor < ActiveRecord::Base
+    has_paper_trail
     include Elasticsearch::Model
     rails_admin do
         weight -10

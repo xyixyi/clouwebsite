@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
     has_many :types, :dependent => :destroy
     has_many :products
     mount_uploader :image, ImageUploader
-    
+    has_paper_trail
     #rails admin set up
     rails_admin do
         navigation_label '产品'

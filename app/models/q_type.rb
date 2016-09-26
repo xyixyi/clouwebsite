@@ -1,5 +1,6 @@
 class QType < ActiveRecord::Base
     has_many :qand_as, :dependent => :destroy
+    has_paper_trail
     rails_admin do
         navigation_label '客户服务'
         list do

@@ -2,7 +2,7 @@ class Type < ActiveRecord::Base
     has_many :products, :dependent => :destroy
     belongs_to :category
     mount_uploader :image, ImageUploader
-    
+    has_paper_trail
     #set up rails admin
     rails_admin do
         parent Category 
