@@ -4,7 +4,7 @@ ruby '2.3.0'
 
 gem "carrierwave"
 gem "mini_magick"
-gem 'paper_trail'
+gem 'paper_trail', '~> 4.0.0.rc'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
