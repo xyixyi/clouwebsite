@@ -6,7 +6,7 @@ class IndustryNewsController < ApplicationController
 
 
   def show
-    @news = IndustryNews.where(:Authorized => true).find(params[:id])
+    @news = IndustryNews.find(params[:id])
   end
 
 

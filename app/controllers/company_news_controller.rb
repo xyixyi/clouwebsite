@@ -6,7 +6,7 @@ class CompanyNewsController < ApplicationController
 
 
   def show
-    @news = CompanyNews.where(:Authorized => true).find(params[:id])
+    @news = CompanyNews.find(params[:id])
   end
 
 

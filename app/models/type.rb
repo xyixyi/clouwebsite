@@ -16,7 +16,7 @@ class Type < ActiveRecord::Base
           # field :description, :text do
           #   label "简介"
           # end
-          field :Category_id, :enum do
+          field :category_id, :enum do
             label "产品大类"
             enum do
               Category.all.collect {|p| [p.name, p.id]}
@@ -34,7 +34,7 @@ class Type < ActiveRecord::Base
           # field :description, :text do
           #   label "简介"
           # end
-          field :Category_id, :enum do
+          field :category_id, :enum do
             label "产品大类"
             required true
             enum do

@@ -22,6 +22,7 @@ class Ability
         # this is amazing!!!
         can :read, :all  
         cannot :read, User
+        cannot :read, :history
         # byebug
         if(user.authority)
           model_list = ''
