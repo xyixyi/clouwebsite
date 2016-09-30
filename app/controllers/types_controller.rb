@@ -11,7 +11,7 @@ class TypesController < ApplicationController
   # GET /types/1.json
   def show
     @type = Type.where(:Authorized => true).find(params[:id])
-    @category = Category.where(:Authorized => true).find(@type.Category_id)
+    @category = Category.where(:Authorized => true).find(@type.category_id)
     @products = @type.products.where(:Authorized => true).paginate :page => params[:page],:per_page => 6
   end
 

@@ -7,18 +7,18 @@ $(document).ready ->
   else
     $('#user_authority_field').css('display', 'block')
   
-  $('#product_Type_id').empty()
-  $('#product_Type_id').append "<option value='' selected='selected'></option>"
-  $('#product_Type_id').change()
+  $('#product_type_id').empty()
+  $('#product_type_id').append "<option value='' selected='selected'></option>"
+  $('#product_type_id').change()
   $(document).on 'change', '#product_category_id', (event) ->
     # window.alert "aaa"
     category = $('#product_category_id').val()
     # window.alert category
     $.get("/categories/find_subtypes/" + category).done (values) ->
-      $('#product_Type_id').empty()
-      $('#product_Type_id').append '<option value=""></option>'
+      $('#product_type_id').empty()
+      $('#product_type_id').append '<option value=""></option>'
       $.each values, (idx, value) ->
-        $('#product_Type_id').append $('<option>',
+        $('#product_type_id').append $('<option>',
           value: value[0]
           text: value[1]
         )

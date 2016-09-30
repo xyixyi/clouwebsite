@@ -1,8 +1,8 @@
 <!-- Latest compiled and minified CSS bootstrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<select id="product_Type_id" name="product[Type_id]" class='form-control' style='width:200px;'>
+<select id="product_type_id" name="product[type_id]" class='form-control' style='width:200px;'>
 
-    <%if select_type.Type_id %>
-        <option value=<%=select_type.Type_id%>><%= Type.find(select_type.Type_id).name %></option>
+    <%if select_type.type_id %>
+        <option value=<%=select_type.type_id%>><%= Type.find(select_type.type_id).name %></option>
     <% end %>
 </select>

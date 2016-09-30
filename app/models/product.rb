@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
     #may need to change :product to products --yiran
-    belongs_to :type, :inverse_of => :product
+    belongs_to :type, :inverse_of => :products
     belongs_to :category, :inverse_of => :products
     has_paper_trail
     mount_uploader :image, ImageUploader
@@ -48,7 +48,7 @@ class Product < ActiveRecord::Base
             end
           end
           
-          field :Type_id, :enum do
+          field :type_id, :enum do
             label "产品小类"
             enum do
               ::Type.all.collect {|p| [p.name, p.id]}
@@ -86,7 +86,7 @@ class Product < ActiveRecord::Base
             end
           end
           
-          field :Type_id, :enum do
+          field :type_id, :enum do
             label "产品小类"
             enum do
               ::Type.all.collect {|p| [p.name, p.id]}
@@ -131,7 +131,7 @@ class Product < ActiveRecord::Base
             end
           end
           
-          field :Type_id do
+          field :type_id do
             label "产品小类"
             required true
             render do
