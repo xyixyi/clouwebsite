@@ -36,7 +36,7 @@ RailsAdmin.config do |config|
                             "Trouble", "Honor", "SpecialNewsOne", "SpecialNewsTwo"]
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
-  config.audit_with :history, User
+  config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
