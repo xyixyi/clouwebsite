@@ -1,7 +1,7 @@
 class PopProduct < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
-  belongs_to :Type
+  belongs_to :type
   belongs_to :category
   mount_uploader :image, ImageUploader
   mount_uploader :attachment, AttachmentUploader
@@ -15,19 +15,6 @@ class PopProduct < ActiveRecord::Base
         label "名称"
       end
 
-      field :category_id, :enum do
-        label "产品大类"
-        enum do 
-          Category.all.collect {|p| [p.name, p.id]}
-        end
-      end
-      
-      field :type_id, :enum do
-        label "产品小类"
-        enum do
-          ::Type.all.collect {|p| [p.name, p.id]}
-        end
-      end
       
       field :image, :carrierwave do
         label "图片"
