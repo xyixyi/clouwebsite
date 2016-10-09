@@ -82,7 +82,7 @@ class ProductsController < ApplicationController
   def find_products
     if params[:type_id]
       @current_type = Type.find(params[:type_id])
-      @products = Type.find(params[:type_id]).products
+      @products = Type.find(params[:type_id]).products.order(priority: :asc)
     else
       # Error or @lessons = Lesson.all
       @products = nil

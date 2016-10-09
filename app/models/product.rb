@@ -5,6 +5,9 @@ class Product < ActiveRecord::Base
     #may need to change :product to products --yiran
     belongs_to :type, :inverse_of => :products
     belongs_to :category, :inverse_of => :products
+    # validate
+    validates :priority,numericality:{allow_nil: false,greater_than_or_equal_to:0,less_than_or_equal_to:999}
+    
     has_paper_trail
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
@@ -61,7 +64,10 @@ class Product < ActiveRecord::Base
           
           field :Authorized do
             label "已审核"
-          end     
+          end 
+          field :priority do
+            label '排序'
+          end
         end
         
         
@@ -105,6 +111,10 @@ class Product < ActiveRecord::Base
             pretty_value do
               value.html_safe unless value.blank?
             end
+          end
+          field :priority do
+            label '排序'
+            help '排序越小越靠前，范围0-999'
           end
         end
         
@@ -164,6 +174,11 @@ class Product < ActiveRecord::Base
               render do
                 bindings[:view].render :partial  => "/rails_admin/main/check_box", :locals => {:field => self, :select_product => bindings[:object]}
               end
+          end
+          
+          field :priority do
+            label '排序'
+            help '排序越小越靠前，范围0-999'
           end
         
           

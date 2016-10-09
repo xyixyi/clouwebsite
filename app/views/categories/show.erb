@@ -5,7 +5,7 @@
     <hr class="hr">
     <ul>
         <% counter = 1%>
-        <% @category.types.each do |type| %>
+        <% @category.types.order(priority: :asc).each do |type| %>
         <li>
             <% if counter == 1%>
                 <%= link_to(type.name, type_path(:id => type.id), id: "first_field", class: "typeslink") %>

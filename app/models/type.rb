@@ -3,6 +3,8 @@ class Type < ActiveRecord::Base
     belongs_to :category
     mount_uploader :image, ImageUploader
     has_paper_trail
+    
+    validates :priority,numericality:{allow_nil: false,greater_than_or_equal_to:0,less_than_or_equal_to:999}
     #set up rails admin
     rails_admin do
         parent Category 
@@ -24,6 +26,9 @@ class Type < ActiveRecord::Base
           end
           field :Authorized do
             label "已审核"
+          end
+          field :priority do
+            label '排序'
           end
         end
         edit do
@@ -49,6 +54,11 @@ class Type < ActiveRecord::Base
             render do
               bindings[:view].render :partial  => "rails_admin/main/check_box", :locals => {:field => self, :select_user => bindings[:object]}
             end
+          end
+          
+          field :priority do
+            label '排序'
+            help '排序越小越靠前，范围0-999'
           end
         end
     end

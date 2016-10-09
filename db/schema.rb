@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930173127) do
+ActiveRecord::Schema.define(version: 20161009180138) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -159,18 +159,19 @@ ActiveRecord::Schema.define(version: 20160930173127) do
   add_index "pop_products", ["type_id"], name: "index_pop_products_on_type_id"
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",                        null: false
+    t.string   "name",                                    null: false
     t.string   "synopsis"
     t.string   "detail"
     t.integer  "type_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "image"
     t.integer  "category_id"
     t.string   "attachment"
     t.string   "seo_title"
     t.string   "seo_word"
-    t.boolean  "Authorized",  default: false
+    t.boolean  "Authorized",              default: false
+    t.integer  "priority",    limit: 999, default: 0
   end
 
   create_table "q_types", force: :cascade do |t|
@@ -271,13 +272,14 @@ ActiveRecord::Schema.define(version: 20160930173127) do
   end
 
   create_table "types", force: :cascade do |t|
-    t.string   "name",                        null: false
+    t.string   "name",                                    null: false
     t.string   "description"
     t.integer  "category_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "image"
-    t.boolean  "Authorized",  default: false
+    t.boolean  "Authorized",              default: false
+    t.integer  "priority",    limit: 999, default: 0
   end
 
   create_table "users", force: :cascade do |t|

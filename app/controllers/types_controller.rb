@@ -12,7 +12,7 @@ class TypesController < ApplicationController
   def show
     @type = Type.where(:Authorized => true).find(params[:id])
     @category = Category.where(:Authorized => true).find(@type.category_id)
-    @products = @type.products.where(:Authorized => true).paginate :page => params[:page],:per_page => 6
+    @products = @type.products.where(:Authorized => true).order(priority: :asc).paginate :page => params[:page],:per_page => 6
   end
 
   # GET /types/new
