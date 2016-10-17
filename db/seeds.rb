@@ -21,10 +21,16 @@ user1.email = 'raoyiran@hotmail.com'
 # user3.role = 'developer'
 # user3.authorized = true
 # user3.save!
-Product.all.each do |product|
-    if product.priority == 0
-        product.priority = 999
-        product.save!
+# Product.all.each do |product|
+#     if product.priority == 0
+#         product.priority = 999
+#         product.save!
+#     end
+# end
+Type.all.each do |type|
+    if type.priority == 0
+        type.priority = 999
+        type.save!
     end
 end
 
