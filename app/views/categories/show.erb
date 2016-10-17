@@ -32,9 +32,9 @@
         
             <% @products.each do |product| %>
                 <li><div class="product">
-                    <div class="productimage" style="background: url(<%= product.image%>);">
+                    <a class="productimage" style="background: url(<%= product.image%>);" href="/products/<%= product.id%>">
                         
-                    </div>
+                    </a>
                         <div class="text-field">
                             <%= link_to(product.name, product_path(:id => product.id), class: "producttitle") if product.name and product.id%>
                             <p class="producttext"><%= product.synopsis.html_safe if product.synopsis%></p>

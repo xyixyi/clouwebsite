@@ -95,7 +95,7 @@
     <% @categories.each do |category| %>
       <%if category.language == '' or category.language == '中文'%>
         <div class="cell">
-          <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
+          <a class="categoryimg" style="background: url(<%= category.image%>);" href="categories/<%= category.id%>"></a>
           <%= link_to category.name, category_path(category.id) %>
         </div>
       <%end%>
