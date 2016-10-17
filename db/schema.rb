@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161009180138) do
+ActiveRecord::Schema.define(version: 20161017000128) do
 
   create_table "announcements", force: :cascade do |t|
     t.datetime "date"
@@ -171,7 +171,7 @@ ActiveRecord::Schema.define(version: 20161009180138) do
     t.string   "seo_title"
     t.string   "seo_word"
     t.boolean  "Authorized",              default: false
-    t.integer  "priority",    limit: 999, default: 0
+    t.integer  "priority",    limit: 999, default: 999
   end
 
   create_table "q_types", force: :cascade do |t|
@@ -279,7 +279,7 @@ ActiveRecord::Schema.define(version: 20161009180138) do
     t.datetime "updated_at",                              null: false
     t.string   "image"
     t.boolean  "Authorized",              default: false
-    t.integer  "priority",    limit: 999, default: 0
+    t.integer  "priority",    limit: 999, default: 999
   end
 
   create_table "users", force: :cascade do |t|
