@@ -451,7 +451,7 @@ h15 {
 
 .carousel-caption {
     float: right;
-    right: 5%;
+    right: 0;
     width: 40%;
     top: 0px;
     left: initial;
