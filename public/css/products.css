@@ -236,7 +236,7 @@ h6 {
 .categoryimg {
     width: 100%;
     height: 90%;
-    background-size: contain !important;
+    background-size: cover !important;
     display: inline-block;
     background-repeat: no-repeat !important;
     background-position: center center !important;
