@@ -391,7 +391,7 @@ h1 {
 
 
 .productintro {
-    width: 400px;
+    width: 100%;
     position: relative;
 }
 
@@ -451,7 +451,7 @@ h15 {
 
 .carousel-caption {
     float: right;
-    right: 0;
+    right: 5%;
     width: 40%;
     top: 0px;
     left: initial;

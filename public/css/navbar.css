@@ -409,6 +409,10 @@ li {
     
 }
 
+.carousel-indicators li {
+    margin: 0 !important;
+}
+
 .mobile-link {
     width: 100%;
     display: block;
